@@ -1,0 +1,86 @@
+PODS:
+  - Alamofire (4.8.1)
+  - IQKeyboardManagerSwift (6.2.0)
+  - Kingfisher (5.1.1)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
+  - Moya/RxSwift (12.0.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - ObjectMapper (3.4.2)
+  - PKHUD (5.2.1)
+  - R.swift (5.0.2):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.0)
+  - Result (4.1.0)
+  - RxAtomic (4.4.1)
+  - RxCocoa (4.4.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.1):
+    - RxAtomic (~> 4.4)
+  - RxSwiftExt (3.4.0):
+    - RxSwiftExt/Core (= 3.4.0)
+    - RxSwiftExt/RxCocoa (= 3.4.0)
+  - RxSwiftExt/Core (3.4.0):
+    - RxSwift (~> 4.0)
+  - RxSwiftExt/RxCocoa (3.4.0):
+    - RxCocoa (~> 4.0)
+    - RxSwiftExt/Core
+  - SegueManager (4.0.0):
+    - SegueManager/iOS (= 4.0.0)
+    - SegueManager/OSX (= 4.0.0)
+    - SegueManager/R.swift (= 4.0.0)
+  - SegueManager/iOS (4.0.0)
+  - SegueManager/R.swift (4.0.0):
+    - R.swift.Library
+    - SegueManager/iOS
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - Kingfisher
+  - Moya/RxSwift (~> 12.0)
+  - ObjectMapper (~> 3.4)
+  - PKHUD (~> 5.0)
+  - R.swift
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
+  - RxSwiftExt
+  - SegueManager
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - Moya
+    - ObjectMapper
+    - PKHUD
+    - R.swift
+    - R.swift.Library
+    - Result
+    - RxAtomic
+    - RxCocoa
+    - RxSwift
+    - RxSwiftExt
+    - SegueManager
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  Kingfisher: 2558186963e5be42d98c5b110ccb3130148b77e4
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
+  R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
+  R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
+  RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
+  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
+  RxSwiftExt: 01f8ecbeeb355698e9c75365ebe908b00dacf45d
+  SegueManager: e4970e6f7150c81ec577e0b61d9fda3f27c11db5
+
+PODFILE CHECKSUM: 727a1ac547d5c5cda1f3831dad3855c0277322e2
+
+COCOAPODS: 1.6.0

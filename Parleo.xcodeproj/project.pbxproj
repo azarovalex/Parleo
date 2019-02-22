@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D503B02D6D652BDE472115AE /* Pods_Parleo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB326362162031AE8AFC21E5 /* Pods_Parleo.framework */; };
 		EC863CB12220811800A49824 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC863CB02220811800A49824 /* AppDelegate.swift */; };
 		EC863CB32220811800A49824 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC863CB22220811800A49824 /* FirstViewController.swift */; };
 		EC863CB52220811800A49824 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC863CB42220811800A49824 /* SecondViewController.swift */; };
 		EC863CB82220811800A49824 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC863CB62220811800A49824 /* Main.storyboard */; };
 		EC863CBA2220811A00A49824 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC863CB92220811A00A49824 /* Assets.xcassets */; };
 		EC863CBD2220811A00A49824 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC863CBB2220811A00A49824 /* LaunchScreen.storyboard */; };
+		ECE1D8A22221A5DC009DE2A3 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE1D8A12221A5DB009DE2A3 /* R.generated.swift */; };
+		ECE1D8A42221A950009DE2A3 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE1D8A32221A950009DE2A3 /* Onboarding.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		202752E7785D98F75A6A9345 /* Pods-Parleo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parleo.debug.xcconfig"; path = "Target Support Files/Pods-Parleo/Pods-Parleo.debug.xcconfig"; sourceTree = "<group>"; };
+		2B8D131903A6E9C27129821A /* Pods-Parleo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parleo.release.xcconfig"; path = "Target Support Files/Pods-Parleo/Pods-Parleo.release.xcconfig"; sourceTree = "<group>"; };
 		EC863CAD2220811800A49824 /* Parleo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parleo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC863CB02220811800A49824 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC863CB22220811800A49824 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		EC863CB92220811A00A49824 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC863CBC2220811A00A49824 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC863CBE2220811A00A49824 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECE1D8A12221A5DB009DE2A3 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		ECE1D8A32221A950009DE2A3 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		FB326362162031AE8AFC21E5 /* Pods_Parleo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parleo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D503B02D6D652BDE472115AE /* Pods_Parleo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DA7D8199F90915306C24272 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB326362162031AE8AFC21E5 /* Pods_Parleo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3085F41D75AEADB82108DF5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				202752E7785D98F75A6A9345 /* Pods-Parleo.debug.xcconfig */,
+				2B8D131903A6E9C27129821A /* Pods-Parleo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EC863CA42220811800A49824 = {
 			isa = PBXGroup;
 			children = (
 				EC863CAF2220811800A49824 /* Parleo */,
 				EC863CAE2220811800A49824 /* Products */,
+				E3085F41D75AEADB82108DF5 /* Pods */,
+				4DA7D8199F90915306C24272 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +84,57 @@
 		EC863CAF2220811800A49824 /* Parleo */ = {
 			isa = PBXGroup;
 			children = (
-				EC863CB02220811800A49824 /* AppDelegate.swift */,
-				EC863CB22220811800A49824 /* FirstViewController.swift */,
-				EC863CB42220811800A49824 /* SecondViewController.swift */,
-				EC863CB62220811800A49824 /* Main.storyboard */,
-				EC863CB92220811A00A49824 /* Assets.xcassets */,
-				EC863CBB2220811A00A49824 /* LaunchScreen.storyboard */,
-				EC863CBE2220811A00A49824 /* Info.plist */,
+				EC863CC5222083F300A49824 /* Application */,
+				EC863CC6222083F700A49824 /* Classes */,
+				EC863CC7222083FC00A49824 /* Resources */,
 			);
 			path = Parleo;
+			sourceTree = "<group>";
+		};
+		EC863CC5222083F300A49824 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EC863CB02220811800A49824 /* AppDelegate.swift */,
+				ECE1D8A12221A5DB009DE2A3 /* R.generated.swift */,
+				EC863CBE2220811A00A49824 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		EC863CC6222083F700A49824 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ECE1D8A52221A987009DE2A3 /* Onboarding */,
+				EC863CB42220811800A49824 /* SecondViewController.swift */,
+				EC863CB22220811800A49824 /* FirstViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EC863CC7222083FC00A49824 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC863CC82220841500A49824 /* Storyboards */,
+				EC863CB92220811A00A49824 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EC863CC82220841500A49824 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EC863CBB2220811A00A49824 /* LaunchScreen.storyboard */,
+				EC863CB62220811800A49824 /* Main.storyboard */,
+				ECE1D8A32221A950009DE2A3 /* Onboarding.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		ECE1D8A52221A987009DE2A3 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC863CC12220811A00A49824 /* Build configuration list for PBXNativeTarget "Parleo" */;
 			buildPhases = (
+				D25CDD3F99989D014EC0A1E5 /* [CP] Check Pods Manifest.lock */,
 				EC863CA92220811800A49824 /* Sources */,
 				EC863CAA2220811800A49824 /* Frameworks */,
 				EC863CAB2220811800A49824 /* Resources */,
+				60775439CBC451E4B46852F2 /* [CP] Embed Pods Frameworks */,
+				EC863CC4222083C500A49824 /* R.swift */,
 			);
 			buildRules = (
 			);
@@ -128,10 +201,102 @@
 				EC863CBD2220811A00A49824 /* LaunchScreen.storyboard in Resources */,
 				EC863CBA2220811A00A49824 /* Assets.xcassets in Resources */,
 				EC863CB82220811800A49824 /* Main.storyboard in Resources */,
+				ECE1D8A42221A950009DE2A3 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		60775439CBC451E4B46852F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Parleo/Pods-Parleo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
+				"${BUILT_PRODUCTS_DIR}/SegueManager/SegueManager.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SegueManager.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Parleo/Pods-Parleo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D25CDD3F99989D014EC0A1E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Parleo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC863CC4222083C500A49824 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/Parleo/Application/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Parleo/Application/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EC863CA92220811800A49824 /* Sources */ = {
@@ -141,6 +306,7 @@
 				EC863CB52220811800A49824 /* SecondViewController.swift in Sources */,
 				EC863CB12220811800A49824 /* AppDelegate.swift in Sources */,
 				EC863CB32220811800A49824 /* FirstViewController.swift in Sources */,
+				ECE1D8A22221A5DC009DE2A3 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,11 +450,12 @@
 		};
 		EC863CC22220811A00A49824 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 202752E7785D98F75A6A9345 /* Pods-Parleo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CLALR9F4Q5;
-				INFOPLIST_FILE = Parleo/Info.plist;
+				INFOPLIST_FILE = Parleo/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,11 +469,12 @@
 		};
 		EC863CC32220811A00A49824 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B8D131903A6E9C27129821A /* Pods-Parleo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CLALR9F4Q5;
-				INFOPLIST_FILE = Parleo/Info.plist;
+				INFOPLIST_FILE = Parleo/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
