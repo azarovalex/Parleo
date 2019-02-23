@@ -16,6 +16,10 @@
 		EC863CBD2220811A00A49824 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC863CBB2220811A00A49824 /* LaunchScreen.storyboard */; };
 		ECE1D8A22221A5DC009DE2A3 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE1D8A12221A5DB009DE2A3 /* R.generated.swift */; };
 		ECE1D8A42221A950009DE2A3 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE1D8A32221A950009DE2A3 /* Onboarding.storyboard */; };
+		ECE1D8A82221AD23009DE2A3 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECE1D8A72221AD0B009DE2A3 /* Montserrat-ExtraBold.ttf */; };
+		ECE1D8AA2221AF51009DE2A3 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECE1D8A92221AF4E009DE2A3 /* Montserrat-SemiBold.ttf */; };
+		ECE1D8AC2221B054009DE2A3 /* OnboardingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE1D8AB2221B054009DE2A3 /* OnboardingNavigationController.swift */; };
+		ECE1D8AE2221B5ED009DE2A3 /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE1D8AD2221B5ED009DE2A3 /* StartupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		EC863CBE2220811A00A49824 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECE1D8A12221A5DB009DE2A3 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		ECE1D8A32221A950009DE2A3 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		ECE1D8A72221AD0B009DE2A3 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		ECE1D8A92221AF4E009DE2A3 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		ECE1D8AB2221B054009DE2A3 /* OnboardingNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigationController.swift; sourceTree = "<group>"; };
+		ECE1D8AD2221B5ED009DE2A3 /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
 		FB326362162031AE8AFC21E5 /* Pods_Parleo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parleo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,6 +122,7 @@
 		EC863CC7222083FC00A49824 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ECE1D8A62221ACA6009DE2A3 /* Fonts */,
 				EC863CC82220841500A49824 /* Storyboards */,
 				EC863CB92220811A00A49824 /* Assets.xcassets */,
 			);
@@ -133,8 +142,19 @@
 		ECE1D8A52221A987009DE2A3 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				ECE1D8AB2221B054009DE2A3 /* OnboardingNavigationController.swift */,
+				ECE1D8AD2221B5ED009DE2A3 /* StartupViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		ECE1D8A62221ACA6009DE2A3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ECE1D8A92221AF4E009DE2A3 /* Montserrat-SemiBold.ttf */,
+				ECE1D8A72221AD0B009DE2A3 /* Montserrat-ExtraBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,11 +165,11 @@
 			buildConfigurationList = EC863CC12220811A00A49824 /* Build configuration list for PBXNativeTarget "Parleo" */;
 			buildPhases = (
 				D25CDD3F99989D014EC0A1E5 /* [CP] Check Pods Manifest.lock */,
+				EC863CC4222083C500A49824 /* R.swift */,
 				EC863CA92220811800A49824 /* Sources */,
 				EC863CAA2220811800A49824 /* Frameworks */,
 				EC863CAB2220811800A49824 /* Resources */,
 				60775439CBC451E4B46852F2 /* [CP] Embed Pods Frameworks */,
-				EC863CC4222083C500A49824 /* R.swift */,
 			);
 			buildRules = (
 			);
@@ -198,6 +218,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE1D8AA2221AF51009DE2A3 /* Montserrat-SemiBold.ttf in Resources */,
+				ECE1D8A82221AD23009DE2A3 /* Montserrat-ExtraBold.ttf in Resources */,
 				EC863CBD2220811A00A49824 /* LaunchScreen.storyboard in Resources */,
 				EC863CBA2220811A00A49824 /* Assets.xcassets in Resources */,
 				EC863CB82220811800A49824 /* Main.storyboard in Resources */,
@@ -303,9 +325,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE1D8AC2221B054009DE2A3 /* OnboardingNavigationController.swift in Sources */,
 				EC863CB52220811800A49824 /* SecondViewController.swift in Sources */,
 				EC863CB12220811800A49824 /* AppDelegate.swift in Sources */,
 				EC863CB32220811800A49824 /* FirstViewController.swift in Sources */,
+				ECE1D8AE2221B5ED009DE2A3 /* StartupViewController.swift in Sources */,
 				ECE1D8A22221A5DC009DE2A3 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,7 +487,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.Parleo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -482,7 +506,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.Parleo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
