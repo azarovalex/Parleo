@@ -14,6 +14,7 @@ class OnboardingNavigationController: UINavigationController {
         super.viewDidLoad()
 
         navigationBar.setBackgroundImage(UIImage(), for: .default)
-//        navigationBar.shadowImage = UIImage()
+        navigationBar.shadowImage = UIImage()
+        navigationBar.tintColor = .gray
     }
 }

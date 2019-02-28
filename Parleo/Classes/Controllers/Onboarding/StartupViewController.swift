@@ -13,10 +13,12 @@ class StartupViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        setNeedsStatusBarAppearanceUpdate()
+        navigationController?.navigationBar.barStyle = .black
     }
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        navigationController?.navigationBar.barStyle = .default
     }
 }

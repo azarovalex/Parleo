@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D503B02D6D652BDE472115AE /* Pods_Parleo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB326362162031AE8AFC21E5 /* Pods_Parleo.framework */; };
+		EC2C85EF2222758600D113B5 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC2C85EE2222756800D113B5 /* Montserrat-Regular.ttf */; };
+		EC2C85F12222788100D113B5 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC2C85F02222787F00D113B5 /* Montserrat-Bold.ttf */; };
+		EC2C85F322227A0400D113B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C85F222227A0400D113B5 /* LoginViewController.swift */; };
 		EC863CB12220811800A49824 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC863CB02220811800A49824 /* AppDelegate.swift */; };
 		EC863CB32220811800A49824 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC863CB22220811800A49824 /* FirstViewController.swift */; };
 		EC863CB52220811800A49824 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC863CB42220811800A49824 /* SecondViewController.swift */; };
@@ -20,11 +23,17 @@
 		ECE1D8AA2221AF51009DE2A3 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECE1D8A92221AF4E009DE2A3 /* Montserrat-SemiBold.ttf */; };
 		ECE1D8AC2221B054009DE2A3 /* OnboardingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE1D8AB2221B054009DE2A3 /* OnboardingNavigationController.swift */; };
 		ECE1D8AE2221B5ED009DE2A3 /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE1D8AD2221B5ED009DE2A3 /* StartupViewController.swift */; };
+		ECF190C222274311002D24EF /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF190C122274311002D24EF /* CreateAccount.storyboard */; };
+		ECF190C62227463C002D24EF /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF190C52227463C002D24EF /* RoundedTextField.swift */; };
+		ECF190C82227E362002D24EF /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF190C72227E362002D24EF /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		202752E7785D98F75A6A9345 /* Pods-Parleo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parleo.debug.xcconfig"; path = "Target Support Files/Pods-Parleo/Pods-Parleo.debug.xcconfig"; sourceTree = "<group>"; };
 		2B8D131903A6E9C27129821A /* Pods-Parleo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parleo.release.xcconfig"; path = "Target Support Files/Pods-Parleo/Pods-Parleo.release.xcconfig"; sourceTree = "<group>"; };
+		EC2C85EE2222756800D113B5 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		EC2C85F02222787F00D113B5 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		EC2C85F222227A0400D113B5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EC863CAD2220811800A49824 /* Parleo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parleo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC863CB02220811800A49824 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC863CB22220811800A49824 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +48,9 @@
 		ECE1D8A92221AF4E009DE2A3 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		ECE1D8AB2221B054009DE2A3 /* OnboardingNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigationController.swift; sourceTree = "<group>"; };
 		ECE1D8AD2221B5ED009DE2A3 /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
+		ECF190C122274311002D24EF /* CreateAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateAccount.storyboard; sourceTree = "<group>"; };
+		ECF190C52227463C002D24EF /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		ECF190C72227E362002D24EF /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		FB326362162031AE8AFC21E5 /* Pods_Parleo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parleo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,9 +124,8 @@
 		EC863CC6222083F700A49824 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				ECE1D8A52221A987009DE2A3 /* Onboarding */,
-				EC863CB42220811800A49824 /* SecondViewController.swift */,
-				EC863CB22220811800A49824 /* FirstViewController.swift */,
+				ECF190C3222745AD002D24EF /* Controllers */,
+				ECF190C4222745FD002D24EF /* Views */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -135,6 +146,7 @@
 				EC863CBB2220811A00A49824 /* LaunchScreen.storyboard */,
 				EC863CB62220811800A49824 /* Main.storyboard */,
 				ECE1D8A32221A950009DE2A3 /* Onboarding.storyboard */,
+				ECF190C122274311002D24EF /* CreateAccount.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -144,6 +156,7 @@
 			children = (
 				ECE1D8AB2221B054009DE2A3 /* OnboardingNavigationController.swift */,
 				ECE1D8AD2221B5ED009DE2A3 /* StartupViewController.swift */,
+				EC2C85F222227A0400D113B5 /* LoginViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -152,9 +165,30 @@
 			isa = PBXGroup;
 			children = (
 				ECE1D8A92221AF4E009DE2A3 /* Montserrat-SemiBold.ttf */,
+				EC2C85EE2222756800D113B5 /* Montserrat-Regular.ttf */,
+				EC2C85F02222787F00D113B5 /* Montserrat-Bold.ttf */,
 				ECE1D8A72221AD0B009DE2A3 /* Montserrat-ExtraBold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		ECF190C3222745AD002D24EF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC863CB22220811800A49824 /* FirstViewController.swift */,
+				EC863CB42220811800A49824 /* SecondViewController.swift */,
+				ECE1D8A52221A987009DE2A3 /* Onboarding */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ECF190C4222745FD002D24EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ECF190C52227463C002D24EF /* RoundedTextField.swift */,
+				ECF190C72227E362002D24EF /* RoundedButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,10 +254,13 @@
 			files = (
 				ECE1D8AA2221AF51009DE2A3 /* Montserrat-SemiBold.ttf in Resources */,
 				ECE1D8A82221AD23009DE2A3 /* Montserrat-ExtraBold.ttf in Resources */,
+				EC2C85EF2222758600D113B5 /* Montserrat-Regular.ttf in Resources */,
 				EC863CBD2220811A00A49824 /* LaunchScreen.storyboard in Resources */,
+				EC2C85F12222788100D113B5 /* Montserrat-Bold.ttf in Resources */,
 				EC863CBA2220811A00A49824 /* Assets.xcassets in Resources */,
 				EC863CB82220811800A49824 /* Main.storyboard in Resources */,
 				ECE1D8A42221A950009DE2A3 /* Onboarding.storyboard in Resources */,
+				ECF190C222274311002D24EF /* CreateAccount.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,8 +362,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECF190C62227463C002D24EF /* RoundedTextField.swift in Sources */,
+				EC2C85F322227A0400D113B5 /* LoginViewController.swift in Sources */,
 				ECE1D8AC2221B054009DE2A3 /* OnboardingNavigationController.swift in Sources */,
 				EC863CB52220811800A49824 /* SecondViewController.swift in Sources */,
+				ECF190C82227E362002D24EF /* RoundedButton.swift in Sources */,
 				EC863CB12220811800A49824 /* AppDelegate.swift in Sources */,
 				EC863CB32220811800A49824 /* FirstViewController.swift in Sources */,
 				ECE1D8AE2221B5ED009DE2A3 /* StartupViewController.swift in Sources */,
