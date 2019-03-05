@@ -10,6 +10,11 @@ import UIKit
 
 class RoundedTextField: UITextField {
 
+    private enum Constants {
+        static let padding: CGFloat = 20
+        static let cornerRadius = 25
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -23,15 +28,15 @@ class RoundedTextField: UITextField {
     }
 
     override func textRect(forBounds bounds: CGRect) -> CGRect {
-        return makePadding(in: bounds)
+        return super.textRect(forBounds: bounds).insetBy(dx: Constants.padding, dy: 0)
     }
 
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
-        return makePadding(in: bounds)
+        return super.editingRect(forBounds: bounds).insetBy(dx: Constants.padding, dy: 0)
     }
 
     override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-        return makePadding(in: bounds)
+        return super.placeholderRect(forBounds: bounds).insetBy(dx: Constants.padding, dy: 0)
     }
 
 }
@@ -41,9 +46,5 @@ private extension RoundedTextField {
 
     func setup() {
         layer.cornerRadius = 25
-    }
-
-    func makePadding(in bounds: CGRect) -> CGRect {
-        return bounds.inset(by: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0))
     }
 }
