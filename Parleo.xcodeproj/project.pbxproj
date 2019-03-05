@@ -17,6 +17,13 @@
 		EC863CB82220811800A49824 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC863CB62220811800A49824 /* Main.storyboard */; };
 		EC863CBA2220811A00A49824 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC863CB92220811A00A49824 /* Assets.xcassets */; };
 		EC863CBD2220811A00A49824 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC863CBB2220811A00A49824 /* LaunchScreen.storyboard */; };
+		EC93F3D2222C834F00C4BB89 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D1222C834F00C4BB89 /* NetworkService.swift */; };
+		EC93F3D4222C836D00C4BB89 /* NetworkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D3222C836D00C4BB89 /* NetworkExtension.swift */; };
+		EC93F3D6222C83B300C4BB89 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D5222C83B300C4BB89 /* AuthorizationService.swift */; };
+		EC93F3D8222C83BF00C4BB89 /* AuthorizationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D7222C83BF00C4BB89 /* AuthorizationAPI.swift */; };
+		ECDCC252222EB07400DA9758 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC251222EB07400DA9758 /* User.swift */; };
+		ECDCC254222EB0D000DA9758 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC253222EB0D000DA9758 /* Credentials.swift */; };
+		ECDCC257222EB2C400DA9758 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC256222EB2C400DA9758 /* AppError.swift */; };
 		ECE1D8A22221A5DC009DE2A3 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE1D8A12221A5DB009DE2A3 /* R.generated.swift */; };
 		ECE1D8A42221A950009DE2A3 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE1D8A32221A950009DE2A3 /* Onboarding.storyboard */; };
 		ECE1D8A82221AD23009DE2A3 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECE1D8A72221AD0B009DE2A3 /* Montserrat-ExtraBold.ttf */; };
@@ -42,6 +49,13 @@
 		EC863CB92220811A00A49824 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC863CBC2220811A00A49824 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC863CBE2220811A00A49824 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC93F3D1222C834F00C4BB89 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		EC93F3D3222C836D00C4BB89 /* NetworkExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkExtension.swift; sourceTree = "<group>"; };
+		EC93F3D5222C83B300C4BB89 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
+		EC93F3D7222C83BF00C4BB89 /* AuthorizationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAPI.swift; sourceTree = "<group>"; };
+		ECDCC251222EB07400DA9758 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ECDCC253222EB0D000DA9758 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		ECDCC256222EB2C400DA9758 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		ECE1D8A12221A5DB009DE2A3 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		ECE1D8A32221A950009DE2A3 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		ECE1D8A72221AD0B009DE2A3 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -124,8 +138,11 @@
 		EC863CC6222083F700A49824 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EC93F3CA222C643C00C4BB89 /* Common */,
 				ECF190C3222745AD002D24EF /* Controllers */,
+				EC93F3C9222C641C00C4BB89 /* ViewModels */,
 				ECF190C4222745FD002D24EF /* Views */,
+				EC93F3CB222C644800C4BB89 /* Models */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -149,6 +166,82 @@
 				ECF190C122274311002D24EF /* CreateAccount.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EC93F3C9222C641C00C4BB89 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EC93F3CA222C643C00C4BB89 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				ECDCC255222EB2B700DA9758 /* Protocols */,
+				EC93F3CC222C830200C4BB89 /* Network */,
+				EC93F3CD222C831100C4BB89 /* Extentions */,
+				ECDCC253222EB0D000DA9758 /* Credentials.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EC93F3CB222C644800C4BB89 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ECDCC251222EB07400DA9758 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EC93F3CC222C830200C4BB89 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EC93F3CE222C832C00C4BB89 /* Base */,
+				EC93F3D0222C833500C4BB89 /* API */,
+				EC93F3CF222C833000C4BB89 /* Services */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EC93F3CD222C831100C4BB89 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		EC93F3CE222C832C00C4BB89 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EC93F3D1222C834F00C4BB89 /* NetworkService.swift */,
+				EC93F3D3222C836D00C4BB89 /* NetworkExtension.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EC93F3CF222C833000C4BB89 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EC93F3D5222C83B300C4BB89 /* AuthorizationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EC93F3D0222C833500C4BB89 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EC93F3D7222C83BF00C4BB89 /* AuthorizationAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		ECDCC255222EB2B700DA9758 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				ECDCC256222EB2C400DA9758 /* AppError.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		ECE1D8A52221A987009DE2A3 /* Onboarding */ = {
@@ -362,13 +455,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC93F3D2222C834F00C4BB89 /* NetworkService.swift in Sources */,
 				ECF190C62227463C002D24EF /* RoundedTextField.swift in Sources */,
 				EC2C85F322227A0400D113B5 /* LoginViewController.swift in Sources */,
+				EC93F3D6222C83B300C4BB89 /* AuthorizationService.swift in Sources */,
+				ECDCC257222EB2C400DA9758 /* AppError.swift in Sources */,
 				ECE1D8AC2221B054009DE2A3 /* OnboardingNavigationController.swift in Sources */,
 				EC863CB52220811800A49824 /* SecondViewController.swift in Sources */,
+				ECDCC252222EB07400DA9758 /* User.swift in Sources */,
+				EC93F3D4222C836D00C4BB89 /* NetworkExtension.swift in Sources */,
+				EC93F3D8222C83BF00C4BB89 /* AuthorizationAPI.swift in Sources */,
 				ECF190C82227E362002D24EF /* RoundedButton.swift in Sources */,
 				EC863CB12220811800A49824 /* AppDelegate.swift in Sources */,
 				EC863CB32220811800A49824 /* FirstViewController.swift in Sources */,
+				ECDCC254222EB0D000DA9758 /* Credentials.swift in Sources */,
 				ECE1D8AE2221B5ED009DE2A3 /* StartupViewController.swift in Sources */,
 				ECE1D8A22221A5DC009DE2A3 /* R.generated.swift in Sources */,
 			);
