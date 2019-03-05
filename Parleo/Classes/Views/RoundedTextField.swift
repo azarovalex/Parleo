@@ -34,11 +34,6 @@ class RoundedTextField: UITextField {
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return super.editingRect(forBounds: bounds).insetBy(dx: Constants.padding, dy: 0)
     }
-
-    override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-        return super.placeholderRect(forBounds: bounds).insetBy(dx: Constants.padding, dy: 0)
-    }
-
 }
 
 // MARK: - Setup
