@@ -205,12 +205,22 @@ app even more often</string>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="emailTextField" destination="NMq-mG-KPZ" id="Gvz-f8-xIT"/>
+                        <outlet property="loginButton" destination="ula-WF-SS6" id="y2U-Pj-B6y"/>
                         <outlet property="passwordTextField" destination="9ch-Ym-MY3" id="9h3-gK-u6B"/>
+                        <segue destination="Avp-5r-DNL" kind="show" identifier="fromLoginToMain" id="s67-GA-Wp9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K97-2P-W5C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="876" y="152"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="Wqj-It-3rY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="Avp-5r-DNL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ztv-VK-hKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1560" y="151"/>
         </scene>
     </scenes>
     <resources>

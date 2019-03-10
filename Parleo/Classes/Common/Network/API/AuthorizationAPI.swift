@@ -9,7 +9,7 @@
 import Moya
 
 enum AuthorizationAPI {
-    case login(username: String, password: String)
+    case login(email: String, password: String)
 }
 
 extension AuthorizationAPI: TargetType {
@@ -28,7 +28,10 @@ extension AuthorizationAPI: TargetType {
     }
 
     var sampleData: Data {
-        return Data()
+        switch self {
+        case .login(let email, _):
+            return .mockedUser(with: email)
+        }
     }
 
     var task: Task {
@@ -37,5 +40,12 @@ extension AuthorizationAPI: TargetType {
 
     var headers: [String : String]? {
         return [:]
+    }
+}
+
+private extension Data {
+
+    static func mockedUser(with email: String) -> Data {
+        return User(id: 1, email: email).toJSONString()!.data(using: .utf8)!
     }
 }

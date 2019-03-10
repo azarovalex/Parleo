@@ -11,6 +11,12 @@
 		EC2C85EF2222758600D113B5 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC2C85EE2222756800D113B5 /* Montserrat-Regular.ttf */; };
 		EC2C85F12222788100D113B5 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC2C85F02222787F00D113B5 /* Montserrat-Bold.ttf */; };
 		EC2C85F322227A0400D113B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C85F222227A0400D113B5 /* LoginViewController.swift */; };
+		EC76CA2E2235397400ADD1BE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76CA2D2235397400ADD1BE /* LoginViewModel.swift */; };
+		EC76CA30223539D700ADD1BE /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76CA2F223539D700ADD1BE /* ViewModelType.swift */; };
+		EC76CA3322353C4500ADD1BE /* UIViewController+ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76CA3222353C4500ADD1BE /* UIViewController+ErrorAlert.swift */; };
+		EC76CA3522353CA100ADD1BE /* UIViewController+HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76CA3422353CA100ADD1BE /* UIViewController+HUD.swift */; };
+		EC76CA3722353E1000ADD1BE /* UIViewController+RxNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76CA3622353E1000ADD1BE /* UIViewController+RxNavigation.swift */; };
+		EC76CA3B2235877900ADD1BE /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76CA3A2235877900ADD1BE /* Storage.swift */; };
 		EC863CB12220811800A49824 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC863CB02220811800A49824 /* AppDelegate.swift */; };
 		EC863CB32220811800A49824 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC863CB22220811800A49824 /* FirstViewController.swift */; };
 		EC863CB52220811800A49824 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC863CB42220811800A49824 /* SecondViewController.swift */; };
@@ -41,6 +47,12 @@
 		EC2C85EE2222756800D113B5 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		EC2C85F02222787F00D113B5 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		EC2C85F222227A0400D113B5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EC76CA2D2235397400ADD1BE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		EC76CA2F223539D700ADD1BE /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		EC76CA3222353C4500ADD1BE /* UIViewController+ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ErrorAlert.swift"; sourceTree = "<group>"; };
+		EC76CA3422353CA100ADD1BE /* UIViewController+HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HUD.swift"; sourceTree = "<group>"; };
+		EC76CA3622353E1000ADD1BE /* UIViewController+RxNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RxNavigation.swift"; sourceTree = "<group>"; };
+		EC76CA3A2235877900ADD1BE /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		EC863CAD2220811800A49824 /* Parleo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parleo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC863CB02220811800A49824 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC863CB22220811800A49824 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +107,32 @@
 				2B8D131903A6E9C27129821A /* Pods-Parleo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EC76CA2C2235395E00ADD1BE /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EC76CA2D2235397400ADD1BE /* LoginViewModel.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		EC76CA3122353C3300ADD1BE /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC76CA3222353C4500ADD1BE /* UIViewController+ErrorAlert.swift */,
+				EC76CA3422353CA100ADD1BE /* UIViewController+HUD.swift */,
+				EC76CA3622353E1000ADD1BE /* UIViewController+RxNavigation.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		EC76CA392235876700ADD1BE /* Storages */ = {
+			isa = PBXGroup;
+			children = (
+				EC76CA3A2235877900ADD1BE /* Storage.swift */,
+			);
+			path = Storages;
 			sourceTree = "<group>";
 		};
 		EC863CA42220811800A49824 = {
@@ -171,6 +209,7 @@
 		EC93F3C9222C641C00C4BB89 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				EC76CA2C2235395E00ADD1BE /* Onboarding */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -178,6 +217,7 @@
 		EC93F3CA222C643C00C4BB89 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EC76CA392235876700ADD1BE /* Storages */,
 				ECDCC255222EB2B700DA9758 /* Protocols */,
 				EC93F3CC222C830200C4BB89 /* Network */,
 				EC93F3CD222C831100C4BB89 /* Extentions */,
@@ -207,6 +247,7 @@
 		EC93F3CD222C831100C4BB89 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				EC76CA3122353C3300ADD1BE /* UIViewController */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -240,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				ECDCC256222EB2C400DA9758 /* AppError.swift */,
+				EC76CA2F223539D700ADD1BE /* ViewModelType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -456,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC93F3D2222C834F00C4BB89 /* NetworkService.swift in Sources */,
+				EC76CA3B2235877900ADD1BE /* Storage.swift in Sources */,
 				ECF190C62227463C002D24EF /* RoundedTextField.swift in Sources */,
 				EC2C85F322227A0400D113B5 /* LoginViewController.swift in Sources */,
 				EC93F3D6222C83B300C4BB89 /* AuthorizationService.swift in Sources */,
@@ -463,13 +506,18 @@
 				ECE1D8AC2221B054009DE2A3 /* OnboardingNavigationController.swift in Sources */,
 				EC863CB52220811800A49824 /* SecondViewController.swift in Sources */,
 				ECDCC252222EB07400DA9758 /* User.swift in Sources */,
+				EC76CA30223539D700ADD1BE /* ViewModelType.swift in Sources */,
 				EC93F3D4222C836D00C4BB89 /* NetworkExtension.swift in Sources */,
+				EC76CA3522353CA100ADD1BE /* UIViewController+HUD.swift in Sources */,
 				EC93F3D8222C83BF00C4BB89 /* AuthorizationAPI.swift in Sources */,
+				EC76CA2E2235397400ADD1BE /* LoginViewModel.swift in Sources */,
+				EC76CA3722353E1000ADD1BE /* UIViewController+RxNavigation.swift in Sources */,
 				ECF190C82227E362002D24EF /* RoundedButton.swift in Sources */,
 				EC863CB12220811800A49824 /* AppDelegate.swift in Sources */,
 				EC863CB32220811800A49824 /* FirstViewController.swift in Sources */,
 				ECDCC254222EB0D000DA9758 /* Credentials.swift in Sources */,
 				ECE1D8AE2221B5ED009DE2A3 /* StartupViewController.swift in Sources */,
+				EC76CA3322353C4500ADD1BE /* UIViewController+ErrorAlert.swift in Sources */,
 				ECE1D8A22221A5DC009DE2A3 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

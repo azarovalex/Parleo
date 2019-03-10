@@ -13,7 +13,7 @@ struct AuthorizationService: NetworkService {
 
     var provider = MoyaProvider<AuthorizationAPI>()
 
-    func logIn(with username: String, password: String) -> Single<Result<User>> {
-        return fetchModel(.login(username: "alex", password: "qwerty"))
+    func logIn(with email: String, password: String) -> Single<Result<User>> {
+        return fetchModel(.login(email: email, password: password))
     }
 }
