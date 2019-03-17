@@ -31,6 +31,11 @@
 		EC93F3D4222C836D00C4BB89 /* NetworkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D3222C836D00C4BB89 /* NetworkExtension.swift */; };
 		EC93F3D6222C83B300C4BB89 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D5222C83B300C4BB89 /* AuthorizationService.swift */; };
 		EC93F3D8222C83BF00C4BB89 /* AuthorizationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D7222C83BF00C4BB89 /* AuthorizationAPI.swift */; };
+		ECD2C1CC223F008000C421A7 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2C1CB223F008000C421A7 /* UsersViewController.swift */; };
+		ECD2C1CF223F00E800C421A7 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2C1CE223F00E800C421A7 /* UsersViewModel.swift */; };
+		ECD2C1DA223F01BF00C421A7 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2C1D8223F01BF00C421A7 /* UserCell.swift */; };
+		ECD2C1DB223F01BF00C421A7 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECD2C1D9223F01BF00C421A7 /* UserCell.xib */; };
+		ECD2C1DD223F035A00C421A7 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECD2C1DC223F035700C421A7 /* Montserrat-Medium.ttf */; };
 		ECDCC252222EB07400DA9758 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC251222EB07400DA9758 /* User.swift */; };
 		ECDCC254222EB0D000DA9758 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC253222EB0D000DA9758 /* Credentials.swift */; };
 		ECDCC257222EB2C400DA9758 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC256222EB2C400DA9758 /* AppError.swift */; };
@@ -73,6 +78,11 @@
 		EC93F3D3222C836D00C4BB89 /* NetworkExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkExtension.swift; sourceTree = "<group>"; };
 		EC93F3D5222C83B300C4BB89 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		EC93F3D7222C83BF00C4BB89 /* AuthorizationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAPI.swift; sourceTree = "<group>"; };
+		ECD2C1CB223F008000C421A7 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		ECD2C1CE223F00E800C421A7 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		ECD2C1D8223F01BF00C421A7 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		ECD2C1D9223F01BF00C421A7 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		ECD2C1DC223F035700C421A7 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		ECDCC251222EB07400DA9758 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ECDCC253222EB0D000DA9758 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		ECDCC256222EB2C400DA9758 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
@@ -230,6 +240,7 @@
 		EC93F3C9222C641C00C4BB89 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				ECD2C1CD223F00D700C421A7 /* Users */,
 				EC76CA2C2235395E00ADD1BE /* Onboarding */,
 			);
 			path = ViewModels;
@@ -298,6 +309,39 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		ECD2C1CA223F007100C421A7 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				ECD2C1CB223F008000C421A7 /* UsersViewController.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		ECD2C1CD223F00D700C421A7 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				ECD2C1CE223F00E800C421A7 /* UsersViewModel.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		ECD2C1D0223F017500C421A7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ECD2C1D3223F018B00C421A7 /* UserCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		ECD2C1D3223F018B00C421A7 /* UserCell */ = {
+			isa = PBXGroup;
+			children = (
+				ECD2C1D8223F01BF00C421A7 /* UserCell.swift */,
+				ECD2C1D9223F01BF00C421A7 /* UserCell.xib */,
+			);
+			path = UserCell;
+			sourceTree = "<group>";
+		};
 		ECDCC255222EB2B700DA9758 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				ECE1D8A92221AF4E009DE2A3 /* Montserrat-SemiBold.ttf */,
+				ECD2C1DC223F035700C421A7 /* Montserrat-Medium.ttf */,
 				EC2C85EE2222756800D113B5 /* Montserrat-Regular.ttf */,
 				EC2C85F02222787F00D113B5 /* Montserrat-Bold.ttf */,
 				ECE1D8A72221AD0B009DE2A3 /* Montserrat-ExtraBold.ttf */,
@@ -331,6 +376,7 @@
 		ECF190C3222745AD002D24EF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ECD2C1CA223F007100C421A7 /* Users */,
 				ECE1D8A52221A987009DE2A3 /* Onboarding */,
 				EC1B9AD522396B6F007B4113 /* BaseTabBarController.swift */,
 			);
@@ -340,6 +386,7 @@
 		ECF190C4222745FD002D24EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ECD2C1D0223F017500C421A7 /* Cells */,
 				ECF190C52227463C002D24EF /* RoundedTextField.swift */,
 				ECF190C72227E362002D24EF /* RoundedButton.swift */,
 			);
@@ -421,6 +468,8 @@
 				EC1B9AC922396A70007B4113 /* Events.storyboard in Resources */,
 				EC1B9AD422396AB3007B4113 /* Profile.storyboard in Resources */,
 				EC1B9AD222396AA5007B4113 /* Notifications.storyboard in Resources */,
+				ECD2C1DD223F035A00C421A7 /* Montserrat-Medium.ttf in Resources */,
+				ECD2C1DB223F01BF00C421A7 /* UserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,14 +574,17 @@
 				EC93F3D2222C834F00C4BB89 /* NetworkService.swift in Sources */,
 				EC76CA3B2235877900ADD1BE /* Storage.swift in Sources */,
 				ECF190C62227463C002D24EF /* RoundedTextField.swift in Sources */,
+				ECD2C1CC223F008000C421A7 /* UsersViewController.swift in Sources */,
 				EC2C85F322227A0400D113B5 /* LoginViewController.swift in Sources */,
 				EC93F3D6222C83B300C4BB89 /* AuthorizationService.swift in Sources */,
 				ECDCC257222EB2C400DA9758 /* AppError.swift in Sources */,
 				ECE1D8AC2221B054009DE2A3 /* OnboardingNavigationController.swift in Sources */,
+				ECD2C1DA223F01BF00C421A7 /* UserCell.swift in Sources */,
 				ECDCC252222EB07400DA9758 /* User.swift in Sources */,
 				EC76CA30223539D700ADD1BE /* ViewModelType.swift in Sources */,
 				EC93F3D4222C836D00C4BB89 /* NetworkExtension.swift in Sources */,
 				EC76CA3522353CA100ADD1BE /* UIViewController+HUD.swift in Sources */,
+				ECD2C1CF223F00E800C421A7 /* UsersViewModel.swift in Sources */,
 				EC93F3D8222C83BF00C4BB89 /* AuthorizationAPI.swift in Sources */,
 				EC76CA2E2235397400ADD1BE /* LoginViewModel.swift in Sources */,
 				EC76CA3722353E1000ADD1BE /* UIViewController+RxNavigation.swift in Sources */,
