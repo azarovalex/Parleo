@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17453954223F8F5400796A12 /* ItemsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1745394D223F8F5400796A12 /* ItemsListViewController.swift */; };
+		17453955223F8F5400796A12 /* ItemsListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1745394F223F8F5400796A12 /* ItemsListTableCell.swift */; };
+		17453956223F8F5400796A12 /* ItemsListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17453950223F8F5400796A12 /* ItemsListTableCell.xib */; };
+		17453957223F8F5400796A12 /* ItemsListTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17453951223F8F5400796A12 /* ItemsListTableCellViewModel.swift */; };
+		17453958223F8F5400796A12 /* ItemsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17453952223F8F5400796A12 /* ItemsListViewModel.swift */; };
+		1745395C223F8FA900796A12 /* StringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1745395A223F8FA800796A12 /* StringRepresentable.swift */; };
+		1745395D223F8FA900796A12 /* ImageRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1745395B223F8FA800796A12 /* ImageRepresentable.swift */; };
+		17453961223F8FCA00796A12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1745395F223F8FCA00796A12 /* ViewController.swift */; };
+		17453962223F8FCA00796A12 /* UnscrolableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17453960223F8FCA00796A12 /* UnscrolableTableView.swift */; };
+		17453964223F8FE600796A12 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17453963223F8FE600796A12 /* Colors.xcassets */; };
+		17453967223F909500796A12 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17453966223F909500796A12 /* UIView.swift */; };
+		17453969223F90E800796A12 /* ItemsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17453968223F90E800796A12 /* ItemsList.storyboard */; };
 		D503B02D6D652BDE472115AE /* Pods_Parleo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB326362162031AE8AFC21E5 /* Pods_Parleo.framework */; };
 		EC1B9AC922396A70007B4113 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1B9AC822396A70007B4113 /* Events.storyboard */; };
 		EC1B9ACC22396A85007B4113 /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1B9ACB22396A85007B4113 /* Users.storyboard */; };
@@ -46,6 +58,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1745394D223F8F5400796A12 /* ItemsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsListViewController.swift; sourceTree = "<group>"; };
+		1745394F223F8F5400796A12 /* ItemsListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsListTableCell.swift; sourceTree = "<group>"; };
+		17453950223F8F5400796A12 /* ItemsListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemsListTableCell.xib; sourceTree = "<group>"; };
+		17453951223F8F5400796A12 /* ItemsListTableCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsListTableCellViewModel.swift; sourceTree = "<group>"; };
+		17453952223F8F5400796A12 /* ItemsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsListViewModel.swift; sourceTree = "<group>"; };
+		1745395A223F8FA800796A12 /* StringRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringRepresentable.swift; sourceTree = "<group>"; };
+		1745395B223F8FA800796A12 /* ImageRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRepresentable.swift; sourceTree = "<group>"; };
+		1745395F223F8FCA00796A12 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17453960223F8FCA00796A12 /* UnscrolableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnscrolableTableView.swift; sourceTree = "<group>"; };
+		17453963223F8FE600796A12 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		17453966223F909500796A12 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		17453968223F90E800796A12 /* ItemsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ItemsList.storyboard; sourceTree = "<group>"; };
 		202752E7785D98F75A6A9345 /* Pods-Parleo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parleo.debug.xcconfig"; path = "Target Support Files/Pods-Parleo/Pods-Parleo.debug.xcconfig"; sourceTree = "<group>"; };
 		2B8D131903A6E9C27129821A /* Pods-Parleo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parleo.release.xcconfig"; path = "Target Support Files/Pods-Parleo/Pods-Parleo.release.xcconfig"; sourceTree = "<group>"; };
 		EC1B9AC822396A70007B4113 /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
@@ -100,6 +124,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1745394C223F8F5400796A12 /* ItemsList */ = {
+			isa = PBXGroup;
+			children = (
+				1745394E223F8F5400796A12 /* ItemsListCell */,
+				1745394D223F8F5400796A12 /* ItemsListViewController.swift */,
+				17453952223F8F5400796A12 /* ItemsListViewModel.swift */,
+			);
+			path = ItemsList;
+			sourceTree = "<group>";
+		};
+		1745394E223F8F5400796A12 /* ItemsListCell */ = {
+			isa = PBXGroup;
+			children = (
+				1745394F223F8F5400796A12 /* ItemsListTableCell.swift */,
+				17453950223F8F5400796A12 /* ItemsListTableCell.xib */,
+				17453951223F8F5400796A12 /* ItemsListTableCellViewModel.swift */,
+			);
+			path = ItemsListCell;
+			sourceTree = "<group>";
+		};
+		1745395E223F8FCA00796A12 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				1745395F223F8FCA00796A12 /* ViewController.swift */,
+				17453960223F8FCA00796A12 /* UnscrolableTableView.swift */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		17453965223F909500796A12 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				EC76CA3122353C3300ADD1BE /* UIViewController */,
+				17453966223F909500796A12 /* UIView.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		4DA7D8199F90915306C24272 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +270,7 @@
 				ECE1D8A62221ACA6009DE2A3 /* Fonts */,
 				EC863CC82220841500A49824 /* Storyboards */,
 				EC1B9AD722397103007B4113 /* Assets.xcassets */,
+				17453963223F8FE600796A12 /* Colors.xcassets */,
 				EC863CBB2220811A00A49824 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -219,6 +282,7 @@
 				EC1B9AC622396A37007B4113 /* Onboarding */,
 				EC863CB62220811800A49824 /* Main.storyboard */,
 				EC1B9AC822396A70007B4113 /* Events.storyboard */,
+				17453968223F90E800796A12 /* ItemsList.storyboard */,
 				EC1B9ACB22396A85007B4113 /* Users.storyboard */,
 				EC1B9ACE22396A97007B4113 /* Chats.storyboard */,
 				EC1B9AD122396AA5007B4113 /* Notifications.storyboard */,
@@ -238,6 +302,7 @@
 		EC93F3CA222C643C00C4BB89 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1745395E223F8FCA00796A12 /* BaseClasses */,
 				EC76CA392235876700ADD1BE /* Storages */,
 				ECDCC255222EB2B700DA9758 /* Protocols */,
 				EC93F3CC222C830200C4BB89 /* Network */,
@@ -268,7 +333,7 @@
 		EC93F3CD222C831100C4BB89 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				EC76CA3122353C3300ADD1BE /* UIViewController */,
+				17453965223F909500796A12 /* UIKit */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -303,6 +368,8 @@
 			children = (
 				ECDCC256222EB2C400DA9758 /* AppError.swift */,
 				EC76CA2F223539D700ADD1BE /* ViewModelType.swift */,
+				1745395B223F8FA800796A12 /* ImageRepresentable.swift */,
+				1745395A223F8FA800796A12 /* StringRepresentable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -340,6 +407,7 @@
 		ECF190C4222745FD002D24EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1745394C223F8F5400796A12 /* ItemsList */,
 				ECF190C52227463C002D24EF /* RoundedTextField.swift */,
 				ECF190C72227E362002D24EF /* RoundedButton.swift */,
 			);
@@ -410,6 +478,7 @@
 				EC1B9ACC22396A85007B4113 /* Users.storyboard in Resources */,
 				ECE1D8AA2221AF51009DE2A3 /* Montserrat-SemiBold.ttf in Resources */,
 				ECE1D8A82221AD23009DE2A3 /* Montserrat-ExtraBold.ttf in Resources */,
+				17453969223F90E800796A12 /* ItemsList.storyboard in Resources */,
 				EC2C85EF2222758600D113B5 /* Montserrat-Regular.ttf in Resources */,
 				EC1B9AD822397103007B4113 /* Assets.xcassets in Resources */,
 				EC863CBD2220811A00A49824 /* LaunchScreen.storyboard in Resources */,
@@ -418,7 +487,9 @@
 				EC863CB82220811800A49824 /* Main.storyboard in Resources */,
 				ECE1D8A42221A950009DE2A3 /* Onboarding.storyboard in Resources */,
 				ECF190C222274311002D24EF /* CreateAccount.storyboard in Resources */,
+				17453956223F8F5400796A12 /* ItemsListTableCell.xib in Resources */,
 				EC1B9AC922396A70007B4113 /* Events.storyboard in Resources */,
+				17453964223F8FE600796A12 /* Colors.xcassets in Resources */,
 				EC1B9AD422396AB3007B4113 /* Profile.storyboard in Resources */,
 				EC1B9AD222396AA5007B4113 /* Notifications.storyboard in Resources */,
 			);
@@ -527,15 +598,23 @@
 				ECF190C62227463C002D24EF /* RoundedTextField.swift in Sources */,
 				EC2C85F322227A0400D113B5 /* LoginViewController.swift in Sources */,
 				EC93F3D6222C83B300C4BB89 /* AuthorizationService.swift in Sources */,
+				1745395D223F8FA900796A12 /* ImageRepresentable.swift in Sources */,
+				17453954223F8F5400796A12 /* ItemsListViewController.swift in Sources */,
 				ECDCC257222EB2C400DA9758 /* AppError.swift in Sources */,
+				17453955223F8F5400796A12 /* ItemsListTableCell.swift in Sources */,
 				ECE1D8AC2221B054009DE2A3 /* OnboardingNavigationController.swift in Sources */,
 				ECDCC252222EB07400DA9758 /* User.swift in Sources */,
+				17453957223F8F5400796A12 /* ItemsListTableCellViewModel.swift in Sources */,
+				1745395C223F8FA900796A12 /* StringRepresentable.swift in Sources */,
+				17453962223F8FCA00796A12 /* UnscrolableTableView.swift in Sources */,
 				EC76CA30223539D700ADD1BE /* ViewModelType.swift in Sources */,
 				EC93F3D4222C836D00C4BB89 /* NetworkExtension.swift in Sources */,
+				17453967223F909500796A12 /* UIView.swift in Sources */,
 				EC76CA3522353CA100ADD1BE /* UIViewController+HUD.swift in Sources */,
 				EC93F3D8222C83BF00C4BB89 /* AuthorizationAPI.swift in Sources */,
 				EC76CA2E2235397400ADD1BE /* LoginViewModel.swift in Sources */,
 				EC76CA3722353E1000ADD1BE /* UIViewController+RxNavigation.swift in Sources */,
+				17453961223F8FCA00796A12 /* ViewController.swift in Sources */,
 				EC1B9AD622396B6F007B4113 /* BaseTabBarController.swift in Sources */,
 				ECF190C82227E362002D24EF /* RoundedButton.swift in Sources */,
 				EC863CB12220811800A49824 /* AppDelegate.swift in Sources */,
@@ -543,6 +622,7 @@
 				ECE1D8AE2221B5ED009DE2A3 /* StartupViewController.swift in Sources */,
 				EC76CA3322353C4500ADD1BE /* UIViewController+ErrorAlert.swift in Sources */,
 				ECE1D8A22221A5DC009DE2A3 /* R.generated.swift in Sources */,
+				17453958223F8F5400796A12 /* ItemsListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,7 +770,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CLALR9F4Q5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Parleo/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -709,7 +789,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CLALR9F4Q5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Parleo/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
