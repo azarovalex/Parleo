@@ -1,4 +1,7 @@
 PODS:
+  - Action (3.11.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
   - Alamofire (4.8.1)
   - IQKeyboardManagerSwift (6.2.0)
   - Kingfisher (5.1.1)
@@ -37,6 +40,7 @@ PODS:
     - SegueManager/iOS
 
 DEPENDENCIES:
+  - Action
   - IQKeyboardManagerSwift
   - Kingfisher
   - Moya/RxSwift (~> 12.0)
@@ -50,6 +54,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Action
     - Alamofire
     - IQKeyboardManagerSwift
     - Kingfisher
@@ -66,6 +71,7 @@ SPEC REPOS:
     - SegueManager
 
 SPEC CHECKSUMS:
+  Action: 689181e4c3f6566844178d8a7da6fef39a9597fc
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
   Kingfisher: 2558186963e5be42d98c5b110ccb3130148b77e4
@@ -81,6 +87,6 @@ SPEC CHECKSUMS:
   RxSwiftExt: 01f8ecbeeb355698e9c75365ebe908b00dacf45d
   SegueManager: e4970e6f7150c81ec577e0b61d9fda3f27c11db5
 
-PODFILE CHECKSUM: 727a1ac547d5c5cda1f3831dad3855c0277322e2
+PODFILE CHECKSUM: 0236e8d759e5fa31cc08d4bb8ab1a661f093e404
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.6.1

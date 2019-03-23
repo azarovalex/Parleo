@@ -6,38 +6,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="qIh-v8-bTX">
-            <objects>
-                <tableViewController id="FpG-gY-9Nj" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BOG-vb-PYf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0sX-XB-eTS">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0sX-XB-eTS" id="nuI-Nt-ffw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="FpG-gY-9Nj" id="WeP-dZ-iKj"/>
-                            <outlet property="delegate" destination="FpG-gY-9Nj" id="KLX-3E-8in"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="VPR-cf-Fh1"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZWH-dI-f4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="42" y="135"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="m5L-Mu-g15">
             <objects>
@@ -51,12 +23,28 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="FpG-gY-9Nj" kind="relationship" relationship="rootViewController" id="Ffy-xY-8p8"/>
+                        <segue destination="Irt-RZ-rBn" kind="relationship" relationship="rootViewController" id="0Av-8i-eI2"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwI-6L-zrC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-910" y="135"/>
+        </scene>
+        <!--Chats-->
+        <scene sceneID="0Ht-J4-2Wl">
+            <objects>
+                <viewController id="Irt-RZ-rBn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n6U-Ya-6GL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RP7-Sw-S8c"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chats" id="uMM-P0-GSH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6WA-C8-Lqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="134"/>
         </scene>
     </scenes>
     <resources>

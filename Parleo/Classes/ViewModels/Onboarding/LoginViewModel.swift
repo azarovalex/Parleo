@@ -8,11 +8,10 @@
 
 import RxSwift
 import RxCocoa
+import Action
 
 class LoginViewModel: ViewModelType {
 
-    private let isLoadingRelay = BehaviorRelay<Bool>(value: false)
-    private let errorsRelay = PublishRelay<Error>()
     private let authorizationService = AuthorizationService(mockType: .delayed(1))
 
     struct Input {
@@ -22,45 +21,46 @@ class LoginViewModel: ViewModelType {
     }
 
     struct Output {
+        let loginAction: CocoaAction
         let loggedIn: Signal<Void>
         let error: Signal<Error>
         let isLoading: Driver<Bool>
-        let isLoginButtonEnabled: Driver<Bool>
     }
 
     func transform(input: Input) -> Output {
-        let isLoginButtonEnabled = Driver.combineLatest(input.email, input.password) { $0 != "" && $1 != "" }
-        let loggedIn = getLoggedInSignal(input: input)
+        let action = getLoginAction(input: input)
+        let loggedIn = action.elements.asSignal(onErrorSignalWith: .never())
+        let errors = action.underlyingError.asSignal(onErrorSignalWith: .never())
+        let isLoading = action.executing.asDriver(onErrorDriveWith: .never())
 
-        return Output(loggedIn: loggedIn,
-                      error: errorsRelay.asSignal(),
-                      isLoading: isLoadingRelay.asDriver(),
-                      isLoginButtonEnabled: isLoginButtonEnabled)
+        return Output(loginAction: action, loggedIn: loggedIn, error: errors, isLoading: isLoading)
     }
 }
 
 // MARK: - Private
 private extension LoginViewModel {
 
-    func getLoggedInSignal(input: Input) -> Signal<Void> {
-        let usernameAndPassword = Driver.combineLatest(input.email, input.password) { (email: $0, password: $1) }
+    typealias LoginInfo = (email: String, password: String)
 
-        return input.loginButtonTap
-            .withLatestFrom(usernameAndPassword)
-            .do { [weak self] in self?.isLoadingRelay.accept(true) }
-            .flatMap { pair in
-                self.authorizationService.logIn(with: pair.email, password: pair.password)
-                    .do { [weak self] in self?.isLoadingRelay.accept(false) }
-                    .flatMap { result in
-                        switch result {
-                        case .success(let user):
-                            Storage.shared.currentUser = user
-                            return .just(())
-                        case .failure(let error):
-                            return .error(error)
-                        } }
-                    .asSignal(onErrorRecover: { error in
-                        self.errorsRelay.accept(error)
-                        return .never() }) }
+    func getLoginAction(input: Input) -> CocoaAction {
+        let usernameAndPassword = Driver.combineLatest(input.email, input.password) { (email: $0, password: $1) }.asObservable()
+        let enabledIf = Driver.combineLatest(input.email, input.password) { $0 != "" && $1 != "" }.asObservable()
+
+        return CocoaAction(enabledIf: enabledIf, workFactory: { _ -> Observable<Void> in
+            usernameAndPassword.flatMap { [unowned self] info in self.login(with: info) }
+        })
+    }
+
+    func login(with info: LoginInfo) -> Observable<Void> {
+        return self.authorizationService.logIn(with: info.email, password: info.password)
+            .flatMap { result in
+                switch result {
+                case .success(let user):
+                    Storage.shared.currentUser = user
+                    return .just(())
+                case .failure(let error):
+                    return .error(error)
+                } }
+            .asObservable()
     }
 }

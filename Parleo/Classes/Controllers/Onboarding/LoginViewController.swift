@@ -39,17 +39,15 @@ private extension LoginViewController {
                                          loginButtonTap: loginButton.rx.tap.asSignal())
         let output = viewModel.transform(input: input)
 
+        loginButton.rx.action = output.loginAction
         output.error.emit(to: rx.error).disposed(by: bag)
         output.isLoading.drive(rx.isLoading).disposed(by: bag)
-        output.isLoginButtonEnabled
-            .drive(onNext: { [weak self] isEnabled in
-                self?.loginButton.isEnabled = isEnabled
-                self?.loginButton.alpha = isEnabled ? 1 : 0.5
-            })
+        output.loginAction.enabled
+            .map { $0 ? 1 : 0.7 }
+            .bind(to: loginButton.rx.alpha)
             .disposed(by: bag)
-
         output.loggedIn
-            .emit(to: rx.navigate(with: R.segue.loginViewController.fromLoginToMain))
-            .disposed(by: bag)
+            .emit(onNext: { UIApplication.shared.keyWindow?.rootViewController = R.storyboard.main.instantiateInitialViewController()!
+            }).disposed(by: bag)
     }
 }

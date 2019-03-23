@@ -9,6 +9,7 @@ target 'Parleo' do
   pod 'RxSwift', '~> 4.0'
   pod 'RxCocoa', '~> 4.0'
   pod 'RxSwiftExt'
+  pod 'Action'
 
   # Pods for UI
   pod 'PKHUD', '~> 5.0'
