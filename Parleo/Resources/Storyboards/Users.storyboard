@@ -33,8 +33,12 @@
                         <viewLayoutGuide key="safeArea" id="R0P-oQ-OvM"/>
                     </view>
                     <navigationItem key="navigationItem" title="Users" id="tNa-X6-Jah">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="EzB-vS-xEp"/>
                         <barButtonItem key="rightBarButtonItem" image="filterIcon" id="p2e-k6-Z8n">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="Ebw-5o-2T2" kind="show" id="rDc-k7-uWP"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -44,6 +48,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ec8-ZM-dzv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="160.80000000000001" y="170.46476761619192"/>
+        </scene>
+        <!--Filter-->
+        <scene sceneID="9rg-Qe-SPM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Filter" id="Ebw-5o-2T2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hH5-mE-AOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="837" y="95"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DIs-LN-NGi">
@@ -70,4 +82,5 @@
         <image name="filterIcon" width="24" height="24"/>
         <image name="tabBarUsersIcon" width="31" height="23"/>
     </resources>
+    <color key="tintColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

@@ -31,6 +31,20 @@
 		EC93F3D4222C836D00C4BB89 /* NetworkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D3222C836D00C4BB89 /* NetworkExtension.swift */; };
 		EC93F3D6222C83B300C4BB89 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D5222C83B300C4BB89 /* AuthorizationService.swift */; };
 		EC93F3D8222C83BF00C4BB89 /* AuthorizationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D7222C83BF00C4BB89 /* AuthorizationAPI.swift */; };
+		ECC961502246BC3100E4D4C1 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC9614F2246BC3100E4D4C1 /* Filter.storyboard */; };
+		ECC961522246BD9700E4D4C1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC961512246BD9700E4D4C1 /* Colors.xcassets */; };
+		ECC961552246C42B00E4D4C1 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC961542246C42B00E4D4C1 /* FilterViewController.swift */; };
+		ECC961572246C46300E4D4C1 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC961562246C46300E4D4C1 /* FilterViewModel.swift */; };
+		ECC9615C2246C5F300E4D4C1 /* CheckboxesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9615A2246C5F300E4D4C1 /* CheckboxesCell.swift */; };
+		ECC9615D2246C5F300E4D4C1 /* CheckboxesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC9615B2246C5F300E4D4C1 /* CheckboxesCell.xib */; };
+		ECC961602246CA5900E4D4C1 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9615F2246CA5900E4D4C1 /* CheckboxView.swift */; };
+		ECC961622246CA6800E4D4C1 /* CheckboxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC961612246CA6800E4D4C1 /* CheckboxView.xib */; };
+		ECC961642246CB3E00E4D4C1 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC961632246CB3E00E4D4C1 /* NibLoadable.swift */; };
+		ECC9616A2246E1DC00E4D4C1 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC961682246E1DC00E4D4C1 /* SliderCell.swift */; };
+		ECC9616B2246E1DC00E4D4C1 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC961692246E1DC00E4D4C1 /* SliderCell.xib */; };
+		ECC9616D224778C500E4D4C1 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9616C224778C500E4D4C1 /* RangeSlider.swift */; };
+		ECC9617022478E3300E4D4C1 /* FilterCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9616F22478E3300E4D4C1 /* FilterCellConfigurator.swift */; };
+		ECC9617422478F5200E4D4C1 /* TapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9617322478F5200E4D4C1 /* TapticEngine.swift */; };
 		ECD2C1CC223F008000C421A7 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2C1CB223F008000C421A7 /* UsersViewController.swift */; };
 		ECD2C1CF223F00E800C421A7 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2C1CE223F00E800C421A7 /* UsersViewModel.swift */; };
 		ECD2C1DA223F01BF00C421A7 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2C1D8223F01BF00C421A7 /* UserCell.swift */; };
@@ -78,6 +92,20 @@
 		EC93F3D3222C836D00C4BB89 /* NetworkExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkExtension.swift; sourceTree = "<group>"; };
 		EC93F3D5222C83B300C4BB89 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		EC93F3D7222C83BF00C4BB89 /* AuthorizationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAPI.swift; sourceTree = "<group>"; };
+		ECC9614F2246BC3100E4D4C1 /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
+		ECC961512246BD9700E4D4C1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		ECC961542246C42B00E4D4C1 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		ECC961562246C46300E4D4C1 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		ECC9615A2246C5F300E4D4C1 /* CheckboxesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxesCell.swift; sourceTree = "<group>"; };
+		ECC9615B2246C5F300E4D4C1 /* CheckboxesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckboxesCell.xib; sourceTree = "<group>"; };
+		ECC9615F2246CA5900E4D4C1 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
+		ECC961612246CA6800E4D4C1 /* CheckboxView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckboxView.xib; sourceTree = "<group>"; };
+		ECC961632246CB3E00E4D4C1 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		ECC961682246E1DC00E4D4C1 /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
+		ECC961692246E1DC00E4D4C1 /* SliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
+		ECC9616C224778C500E4D4C1 /* RangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
+		ECC9616F22478E3300E4D4C1 /* FilterCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCellConfigurator.swift; sourceTree = "<group>"; };
+		ECC9617322478F5200E4D4C1 /* TapticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapticEngine.swift; sourceTree = "<group>"; };
 		ECD2C1CB223F008000C421A7 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		ECD2C1CE223F00E800C421A7 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		ECD2C1D8223F01BF00C421A7 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -218,6 +246,7 @@
 				ECE1D8A62221ACA6009DE2A3 /* Fonts */,
 				EC863CC82220841500A49824 /* Storyboards */,
 				EC1B9AD722397103007B4113 /* Assets.xcassets */,
+				ECC961512246BD9700E4D4C1 /* Colors.xcassets */,
 				EC863CBB2220811A00A49824 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -233,6 +262,7 @@
 				EC1B9ACE22396A97007B4113 /* Chats.storyboard */,
 				EC1B9AD122396AA5007B4113 /* Notifications.storyboard */,
 				EC1B9AD322396AB3007B4113 /* Profile.storyboard */,
+				ECC9614F2246BC3100E4D4C1 /* Filter.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -242,6 +272,7 @@
 			children = (
 				ECD2C1CD223F00D700C421A7 /* Users */,
 				EC76CA2C2235395E00ADD1BE /* Onboarding */,
+				ECC961562246C46300E4D4C1 /* FilterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -249,6 +280,8 @@
 		EC93F3CA222C643C00C4BB89 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				ECC9617222478F3500E4D4C1 /* Helpers */,
+				ECC9616E22478E1500E4D4C1 /* CellConfigurators */,
 				EC76CA392235876700ADD1BE /* Storages */,
 				ECDCC255222EB2B700DA9758 /* Protocols */,
 				EC93F3CC222C830200C4BB89 /* Network */,
@@ -309,6 +342,76 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		ECC961532246C41B00E4D4C1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EC1B9AD522396B6F007B4113 /* BaseTabBarController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		ECC961582246C5B200E4D4C1 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				ECC9617522482DC700E4D4C1 /* LanguagesCell */,
+				ECC961652246E1A600E4D4C1 /* SliderCell */,
+				ECC961592246C5CD00E4D4C1 /* CheckboxesCell */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		ECC961592246C5CD00E4D4C1 /* CheckboxesCell */ = {
+			isa = PBXGroup;
+			children = (
+				ECC9615E2246CA3900E4D4C1 /* CheckboxView */,
+				ECC9615A2246C5F300E4D4C1 /* CheckboxesCell.swift */,
+				ECC9615B2246C5F300E4D4C1 /* CheckboxesCell.xib */,
+			);
+			path = CheckboxesCell;
+			sourceTree = "<group>";
+		};
+		ECC9615E2246CA3900E4D4C1 /* CheckboxView */ = {
+			isa = PBXGroup;
+			children = (
+				ECC9615F2246CA5900E4D4C1 /* CheckboxView.swift */,
+				ECC961612246CA6800E4D4C1 /* CheckboxView.xib */,
+			);
+			path = CheckboxView;
+			sourceTree = "<group>";
+		};
+		ECC961652246E1A600E4D4C1 /* SliderCell */ = {
+			isa = PBXGroup;
+			children = (
+				ECC961682246E1DC00E4D4C1 /* SliderCell.swift */,
+				ECC9616C224778C500E4D4C1 /* RangeSlider.swift */,
+				ECC961692246E1DC00E4D4C1 /* SliderCell.xib */,
+			);
+			path = SliderCell;
+			sourceTree = "<group>";
+		};
+		ECC9616E22478E1500E4D4C1 /* CellConfigurators */ = {
+			isa = PBXGroup;
+			children = (
+				ECC9616F22478E3300E4D4C1 /* FilterCellConfigurator.swift */,
+			);
+			path = CellConfigurators;
+			sourceTree = "<group>";
+		};
+		ECC9617222478F3500E4D4C1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ECC9617322478F5200E4D4C1 /* TapticEngine.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		ECC9617522482DC700E4D4C1 /* LanguagesCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LanguagesCell;
+			sourceTree = "<group>";
+		};
 		ECD2C1CA223F007100C421A7 /* Users */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +431,7 @@
 		ECD2C1D0223F017500C421A7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				ECC961582246C5B200E4D4C1 /* Filter */,
 				ECD2C1D3223F018B00C421A7 /* UserCell */,
 			);
 			path = Cells;
@@ -347,6 +451,7 @@
 			children = (
 				ECDCC256222EB2C400DA9758 /* AppError.swift */,
 				EC76CA2F223539D700ADD1BE /* ViewModelType.swift */,
+				ECC961632246CB3E00E4D4C1 /* NibLoadable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -376,9 +481,10 @@
 		ECF190C3222745AD002D24EF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ECC961532246C41B00E4D4C1 /* Base */,
 				ECD2C1CA223F007100C421A7 /* Users */,
 				ECE1D8A52221A987009DE2A3 /* Onboarding */,
-				EC1B9AD522396B6F007B4113 /* BaseTabBarController.swift */,
+				ECC961542246C42B00E4D4C1 /* FilterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -457,19 +563,24 @@
 				EC1B9ACC22396A85007B4113 /* Users.storyboard in Resources */,
 				ECE1D8AA2221AF51009DE2A3 /* Montserrat-SemiBold.ttf in Resources */,
 				ECE1D8A82221AD23009DE2A3 /* Montserrat-ExtraBold.ttf in Resources */,
+				ECC9616B2246E1DC00E4D4C1 /* SliderCell.xib in Resources */,
 				EC2C85EF2222758600D113B5 /* Montserrat-Regular.ttf in Resources */,
 				EC1B9AD822397103007B4113 /* Assets.xcassets in Resources */,
 				EC863CBD2220811A00A49824 /* LaunchScreen.storyboard in Resources */,
 				EC2C85F12222788100D113B5 /* Montserrat-Bold.ttf in Resources */,
 				EC1B9ACF22396A97007B4113 /* Chats.storyboard in Resources */,
 				EC863CB82220811800A49824 /* Main.storyboard in Resources */,
+				ECC961522246BD9700E4D4C1 /* Colors.xcassets in Resources */,
 				ECE1D8A42221A950009DE2A3 /* Onboarding.storyboard in Resources */,
 				ECF190C222274311002D24EF /* CreateAccount.storyboard in Resources */,
 				EC1B9AC922396A70007B4113 /* Events.storyboard in Resources */,
 				EC1B9AD422396AB3007B4113 /* Profile.storyboard in Resources */,
+				ECC961502246BC3100E4D4C1 /* Filter.storyboard in Resources */,
 				EC1B9AD222396AA5007B4113 /* Notifications.storyboard in Resources */,
+				ECC9615D2246C5F300E4D4C1 /* CheckboxesCell.xib in Resources */,
 				ECD2C1DD223F035A00C421A7 /* Montserrat-Medium.ttf in Resources */,
 				ECD2C1DB223F01BF00C421A7 /* UserCell.xib in Resources */,
+				ECC961622246CA6800E4D4C1 /* CheckboxView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,7 +671,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/Parleo/Application/R.generated.swift",
+				$SRCROOT/Parleo/Application/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -579,19 +690,28 @@
 				ECD2C1CC223F008000C421A7 /* UsersViewController.swift in Sources */,
 				EC2C85F322227A0400D113B5 /* LoginViewController.swift in Sources */,
 				EC93F3D6222C83B300C4BB89 /* AuthorizationService.swift in Sources */,
+				ECC9615C2246C5F300E4D4C1 /* CheckboxesCell.swift in Sources */,
 				ECDCC257222EB2C400DA9758 /* AppError.swift in Sources */,
 				ECE1D8AC2221B054009DE2A3 /* OnboardingNavigationController.swift in Sources */,
 				ECD2C1DA223F01BF00C421A7 /* UserCell.swift in Sources */,
 				ECDCC252222EB07400DA9758 /* User.swift in Sources */,
+				ECC961602246CA5900E4D4C1 /* CheckboxView.swift in Sources */,
 				EC76CA30223539D700ADD1BE /* ViewModelType.swift in Sources */,
+				ECC9617422478F5200E4D4C1 /* TapticEngine.swift in Sources */,
 				EC93F3D4222C836D00C4BB89 /* NetworkExtension.swift in Sources */,
 				EC76CA3522353CA100ADD1BE /* UIViewController+HUD.swift in Sources */,
 				ECD2C1CF223F00E800C421A7 /* UsersViewModel.swift in Sources */,
+				ECC9617022478E3300E4D4C1 /* FilterCellConfigurator.swift in Sources */,
+				ECC9616A2246E1DC00E4D4C1 /* SliderCell.swift in Sources */,
 				EC93F3D8222C83BF00C4BB89 /* AuthorizationAPI.swift in Sources */,
 				EC76CA2E2235397400ADD1BE /* LoginViewModel.swift in Sources */,
+				ECC961572246C46300E4D4C1 /* FilterViewModel.swift in Sources */,
+				ECC961642246CB3E00E4D4C1 /* NibLoadable.swift in Sources */,
+				ECC9616D224778C500E4D4C1 /* RangeSlider.swift in Sources */,
 				EC76CA3722353E1000ADD1BE /* UIViewController+RxNavigation.swift in Sources */,
 				EC1B9AD622396B6F007B4113 /* BaseTabBarController.swift in Sources */,
 				ECF190C82227E362002D24EF /* RoundedButton.swift in Sources */,
+				ECC961552246C42B00E4D4C1 /* FilterViewController.swift in Sources */,
 				EC863CB12220811800A49824 /* AppDelegate.swift in Sources */,
 				ECDCC254222EB0D000DA9758 /* Credentials.swift in Sources */,
 				ECE1D8AE2221B5ED009DE2A3 /* StartupViewController.swift in Sources */,
