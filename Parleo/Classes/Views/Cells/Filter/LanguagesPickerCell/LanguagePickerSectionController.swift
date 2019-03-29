@@ -20,16 +20,16 @@ class LanguagePickerSectionController: ListSectionController {
 
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         let cell = collectionContext!.dequeueReusableCell(withNibName: R.nib.languagesPickerCell.name, bundle: R.nib.languagesPickerCell.bundle, for: self, at: index) as! LanguagesPickerCell
-        cell.configure(with: model, updateLayoutAction: { [unowned self] in
-            self.collectionContext!.invalidateLayout(for: self)
-            self.numberOfLanguages += 1
+        cell.configure(with: model, updateLayoutAction: { [unowned self] change in
+            self.numberOfLanguages += change
+            UIView.performWithoutAnimation { self.collectionContext!.invalidateLayout(for: self) }
         })
         return cell
     }
 
     override func didUpdate(to object: Any) {
         self.model = (object as! LanguagePickerModel)
-        numberOfLanguages = model.languages.count + 1
+        numberOfLanguages = model.languages.count
     }
 }
 

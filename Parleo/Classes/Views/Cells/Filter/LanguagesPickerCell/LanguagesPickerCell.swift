@@ -33,7 +33,7 @@ class LanguagesPickerCell: UICollectionViewCell {
     @IBOutlet private var stackView: UIStackView!
     @IBOutlet private var addMoreView: UIView!
 
-    private var updateLayoutAction: () -> Void = { }
+    private var updateLayoutAction: (Int) -> Void = { _ in }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,14 +47,16 @@ class LanguagesPickerCell: UICollectionViewCell {
         stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
     }
 
-    func configure(with model: LanguagePickerModel, updateLayoutAction: @escaping () -> Void) {
-        model.languages.forEach { _ in
-            stackView.insertArrangedSubview(LanguageInPicker(), at: stackView.arrangedSubviews.count - 1) }
+    func configure(with model: LanguagePickerModel, updateLayoutAction: @escaping (Int) -> Void) {
         self.updateLayoutAction = updateLayoutAction
+        model.languages.forEach { _ in addMore() }
     }
 
     @objc private func addMore() {
-        stackView.insertArrangedSubview(LanguageInPicker(), at: self.stackView.subviews.count - 1)
-        updateLayoutAction()
+        let view = LanguageInPicker(removeAction: { [weak self] in self?.updateLayoutAction(-1) })
+        view.alpha = 0
+        updateLayoutAction(+1)
+        stackView.insertArrangedSubview(view, at: self.stackView.subviews.count - 1)
+        UIView.animate(withDuration: 0.4, animations: { view.alpha = 1 })
     }
 }

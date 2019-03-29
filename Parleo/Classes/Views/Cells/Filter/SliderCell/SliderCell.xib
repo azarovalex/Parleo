@@ -35,9 +35,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fO1-Rl-Bvh" customClass="RangeSlider" customModule="Parleo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="50" width="321" height="44"/>
+                                <rect key="frame" x="20" y="50" width="321" height="54"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.15312500000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="Akg-3q-QAL"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="minValue">
                                         <real key="value" value="16"/>
@@ -93,7 +96,7 @@
                             <constraint firstAttribute="trailing" secondItem="2WW-ad-5wz" secondAttribute="trailing" constant="20" id="Mf6-HZ-g3X"/>
                             <constraint firstItem="2WW-ad-5wz" firstAttribute="leading" secondItem="qek-fV-6de" secondAttribute="leading" constant="20" id="PeP-pd-Xkm"/>
                             <constraint firstItem="fO1-Rl-Bvh" firstAttribute="top" secondItem="2WW-ad-5wz" secondAttribute="bottom" constant="8" id="f1Q-I9-3hL"/>
-                            <constraint firstAttribute="bottom" secondItem="fO1-Rl-Bvh" secondAttribute="bottom" constant="20" id="hww-e3-pwD"/>
+                            <constraint firstAttribute="bottom" secondItem="fO1-Rl-Bvh" secondAttribute="bottom" constant="10" id="hww-e3-pwD"/>
                             <constraint firstItem="fO1-Rl-Bvh" firstAttribute="leading" secondItem="2WW-ad-5wz" secondAttribute="leading" id="og2-AX-4cM"/>
                             <constraint firstItem="fO1-Rl-Bvh" firstAttribute="trailing" secondItem="2WW-ad-5wz" secondAttribute="trailing" id="qCU-tW-4HQ"/>
                         </constraints>
