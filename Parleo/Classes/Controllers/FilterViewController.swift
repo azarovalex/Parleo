@@ -9,16 +9,33 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import IGListKit
 
 class FilterViewController: UIViewController {
 
-    enum CellType {
-        case checkboxes(model: CheckboxCellModel)
-        case rangeSlider(model: SliderCellModel)
-        case languagePicker
+    private lazy var adapter = ListAdapter(updater: ListAdapterUpdater(), viewController: self)
+
+    enum ScreenConfiguration {
+        case filterUsers
+        case filterEvents
+
+        var cells: [ListDiffable] {
+            switch self {
+            case .filterEvents:
+                return []
+            case .filterUsers:
+                return [
+                    CheckboxCellModel(title: "Gender", items: ["Female", "Male"]),
+                    SliderCellModel(title: "Age", minValue: 16, maxValue: 65, step: 1),
+                    LanguagePickerModel(languages: [])
+                ]
+            }
+        }
     }
 
-    @IBOutlet private var tableView: UITableView!
+    @IBOutlet private var collectionView: UICollectionView!
+
+    var screenConfiguration: ScreenConfiguration!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,24 +48,28 @@ class FilterViewController: UIViewController {
 private extension FilterViewController {
 
     func setup() {
-        tableView.register(R.nib.checkboxesCell)
-        tableView.register(R.nib.sliderCell)
-        Driver<[CellType]>.just([
-            .checkboxes(model: CheckboxCellModel(title: "Gender", items: ["Male", "Female", "Apache Helicopter"])),
-            .rangeSlider(model: SliderCellModel(title: "Age", minValue: 16, maxValue: 65, step: 1))
-            ]).drive(tableView.rx.items) { _, row, cellType in
-                switch cellType {
-                case .checkboxes(let model):
-                    let cell = self.tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.checkboxesCell, for: IndexPath(row: row, section: 0))!
-                    cell.configure(with: model)
-                    return cell
-                case .rangeSlider(let model):
-                    let cell = self.tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.sliderCell, for: IndexPath(row: row, section: 0))!
-                    cell.configure(with: model)
-                    return cell
-                default:
-                    return UITableViewCell()
-                }
+        adapter.collectionView = collectionView
+        adapter.dataSource = self
+
+    }
+}
+
+// MARK: - ListAdapterDataSource
+extension FilterViewController: ListAdapterDataSource {
+
+
+
+    func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        return screenConfiguration.cells
+    }
+
+    func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        switch object {
+        case is CheckboxCellModel: return CheckboxSectionController()
+        case is SliderCellModel: return SliderSectionController()
+        default: return LanguagePickerSectionController()
         }
     }
+
+    func emptyView(for listAdapter: ListAdapter) -> UIView? { return nil }
 }

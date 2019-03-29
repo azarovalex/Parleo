@@ -1,3 +1,4 @@
+inhibit_all_warnings!
 target 'Parleo' do
   use_frameworks!
 
@@ -15,6 +16,7 @@ target 'Parleo' do
   pod 'PKHUD', '~> 5.0'
   pod 'Kingfisher'
   pod 'IQKeyboardManagerSwift'
+  pod 'IGListKit', '~> 3.0'
 
   # Common
   pod 'R.swift'

@@ -7,15 +7,36 @@
 //
 
 import UIKit
+import IGListKit
 
-struct SliderCellModel {
+class SliderCellModel: ListDiffable {
+
     let title: String
     let minValue: Double
     let maxValue: Double
     let step: Double
+
+    init(title: String, minValue: Double, maxValue: Double, step: Double) {
+        self.title = title
+        self.minValue = minValue
+        self.maxValue = maxValue
+        self.step = step
+    }
+
+    // MARK: ListDiffable
+
+    func diffIdentifier() -> NSObjectProtocol {
+        return title as NSObjectProtocol
+    }
+
+    func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        guard self !== object else { return true }
+        guard let object = object as? SliderCellModel else { return false }
+        return title == object.title
+    }
 }
 
-class SliderCell: UITableViewCell {
+class SliderCell: UICollectionViewCell {
 
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var rangeSlider: RangeSlider!

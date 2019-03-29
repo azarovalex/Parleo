@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NA0-lV-n9g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NA0-lV-n9g">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,17 +19,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qdb-0B-5Wz">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sFi-xa-QzH">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tm5-k0-aOU">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qdb-0B-5Wz" firstAttribute="trailing" secondItem="QfE-Sl-TF1" secondAttribute="trailing" id="DRz-lE-o9U"/>
-                            <constraint firstItem="qdb-0B-5Wz" firstAttribute="top" secondItem="QfE-Sl-TF1" secondAttribute="top" id="kNv-k5-XDj"/>
-                            <constraint firstItem="qdb-0B-5Wz" firstAttribute="leading" secondItem="QfE-Sl-TF1" secondAttribute="leading" id="vNo-3S-B2G"/>
-                            <constraint firstItem="qdb-0B-5Wz" firstAttribute="bottom" secondItem="QfE-Sl-TF1" secondAttribute="bottom" id="xqS-YI-o3f"/>
+                            <constraint firstItem="sFi-xa-QzH" firstAttribute="top" secondItem="QfE-Sl-TF1" secondAttribute="top" id="7Dh-fv-Ir5"/>
+                            <constraint firstItem="QfE-Sl-TF1" firstAttribute="trailing" secondItem="sFi-xa-QzH" secondAttribute="trailing" id="NcV-0p-Ejq"/>
+                            <constraint firstItem="sFi-xa-QzH" firstAttribute="leading" secondItem="QfE-Sl-TF1" secondAttribute="leading" id="dZb-HS-HS9"/>
+                            <constraint firstItem="QfE-Sl-TF1" firstAttribute="bottom" secondItem="sFi-xa-QzH" secondAttribute="bottom" id="oc3-IM-NGR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QfE-Sl-TF1"/>
                     </view>
@@ -40,7 +47,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="tableView" destination="qdb-0B-5Wz" id="k04-kL-YT6"/>
+                        <outlet property="collectionView" destination="sFi-xa-QzH" id="rfP-VU-Res"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AiW-c5-GUs" userLabel="First Responder" sceneMemberID="firstResponder"/>

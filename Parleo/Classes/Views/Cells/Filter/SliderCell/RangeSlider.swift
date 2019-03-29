@@ -150,9 +150,6 @@ class RangeSlider: UIControl {
         }
     }
 
-    /// Selected handle diameter multiplier (default 1.7)
-    @IBInspectable var selectedHandleDiameterMultiplier: CGFloat = 1.7
-
     /// Set the slider line height (default 1.0)
     @IBInspectable var lineHeight: CGFloat = 1.0 {
         didSet {
@@ -584,28 +581,6 @@ class RangeSlider: UIControl {
             previousStepMaxValue = selectedMaxValue
         }
 
-//        let diff: CGFloat = selectedMaxValue - selectedMinValue
-
-//        if diff < minDistance {
-//            switch handleTracking {
-//            case .left:
-//                selectedMinValue = selectedMaxValue - minDistance
-//            case .right:
-//                selectedMaxValue = selectedMinValue + minDistance
-//            case .none:
-//                break
-//            }
-//        } else if diff > maxDistance {
-//            switch handleTracking {
-//            case .left:
-//                selectedMinValue = selectedMaxValue - maxDistance
-//            case .right:
-//                selectedMaxValue = selectedMinValue + maxDistance
-//            case .none:
-//                break
-//            }
-//        }
-
         // ensure the minimum and maximum selected values are within range. Access the values directly so we don't cause this refresh method to be called again (otherwise changing the properties causes a refresh)
         if selectedMinValue < minValue {
             selectedMinValue = minValue
@@ -624,25 +599,13 @@ class RangeSlider: UIControl {
         updateLabelValues()
         updateColors()
         updateAccessibilityElements()
-
-        // update the delegate
-//        if let delegate = delegate, handleTracking != .none {
-//            delegate.rangeSeekSlider(self, didChange: selectedMinValue, maxValue: selectedMaxValue)
-//        }
     }
 
     private func animate(handle: CALayer, selected: Bool) {
-        let transform: CATransform3D
-        if selected {
-            transform = CATransform3DMakeScale(selectedHandleDiameterMultiplier, selectedHandleDiameterMultiplier, 1.0)
-        } else {
-            transform = CATransform3DIdentity
-        }
 
         CATransaction.begin()
         CATransaction.setAnimationDuration(0.3)
         CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: .easeInEaseOut))
-        handle.transform = transform
 
         // the label above the handle will need to move too if the handle changes size
         updateLabelPositions()

@@ -25,7 +25,7 @@ class CheckboxView: UIView, NibLoadable {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError()
+        fatalError("init(coder:) has not been implemented")
     }
 
     @IBAction func toggle(_ sender: Any) {

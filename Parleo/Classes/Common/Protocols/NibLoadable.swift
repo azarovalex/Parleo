@@ -30,8 +30,8 @@ extension NibLoadable where Self: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(view)
         let views = ["view": view]
-        let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[view]-0-|", options: .alignAllLastBaseline, metrics: nil, views: views)
-        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[view]-0-|", options: .alignAllLastBaseline, metrics: nil, views: views)
+        let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: .alignAllLastBaseline, metrics: nil, views: views)
+        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: .alignAllLastBaseline, metrics: nil, views: views)
         addConstraints(verticalConstraints + horizontalConstraints)
     }
 }

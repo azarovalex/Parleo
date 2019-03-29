@@ -15,6 +15,8 @@
 		EC1B9AD422396AB3007B4113 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1B9AD322396AB3007B4113 /* Profile.storyboard */; };
 		EC1B9AD622396B6F007B4113 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B9AD522396B6F007B4113 /* BaseTabBarController.swift */; };
 		EC1B9AD822397103007B4113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1B9AD722397103007B4113 /* Assets.xcassets */; };
+		EC251952224E8AEE00D0FEE7 /* LanguagesPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC251950224E8AEE00D0FEE7 /* LanguagesPickerCell.swift */; };
+		EC251953224E8AEE00D0FEE7 /* LanguagesPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC251951224E8AEE00D0FEE7 /* LanguagesPickerCell.xib */; };
 		EC2C85EF2222758600D113B5 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC2C85EE2222756800D113B5 /* Montserrat-Regular.ttf */; };
 		EC2C85F12222788100D113B5 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC2C85F02222787F00D113B5 /* Montserrat-Bold.ttf */; };
 		EC2C85F322227A0400D113B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C85F222227A0400D113B5 /* LoginViewController.swift */; };
@@ -35,8 +37,6 @@
 		ECC961522246BD9700E4D4C1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC961512246BD9700E4D4C1 /* Colors.xcassets */; };
 		ECC961552246C42B00E4D4C1 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC961542246C42B00E4D4C1 /* FilterViewController.swift */; };
 		ECC961572246C46300E4D4C1 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC961562246C46300E4D4C1 /* FilterViewModel.swift */; };
-		ECC9615C2246C5F300E4D4C1 /* CheckboxesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9615A2246C5F300E4D4C1 /* CheckboxesCell.swift */; };
-		ECC9615D2246C5F300E4D4C1 /* CheckboxesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC9615B2246C5F300E4D4C1 /* CheckboxesCell.xib */; };
 		ECC961602246CA5900E4D4C1 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9615F2246CA5900E4D4C1 /* CheckboxView.swift */; };
 		ECC961622246CA6800E4D4C1 /* CheckboxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC961612246CA6800E4D4C1 /* CheckboxView.xib */; };
 		ECC961642246CB3E00E4D4C1 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC961632246CB3E00E4D4C1 /* NibLoadable.swift */; };
@@ -45,11 +45,20 @@
 		ECC9616D224778C500E4D4C1 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9616C224778C500E4D4C1 /* RangeSlider.swift */; };
 		ECC9617022478E3300E4D4C1 /* FilterCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9616F22478E3300E4D4C1 /* FilterCellConfigurator.swift */; };
 		ECC9617422478F5200E4D4C1 /* TapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9617322478F5200E4D4C1 /* TapticEngine.swift */; };
+		ECC9617722482EFA00E4D4C1 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9617622482EFA00E4D4C1 /* UserProfileViewController.swift */; };
 		ECD2C1CC223F008000C421A7 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2C1CB223F008000C421A7 /* UsersViewController.swift */; };
 		ECD2C1CF223F00E800C421A7 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2C1CE223F00E800C421A7 /* UsersViewModel.swift */; };
 		ECD2C1DA223F01BF00C421A7 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2C1D8223F01BF00C421A7 /* UserCell.swift */; };
 		ECD2C1DB223F01BF00C421A7 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECD2C1D9223F01BF00C421A7 /* UserCell.xib */; };
 		ECD2C1DD223F035A00C421A7 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECD2C1DC223F035700C421A7 /* Montserrat-Medium.ttf */; };
+		ECDB2A3A224E8EF70061AEB1 /* LanguageInPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECDB2A39224E8EF70061AEB1 /* LanguageInPicker.xib */; };
+		ECDB2A3C224E8F110061AEB1 /* LanguageInPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A3B224E8F110061AEB1 /* LanguageInPicker.swift */; };
+		ECDB2A3E224EC4220061AEB1 /* DiffableBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A3D224EC4220061AEB1 /* DiffableBox.swift */; };
+		ECDB2A40224ECB1E0061AEB1 /* CheckboxSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A3F224ECB1E0061AEB1 /* CheckboxSectionController.swift */; };
+		ECDB2A42224ECB690061AEB1 /* SliderSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A41224ECB690061AEB1 /* SliderSectionController.swift */; };
+		ECDB2A44224ECB970061AEB1 /* LanguagePickerSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A43224ECB970061AEB1 /* LanguagePickerSectionController.swift */; };
+		ECDB2A47224ECD1A0061AEB1 /* CheckboxesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A45224ECD1A0061AEB1 /* CheckboxesCell.swift */; };
+		ECDB2A48224ECD1A0061AEB1 /* CheckboxesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECDB2A46224ECD1A0061AEB1 /* CheckboxesCell.xib */; };
 		ECDCC252222EB07400DA9758 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC251222EB07400DA9758 /* User.swift */; };
 		ECDCC254222EB0D000DA9758 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC253222EB0D000DA9758 /* Credentials.swift */; };
 		ECDCC257222EB2C400DA9758 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC256222EB2C400DA9758 /* AppError.swift */; };
@@ -74,6 +83,8 @@
 		EC1B9AD322396AB3007B4113 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		EC1B9AD522396B6F007B4113 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		EC1B9AD722397103007B4113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC251950224E8AEE00D0FEE7 /* LanguagesPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesPickerCell.swift; sourceTree = "<group>"; };
+		EC251951224E8AEE00D0FEE7 /* LanguagesPickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguagesPickerCell.xib; sourceTree = "<group>"; };
 		EC2C85EE2222756800D113B5 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		EC2C85F02222787F00D113B5 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		EC2C85F222227A0400D113B5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -96,8 +107,6 @@
 		ECC961512246BD9700E4D4C1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		ECC961542246C42B00E4D4C1 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		ECC961562246C46300E4D4C1 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
-		ECC9615A2246C5F300E4D4C1 /* CheckboxesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxesCell.swift; sourceTree = "<group>"; };
-		ECC9615B2246C5F300E4D4C1 /* CheckboxesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckboxesCell.xib; sourceTree = "<group>"; };
 		ECC9615F2246CA5900E4D4C1 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
 		ECC961612246CA6800E4D4C1 /* CheckboxView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckboxView.xib; sourceTree = "<group>"; };
 		ECC961632246CB3E00E4D4C1 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
@@ -106,11 +115,20 @@
 		ECC9616C224778C500E4D4C1 /* RangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
 		ECC9616F22478E3300E4D4C1 /* FilterCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCellConfigurator.swift; sourceTree = "<group>"; };
 		ECC9617322478F5200E4D4C1 /* TapticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapticEngine.swift; sourceTree = "<group>"; };
+		ECC9617622482EFA00E4D4C1 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		ECD2C1CB223F008000C421A7 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		ECD2C1CE223F00E800C421A7 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		ECD2C1D8223F01BF00C421A7 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		ECD2C1D9223F01BF00C421A7 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		ECD2C1DC223F035700C421A7 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		ECDB2A39224E8EF70061AEB1 /* LanguageInPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageInPicker.xib; sourceTree = "<group>"; };
+		ECDB2A3B224E8F110061AEB1 /* LanguageInPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageInPicker.swift; sourceTree = "<group>"; };
+		ECDB2A3D224EC4220061AEB1 /* DiffableBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableBox.swift; sourceTree = "<group>"; };
+		ECDB2A3F224ECB1E0061AEB1 /* CheckboxSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxSectionController.swift; sourceTree = "<group>"; };
+		ECDB2A41224ECB690061AEB1 /* SliderSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderSectionController.swift; sourceTree = "<group>"; };
+		ECDB2A43224ECB970061AEB1 /* LanguagePickerSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePickerSectionController.swift; sourceTree = "<group>"; };
+		ECDB2A45224ECD1A0061AEB1 /* CheckboxesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxesCell.swift; sourceTree = "<group>"; };
+		ECDB2A46224ECD1A0061AEB1 /* CheckboxesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckboxesCell.xib; sourceTree = "<group>"; };
 		ECDCC251222EB07400DA9758 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ECDCC253222EB0D000DA9758 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		ECDCC256222EB2C400DA9758 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
@@ -353,7 +371,7 @@
 		ECC961582246C5B200E4D4C1 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
-				ECC9617522482DC700E4D4C1 /* LanguagesCell */,
+				ECC9617522482DC700E4D4C1 /* LanguagesPickerCell */,
 				ECC961652246E1A600E4D4C1 /* SliderCell */,
 				ECC961592246C5CD00E4D4C1 /* CheckboxesCell */,
 			);
@@ -364,8 +382,9 @@
 			isa = PBXGroup;
 			children = (
 				ECC9615E2246CA3900E4D4C1 /* CheckboxView */,
-				ECC9615A2246C5F300E4D4C1 /* CheckboxesCell.swift */,
-				ECC9615B2246C5F300E4D4C1 /* CheckboxesCell.xib */,
+				ECDB2A3F224ECB1E0061AEB1 /* CheckboxSectionController.swift */,
+				ECDB2A45224ECD1A0061AEB1 /* CheckboxesCell.swift */,
+				ECDB2A46224ECD1A0061AEB1 /* CheckboxesCell.xib */,
 			);
 			path = CheckboxesCell;
 			sourceTree = "<group>";
@@ -382,9 +401,10 @@
 		ECC961652246E1A600E4D4C1 /* SliderCell */ = {
 			isa = PBXGroup;
 			children = (
-				ECC961682246E1DC00E4D4C1 /* SliderCell.swift */,
 				ECC9616C224778C500E4D4C1 /* RangeSlider.swift */,
+				ECC961682246E1DC00E4D4C1 /* SliderCell.swift */,
 				ECC961692246E1DC00E4D4C1 /* SliderCell.xib */,
+				ECDB2A41224ECB690061AEB1 /* SliderSectionController.swift */,
 			);
 			path = SliderCell;
 			sourceTree = "<group>";
@@ -401,21 +421,27 @@
 			isa = PBXGroup;
 			children = (
 				ECC9617322478F5200E4D4C1 /* TapticEngine.swift */,
+				ECDB2A3D224EC4220061AEB1 /* DiffableBox.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		ECC9617522482DC700E4D4C1 /* LanguagesCell */ = {
+		ECC9617522482DC700E4D4C1 /* LanguagesPickerCell */ = {
 			isa = PBXGroup;
 			children = (
+				ECDB2A38224E8BFE0061AEB1 /* LanguageInPicker */,
+				EC251950224E8AEE00D0FEE7 /* LanguagesPickerCell.swift */,
+				EC251951224E8AEE00D0FEE7 /* LanguagesPickerCell.xib */,
+				ECDB2A43224ECB970061AEB1 /* LanguagePickerSectionController.swift */,
 			);
-			path = LanguagesCell;
+			path = LanguagesPickerCell;
 			sourceTree = "<group>";
 		};
 		ECD2C1CA223F007100C421A7 /* Users */ = {
 			isa = PBXGroup;
 			children = (
 				ECD2C1CB223F008000C421A7 /* UsersViewController.swift */,
+				ECC9617622482EFA00E4D4C1 /* UserProfileViewController.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -444,6 +470,15 @@
 				ECD2C1D9223F01BF00C421A7 /* UserCell.xib */,
 			);
 			path = UserCell;
+			sourceTree = "<group>";
+		};
+		ECDB2A38224E8BFE0061AEB1 /* LanguageInPicker */ = {
+			isa = PBXGroup;
+			children = (
+				ECDB2A39224E8EF70061AEB1 /* LanguageInPicker.xib */,
+				ECDB2A3B224E8F110061AEB1 /* LanguageInPicker.swift */,
+			);
+			path = LanguageInPicker;
 			sourceTree = "<group>";
 		};
 		ECDCC255222EB2B700DA9758 /* Protocols */ = {
@@ -562,11 +597,14 @@
 			files = (
 				EC1B9ACC22396A85007B4113 /* Users.storyboard in Resources */,
 				ECE1D8AA2221AF51009DE2A3 /* Montserrat-SemiBold.ttf in Resources */,
+				ECDB2A48224ECD1A0061AEB1 /* CheckboxesCell.xib in Resources */,
 				ECE1D8A82221AD23009DE2A3 /* Montserrat-ExtraBold.ttf in Resources */,
 				ECC9616B2246E1DC00E4D4C1 /* SliderCell.xib in Resources */,
 				EC2C85EF2222758600D113B5 /* Montserrat-Regular.ttf in Resources */,
 				EC1B9AD822397103007B4113 /* Assets.xcassets in Resources */,
+				ECDB2A3A224E8EF70061AEB1 /* LanguageInPicker.xib in Resources */,
 				EC863CBD2220811A00A49824 /* LaunchScreen.storyboard in Resources */,
+				EC251953224E8AEE00D0FEE7 /* LanguagesPickerCell.xib in Resources */,
 				EC2C85F12222788100D113B5 /* Montserrat-Bold.ttf in Resources */,
 				EC1B9ACF22396A97007B4113 /* Chats.storyboard in Resources */,
 				EC863CB82220811800A49824 /* Main.storyboard in Resources */,
@@ -577,7 +615,6 @@
 				EC1B9AD422396AB3007B4113 /* Profile.storyboard in Resources */,
 				ECC961502246BC3100E4D4C1 /* Filter.storyboard in Resources */,
 				EC1B9AD222396AA5007B4113 /* Notifications.storyboard in Resources */,
-				ECC9615D2246C5F300E4D4C1 /* CheckboxesCell.xib in Resources */,
 				ECD2C1DD223F035A00C421A7 /* Montserrat-Medium.ttf in Resources */,
 				ECD2C1DB223F01BF00C421A7 /* UserCell.xib in Resources */,
 				ECC961622246CA6800E4D4C1 /* CheckboxView.xib in Resources */,
@@ -598,6 +635,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Parleo/Pods-Parleo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -617,6 +655,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -687,10 +726,12 @@
 				EC93F3D2222C834F00C4BB89 /* NetworkService.swift in Sources */,
 				EC76CA3B2235877900ADD1BE /* Storage.swift in Sources */,
 				ECF190C62227463C002D24EF /* RoundedTextField.swift in Sources */,
+				ECDB2A47224ECD1A0061AEB1 /* CheckboxesCell.swift in Sources */,
 				ECD2C1CC223F008000C421A7 /* UsersViewController.swift in Sources */,
 				EC2C85F322227A0400D113B5 /* LoginViewController.swift in Sources */,
+				ECC9617722482EFA00E4D4C1 /* UserProfileViewController.swift in Sources */,
+				ECDB2A3C224E8F110061AEB1 /* LanguageInPicker.swift in Sources */,
 				EC93F3D6222C83B300C4BB89 /* AuthorizationService.swift in Sources */,
-				ECC9615C2246C5F300E4D4C1 /* CheckboxesCell.swift in Sources */,
 				ECDCC257222EB2C400DA9758 /* AppError.swift in Sources */,
 				ECE1D8AC2221B054009DE2A3 /* OnboardingNavigationController.swift in Sources */,
 				ECD2C1DA223F01BF00C421A7 /* UserCell.swift in Sources */,
@@ -698,8 +739,10 @@
 				ECC961602246CA5900E4D4C1 /* CheckboxView.swift in Sources */,
 				EC76CA30223539D700ADD1BE /* ViewModelType.swift in Sources */,
 				ECC9617422478F5200E4D4C1 /* TapticEngine.swift in Sources */,
+				EC251952224E8AEE00D0FEE7 /* LanguagesPickerCell.swift in Sources */,
 				EC93F3D4222C836D00C4BB89 /* NetworkExtension.swift in Sources */,
 				EC76CA3522353CA100ADD1BE /* UIViewController+HUD.swift in Sources */,
+				ECDB2A44224ECB970061AEB1 /* LanguagePickerSectionController.swift in Sources */,
 				ECD2C1CF223F00E800C421A7 /* UsersViewModel.swift in Sources */,
 				ECC9617022478E3300E4D4C1 /* FilterCellConfigurator.swift in Sources */,
 				ECC9616A2246E1DC00E4D4C1 /* SliderCell.swift in Sources */,
@@ -708,10 +751,13 @@
 				ECC961572246C46300E4D4C1 /* FilterViewModel.swift in Sources */,
 				ECC961642246CB3E00E4D4C1 /* NibLoadable.swift in Sources */,
 				ECC9616D224778C500E4D4C1 /* RangeSlider.swift in Sources */,
+				ECDB2A42224ECB690061AEB1 /* SliderSectionController.swift in Sources */,
 				EC76CA3722353E1000ADD1BE /* UIViewController+RxNavigation.swift in Sources */,
 				EC1B9AD622396B6F007B4113 /* BaseTabBarController.swift in Sources */,
 				ECF190C82227E362002D24EF /* RoundedButton.swift in Sources */,
 				ECC961552246C42B00E4D4C1 /* FilterViewController.swift in Sources */,
+				ECDB2A3E224EC4220061AEB1 /* DiffableBox.swift in Sources */,
+				ECDB2A40224ECB1E0061AEB1 /* CheckboxSectionController.swift in Sources */,
 				EC863CB12220811800A49824 /* AppDelegate.swift in Sources */,
 				ECDCC254222EB0D000DA9758 /* Credentials.swift in Sources */,
 				ECE1D8AE2221B5ED009DE2A3 /* StartupViewController.swift in Sources */,
@@ -863,7 +909,6 @@
 			baseConfigurationReference = 202752E7785D98F75A6A9345 /* Pods-Parleo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CLALR9F4Q5;
 				INFOPLIST_FILE = Parleo/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -882,7 +927,6 @@
 			baseConfigurationReference = 2B8D131903A6E9C27129821A /* Pods-Parleo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CLALR9F4Q5;
 				INFOPLIST_FILE = Parleo/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
