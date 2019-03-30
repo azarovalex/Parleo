@@ -14,7 +14,6 @@ class BaseTabBarController: UITabBarController {
         super.viewDidLoad()
 
         setup()
-
     }
 }
 
@@ -24,7 +23,7 @@ private extension BaseTabBarController {
     func setup() {
         tabBar.backgroundImage = UIImage()
         tabBar.tintColor = #colorLiteral(red: 0.3215686275, green: 0.3921568627, blue: 1, alpha: 1)
-        tabBar.shadowImage = UIImage()
+//        tabBar.shadowImage = UIImage()
         tabBar.backgroundColor = .white
     }
 }

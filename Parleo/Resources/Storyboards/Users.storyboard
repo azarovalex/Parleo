@@ -1,55 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uHf-yX-JzM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uHf-yX-JzM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="YFX-X8-hxi">
+        <!--Users-->
+        <scene sceneID="SfA-qx-Vim">
             <objects>
-                <tableViewController id="3gx-Xu-SSb" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6hb-ba-kTi">
+                <viewController id="nwe-JQ-2DY" customClass="UsersViewController" customModule="Parleo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sLh-Ze-cF5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ko0-67-F0T">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LD5-Im-tUS">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LD5-Im-tUS" id="2bF-5K-eA9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="3gx-Xu-SSb" id="aXQ-Qs-C6Z"/>
-                            <outlet property="delegate" destination="3gx-Xu-SSb" id="YS4-Cl-LTK"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="0fO-O3-o0I"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o59-zi-qUV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="R0P-oQ-OvM" firstAttribute="trailing" secondItem="Ko0-67-F0T" secondAttribute="trailing" id="DEc-wa-9RL"/>
+                            <constraint firstItem="Ko0-67-F0T" firstAttribute="leading" secondItem="R0P-oQ-OvM" secondAttribute="leading" id="ZDw-SH-way"/>
+                            <constraint firstItem="Ko0-67-F0T" firstAttribute="top" secondItem="R0P-oQ-OvM" secondAttribute="top" id="d4n-uv-BLl"/>
+                            <constraint firstItem="R0P-oQ-OvM" firstAttribute="bottom" secondItem="Ko0-67-F0T" secondAttribute="bottom" id="rBg-SC-gQi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R0P-oQ-OvM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Users" id="tNa-X6-Jah">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="EzB-vS-xEp"/>
+                        <barButtonItem key="rightBarButtonItem" image="filterIcon" id="p2e-k6-Z8n">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="filterButton" destination="p2e-k6-Z8n" id="0Rp-Mg-Phz"/>
+                        <outlet property="tableView" destination="Ko0-67-F0T" id="L34-I5-CRG"/>
+                        <segue destination="Ebw-5o-2T2" kind="show" identifier="fromUsersListToFilter" id="q9O-6l-LsT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ec8-ZM-dzv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255" y="172"/>
+            <point key="canvasLocation" x="160.80000000000001" y="170.46476761619192"/>
+        </scene>
+        <!--Filter-->
+        <scene sceneID="9rg-Qe-SPM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Filter" id="Ebw-5o-2T2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hH5-mE-AOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="837" y="95"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DIs-LN-NGi">
             <objects>
                 <navigationController id="uHf-yX-JzM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="tabBarUsersIcon" id="Wxk-iu-JRK"/>
+                    <tabBarItem key="tabBarItem" title="" image="tabBarUsersIcon" id="Wxk-iu-JRK">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YbQ-D1-CdB">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="3gx-Xu-SSb" kind="relationship" relationship="rootViewController" id="l1f-V3-rk5"/>
+                        <segue destination="nwe-JQ-2DY" kind="relationship" relationship="rootViewController" id="3dt-ez-s0C"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="838-9T-KWV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -58,6 +78,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="filterIcon" width="24" height="24"/>
         <image name="tabBarUsersIcon" width="31" height="23"/>
     </resources>
+    <color key="tintColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

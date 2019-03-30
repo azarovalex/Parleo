@@ -26,9 +26,12 @@ private extension AppDelegate {
 
     func setupNavigationButtons() {
         UIBarButtonItem.appearance().setTitleTextAttributes([
-            .font : R.font.montserratRegular(size: 16)!,
-            .foregroundColor : UIColor.black.withAlphaComponent(0.5)
-            ], for: .normal)
+            .font : R.font.montserratRegular(size: 16)!
+        ], for: .normal)
+        UINavigationBar.appearance().titleTextAttributes = [
+            .foregroundColor: UIColor.black.withAlphaComponent(0.5),
+            .font: R.font.montserratRegular(size: 18)!
+        ]
     }
 }
 
