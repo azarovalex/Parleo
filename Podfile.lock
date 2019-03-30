@@ -3,6 +3,9 @@ PODS:
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - Alamofire (4.8.2)
+  - Chatto (3.3.1)
+  - ChattoAdditions (3.3.1):
+    - Chatto
   - IGListKit (3.4.0):
     - IGListKit/Default (= 3.4.0)
   - IGListKit/Default (3.4.0):
@@ -46,6 +49,8 @@ PODS:
 
 DEPENDENCIES:
   - Action
+  - Chatto (from `https://github.com/badoo/Chatto`, branch `master`)
+  - ChattoAdditions (from `https://github.com/badoo/Chatto`, branch `master`)
   - IGListKit (~> 3.0)
   - IQKeyboardManagerSwift
   - Kingfisher
@@ -77,9 +82,27 @@ SPEC REPOS:
     - RxSwiftExt
     - SegueManager
 
+EXTERNAL SOURCES:
+  Chatto:
+    :branch: master
+    :git: https://github.com/badoo/Chatto
+  ChattoAdditions:
+    :branch: master
+    :git: https://github.com/badoo/Chatto
+
+CHECKOUT OPTIONS:
+  Chatto:
+    :commit: 5995970d12c720a29062a0cb16f877425a35ef17
+    :git: https://github.com/badoo/Chatto
+  ChattoAdditions:
+    :commit: 5995970d12c720a29062a0cb16f877425a35ef17
+    :git: https://github.com/badoo/Chatto
+
 SPEC CHECKSUMS:
   Action: 689181e4c3f6566844178d8a7da6fef39a9597fc
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Chatto: 45f1df6af89c0b1b526e7d6368a9dca4a4728def
+  ChattoAdditions: f38e9fef6c17ee587be70377b33841ff78c26f94
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   IQKeyboardManagerSwift: 0f0ae8935360b4003e6ea1ac7c19898f01e2f7c7
   Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
@@ -95,6 +118,6 @@ SPEC CHECKSUMS:
   RxSwiftExt: 01f8ecbeeb355698e9c75365ebe908b00dacf45d
   SegueManager: e4970e6f7150c81ec577e0b61d9fda3f27c11db5
 
-PODFILE CHECKSUM: 8e75f13fdc0fb3b040a4627960a250e6d90d49d2
+PODFILE CHECKSUM: 83f734bd009aae88a1243957dd10db7ac0519287
 
 COCOAPODS: 1.6.1

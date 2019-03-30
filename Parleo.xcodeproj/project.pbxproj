@@ -59,6 +59,7 @@
 		ECDB2A44224ECB970061AEB1 /* LanguagePickerSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A43224ECB970061AEB1 /* LanguagePickerSectionController.swift */; };
 		ECDB2A47224ECD1A0061AEB1 /* CheckboxesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A45224ECD1A0061AEB1 /* CheckboxesCell.swift */; };
 		ECDB2A48224ECD1A0061AEB1 /* CheckboxesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECDB2A46224ECD1A0061AEB1 /* CheckboxesCell.xib */; };
+		ECDB2A4D224F775D0061AEB1 /* ListOfChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A4C224F775D0061AEB1 /* ListOfChatsViewController.swift */; };
 		ECDCC252222EB07400DA9758 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC251222EB07400DA9758 /* User.swift */; };
 		ECDCC254222EB0D000DA9758 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC253222EB0D000DA9758 /* Credentials.swift */; };
 		ECDCC257222EB2C400DA9758 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC256222EB2C400DA9758 /* AppError.swift */; };
@@ -129,6 +130,7 @@
 		ECDB2A43224ECB970061AEB1 /* LanguagePickerSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePickerSectionController.swift; sourceTree = "<group>"; };
 		ECDB2A45224ECD1A0061AEB1 /* CheckboxesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxesCell.swift; sourceTree = "<group>"; };
 		ECDB2A46224ECD1A0061AEB1 /* CheckboxesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckboxesCell.xib; sourceTree = "<group>"; };
+		ECDB2A4C224F775D0061AEB1 /* ListOfChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfChatsViewController.swift; sourceTree = "<group>"; };
 		ECDCC251222EB07400DA9758 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ECDCC253222EB0D000DA9758 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		ECDCC256222EB2C400DA9758 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
@@ -457,6 +459,7 @@
 		ECD2C1D0223F017500C421A7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				ECDB2A49224F75170061AEB1 /* Chats */,
 				ECC961582246C5B200E4D4C1 /* Filter */,
 				ECD2C1D3223F018B00C421A7 /* UserCell */,
 			);
@@ -479,6 +482,21 @@
 				ECDB2A3B224E8F110061AEB1 /* LanguageInPicker.swift */,
 			);
 			path = LanguageInPicker;
+			sourceTree = "<group>";
+		};
+		ECDB2A49224F75170061AEB1 /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chats;
+			sourceTree = "<group>";
+		};
+		ECDB2A4B224F773C0061AEB1 /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+				ECDB2A4C224F775D0061AEB1 /* ListOfChatsViewController.swift */,
+			);
+			path = Chats;
 			sourceTree = "<group>";
 		};
 		ECDCC255222EB2B700DA9758 /* Protocols */ = {
@@ -517,6 +535,7 @@
 			isa = PBXGroup;
 			children = (
 				ECC961532246C41B00E4D4C1 /* Base */,
+				ECDB2A4B224F773C0061AEB1 /* Chats */,
 				ECD2C1CA223F007100C421A7 /* Users */,
 				ECE1D8A52221A987009DE2A3 /* Onboarding */,
 				ECC961542246C42B00E4D4C1 /* FilterViewController.swift */,
@@ -635,6 +654,8 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Parleo/Pods-Parleo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Chatto/Chatto.framework",
+				"${BUILT_PRODUCTS_DIR}/ChattoAdditions/ChattoAdditions.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -655,6 +676,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Chatto.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChattoAdditions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -757,6 +780,7 @@
 				ECF190C82227E362002D24EF /* RoundedButton.swift in Sources */,
 				ECC961552246C42B00E4D4C1 /* FilterViewController.swift in Sources */,
 				ECDB2A3E224EC4220061AEB1 /* DiffableBox.swift in Sources */,
+				ECDB2A4D224F775D0061AEB1 /* ListOfChatsViewController.swift in Sources */,
 				ECDB2A40224ECB1E0061AEB1 /* CheckboxSectionController.swift in Sources */,
 				EC863CB12220811800A49824 /* AppDelegate.swift in Sources */,
 				ECDCC254222EB0D000DA9758 /* Credentials.swift in Sources */,
