@@ -17,6 +17,8 @@ target 'Parleo' do
   pod 'Kingfisher'
   pod 'IQKeyboardManagerSwift'
   pod 'IGListKit', '~> 3.0'
+  pod 'Chatto', :git => 'https://github.com/badoo/Chatto', :branch => 'master'
+  pod 'ChattoAdditions', :git => 'https://github.com/badoo/Chatto', :branch => 'master'
 
   # Common
   pod 'R.swift'

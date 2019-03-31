@@ -59,6 +59,45 @@
 		ECDB2A44224ECB970061AEB1 /* LanguagePickerSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A43224ECB970061AEB1 /* LanguagePickerSectionController.swift */; };
 		ECDB2A47224ECD1A0061AEB1 /* CheckboxesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A45224ECD1A0061AEB1 /* CheckboxesCell.swift */; };
 		ECDB2A48224ECD1A0061AEB1 /* CheckboxesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECDB2A46224ECD1A0061AEB1 /* CheckboxesCell.xib */; };
+		ECDB2A4D224F775D0061AEB1 /* ListOfChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A4C224F775D0061AEB1 /* ListOfChatsViewController.swift */; };
+		ECDB2A50224F87D20061AEB1 /* ListOfChatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A4E224F87D20061AEB1 /* ListOfChatsCell.swift */; };
+		ECDB2A51224F87D20061AEB1 /* ListOfChatsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECDB2A4F224F87D20061AEB1 /* ListOfChatsCell.xib */; };
+		ECDB2A53224F8B6E0061AEB1 /* ListOfChatsSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A52224F8B6E0061AEB1 /* ListOfChatsSectionController.swift */; };
+		ECDB2A71224FA9AF0061AEB1 /* AddRandomMessageChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A70224FA9AE0061AEB1 /* AddRandomMessageChatViewController.swift */; };
+		ECDB2A7A224FA9D90061AEB1 /* UpdateItemTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A72224FA9D80061AEB1 /* UpdateItemTypeViewController.swift */; };
+		ECDB2A7B224FA9D90061AEB1 /* DemoChatMessageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A73224FA9D80061AEB1 /* DemoChatMessageFactory.swift */; };
+		ECDB2A7C224FA9D90061AEB1 /* DemoChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A74224FA9D80061AEB1 /* DemoChatViewController.swift */; };
+		ECDB2A7D224FA9D90061AEB1 /* DemoChatDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A75224FA9D80061AEB1 /* DemoChatDataSource.swift */; };
+		ECDB2A7E224FA9D90061AEB1 /* DemoChatItemsDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A76224FA9D90061AEB1 /* DemoChatItemsDecorator.swift */; };
+		ECDB2A7F224FA9D90061AEB1 /* MessagesSelectionChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A77224FA9D90061AEB1 /* MessagesSelectionChatViewController.swift */; };
+		ECDB2A80224FA9D90061AEB1 /* DemoChatMessageSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A78224FA9D90061AEB1 /* DemoChatMessageSender.swift */; };
+		ECDB2A81224FA9D90061AEB1 /* ScrollToBottomButtonChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A79224FA9D90061AEB1 /* ScrollToBottomButtonChatViewController.swift */; };
+		ECDB2A87224FAA0B0061AEB1 /* DemoTextMessageContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A82224FAA0B0061AEB1 /* DemoTextMessageContentFactory.swift */; };
+		ECDB2A88224FAA0B0061AEB1 /* DemoCompoundMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A83224FAA0B0061AEB1 /* DemoCompoundMessageModel.swift */; };
+		ECDB2A89224FAA0B0061AEB1 /* DemoImageMessageContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A84224FAA0B0061AEB1 /* DemoImageMessageContentFactory.swift */; };
+		ECDB2A8A224FAA0B0061AEB1 /* DemoCompoundMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A85224FAA0B0061AEB1 /* DemoCompoundMessageViewModel.swift */; };
+		ECDB2A8B224FAA0B0061AEB1 /* DemoDateMessageContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A86224FAA0B0061AEB1 /* DemoDateMessageContentFactory.swift */; };
+		ECDB2A8E224FAA160061AEB1 /* CustomInput.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECDB2A8C224FAA150061AEB1 /* CustomInput.xcassets */; };
+		ECDB2A8F224FAA160061AEB1 /* ContentAwareInputItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A8D224FAA150061AEB1 /* ContentAwareInputItem.swift */; };
+		ECDB2A93224FAA210061AEB1 /* GenericMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A90224FAA200061AEB1 /* GenericMessageHandler.swift */; };
+		ECDB2A94224FAA210061AEB1 /* BaseMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A91224FAA200061AEB1 /* BaseMessageHandler.swift */; };
+		ECDB2A95224FAA210061AEB1 /* BaseMessageCollectionViewCellAvatarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A92224FAA210061AEB1 /* BaseMessageCollectionViewCellAvatarStyle.swift */; };
+		ECDB2A98224FAA2E0061AEB1 /* DemoPhotoMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A96224FAA270061AEB1 /* DemoPhotoMessageModel.swift */; };
+		ECDB2A99224FAA2E0061AEB1 /* DemoPhotoMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A97224FAA2B0061AEB1 /* DemoPhotoMessageViewModel.swift */; };
+		ECDB2A9D224FAA330061AEB1 /* SendingStatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A9A224FAA310061AEB1 /* SendingStatusCollectionViewCell.swift */; };
+		ECDB2A9E224FAA330061AEB1 /* SendingStatusPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2A9B224FAA320061AEB1 /* SendingStatusPresenter.swift */; };
+		ECDB2A9F224FAA330061AEB1 /* SendingStatusCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECDB2A9C224FAA320061AEB1 /* SendingStatusCollectionViewCell.xib */; };
+		ECDB2AA2224FAA400061AEB1 /* DemoTextMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2AA0224FAA3F0061AEB1 /* DemoTextMessageModel.swift */; };
+		ECDB2AA3224FAA400061AEB1 /* DemoTextMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2AA1224FAA400061AEB1 /* DemoTextMessageViewModel.swift */; };
+		ECDB2AA7224FAA4C0061AEB1 /* TimeSeparatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2AA4224FAA490061AEB1 /* TimeSeparatorModel.swift */; };
+		ECDB2AA8224FAA4C0061AEB1 /* TimeSeparatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2AA5224FAA4A0061AEB1 /* TimeSeparatorCollectionViewCell.swift */; };
+		ECDB2AA9224FAA4C0061AEB1 /* TimeSeparatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2AA6224FAA4A0061AEB1 /* TimeSeparatorPresenter.swift */; };
+		ECDB2AB0224FAA5D0061AEB1 /* CellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2AAA224FAA5B0061AEB1 /* CellsViewController.swift */; };
+		ECDB2AB1224FAA5D0061AEB1 /* ChatWithTabBarExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2AAB224FAA5B0061AEB1 /* ChatWithTabBarExamplesViewController.swift */; };
+		ECDB2AB2224FAA5D0061AEB1 /* SlidingDatasSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2AAC224FAA5C0061AEB1 /* SlidingDatasSource.swift */; };
+		ECDB2AB3224FAA5D0061AEB1 /* BaseMessagesSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2AAD224FAA5C0061AEB1 /* BaseMessagesSelector.swift */; };
+		ECDB2AB4224FAA5D0061AEB1 /* MessagesSelectorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2AAE224FAA5D0061AEB1 /* MessagesSelectorProtocol.swift */; };
+		ECDB2AB5224FAA5D0061AEB1 /* ChatExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB2AAF224FAA5D0061AEB1 /* ChatExamplesViewController.swift */; };
 		ECDCC252222EB07400DA9758 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC251222EB07400DA9758 /* User.swift */; };
 		ECDCC254222EB0D000DA9758 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC253222EB0D000DA9758 /* Credentials.swift */; };
 		ECDCC257222EB2C400DA9758 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC256222EB2C400DA9758 /* AppError.swift */; };
@@ -129,6 +168,45 @@
 		ECDB2A43224ECB970061AEB1 /* LanguagePickerSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePickerSectionController.swift; sourceTree = "<group>"; };
 		ECDB2A45224ECD1A0061AEB1 /* CheckboxesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxesCell.swift; sourceTree = "<group>"; };
 		ECDB2A46224ECD1A0061AEB1 /* CheckboxesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckboxesCell.xib; sourceTree = "<group>"; };
+		ECDB2A4C224F775D0061AEB1 /* ListOfChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfChatsViewController.swift; sourceTree = "<group>"; };
+		ECDB2A4E224F87D20061AEB1 /* ListOfChatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfChatsCell.swift; sourceTree = "<group>"; };
+		ECDB2A4F224F87D20061AEB1 /* ListOfChatsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListOfChatsCell.xib; sourceTree = "<group>"; };
+		ECDB2A52224F8B6E0061AEB1 /* ListOfChatsSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfChatsSectionController.swift; sourceTree = "<group>"; };
+		ECDB2A70224FA9AE0061AEB1 /* AddRandomMessageChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRandomMessageChatViewController.swift; sourceTree = "<group>"; };
+		ECDB2A72224FA9D80061AEB1 /* UpdateItemTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateItemTypeViewController.swift; sourceTree = "<group>"; };
+		ECDB2A73224FA9D80061AEB1 /* DemoChatMessageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoChatMessageFactory.swift; sourceTree = "<group>"; };
+		ECDB2A74224FA9D80061AEB1 /* DemoChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoChatViewController.swift; sourceTree = "<group>"; };
+		ECDB2A75224FA9D80061AEB1 /* DemoChatDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoChatDataSource.swift; sourceTree = "<group>"; };
+		ECDB2A76224FA9D90061AEB1 /* DemoChatItemsDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoChatItemsDecorator.swift; sourceTree = "<group>"; };
+		ECDB2A77224FA9D90061AEB1 /* MessagesSelectionChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesSelectionChatViewController.swift; sourceTree = "<group>"; };
+		ECDB2A78224FA9D90061AEB1 /* DemoChatMessageSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoChatMessageSender.swift; sourceTree = "<group>"; };
+		ECDB2A79224FA9D90061AEB1 /* ScrollToBottomButtonChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollToBottomButtonChatViewController.swift; sourceTree = "<group>"; };
+		ECDB2A82224FAA0B0061AEB1 /* DemoTextMessageContentFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTextMessageContentFactory.swift; sourceTree = "<group>"; };
+		ECDB2A83224FAA0B0061AEB1 /* DemoCompoundMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCompoundMessageModel.swift; sourceTree = "<group>"; };
+		ECDB2A84224FAA0B0061AEB1 /* DemoImageMessageContentFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoImageMessageContentFactory.swift; sourceTree = "<group>"; };
+		ECDB2A85224FAA0B0061AEB1 /* DemoCompoundMessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCompoundMessageViewModel.swift; sourceTree = "<group>"; };
+		ECDB2A86224FAA0B0061AEB1 /* DemoDateMessageContentFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoDateMessageContentFactory.swift; sourceTree = "<group>"; };
+		ECDB2A8C224FAA150061AEB1 /* CustomInput.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CustomInput.xcassets; sourceTree = "<group>"; };
+		ECDB2A8D224FAA150061AEB1 /* ContentAwareInputItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentAwareInputItem.swift; sourceTree = "<group>"; };
+		ECDB2A90224FAA200061AEB1 /* GenericMessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericMessageHandler.swift; sourceTree = "<group>"; };
+		ECDB2A91224FAA200061AEB1 /* BaseMessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMessageHandler.swift; sourceTree = "<group>"; };
+		ECDB2A92224FAA210061AEB1 /* BaseMessageCollectionViewCellAvatarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMessageCollectionViewCellAvatarStyle.swift; sourceTree = "<group>"; };
+		ECDB2A96224FAA270061AEB1 /* DemoPhotoMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoPhotoMessageModel.swift; sourceTree = "<group>"; };
+		ECDB2A97224FAA2B0061AEB1 /* DemoPhotoMessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoPhotoMessageViewModel.swift; sourceTree = "<group>"; };
+		ECDB2A9A224FAA310061AEB1 /* SendingStatusCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingStatusCollectionViewCell.swift; sourceTree = "<group>"; };
+		ECDB2A9B224FAA320061AEB1 /* SendingStatusPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingStatusPresenter.swift; sourceTree = "<group>"; };
+		ECDB2A9C224FAA320061AEB1 /* SendingStatusCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendingStatusCollectionViewCell.xib; sourceTree = "<group>"; };
+		ECDB2AA0224FAA3F0061AEB1 /* DemoTextMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTextMessageModel.swift; sourceTree = "<group>"; };
+		ECDB2AA1224FAA400061AEB1 /* DemoTextMessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTextMessageViewModel.swift; sourceTree = "<group>"; };
+		ECDB2AA4224FAA490061AEB1 /* TimeSeparatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSeparatorModel.swift; sourceTree = "<group>"; };
+		ECDB2AA5224FAA4A0061AEB1 /* TimeSeparatorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSeparatorCollectionViewCell.swift; sourceTree = "<group>"; };
+		ECDB2AA6224FAA4A0061AEB1 /* TimeSeparatorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSeparatorPresenter.swift; sourceTree = "<group>"; };
+		ECDB2AAA224FAA5B0061AEB1 /* CellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellsViewController.swift; sourceTree = "<group>"; };
+		ECDB2AAB224FAA5B0061AEB1 /* ChatWithTabBarExamplesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatWithTabBarExamplesViewController.swift; sourceTree = "<group>"; };
+		ECDB2AAC224FAA5C0061AEB1 /* SlidingDatasSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingDatasSource.swift; sourceTree = "<group>"; };
+		ECDB2AAD224FAA5C0061AEB1 /* BaseMessagesSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMessagesSelector.swift; sourceTree = "<group>"; };
+		ECDB2AAE224FAA5D0061AEB1 /* MessagesSelectorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesSelectorProtocol.swift; sourceTree = "<group>"; };
+		ECDB2AAF224FAA5D0061AEB1 /* ChatExamplesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatExamplesViewController.swift; sourceTree = "<group>"; };
 		ECDCC251222EB07400DA9758 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ECDCC253222EB0D000DA9758 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		ECDCC256222EB2C400DA9758 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
@@ -457,6 +535,7 @@
 		ECD2C1D0223F017500C421A7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				ECDB2A49224F75170061AEB1 /* Chats */,
 				ECC961582246C5B200E4D4C1 /* Filter */,
 				ECD2C1D3223F018B00C421A7 /* UserCell */,
 			);
@@ -479,6 +558,67 @@
 				ECDB2A3B224E8F110061AEB1 /* LanguageInPicker.swift */,
 			);
 			path = LanguageInPicker;
+			sourceTree = "<group>";
+		};
+		ECDB2A49224F75170061AEB1 /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+				ECDB2A4E224F87D20061AEB1 /* ListOfChatsCell.swift */,
+				ECDB2A4F224F87D20061AEB1 /* ListOfChatsCell.xib */,
+				ECDB2A52224F8B6E0061AEB1 /* ListOfChatsSectionController.swift */,
+			);
+			path = Chats;
+			sourceTree = "<group>";
+		};
+		ECDB2A4B224F773C0061AEB1 /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+				ECDB2A6F224FA8E70061AEB1 /* Chatto */,
+				ECDB2A4C224F775D0061AEB1 /* ListOfChatsViewController.swift */,
+			);
+			path = Chats;
+			sourceTree = "<group>";
+		};
+		ECDB2A6F224FA8E70061AEB1 /* Chatto */ = {
+			isa = PBXGroup;
+			children = (
+				ECDB2A70224FA9AE0061AEB1 /* AddRandomMessageChatViewController.swift */,
+				ECDB2A75224FA9D80061AEB1 /* DemoChatDataSource.swift */,
+				ECDB2A76224FA9D90061AEB1 /* DemoChatItemsDecorator.swift */,
+				ECDB2A73224FA9D80061AEB1 /* DemoChatMessageFactory.swift */,
+				ECDB2A78224FA9D90061AEB1 /* DemoChatMessageSender.swift */,
+				ECDB2A74224FA9D80061AEB1 /* DemoChatViewController.swift */,
+				ECDB2A77224FA9D90061AEB1 /* MessagesSelectionChatViewController.swift */,
+				ECDB2A79224FA9D90061AEB1 /* ScrollToBottomButtonChatViewController.swift */,
+				ECDB2A72224FA9D80061AEB1 /* UpdateItemTypeViewController.swift */,
+				ECDB2A83224FAA0B0061AEB1 /* DemoCompoundMessageModel.swift */,
+				ECDB2A85224FAA0B0061AEB1 /* DemoCompoundMessageViewModel.swift */,
+				ECDB2A86224FAA0B0061AEB1 /* DemoDateMessageContentFactory.swift */,
+				ECDB2A84224FAA0B0061AEB1 /* DemoImageMessageContentFactory.swift */,
+				ECDB2A82224FAA0B0061AEB1 /* DemoTextMessageContentFactory.swift */,
+				ECDB2A8D224FAA150061AEB1 /* ContentAwareInputItem.swift */,
+				ECDB2A8C224FAA150061AEB1 /* CustomInput.xcassets */,
+				ECDB2A92224FAA210061AEB1 /* BaseMessageCollectionViewCellAvatarStyle.swift */,
+				ECDB2A91224FAA200061AEB1 /* BaseMessageHandler.swift */,
+				ECDB2A90224FAA200061AEB1 /* GenericMessageHandler.swift */,
+				ECDB2A96224FAA270061AEB1 /* DemoPhotoMessageModel.swift */,
+				ECDB2A9A224FAA310061AEB1 /* SendingStatusCollectionViewCell.swift */,
+				ECDB2A9C224FAA320061AEB1 /* SendingStatusCollectionViewCell.xib */,
+				ECDB2A9B224FAA320061AEB1 /* SendingStatusPresenter.swift */,
+				ECDB2A97224FAA2B0061AEB1 /* DemoPhotoMessageViewModel.swift */,
+				ECDB2AA0224FAA3F0061AEB1 /* DemoTextMessageModel.swift */,
+				ECDB2AA1224FAA400061AEB1 /* DemoTextMessageViewModel.swift */,
+				ECDB2AA5224FAA4A0061AEB1 /* TimeSeparatorCollectionViewCell.swift */,
+				ECDB2AA4224FAA490061AEB1 /* TimeSeparatorModel.swift */,
+				ECDB2AA6224FAA4A0061AEB1 /* TimeSeparatorPresenter.swift */,
+				ECDB2AAD224FAA5C0061AEB1 /* BaseMessagesSelector.swift */,
+				ECDB2AAA224FAA5B0061AEB1 /* CellsViewController.swift */,
+				ECDB2AAF224FAA5D0061AEB1 /* ChatExamplesViewController.swift */,
+				ECDB2AAB224FAA5B0061AEB1 /* ChatWithTabBarExamplesViewController.swift */,
+				ECDB2AAE224FAA5D0061AEB1 /* MessagesSelectorProtocol.swift */,
+				ECDB2AAC224FAA5C0061AEB1 /* SlidingDatasSource.swift */,
+			);
+			path = Chatto;
 			sourceTree = "<group>";
 		};
 		ECDCC255222EB2B700DA9758 /* Protocols */ = {
@@ -517,6 +657,7 @@
 			isa = PBXGroup;
 			children = (
 				ECC961532246C41B00E4D4C1 /* Base */,
+				ECDB2A4B224F773C0061AEB1 /* Chats */,
 				ECD2C1CA223F007100C421A7 /* Users */,
 				ECE1D8A52221A987009DE2A3 /* Onboarding */,
 				ECC961542246C42B00E4D4C1 /* FilterViewController.swift */,
@@ -603,6 +744,7 @@
 				EC2C85EF2222758600D113B5 /* Montserrat-Regular.ttf in Resources */,
 				EC1B9AD822397103007B4113 /* Assets.xcassets in Resources */,
 				ECDB2A3A224E8EF70061AEB1 /* LanguageInPicker.xib in Resources */,
+				ECDB2A51224F87D20061AEB1 /* ListOfChatsCell.xib in Resources */,
 				EC863CBD2220811A00A49824 /* LaunchScreen.storyboard in Resources */,
 				EC251953224E8AEE00D0FEE7 /* LanguagesPickerCell.xib in Resources */,
 				EC2C85F12222788100D113B5 /* Montserrat-Bold.ttf in Resources */,
@@ -612,12 +754,14 @@
 				ECE1D8A42221A950009DE2A3 /* Onboarding.storyboard in Resources */,
 				ECF190C222274311002D24EF /* CreateAccount.storyboard in Resources */,
 				EC1B9AC922396A70007B4113 /* Events.storyboard in Resources */,
+				ECDB2A8E224FAA160061AEB1 /* CustomInput.xcassets in Resources */,
 				EC1B9AD422396AB3007B4113 /* Profile.storyboard in Resources */,
 				ECC961502246BC3100E4D4C1 /* Filter.storyboard in Resources */,
 				EC1B9AD222396AA5007B4113 /* Notifications.storyboard in Resources */,
 				ECD2C1DD223F035A00C421A7 /* Montserrat-Medium.ttf in Resources */,
 				ECD2C1DB223F01BF00C421A7 /* UserCell.xib in Resources */,
 				ECC961622246CA6800E4D4C1 /* CheckboxView.xib in Resources */,
+				ECDB2A9F224FAA330061AEB1 /* SendingStatusCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +779,8 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Parleo/Pods-Parleo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Chatto/Chatto.framework",
+				"${BUILT_PRODUCTS_DIR}/ChattoAdditions/ChattoAdditions.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -655,6 +801,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Chatto.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChattoAdditions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -723,46 +871,82 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECDB2A93224FAA210061AEB1 /* GenericMessageHandler.swift in Sources */,
 				EC93F3D2222C834F00C4BB89 /* NetworkService.swift in Sources */,
 				EC76CA3B2235877900ADD1BE /* Storage.swift in Sources */,
+				ECDB2A7A224FA9D90061AEB1 /* UpdateItemTypeViewController.swift in Sources */,
 				ECF190C62227463C002D24EF /* RoundedTextField.swift in Sources */,
 				ECDB2A47224ECD1A0061AEB1 /* CheckboxesCell.swift in Sources */,
 				ECD2C1CC223F008000C421A7 /* UsersViewController.swift in Sources */,
 				EC2C85F322227A0400D113B5 /* LoginViewController.swift in Sources */,
 				ECC9617722482EFA00E4D4C1 /* UserProfileViewController.swift in Sources */,
 				ECDB2A3C224E8F110061AEB1 /* LanguageInPicker.swift in Sources */,
+				ECDB2A50224F87D20061AEB1 /* ListOfChatsCell.swift in Sources */,
 				EC93F3D6222C83B300C4BB89 /* AuthorizationService.swift in Sources */,
+				ECDB2AB0224FAA5D0061AEB1 /* CellsViewController.swift in Sources */,
+				ECDB2A7C224FA9D90061AEB1 /* DemoChatViewController.swift in Sources */,
 				ECDCC257222EB2C400DA9758 /* AppError.swift in Sources */,
+				ECDB2A81224FA9D90061AEB1 /* ScrollToBottomButtonChatViewController.swift in Sources */,
 				ECE1D8AC2221B054009DE2A3 /* OnboardingNavigationController.swift in Sources */,
+				ECDB2AA3224FAA400061AEB1 /* DemoTextMessageViewModel.swift in Sources */,
+				ECDB2A88224FAA0B0061AEB1 /* DemoCompoundMessageModel.swift in Sources */,
+				ECDB2A8F224FAA160061AEB1 /* ContentAwareInputItem.swift in Sources */,
 				ECD2C1DA223F01BF00C421A7 /* UserCell.swift in Sources */,
+				ECDB2AA8224FAA4C0061AEB1 /* TimeSeparatorCollectionViewCell.swift in Sources */,
+				ECDB2A9D224FAA330061AEB1 /* SendingStatusCollectionViewCell.swift in Sources */,
 				ECDCC252222EB07400DA9758 /* User.swift in Sources */,
 				ECC961602246CA5900E4D4C1 /* CheckboxView.swift in Sources */,
+				ECDB2A94224FAA210061AEB1 /* BaseMessageHandler.swift in Sources */,
+				ECDB2AA7224FAA4C0061AEB1 /* TimeSeparatorModel.swift in Sources */,
+				ECDB2A7F224FA9D90061AEB1 /* MessagesSelectionChatViewController.swift in Sources */,
+				ECDB2A80224FA9D90061AEB1 /* DemoChatMessageSender.swift in Sources */,
 				EC76CA30223539D700ADD1BE /* ViewModelType.swift in Sources */,
 				ECC9617422478F5200E4D4C1 /* TapticEngine.swift in Sources */,
+				ECDB2A71224FA9AF0061AEB1 /* AddRandomMessageChatViewController.swift in Sources */,
+				ECDB2A8A224FAA0B0061AEB1 /* DemoCompoundMessageViewModel.swift in Sources */,
+				ECDB2A53224F8B6E0061AEB1 /* ListOfChatsSectionController.swift in Sources */,
 				EC251952224E8AEE00D0FEE7 /* LanguagesPickerCell.swift in Sources */,
+				ECDB2AB1224FAA5D0061AEB1 /* ChatWithTabBarExamplesViewController.swift in Sources */,
 				EC93F3D4222C836D00C4BB89 /* NetworkExtension.swift in Sources */,
 				EC76CA3522353CA100ADD1BE /* UIViewController+HUD.swift in Sources */,
 				ECDB2A44224ECB970061AEB1 /* LanguagePickerSectionController.swift in Sources */,
+				ECDB2A98224FAA2E0061AEB1 /* DemoPhotoMessageModel.swift in Sources */,
+				ECDB2A95224FAA210061AEB1 /* BaseMessageCollectionViewCellAvatarStyle.swift in Sources */,
+				ECDB2AA9224FAA4C0061AEB1 /* TimeSeparatorPresenter.swift in Sources */,
+				ECDB2AB5224FAA5D0061AEB1 /* ChatExamplesViewController.swift in Sources */,
+				ECDB2A7E224FA9D90061AEB1 /* DemoChatItemsDecorator.swift in Sources */,
 				ECD2C1CF223F00E800C421A7 /* UsersViewModel.swift in Sources */,
 				ECC9617022478E3300E4D4C1 /* FilterCellConfigurator.swift in Sources */,
 				ECC9616A2246E1DC00E4D4C1 /* SliderCell.swift in Sources */,
 				EC93F3D8222C83BF00C4BB89 /* AuthorizationAPI.swift in Sources */,
+				ECDB2AA2224FAA400061AEB1 /* DemoTextMessageModel.swift in Sources */,
 				EC76CA2E2235397400ADD1BE /* LoginViewModel.swift in Sources */,
 				ECC961572246C46300E4D4C1 /* FilterViewModel.swift in Sources */,
 				ECC961642246CB3E00E4D4C1 /* NibLoadable.swift in Sources */,
+				ECDB2A9E224FAA330061AEB1 /* SendingStatusPresenter.swift in Sources */,
 				ECC9616D224778C500E4D4C1 /* RangeSlider.swift in Sources */,
+				ECDB2AB4224FAA5D0061AEB1 /* MessagesSelectorProtocol.swift in Sources */,
 				ECDB2A42224ECB690061AEB1 /* SliderSectionController.swift in Sources */,
 				EC76CA3722353E1000ADD1BE /* UIViewController+RxNavigation.swift in Sources */,
+				ECDB2A99224FAA2E0061AEB1 /* DemoPhotoMessageViewModel.swift in Sources */,
+				ECDB2A7D224FA9D90061AEB1 /* DemoChatDataSource.swift in Sources */,
 				EC1B9AD622396B6F007B4113 /* BaseTabBarController.swift in Sources */,
 				ECF190C82227E362002D24EF /* RoundedButton.swift in Sources */,
 				ECC961552246C42B00E4D4C1 /* FilterViewController.swift in Sources */,
+				ECDB2AB2224FAA5D0061AEB1 /* SlidingDatasSource.swift in Sources */,
 				ECDB2A3E224EC4220061AEB1 /* DiffableBox.swift in Sources */,
+				ECDB2A87224FAA0B0061AEB1 /* DemoTextMessageContentFactory.swift in Sources */,
+				ECDB2AB3224FAA5D0061AEB1 /* BaseMessagesSelector.swift in Sources */,
+				ECDB2A4D224F775D0061AEB1 /* ListOfChatsViewController.swift in Sources */,
 				ECDB2A40224ECB1E0061AEB1 /* CheckboxSectionController.swift in Sources */,
 				EC863CB12220811800A49824 /* AppDelegate.swift in Sources */,
 				ECDCC254222EB0D000DA9758 /* Credentials.swift in Sources */,
+				ECDB2A8B224FAA0B0061AEB1 /* DemoDateMessageContentFactory.swift in Sources */,
 				ECE1D8AE2221B5ED009DE2A3 /* StartupViewController.swift in Sources */,
+				ECDB2A7B224FA9D90061AEB1 /* DemoChatMessageFactory.swift in Sources */,
 				EC76CA3322353C4500ADD1BE /* UIViewController+ErrorAlert.swift in Sources */,
 				ECE1D8A22221A5DC009DE2A3 /* R.generated.swift in Sources */,
+				ECDB2A89224FAA0B0061AEB1 /* DemoImageMessageContentFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

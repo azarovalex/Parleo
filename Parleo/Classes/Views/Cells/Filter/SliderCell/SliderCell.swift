@@ -6,7 +6,6 @@
 //  Copyright © 2019 LeatherSoft. All rights reserved.
 //
 
-import UIKit
 import IGListKit
 
 class SliderCellModel: ListDiffable {
