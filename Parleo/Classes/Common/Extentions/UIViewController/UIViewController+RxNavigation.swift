@@ -24,3 +24,14 @@ extension Reactive where Base: SegueManagerViewController {
         }
     }
 }
+
+extension UIViewController {
+
+    @IBAction func close() {
+        if let navigationController = navigationController, navigationController.viewControllers.count > 1 {
+            navigationController.popViewController(animated: true)
+        } else {
+            dismiss(animated: true)
+        }
+    }
+}
