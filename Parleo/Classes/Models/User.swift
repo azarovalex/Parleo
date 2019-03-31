@@ -14,6 +14,7 @@ struct User {
 }
 
 extension User: Mappable {
+
     init?(map: Map) {
         if map.JSON["id"] == nil { return nil }
     }
