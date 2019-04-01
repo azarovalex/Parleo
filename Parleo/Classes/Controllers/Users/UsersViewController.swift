@@ -15,6 +15,7 @@ class UsersViewController: SegueManagerViewController {
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var filterButton: UIBarButtonItem!
 
+    private var refreshController = UIRefreshControl()
     private let viewModel = UsersViewModel()
     private let bag = DisposeBag()
 
@@ -30,6 +31,7 @@ private extension UsersViewController {
 
     func setup() {
         tableView.register(R.nib.userCell)
+        tableView.refreshControl = refreshController
         bindViewModel()
         bindFilterButton()
     }
@@ -41,6 +43,7 @@ private extension UsersViewController {
         output.cells.drive(tableView.rx.items) { [unowned self] _, index, model in
             return self.tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.userCell, for: IndexPath(row: index, section: 0))!
         }.disposed(by: bag)
+        refreshController.rx.action = output.refreshAction
     }
 
     func bindFilterButton() {

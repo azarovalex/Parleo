@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Zv-Ah-rcI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Zv-Ah-rcI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,14 +33,29 @@
         <!--Notifications-->
         <scene sceneID="qRI-ge-LRa">
             <objects>
-                <viewController id="BTU-s4-zSk" sceneMemberID="viewController">
+                <viewController id="BTU-s4-zSk" customClass="NotificationsViewController" customModule="Parleo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1qM-5a-Way">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HVL-Gm-LC1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HVL-Gm-LC1" firstAttribute="top" secondItem="7qz-Bb-HzC" secondAttribute="top" id="1tD-zF-wVg"/>
+                            <constraint firstItem="7qz-Bb-HzC" firstAttribute="bottom" secondItem="HVL-Gm-LC1" secondAttribute="bottom" id="PKD-Px-mId"/>
+                            <constraint firstItem="HVL-Gm-LC1" firstAttribute="leading" secondItem="7qz-Bb-HzC" secondAttribute="leading" id="cnL-SU-E9V"/>
+                            <constraint firstItem="7qz-Bb-HzC" firstAttribute="trailing" secondItem="HVL-Gm-LC1" secondAttribute="trailing" id="gZh-Ne-pYG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7qz-Bb-HzC"/>
                     </view>
                     <navigationItem key="navigationItem" title="Notifications" id="pUj-VA-OX4"/>
+                    <connections>
+                        <outlet property="tableView" destination="HVL-Gm-LC1" id="odC-ke-qfb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUQ-bs-yY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

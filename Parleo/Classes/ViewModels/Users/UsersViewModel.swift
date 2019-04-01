@@ -8,8 +8,11 @@
 
 import RxSwift
 import RxCocoa
+import Action
 
 class UsersViewModel: ViewModelType {
+
+    private let bag = DisposeBag()
 
     struct Input {
 
@@ -17,10 +20,18 @@ class UsersViewModel: ViewModelType {
 
     struct Output {
         let cells: Driver<[Void]>
+        let refreshAction: CocoaAction
     }
 
     func transform(input: Input) -> Output {
-        let cells = Driver.just([(), (), (), (), (), (), ()])
-        return Output(cells: cells)
+        let cellsRelay = BehaviorRelay<[()]>(value: [])
+        let action = CocoaAction { [unowned self] in
+            let cells = Driver.just([(), (), (), (), (), (), (), (), (), (), (), ()])
+                .delay(2)
+            cells.drive(cellsRelay).disposed(by: self.bag)
+            return cells.asObservable().map { _ in }
+        }
+        action.execute()
+        return Output(cells: cellsRelay.asDriver(), refreshAction: action)
     }
 }
