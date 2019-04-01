@@ -23,15 +23,16 @@ class UserCell: UITableViewCell {
 private extension UserCell {
 
     func setup() {
-        shadowView.layer.cornerRadius = 6
+        shadowView.layer.cornerRadius = 7
         shadowView.clipsToBounds = true
 
         self.shadowView.layer.shadowPath = UIBezierPath(roundedRect: shadowView.bounds,
                          cornerRadius: shadowView.layer.cornerRadius).cgPath
         self.shadowView.layer.shadowColor = UIColor.black.cgColor
-        self.shadowView.layer.shadowOpacity = 0.10
+        self.shadowView.layer.shadowOpacity = 0.15
         self.shadowView.layer.shadowOffset = CGSize(width: 0, height: 2)
         self.shadowView.layer.shadowRadius = 5
         self.shadowView.layer.masksToBounds = false
     }
 }
+

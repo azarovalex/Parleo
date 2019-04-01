@@ -43,6 +43,7 @@
 		ECB5962922515316002EDDFD /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5962822515316002EDDFD /* Reactive.swift */; };
 		ECB596412251618C002EDDFD /* FriendRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5963F2251618C002EDDFD /* FriendRequestCell.swift */; };
 		ECB596422251618C002EDDFD /* FriendRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECB596402251618C002EDDFD /* FriendRequestCell.xib */; };
+		ECB596452252ADE0002EDDFD /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB596442252ADE0002EDDFD /* UIView+CornerRadius.swift */; };
 		ECC961502246BC3100E4D4C1 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC9614F2246BC3100E4D4C1 /* Filter.storyboard */; };
 		ECC961522246BD9700E4D4C1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC961512246BD9700E4D4C1 /* Colors.xcassets */; };
 		ECC961552246C42B00E4D4C1 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC961542246C42B00E4D4C1 /* FilterViewController.swift */; };
@@ -162,6 +163,7 @@
 		ECB5962822515316002EDDFD /* Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; };
 		ECB5963F2251618C002EDDFD /* FriendRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestCell.swift; sourceTree = "<group>"; };
 		ECB596402251618C002EDDFD /* FriendRequestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendRequestCell.xib; sourceTree = "<group>"; };
+		ECB596442252ADE0002EDDFD /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
 		ECC9614F2246BC3100E4D4C1 /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		ECC961512246BD9700E4D4C1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		ECC961542246C42B00E4D4C1 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 		EC93F3CD222C831100C4BB89 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				ECB596432252ADB4002EDDFD /* UIView */,
 				EC76CA3122353C3300ADD1BE /* UIViewController */,
 				ECB5962822515316002EDDFD /* Reactive.swift */,
 			);
@@ -488,6 +491,14 @@
 				ECB596402251618C002EDDFD /* FriendRequestCell.xib */,
 			);
 			path = FriendRequestCell;
+			sourceTree = "<group>";
+		};
+		ECB596432252ADB4002EDDFD /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				ECB596442252ADE0002EDDFD /* UIView+CornerRadius.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		ECC961532246C41B00E4D4C1 /* Base */ = {
@@ -931,6 +942,7 @@
 				EC93F3D2222C834F00C4BB89 /* NetworkService.swift in Sources */,
 				EC76CA3B2235877900ADD1BE /* Storage.swift in Sources */,
 				ECDB2A7A224FA9D90061AEB1 /* UpdateItemTypeViewController.swift in Sources */,
+				ECB596452252ADE0002EDDFD /* UIView+CornerRadius.swift in Sources */,
 				ECF190C62227463C002D24EF /* RoundedTextField.swift in Sources */,
 				ECDB2A47224ECD1A0061AEB1 /* CheckboxesCell.swift in Sources */,
 				ECD2C1CC223F008000C421A7 /* UsersViewController.swift in Sources */,
