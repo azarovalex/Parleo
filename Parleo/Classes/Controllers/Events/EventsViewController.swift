@@ -8,10 +8,10 @@
 
 import RxCocoa
 import RxSwift
-import UIKit
+import SegueManager
 
-class EventsViewController: UIViewController {
-    @IBOutlet private var eventsSegmentControl: UISegmentedControl!
+class EventsViewController: SegueManagerViewController {
+
     @IBOutlet private var filterBarButton: UIBarButtonItem!
     @IBOutlet private var addEventBarButton: UIBarButtonItem!
     @IBOutlet private var eventsTableView: UITableView! {
@@ -21,13 +21,7 @@ class EventsViewController: UIViewController {
     }
     
     private let viewModel = EventsViewModel()
-    
-    private let disposeBag = DisposeBag()
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let filterVC = segue.destination as? FilterViewController else { return }
-        filterVC.screenConfiguration = .filterEvents
-    }
+    private let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +41,15 @@ class EventsViewController: UIViewController {
             cell.viewModel = model
             return cell
             }
-        .disposed(by: disposeBag)
+        .disposed(by: bag)
+
+        eventsTableView.rx.modelSelected(EventTableCellViewModel.self)
+            .bind(to: rx.navigate(with: R.segue.eventsViewController.fromEventsToDetails))
+            .disposed(by: bag)
+
+        filterBarButton.rx.tap
+            .bind(to: rx.navigate(with: R.segue.eventsViewController.fromEventsToFilter,
+                                                    segueHandler: { segue, _ in segue.destination.screenConfiguration = .filterEvents }))
+            .disposed(by: bag)
     }
 }

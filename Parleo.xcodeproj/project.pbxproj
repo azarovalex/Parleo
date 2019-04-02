@@ -31,6 +31,7 @@
 		EC76CA3522353CA100ADD1BE /* UIViewController+HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76CA3422353CA100ADD1BE /* UIViewController+HUD.swift */; };
 		EC76CA3722353E1000ADD1BE /* UIViewController+RxNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76CA3622353E1000ADD1BE /* UIViewController+RxNavigation.swift */; };
 		EC76CA3B2235877900ADD1BE /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76CA3A2235877900ADD1BE /* Storage.swift */; };
+		EC8059C32253ABC6005C1644 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8059C22253ABC6005C1644 /* EventDetailsViewController.swift */; };
 		EC863CB12220811800A49824 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC863CB02220811800A49824 /* AppDelegate.swift */; };
 		EC863CB82220811800A49824 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC863CB62220811800A49824 /* Main.storyboard */; };
 		EC863CBD2220811A00A49824 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC863CBB2220811A00A49824 /* LaunchScreen.storyboard */; };
@@ -161,6 +162,7 @@
 		EC76CA3422353CA100ADD1BE /* UIViewController+HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HUD.swift"; sourceTree = "<group>"; };
 		EC76CA3622353E1000ADD1BE /* UIViewController+RxNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RxNavigation.swift"; sourceTree = "<group>"; };
 		EC76CA3A2235877900ADD1BE /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		EC8059C22253ABC6005C1644 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		EC863CAD2220811800A49824 /* Parleo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parleo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC863CB02220811800A49824 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC863CB72220811800A49824 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -757,6 +759,7 @@
 			children = (
 				17DFB168223FE2A900495918 /* EventsViewController.swift */,
 				ECDEBFEF22537D3E009CFE93 /* CreateEventViewController.swift */,
+				EC8059C22253ABC6005C1644 /* EventDetailsViewController.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -1015,6 +1018,7 @@
 				ECDB2A47224ECD1A0061AEB1 /* CheckboxesCell.swift in Sources */,
 				ECD2C1CC223F008000C421A7 /* UsersViewController.swift in Sources */,
 				177A7CDC224FCA0000FB4A2D /* EventTableViewCell.swift in Sources */,
+				EC8059C32253ABC6005C1644 /* EventDetailsViewController.swift in Sources */,
 				EC2C85F322227A0400D113B5 /* LoginViewController.swift in Sources */,
 				ECC9617722482EFA00E4D4C1 /* UserProfileViewController.swift in Sources */,
 				ECDB2A3C224E8F110061AEB1 /* LanguageInPicker.swift in Sources */,
