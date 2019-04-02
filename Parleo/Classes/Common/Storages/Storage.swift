@@ -17,5 +17,6 @@ class Storage {
 
     static var shared = Storage()
 
-    var currentUser: User?
+//    var currentUser: User?
+    var accessToken: String?
 }

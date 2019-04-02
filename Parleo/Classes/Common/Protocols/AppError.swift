@@ -14,3 +14,11 @@ protocol AppError: Error {
 }
 
 struct EmptyError: Error {}
+
+struct SimpleError: AppError {
+    var message: String
+    
+    init(message: String) {
+        self.message = message
+    }
+}

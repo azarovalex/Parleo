@@ -12,7 +12,7 @@ import Action
 
 class LoginViewModel: ViewModelType {
 
-    private let authorizationService = AuthorizationService(mockType: .delayed(1))
+    private let authorizationService = AuthorizationService()
 
     struct Input {
         let email: Driver<String>
@@ -52,15 +52,7 @@ private extension LoginViewModel {
     }
 
     func login(with info: LoginInfo) -> Observable<Void> {
-        return self.authorizationService.logIn(with: info.email, password: info.password)
-            .flatMap { result in
-                switch result {
-                case .success(let user):
-                    Storage.shared.currentUser = user
-                    return .just(())
-                case .failure(let error):
-                    return .error(error)
-                } }
-            .asObservable()
+        return unwrapResult(self.authorizationService.login(with: info.email, password: info.password))
+            .do(onNext: { token in Storage.shared.accessToken = token }).map { _ in }
     }
 }

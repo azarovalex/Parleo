@@ -44,6 +44,12 @@
 		ECB596412251618C002EDDFD /* FriendRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5963F2251618C002EDDFD /* FriendRequestCell.swift */; };
 		ECB596422251618C002EDDFD /* FriendRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECB596402251618C002EDDFD /* FriendRequestCell.xib */; };
 		ECB596452252ADE0002EDDFD /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB596442252ADE0002EDDFD /* UIView+CornerRadius.swift */; };
+		ECB596492252C34C002EDDFD /* SignUpAvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB596482252C34C002EDDFD /* SignUpAvatarViewController.swift */; };
+		ECB5964C2252C540002EDDFD /* UIViewController+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5964B2252C540002EDDFD /* UIViewController+ImagePicker.swift */; };
+		ECB5964E2252C564002EDDFD /* ImagePickerController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5964D2252C564002EDDFD /* ImagePickerController+Rx.swift */; };
+		ECB596512252D5ED002EDDFD /* SignUpCredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB596502252D5ED002EDDFD /* SignUpCredentialsViewController.swift */; };
+		ECB596532252D978002EDDFD /* SignUpInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB596522252D978002EDDFD /* SignUpInfoViewController.swift */; };
+		ECB596552252DA4F002EDDFD /* SingUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB596542252DA4F002EDDFD /* SingUpViewModel.swift */; };
 		ECC961502246BC3100E4D4C1 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC9614F2246BC3100E4D4C1 /* Filter.storyboard */; };
 		ECC961522246BD9700E4D4C1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC961512246BD9700E4D4C1 /* Colors.xcassets */; };
 		ECC961552246C42B00E4D4C1 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC961542246C42B00E4D4C1 /* FilterViewController.swift */; };
@@ -164,6 +170,12 @@
 		ECB5963F2251618C002EDDFD /* FriendRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestCell.swift; sourceTree = "<group>"; };
 		ECB596402251618C002EDDFD /* FriendRequestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendRequestCell.xib; sourceTree = "<group>"; };
 		ECB596442252ADE0002EDDFD /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
+		ECB596482252C34C002EDDFD /* SignUpAvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAvatarViewController.swift; sourceTree = "<group>"; };
+		ECB5964B2252C540002EDDFD /* UIViewController+ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ImagePicker.swift"; sourceTree = "<group>"; };
+		ECB5964D2252C564002EDDFD /* ImagePickerController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImagePickerController+Rx.swift"; sourceTree = "<group>"; };
+		ECB596502252D5ED002EDDFD /* SignUpCredentialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCredentialsViewController.swift; sourceTree = "<group>"; };
+		ECB596522252D978002EDDFD /* SignUpInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInfoViewController.swift; sourceTree = "<group>"; };
+		ECB596542252DA4F002EDDFD /* SingUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewModel.swift; sourceTree = "<group>"; };
 		ECC9614F2246BC3100E4D4C1 /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		ECC961512246BD9700E4D4C1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		ECC961542246C42B00E4D4C1 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				EC76CA2D2235397400ADD1BE /* LoginViewModel.swift */,
+				ECB596542252DA4F002EDDFD /* SingUpViewModel.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -293,6 +306,7 @@
 		EC76CA3122353C3300ADD1BE /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
+				ECB5964A2252C526002EDDFD /* ImagePicker */,
 				EC76CA3222353C4500ADD1BE /* UIViewController+ErrorAlert.swift */,
 				EC76CA3422353CA100ADD1BE /* UIViewController+HUD.swift */,
 				EC76CA3622353E1000ADD1BE /* UIViewController+RxNavigation.swift */,
@@ -501,6 +515,25 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		ECB5964A2252C526002EDDFD /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				ECB5964B2252C540002EDDFD /* UIViewController+ImagePicker.swift */,
+				ECB5964D2252C564002EDDFD /* ImagePickerController+Rx.swift */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		ECB5964F2252D5A1002EDDFD /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				ECB596502252D5ED002EDDFD /* SignUpCredentialsViewController.swift */,
+				ECB596522252D978002EDDFD /* SignUpInfoViewController.swift */,
+				ECB596482252C34C002EDDFD /* SignUpAvatarViewController.swift */,
+			);
+			path = CreateAccount;
+			sourceTree = "<group>";
+		};
 		ECC961532246C41B00E4D4C1 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -698,6 +731,7 @@
 		ECE1D8A52221A987009DE2A3 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				ECB5964F2252D5A1002EDDFD /* CreateAccount */,
 				ECE1D8AB2221B054009DE2A3 /* OnboardingNavigationController.swift */,
 				ECE1D8AD2221B5ED009DE2A3 /* StartupViewController.swift */,
 				EC2C85F222227A0400D113B5 /* LoginViewController.swift */,
@@ -938,6 +972,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB596492252C34C002EDDFD /* SignUpAvatarViewController.swift in Sources */,
 				ECDB2A93224FAA210061AEB1 /* GenericMessageHandler.swift in Sources */,
 				EC93F3D2222C834F00C4BB89 /* NetworkService.swift in Sources */,
 				EC76CA3B2235877900ADD1BE /* Storage.swift in Sources */,
@@ -949,8 +984,10 @@
 				EC2C85F322227A0400D113B5 /* LoginViewController.swift in Sources */,
 				ECC9617722482EFA00E4D4C1 /* UserProfileViewController.swift in Sources */,
 				ECDB2A3C224E8F110061AEB1 /* LanguageInPicker.swift in Sources */,
+				ECB596552252DA4F002EDDFD /* SingUpViewModel.swift in Sources */,
 				ECDB2A50224F87D20061AEB1 /* ListOfChatsCell.swift in Sources */,
 				EC93F3D6222C83B300C4BB89 /* AuthorizationService.swift in Sources */,
+				ECB596512252D5ED002EDDFD /* SignUpCredentialsViewController.swift in Sources */,
 				ECDB2AB0224FAA5D0061AEB1 /* CellsViewController.swift in Sources */,
 				ECDB2A7C224FA9D90061AEB1 /* DemoChatViewController.swift in Sources */,
 				ECB5961E22514AC4002EDDFD /* FriendAddedCell.swift in Sources */,
@@ -976,6 +1013,7 @@
 				ECC9617422478F5200E4D4C1 /* TapticEngine.swift in Sources */,
 				ECDB2A71224FA9AF0061AEB1 /* AddRandomMessageChatViewController.swift in Sources */,
 				ECDB2A8A224FAA0B0061AEB1 /* DemoCompoundMessageViewModel.swift in Sources */,
+				ECB5964C2252C540002EDDFD /* UIViewController+ImagePicker.swift in Sources */,
 				ECDB2A53224F8B6E0061AEB1 /* ListOfChatsSectionController.swift in Sources */,
 				EC251952224E8AEE00D0FEE7 /* LanguagesPickerCell.swift in Sources */,
 				ECDB2AB1224FAA5D0061AEB1 /* ChatWithTabBarExamplesViewController.swift in Sources */,
@@ -995,6 +1033,7 @@
 				ECC9616A2246E1DC00E4D4C1 /* SliderCell.swift in Sources */,
 				EC93F3D8222C83BF00C4BB89 /* AuthorizationAPI.swift in Sources */,
 				ECDB2AA2224FAA400061AEB1 /* DemoTextMessageModel.swift in Sources */,
+				ECB5964E2252C564002EDDFD /* ImagePickerController+Rx.swift in Sources */,
 				EC76CA2E2235397400ADD1BE /* LoginViewModel.swift in Sources */,
 				ECC961572246C46300E4D4C1 /* FilterViewModel.swift in Sources */,
 				ECC961642246CB3E00E4D4C1 /* NibLoadable.swift in Sources */,
@@ -1016,6 +1055,7 @@
 				ECDB2A4D224F775D0061AEB1 /* ListOfChatsViewController.swift in Sources */,
 				ECDB2A40224ECB1E0061AEB1 /* CheckboxSectionController.swift in Sources */,
 				EC863CB12220811800A49824 /* AppDelegate.swift in Sources */,
+				ECB596532252D978002EDDFD /* SignUpInfoViewController.swift in Sources */,
 				ECDCC254222EB0D000DA9758 /* Credentials.swift in Sources */,
 				ECDB2A8B224FAA0B0061AEB1 /* DemoDateMessageContentFactory.swift in Sources */,
 				ECE1D8AE2221B5ED009DE2A3 /* StartupViewController.swift in Sources */,
