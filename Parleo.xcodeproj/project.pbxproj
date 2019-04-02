@@ -123,6 +123,7 @@
 		ECDCC252222EB07400DA9758 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC251222EB07400DA9758 /* User.swift */; };
 		ECDCC254222EB0D000DA9758 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC253222EB0D000DA9758 /* Credentials.swift */; };
 		ECDCC257222EB2C400DA9758 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCC256222EB2C400DA9758 /* AppError.swift */; };
+		ECDEBFF022537D3E009CFE93 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEBFEF22537D3E009CFE93 /* CreateEventViewController.swift */; };
 		ECE1D8A22221A5DC009DE2A3 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE1D8A12221A5DB009DE2A3 /* R.generated.swift */; };
 		ECE1D8A42221A950009DE2A3 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE1D8A32221A950009DE2A3 /* Onboarding.storyboard */; };
 		ECE1D8A82221AD23009DE2A3 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECE1D8A72221AD0B009DE2A3 /* Montserrat-ExtraBold.ttf */; };
@@ -254,6 +255,7 @@
 		ECDCC251222EB07400DA9758 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ECDCC253222EB0D000DA9758 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		ECDCC256222EB2C400DA9758 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		ECDEBFEF22537D3E009CFE93 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		ECE1D8A12221A5DB009DE2A3 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		ECE1D8A32221A950009DE2A3 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		ECE1D8A72221AD0B009DE2A3 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -643,6 +645,7 @@
 		ECD2C1D0223F017500C421A7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				ECDEBFED22537179009CFE93 /* Events */,
 				ECB5961A22514A3C002EDDFD /* Notifications */,
 				ECDB2A49224F75170061AEB1 /* Chats */,
 				ECC961582246C5B200E4D4C1 /* Filter */,
@@ -740,6 +743,24 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		ECDEBFED22537179009CFE93 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				177A7CDA224FCA0000FB4A2D /* EventTableViewCell.swift */,
+				177A7CDB224FCA0000FB4A2D /* EventTableViewCell.xib */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		ECDEBFEE2253719E009CFE93 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				17DFB168223FE2A900495918 /* EventsViewController.swift */,
+				ECDEBFEF22537D3E009CFE93 /* CreateEventViewController.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
 		ECE1D8A52221A987009DE2A3 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -766,11 +787,11 @@
 		ECF190C3222745AD002D24EF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ECDEBFEE2253719E009CFE93 /* Events */,
 				ECC961532246C41B00E4D4C1 /* Base */,
 				ECDB2A4B224F773C0061AEB1 /* Chats */,
 				ECD2C1CA223F007100C421A7 /* Users */,
 				ECE1D8A52221A987009DE2A3 /* Onboarding */,
-				17DFB168223FE2A900495918 /* EventsViewController.swift */,
 				ECC961542246C42B00E4D4C1 /* FilterViewController.swift */,
 				ECB5961822514974002EDDFD /* NotificationsViewController.swift */,
 			);
@@ -783,8 +804,6 @@
 				ECD2C1D0223F017500C421A7 /* Cells */,
 				ECF190C52227463C002D24EF /* RoundedTextField.swift */,
 				ECF190C72227E362002D24EF /* RoundedButton.swift */,
-				177A7CDA224FCA0000FB4A2D /* EventTableViewCell.swift */,
-				177A7CDB224FCA0000FB4A2D /* EventTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1033,6 +1052,7 @@
 				EC251952224E8AEE00D0FEE7 /* LanguagesPickerCell.swift in Sources */,
 				ECDB2AB1224FAA5D0061AEB1 /* ChatWithTabBarExamplesViewController.swift in Sources */,
 				EC93F3D4222C836D00C4BB89 /* NetworkExtension.swift in Sources */,
+				ECDEBFF022537D3E009CFE93 /* CreateEventViewController.swift in Sources */,
 				17DFB16B223FE3A800495918 /* EventsViewModel.swift in Sources */,
 				EC76CA3522353CA100ADD1BE /* UIViewController+HUD.swift in Sources */,
 				17DFB169223FE2A900495918 /* EventsViewController.swift in Sources */,

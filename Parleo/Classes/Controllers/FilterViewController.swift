@@ -22,7 +22,11 @@ class FilterViewController: UIViewController {
         var cells: [ListDiffable] {
             switch self {
             case .filterEvents:
-                return []
+                return [
+                    CheckboxCellModel(title: "Number of members", items: ["2", "3+"]),
+                    SliderCellModel(title: "Distance from me (km)", minValue: 0, maxValue: 50, step: 1),
+                    LanguagePickerModel(languages: [])
+                ]
             case .filterUsers:
                 return [
                     CheckboxCellModel(title: "Gender", items: ["Female", "Male"]),

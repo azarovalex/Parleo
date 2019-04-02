@@ -30,6 +30,11 @@ class EventsViewModel {
     }
     
     func transform(input: Input) -> Output {
+        events.accept([
+            Event(id: UUID(), title: "Kate's Cafe"),
+            Event(id: UUID(), title: "My Cafe"),
+            Event(id: UUID(), title: "Your Cafe")
+        ])
         let cellsDriver = events
             .asDriver()
             .map {
