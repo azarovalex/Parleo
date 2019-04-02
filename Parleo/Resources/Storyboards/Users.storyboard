@@ -6,9 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Users-->
         <scene sceneID="SfA-qx-Vim">
@@ -42,6 +48,7 @@
                         <outlet property="filterButton" destination="p2e-k6-Z8n" id="0Rp-Mg-Phz"/>
                         <outlet property="tableView" destination="Ko0-67-F0T" id="L34-I5-CRG"/>
                         <segue destination="Ebw-5o-2T2" kind="show" identifier="fromUsersListToFilter" id="q9O-6l-LsT"/>
+                        <segue destination="m6o-7W-wxe" kind="show" identifier="fromUserListToUserInfo" id="yfz-w7-pZE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ec8-ZM-dzv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -54,7 +61,7 @@
                 <viewControllerPlaceholder storyboardName="Filter" id="Ebw-5o-2T2" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hH5-mE-AOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="837" y="95"/>
+            <point key="canvasLocation" x="832" y="-201"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DIs-LN-NGi">
@@ -76,10 +83,146 @@
             </objects>
             <point key="canvasLocation" x="-697" y="172"/>
         </scene>
+        <!--Tedik's Profile-->
+        <scene sceneID="qh9-gA-IrH">
+            <objects>
+                <viewController id="m6o-7W-wxe" customClass="UserProfileViewController" customModule="Parleo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bzZ-ng-cWx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_example" translatesAutoresizingMaskIntoConstraints="NO" id="adi-3d-X2c">
+                                <rect key="frame" x="16" y="80" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="iQI-jm-BCm"/>
+                                    <constraint firstAttribute="height" constant="90" id="wRR-LK-QAx"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="sfL-w2-VG0">
+                                <rect key="frame" x="122" y="103.5" width="167" height="43.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ricardo Milos, 27" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLv-9l-u5o">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="HiB-JT-7fk">
+                                        <rect key="frame" x="0.0" y="24.5" width="137.5" height="19"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Languages:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V48-63-1ja">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                <color key="textColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4XN-Mo-uUL">
+                                                <rect key="frame" x="94.5" y="0.0" width="43" height="19"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UKFlag" translatesAutoresizingMaskIntoConstraints="NO" id="5Ez-RQ-Ffn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="19" height="19"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="19" id="fky-ue-8vc"/>
+                                                            <constraint firstAttribute="width" constant="19" id="jFp-bV-9Am"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RussianFlag" translatesAutoresizingMaskIntoConstraints="NO" id="Vw3-dM-9pT">
+                                                        <rect key="frame" x="24" y="0.0" width="19" height="19"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="19" id="Lwb-pM-Vaa"/>
+                                                            <constraint firstAttribute="width" constant="19" id="VyV-ZP-J7W"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9V-Tz-KHy">
+                                <rect key="frame" x="16" y="186" width="343" height="51.5"/>
+                                <string key="text">I like PHP, hate React, drink sugarless tea,
+do nothing, watch anime, play tanks and whatnot. 😂✌</string>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eQC-xM-2uW">
+                                <rect key="frame" x="16" y="266" width="343" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ra-x0-uwq">
+                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="IeD-Cp-F0W"/>
+                                        </constraints>
+                                        <color key="tintColor" name="AppGray"/>
+                                        <state key="normal" title="Add Friend"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.84999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijU-tq-jTC">
+                                        <rect key="frame" x="177.5" y="0.0" width="165.5" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="5ru-dT-Chy"/>
+                                        </constraints>
+                                        <color key="tintColor" name="AppGray"/>
+                                        <state key="normal" title="Send Message"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.84999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="n9V-Tz-KHy" firstAttribute="leading" secondItem="adi-3d-X2c" secondAttribute="leading" id="DIa-Ji-fd2"/>
+                            <constraint firstItem="adi-3d-X2c" firstAttribute="leading" secondItem="spb-ah-awz" secondAttribute="leading" constant="16" id="Euf-RF-PR5"/>
+                            <constraint firstItem="sfL-w2-VG0" firstAttribute="centerY" secondItem="adi-3d-X2c" secondAttribute="centerY" id="Ewk-uZ-HRW"/>
+                            <constraint firstItem="adi-3d-X2c" firstAttribute="top" secondItem="spb-ah-awz" secondAttribute="top" constant="16" id="L6E-2x-Nkn"/>
+                            <constraint firstItem="n9V-Tz-KHy" firstAttribute="top" secondItem="adi-3d-X2c" secondAttribute="bottom" constant="16" id="SoJ-Vl-n1r"/>
+                            <constraint firstItem="eQC-xM-2uW" firstAttribute="trailing" secondItem="n9V-Tz-KHy" secondAttribute="trailing" id="Tl6-b0-mTE"/>
+                            <constraint firstItem="eQC-xM-2uW" firstAttribute="leading" secondItem="n9V-Tz-KHy" secondAttribute="leading" id="cDO-13-QsG"/>
+                            <constraint firstAttribute="trailing" secondItem="n9V-Tz-KHy" secondAttribute="trailing" constant="16" id="mA2-5a-y2q"/>
+                            <constraint firstItem="eQC-xM-2uW" firstAttribute="top" secondItem="n9V-Tz-KHy" secondAttribute="bottom" constant="28.5" id="rWc-H7-8jb"/>
+                            <constraint firstItem="sfL-w2-VG0" firstAttribute="leading" secondItem="adi-3d-X2c" secondAttribute="trailing" constant="16" id="uge-um-Xig"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="spb-ah-awz"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tedik's Profile" id="3cC-My-4bS"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zTx-7M-6Pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160.8" y="238.83058470764618"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="RussianFlag" width="19" height="19"/>
+        <image name="UKFlag" width="30" height="30"/>
+        <image name="avatar_example" width="88" height="88"/>
         <image name="filterIcon" width="24" height="24"/>
         <image name="tabBarUsersIcon" width="31" height="23"/>
+        <namedColor name="AppGray">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
     <color key="tintColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

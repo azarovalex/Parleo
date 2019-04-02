@@ -13,7 +13,7 @@ import Action
 class NotificationsViewModel: ViewModelType {
 
     private let cellsRelay = BehaviorRelay<[AppNotification]>(value: [])
-    private let notificationsService = NotificationsService(mockType: .delayed(2))
+    private let notificationsService = NotificationsService(mockType: .delayed(1))
     private let bag = DisposeBag()
 
     struct Input {}

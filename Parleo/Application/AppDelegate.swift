@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwiftExt
 import IQKeyboardManagerSwift
 
 @UIApplicationMain

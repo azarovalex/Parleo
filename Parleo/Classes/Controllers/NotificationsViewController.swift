@@ -53,13 +53,13 @@ private extension NotificationsViewController {
     }
 
     func bindCellActions() {
-        cellsConfigurator.acceptRelay.bind { notification in
+        cellsConfigurator.acceptRelay.subscribeOn(MainScheduler.instance).bind { notification in
             let alert = UIAlertController(title: "Test", message: "Adding \(notification.username) as friend!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default))
             self.present(alert, animated: true)
         }.disposed(by: bag)
 
-        cellsConfigurator.declineRelay.bind { notification in
+        cellsConfigurator.declineRelay.subscribeOn(MainScheduler.instance).bind { notification in
             let alert = UIAlertController(title: "Test", message: "\(notification.username) is not your friend. 😞", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default))
             self.present(alert, animated: true)

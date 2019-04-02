@@ -58,8 +58,14 @@ private extension ListOfChatsViewController {
 extension ListOfChatsViewController: ListAdapterDataSource {
 
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        return [ListOfChatsCellModel(dialogTitle: "Tedik Tanki, 19", unreadMessages: 1),
-                ListOfChatsCellModel(dialogTitle: "User name", unreadMessages: 999)]
+        return [
+            ListOfChatsCellModel(dialogTitle: "Tedik Tanki, 19", unreadMessages: 1),
+            ListOfChatsCellModel(dialogTitle: "User name", unreadMessages: 999),
+            ListOfChatsCellModel(dialogTitle: "Somebody", unreadMessages: 1),
+            ListOfChatsCellModel(dialogTitle: "Once", unreadMessages: 2),
+            ListOfChatsCellModel(dialogTitle: "Told me", unreadMessages: 3),
+            ListOfChatsCellModel(dialogTitle: "The world in gonna roll me", unreadMessages: 3),
+        ]
     }
 
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {

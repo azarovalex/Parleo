@@ -44,6 +44,9 @@ private extension UsersViewController {
             return self.tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.userCell, for: IndexPath(row: index, section: 0))!
         }.disposed(by: bag)
         refreshController.rx.action = output.refreshAction
+        tableView.rx.modelSelected(Void.self)
+            .bind(to: rx.navigate(with: R.segue.usersViewController.fromUserListToUserInfo))
+            .disposed(by: bag)
     }
 
     func bindFilterButton() {

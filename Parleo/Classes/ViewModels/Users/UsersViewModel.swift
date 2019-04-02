@@ -27,7 +27,7 @@ class UsersViewModel: ViewModelType {
         let cellsRelay = BehaviorRelay<[()]>(value: [])
         let action = CocoaAction { [unowned self] in
             let cells = Driver.just([(), (), (), (), (), (), (), (), (), (), (), ()])
-                .delay(2)
+                .delay(1)
             cells.drive(cellsRelay).disposed(by: self.bag)
             return cells.asObservable().map { _ in }
         }
