@@ -32,7 +32,7 @@ extension AuthorizationAPI: TargetType {
 
     var sampleData: Data {
         switch self {
-        case .login(let email, _):
+        case .login:
             return Data()
         case .register:
             return Data()

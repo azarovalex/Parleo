@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventTableViewCell" rowHeight="300" id="KGk-i7-Jjw" customClass="EventTableViewCell" customModule="Parleo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="399" height="249"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="399" height="248.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lBv-UT-eb7">
+                        <rect key="frame" x="0.0" y="0.0" width="399" height="250.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="250" id="fP6-WD-MKq"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventCardShadow" translatesAutoresizingMaskIntoConstraints="NO" id="Rmg-Yo-TCa">
+                        <rect key="frame" x="0.0" y="0.0" width="399" height="250.5"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UKFlag" translatesAutoresizingMaskIntoConstraints="NO" id="2Cm-lK-qVQ">
+                        <rect key="frame" x="20" y="141.5" width="30" height="30"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WBL-aL-rZo">
+                        <rect key="frame" x="20" y="191.5" width="42" height="41"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqW-Q5-t0N">
+                                <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mel-am-0f9">
+                                <rect key="frame" x="0.0" y="20.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventUsers" translatesAutoresizingMaskIntoConstraints="NO" id="1AA-2D-Vaa">
+                        <rect key="frame" x="282.5" y="197.5" width="98.5" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="1AA-2D-Vaa" secondAttribute="height" multiplier="73:26" id="X6J-Y8-QBH"/>
+                            <constraint firstAttribute="height" constant="35" id="erZ-Yw-ipD"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="lBv-UT-eb7" secondAttribute="bottom" id="1Dp-Hm-ghK"/>
+                    <constraint firstItem="lBv-UT-eb7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9jW-gw-qm2"/>
+                    <constraint firstItem="1AA-2D-Vaa" firstAttribute="bottom" secondItem="WBL-aL-rZo" secondAttribute="bottom" id="FLf-6v-9yJ"/>
+                    <constraint firstAttribute="bottom" secondItem="WBL-aL-rZo" secondAttribute="bottom" constant="18" id="G8Y-h3-2Af"/>
+                    <constraint firstItem="lBv-UT-eb7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Igs-Qw-uU0"/>
+                    <constraint firstItem="Rmg-Yo-TCa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Qpa-9q-JZF"/>
+                    <constraint firstAttribute="trailing" secondItem="Rmg-Yo-TCa" secondAttribute="trailing" id="TdV-VC-bCC"/>
+                    <constraint firstItem="lBv-UT-eb7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="W1X-NB-9Wn"/>
+                    <constraint firstAttribute="bottom" secondItem="Rmg-Yo-TCa" secondAttribute="bottom" id="bh0-xX-bEr"/>
+                    <constraint firstAttribute="trailing" secondItem="lBv-UT-eb7" secondAttribute="trailing" id="cao-eM-fsm"/>
+                    <constraint firstItem="WBL-aL-rZo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="cbq-CN-5vg"/>
+                    <constraint firstItem="2Cm-lK-qVQ" firstAttribute="leading" secondItem="WBL-aL-rZo" secondAttribute="leading" id="fd9-u8-LCk"/>
+                    <constraint firstAttribute="bottom" secondItem="lBv-UT-eb7" secondAttribute="bottom" id="ltB-bU-JoF"/>
+                    <constraint firstAttribute="trailing" secondItem="lBv-UT-eb7" secondAttribute="trailing" id="nFy-XA-LYi"/>
+                    <constraint firstItem="Rmg-Yo-TCa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pTJ-su-1cw"/>
+                    <constraint firstAttribute="trailing" secondItem="1AA-2D-Vaa" secondAttribute="trailing" constant="18" id="qjJ-zS-68P"/>
+                    <constraint firstItem="lBv-UT-eb7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tVa-kH-p6O"/>
+                    <constraint firstItem="WBL-aL-rZo" firstAttribute="top" secondItem="2Cm-lK-qVQ" secondAttribute="bottom" constant="20" id="v7v-pL-dP6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backgroundImageView" destination="lBv-UT-eb7" id="9fc-Se-apB"/>
+                <outlet property="descriptionLabel" destination="Mel-am-0f9" id="AID-jk-PSc"/>
+                <outlet property="languageFlagImageView" destination="2Cm-lK-qVQ" id="q2m-bU-1tq"/>
+                <outlet property="titleLabel" destination="vqW-Q5-t0N" id="ZgV-6K-879"/>
+            </connections>
+            <point key="canvasLocation" x="119.2" y="139.880059970015"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="UKFlag" width="30" height="30"/>
+        <image name="eventCardShadow" width="360" height="247"/>
+        <image name="eventUsers" width="73" height="26"/>
+    </resources>
+</document>
