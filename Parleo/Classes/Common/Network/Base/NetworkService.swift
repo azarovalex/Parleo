@@ -51,7 +51,7 @@ extension NetworkService {
     func fetchValue<T>(_ api: API) -> Single<Result<T>> {
         return makeRequest(to: api).map { result in
             guard let response = result.value else { return .failure(result.error ?? EmptyError()) }
-            guard let data = ((try? response.mapJSON() as? T) as T??), let unwrappedData = data else {
+            guard let data = try? response.mapJSON() as? T, let unwrappedData = data else {
                 return .failure(NetworkError(response: response))
             }
             return .success(unwrappedData)

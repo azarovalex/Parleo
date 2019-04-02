@@ -53,7 +53,7 @@ enum Result<Value> {
 extension Array where Element: BaseMappable {
 
     init?(response: Response) {
-        guard let json = ((try? response.mapJSON() as? [[String: Any]]) as [[String : Any]]??), let unwrappedData = json else { return nil }
+        guard let json = try? response.mapJSON() as? [[String: Any]], let unwrappedData = json else { return nil }
         self.init(JSONArray: unwrappedData)
     }
 }
