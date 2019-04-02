@@ -19,6 +19,9 @@
 		17453964223F8FE600796A12 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17453963223F8FE600796A12 /* Colors.xcassets */; };
 		17453967223F909500796A12 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17453966223F909500796A12 /* UIView.swift */; };
 		17453969223F90E800796A12 /* ItemsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17453968223F90E800796A12 /* ItemsList.storyboard */; };
+		17E41FBB2250D08B001234F8 /* GeneralClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E41FBA2250D08B001234F8 /* GeneralClosures.swift */; };
+		17E41FBD2250F4E1001234F8 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E41FBC2250F4E1001234F8 /* SearchTextField.swift */; };
+		17E41FC02250FBCD001234F8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17E41FC22250FBCD001234F8 /* Localizable.strings */; };
 		D503B02D6D652BDE472115AE /* Pods_Parleo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB326362162031AE8AFC21E5 /* Pods_Parleo.framework */; };
 		EC1B9AC922396A70007B4113 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1B9AC822396A70007B4113 /* Events.storyboard */; };
 		EC1B9ACC22396A85007B4113 /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1B9ACB22396A85007B4113 /* Users.storyboard */; };
@@ -70,6 +73,9 @@
 		17453963223F8FE600796A12 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		17453966223F909500796A12 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		17453968223F90E800796A12 /* ItemsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ItemsList.storyboard; sourceTree = "<group>"; };
+		17E41FBA2250D08B001234F8 /* GeneralClosures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralClosures.swift; sourceTree = "<group>"; };
+		17E41FBC2250F4E1001234F8 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		17E41FC12250FBCD001234F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		202752E7785D98F75A6A9345 /* Pods-Parleo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parleo.debug.xcconfig"; path = "Target Support Files/Pods-Parleo/Pods-Parleo.debug.xcconfig"; sourceTree = "<group>"; };
 		2B8D131903A6E9C27129821A /* Pods-Parleo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parleo.release.xcconfig"; path = "Target Support Files/Pods-Parleo/Pods-Parleo.release.xcconfig"; sourceTree = "<group>"; };
 		EC1B9AC822396A70007B4113 /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 			children = (
 				1745395F223F8FCA00796A12 /* ViewController.swift */,
 				17453960223F8FCA00796A12 /* UnscrolableTableView.swift */,
+				17E41FBC2250F4E1001234F8 /* SearchTextField.swift */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -160,6 +167,14 @@
 				17453966223F909500796A12 /* UIView.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		17E41FB92250D079001234F8 /* OtherHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				17E41FBA2250D08B001234F8 /* GeneralClosures.swift */,
+			);
+			path = OtherHelpers;
 			sourceTree = "<group>";
 		};
 		4DA7D8199F90915306C24272 /* Frameworks */ = {
@@ -272,6 +287,7 @@
 				EC1B9AD722397103007B4113 /* Assets.xcassets */,
 				17453963223F8FE600796A12 /* Colors.xcassets */,
 				EC863CBB2220811A00A49824 /* LaunchScreen.storyboard */,
+				17E41FC22250FBCD001234F8 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -302,6 +318,7 @@
 		EC93F3CA222C643C00C4BB89 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				17E41FB92250D079001234F8 /* OtherHelpers */,
 				1745395E223F8FCA00796A12 /* BaseClasses */,
 				EC76CA392235876700ADD1BE /* Storages */,
 				ECDCC255222EB2B700DA9758 /* Protocols */,
@@ -488,6 +505,7 @@
 				ECE1D8A42221A950009DE2A3 /* Onboarding.storyboard in Resources */,
 				ECF190C222274311002D24EF /* CreateAccount.storyboard in Resources */,
 				17453956223F8F5400796A12 /* ItemsListTableCell.xib in Resources */,
+				17E41FC02250FBCD001234F8 /* Localizable.strings in Resources */,
 				EC1B9AC922396A70007B4113 /* Events.storyboard in Resources */,
 				17453964223F8FE600796A12 /* Colors.xcassets in Resources */,
 				EC1B9AD422396AB3007B4113 /* Profile.storyboard in Resources */,
@@ -605,8 +623,10 @@
 				ECE1D8AC2221B054009DE2A3 /* OnboardingNavigationController.swift in Sources */,
 				ECDCC252222EB07400DA9758 /* User.swift in Sources */,
 				17453957223F8F5400796A12 /* ItemsListTableCellViewModel.swift in Sources */,
+				17E41FBB2250D08B001234F8 /* GeneralClosures.swift in Sources */,
 				1745395C223F8FA900796A12 /* StringRepresentable.swift in Sources */,
 				17453962223F8FCA00796A12 /* UnscrolableTableView.swift in Sources */,
+				17E41FBD2250F4E1001234F8 /* SearchTextField.swift in Sources */,
 				EC76CA30223539D700ADD1BE /* ViewModelType.swift in Sources */,
 				EC93F3D4222C836D00C4BB89 /* NetworkExtension.swift in Sources */,
 				17453967223F909500796A12 /* UIView.swift in Sources */,
@@ -629,6 +649,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		17E41FC22250FBCD001234F8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17E41FC12250FBCD001234F8 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		EC863CB62220811800A49824 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -770,7 +798,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = V6422ZTKJ8;
 				INFOPLIST_FILE = Parleo/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -789,7 +817,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = V6422ZTKJ8;
 				INFOPLIST_FILE = Parleo/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

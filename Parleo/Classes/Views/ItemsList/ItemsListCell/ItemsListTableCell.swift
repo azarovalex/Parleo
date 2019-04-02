@@ -14,7 +14,7 @@ class ItemsListTableCell: UITableViewCell {
     @IBOutlet private var itemImageView: UIImageView! {
         didSet {
             itemImageView.contentMode = .scaleAspectFill
-            itemTitleLabel.roundAllCornersWithMaximumRadius()
+            itemImageView.roundAllCornersWithMaximumRadius()
         }
     }
     @IBOutlet private var itemTitleLabel: UILabel! {
@@ -35,14 +35,14 @@ class ItemsListTableCell: UITableViewCell {
             guard let viewModel = viewModel else { return }
             itemImageView.image = viewModel.image
             itemTitleLabel.text = viewModel.title
-            checkboxButton.isSelected = viewModel.isSelected
+            selectionStyle = .none
         }
     }
     
-    
-    @IBAction func checkboxClicked(_ sender: UIButton) {
-        checkboxButton.isSelected = checkboxButton.isSelected
-        viewModel?.isSelected = checkboxButton.isSelected
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        checkboxButton.isSelected = selected
     }
 }
 

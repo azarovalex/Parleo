@@ -46,7 +46,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Co3-we-51P">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Co3-we-51P" customClass="SearchTextField" customModule="Parleo" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="81" width="343" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="tQQ-Pj-hNk"/>
@@ -73,10 +73,10 @@
                                             </constraints>
                                         </view>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="f0L-kR-OUR">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="15e-WE-Ftr">
                                                 <rect key="frame" x="0.0" y="156" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f0L-kR-OUR" id="6j1-1K-LW9">
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="15e-WE-Ftr" id="Zgk-g3-bxU">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
@@ -121,6 +121,7 @@
                         <viewLayoutGuide key="safeArea" id="fIf-eY-Bv5"/>
                     </view>
                     <connections>
+                        <outlet property="containerScrollView" destination="z6z-he-pME" id="uKi-ca-Pjc"/>
                         <outlet property="doneButton" destination="hy0-Kz-pUg" id="CuH-sp-TxI"/>
                         <outlet property="searchTextField" destination="Co3-we-51P" id="EhP-pg-lm4"/>
                         <outlet property="tableView" destination="RNV-jp-kwB" id="Rcj-gd-GR6"/>

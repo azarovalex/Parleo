@@ -13,6 +13,14 @@ class UnscrolableTableView: UITableView {
         return contentSize
     }
     
+    override var contentSize: CGSize {
+        didSet {
+            if oldValue != contentSize  {
+                invalidateIntrinsicContentSize()
+            }
+        }
+    }
+    
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         

@@ -15,68 +15,59 @@ class ItemsListViewController: ViewController {
         didSet {
             tableView.tableFooterView = UIView()
             tableView.register(R.nib.itemsListTableCell)
-            tableView.delegate = self
-            tableView.dataSource = self
+            tableView.allowsMultipleSelection = true
         }
     }
     @IBOutlet private var titleLabel: UILabel! {
         didSet {
             titleLabel.font = Constants.Font.title
             titleLabel.textColor = R.color.black()?.withAlphaComponent(0.5)
-            titleLabel.text = "Items"
         }
     }
-    @IBOutlet private var searchTextField: UITextField! {
+    @IBOutlet private var searchTextField: SearchTextField!
+    @IBOutlet private var doneButton: RoundedButton! {
         didSet {
-            let leftViewContainer = UIView(frame: CGRect(x: 0, y: 0, width: 46, height: searchTextField.bounds.height))
-            UIImageView(image: R.image.searchIcon()).addToView(leftViewContainer, top: 13, bottom: -13, left: 20, right: -8)
-            searchTextField.leftView = leftViewContainer
-            searchTextField.leftViewMode = .always
-            searchTextField.font = Constants.Font.default
-            searchTextField.textColor = R.color.black()
-            searchTextField.backgroundColor = R.color.black()?.withAlphaComponent(0.05)
-            searchTextField.placeholder = "placeholder"
+            doneButton.roundAllCornersWithMaximumRadius()
+            doneButton.backgroundColor = R.color.blue()
+            doneButton.setTitleColor(R.color.white(), for: .normal)
         }
     }
-    @IBOutlet private var doneButton: RoundedButton!
+    @IBOutlet var containerScrollView: UIScrollView!
     
-    private var containerScrollView: UIScrollView? {
-        return tableView.superview as? UIScrollView
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        containerScrollView?.delegate = self
-    }
+    var viewModel = ItemsListViewModel(title: "title", items: [], selectedItems: [])
     
     override func bindData() {
         
-    }
-}
-
-extension ItemsListViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = "text"
-        return cell
-    }
-}
-
-extension ItemsListViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y < -100 {
-            print(scrollView.contentOffset.y)
-        }
+        
+        
+        let input = ItemsListViewModel.Input(offsetDriver: containerScrollView.rx.contentOffset.asDriver(),
+                                             saveSignal: doneButton.rx.tap.asSignal(),
+                                             filterDriver: searchTextField.rx.text.orEmpty.asDriver(),
+                                             selectedDriver: tableView.rx.itemSelected.asDriver(),
+                                             deselectedDriver: tableView.rx.itemDeselected.asDriver())
+        
+        let output = viewModel.transform(input: input)
+        
+        output.titleDriver
+            .drive(titleLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        output.cellsDriver
+            .drive(tableView.rx.items) { [weak self] _, index, cellViewModel in
+                guard let cell = self?.tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.itemsListTableCell,
+                                                                     for: IndexPath(row: index, section: 0)) else {
+                                                                        return UITableViewCell()
+                                                                     }
+                cell.viewModel = cellViewModel
+                return cell
+            }
+            .disposed(by: disposeBag)
+                
+        output.dissmissSignal
+            .emit(onNext: { [weak self] in
+                self?.dismiss(animated: true, completion: nil)
+            })
+            .disposed(by: disposeBag)
     }
 }
 
