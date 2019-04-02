@@ -11,6 +11,6 @@ import UIKit
 struct EventTableCellViewModel {
     let title: String
     let description: String
-    let backgroungImageUrl: URL
+    let backgroungImage: UIImage?
     let flagImage: UIImage?
 }

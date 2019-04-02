@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PKc-Ya-oIi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PKc-Ya-oIi">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -160,17 +160,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UmP-qA-ejn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1320.8" y="810.49475262368821"/>
+            <point key="canvasLocation" x="1446" y="1242"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Filter-->
         <scene sceneID="U2D-l0-ynU">
             <objects>
-                <viewControllerPlaceholder id="bti-tc-Jg1" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Filter" id="bti-tc-Jg1" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tD8-kW-Llf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="698" y="78"/>
+            <point key="canvasLocation" x="915" y="709"/>
         </scene>
-        <!--Events View Controller-->
+        <!--Events-->
         <scene sceneID="ysO-dr-W38">
             <objects>
                 <viewController id="821-QG-YRC" customClass="EventsViewController" customModule="Parleo" customModuleProvider="target" sceneMemberID="viewController">
@@ -179,32 +179,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lG5-YA-j6a">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="526"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Br8-ee-mPG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="29"/>
+                                <segments>
+                                    <segment title="All events"/>
+                                    <segment title="My events"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lG5-YA-j6a" firstAttribute="leading" secondItem="onl-7X-HgH" secondAttribute="leading" id="9a2-Xa-1hg"/>
-                            <constraint firstItem="lG5-YA-j6a" firstAttribute="top" secondItem="onl-7X-HgH" secondAttribute="top" id="Oyv-dH-A1u"/>
+                            <constraint firstItem="lG5-YA-j6a" firstAttribute="top" secondItem="Br8-ee-mPG" secondAttribute="bottom" id="USL-AA-EAG"/>
                             <constraint firstItem="onl-7X-HgH" firstAttribute="bottom" secondItem="lG5-YA-j6a" secondAttribute="bottom" id="YbH-BJ-4gN"/>
+                            <constraint firstItem="Br8-ee-mPG" firstAttribute="top" secondItem="onl-7X-HgH" secondAttribute="top" id="iwo-1B-sAs"/>
+                            <constraint firstItem="Br8-ee-mPG" firstAttribute="leading" secondItem="onl-7X-HgH" secondAttribute="leading" id="s2I-9G-pCP"/>
                             <constraint firstItem="onl-7X-HgH" firstAttribute="trailing" secondItem="lG5-YA-j6a" secondAttribute="trailing" id="ySI-Nr-Lj9"/>
+                            <constraint firstItem="onl-7X-HgH" firstAttribute="trailing" secondItem="Br8-ee-mPG" secondAttribute="trailing" id="z5c-y6-Kam"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="onl-7X-HgH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="QBj-DB-4ZD">
-                        <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Br8-ee-mPG">
-                            <rect key="frame" x="111" y="7" width="153" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="All events"/>
-                                <segment title="My events"/>
-                            </segments>
-                        </segmentedControl>
+                    <navigationItem key="navigationItem" title="Events" id="QBj-DB-4ZD">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="6YE-0C-1A7"/>
-                            <barButtonItem title="Item" image="filterIcon" id="Mrp-Cl-dmf"/>
+                            <barButtonItem systemItem="add" id="6YE-0C-1A7">
+                                <connections>
+                                    <segue destination="Chb-lx-yM9" kind="show" id="ek7-aa-rcM"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="filterIcon" id="Mrp-Cl-dmf">
+                                <connections>
+                                    <segue destination="bti-tc-Jg1" kind="show" id="wb8-Uc-erH"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -212,8 +221,7 @@
                         <outlet property="eventsSegmentControl" destination="Br8-ee-mPG" id="tBS-A8-Ycc"/>
                         <outlet property="eventsTableView" destination="lG5-YA-j6a" id="Bhw-1E-ro2"/>
                         <outlet property="filterBarButton" destination="Mrp-Cl-dmf" id="rs4-fN-uwh"/>
-                        <segue destination="Chb-lx-yM9" kind="show" identifier="eventsToAddEvent" id="xtN-v0-eBe"/>
-                        <segue destination="bti-tc-Jg1" kind="show" identifier="eventsToFilter" id="30a-gs-jpJ"/>
+                        <segue destination="wcv-mh-Nht" kind="show" id="fte-A4-6CD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e7X-s0-YSn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -224,7 +232,9 @@
         <scene sceneID="BYq-Bc-MBk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PKc-Ya-oIi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="tabBarEventsIcon" id="dBa-mo-yRj"/>
+                    <tabBarItem key="tabBarItem" title="" image="tabBarEventsIcon" id="dBa-mo-yRj">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="whr-3E-so7">
@@ -239,6 +249,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyW-f0-CfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-858" y="812"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="i2a-11-iwS">
+            <objects>
+                <viewController id="wcv-mh-Nht" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qj4-tn-cXM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9oq-LH-2gK"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Events" id="CaH-qy-lHb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TcX-kN-Zfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1446" y="358"/>
         </scene>
     </scenes>
     <resources>

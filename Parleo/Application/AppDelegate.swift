@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwiftExt
 import IQKeyboardManagerSwift
 
 @UIApplicationMain
@@ -17,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupNavigationButtons()
         IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.disabledToolbarClasses = [AddRandomMessagesChatViewController.self]
+        IQKeyboardManager.shared.disabledTouchResignedClasses = [AddRandomMessagesChatViewController.self]
+        IQKeyboardManager.shared.disabledDistanceHandlingClasses = [AddRandomMessagesChatViewController.self]
         return true
     }
 }
@@ -26,9 +30,12 @@ private extension AppDelegate {
 
     func setupNavigationButtons() {
         UIBarButtonItem.appearance().setTitleTextAttributes([
-            .font : R.font.montserratRegular(size: 16)!,
-            .foregroundColor : UIColor.black.withAlphaComponent(0.5)
-            ], for: .normal)
+            .font : R.font.montserratRegular(size: 16)!
+        ], for: .normal)
+        UINavigationBar.appearance().titleTextAttributes = [
+            .foregroundColor: UIColor.black.withAlphaComponent(0.5),
+            .font: R.font.montserratRegular(size: 18)!
+        ]
     }
 }
 

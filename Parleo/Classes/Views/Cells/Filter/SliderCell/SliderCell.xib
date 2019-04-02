@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SliderCell" id="bgh-lS-ViM" customClass="SliderCell" customModule="Parleo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="114"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="361" height="114"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qek-fV-6de">
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="114"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WW-ad-5wz">
+                                <rect key="frame" x="20" y="20" width="321" height="22"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                <color key="textColor" name="AppGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fO1-Rl-Bvh" customClass="RangeSlider" customModule="Parleo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="50" width="321" height="54"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.15312500000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="Akg-3q-QAL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                        <real key="value" value="65"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedMinValue">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedMaxValue">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideLabels" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="labelsFixed" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="minLabelColor">
+                                        <color key="value" name="AppAccent"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="maxLabelColor">
+                                        <color key="value" name="AppAccent"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="handleColor">
+                                        <color key="value" name="AppAccent"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="handleBorderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorBetweenHandles">
+                                        <color key="value" name="AppAccent"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableStep" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="step">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="handleBorderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="handleDiameter">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="labelPadding">
+                                        <real key="value" value="-40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2WW-ad-5wz" firstAttribute="top" secondItem="qek-fV-6de" secondAttribute="top" constant="20" id="8u7-2e-TCV"/>
+                            <constraint firstAttribute="trailing" secondItem="2WW-ad-5wz" secondAttribute="trailing" constant="20" id="Mf6-HZ-g3X"/>
+                            <constraint firstItem="2WW-ad-5wz" firstAttribute="leading" secondItem="qek-fV-6de" secondAttribute="leading" constant="20" id="PeP-pd-Xkm"/>
+                            <constraint firstItem="fO1-Rl-Bvh" firstAttribute="top" secondItem="2WW-ad-5wz" secondAttribute="bottom" constant="8" id="f1Q-I9-3hL"/>
+                            <constraint firstAttribute="bottom" secondItem="fO1-Rl-Bvh" secondAttribute="bottom" constant="10" id="hww-e3-pwD"/>
+                            <constraint firstItem="fO1-Rl-Bvh" firstAttribute="leading" secondItem="2WW-ad-5wz" secondAttribute="leading" id="og2-AX-4cM"/>
+                            <constraint firstItem="fO1-Rl-Bvh" firstAttribute="trailing" secondItem="2WW-ad-5wz" secondAttribute="trailing" id="qCU-tW-4HQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="qek-fV-6de" firstAttribute="leading" secondItem="bgh-lS-ViM" secondAttribute="leading" id="9aA-JX-czL"/>
+                <constraint firstItem="qek-fV-6de" firstAttribute="top" secondItem="bgh-lS-ViM" secondAttribute="top" id="RnR-b7-9ch"/>
+                <constraint firstAttribute="trailing" secondItem="qek-fV-6de" secondAttribute="trailing" id="bPh-8h-LuP"/>
+                <constraint firstAttribute="bottom" secondItem="qek-fV-6de" secondAttribute="bottom" id="c93-Fi-moH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="f5E-dZ-Oyi"/>
+            <size key="customSize" width="361" height="114"/>
+            <connections>
+                <outlet property="rangeSlider" destination="fO1-Rl-Bvh" id="DKv-se-Mlc"/>
+                <outlet property="titleLabel" destination="2WW-ad-5wz" id="tFu-Ry-Zrc"/>
+            </connections>
+            <point key="canvasLocation" x="144.80000000000001" y="229.38530734632684"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AppAccent">
+            <color red="0.32156862745098042" green="0.39215686274509803" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppGray">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

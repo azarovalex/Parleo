@@ -21,14 +21,11 @@ class EventsViewModel {
     private let disposeBag = DisposeBag()
     
     struct Input {
-        let addEvent: Signal<Void>
         let viewEvent: Signal<IndexPath>
-        let filter: Signal<Void>
     }
     
     struct Output {
         let cells: Driver<[EventTableCellViewModel]>
-        let addEvent: Signal<Void>
         let viewEvent: Signal<UUID> // FIXME: Use EventViewModel insted
     }
     
@@ -36,7 +33,7 @@ class EventsViewModel {
         let cellsDriver = events
             .asDriver()
             .map {
-                $0.map{ EventTableCellViewModel(title: $0.title, description: $0.title) }
+                $0.map{ EventTableCellViewModel(title: $0.title, description: $0.title, backgroungImage: R.image.katesCafe()!, flagImage: R.image.ukFlag()!) }
             }
         
         let viewEventSignal = input.viewEvent.map { [weak self] indexPath in
@@ -44,7 +41,6 @@ class EventsViewModel {
         }
         
         return Output(cells: cellsDriver,
-                      addEvent: input.addEvent,
                       viewEvent: viewEventSignal)
     }
 }

@@ -1,63 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vmi-kL-ysH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vmi-kL-ysH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="qIh-v8-bTX">
-            <objects>
-                <tableViewController id="FpG-gY-9Nj" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BOG-vb-PYf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0sX-XB-eTS">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0sX-XB-eTS" id="nuI-Nt-ffw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="FpG-gY-9Nj" id="WeP-dZ-iKj"/>
-                            <outlet property="delegate" destination="FpG-gY-9Nj" id="KLX-3E-8in"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="VPR-cf-Fh1"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZWH-dI-f4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="42" y="135"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="m5L-Mu-g15">
             <objects>
                 <navigationController id="vmi-kL-ysH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="tabBarChatIcon" id="VrF-FC-RHH"/>
+                    <tabBarItem key="tabBarItem" title="" image="tabBarChatIcon" id="VrF-FC-RHH">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xYM-V7-suU">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="FpG-gY-9Nj" kind="relationship" relationship="rootViewController" id="Ffy-xY-8p8"/>
+                        <segue destination="Irt-RZ-rBn" kind="relationship" relationship="rootViewController" id="0Av-8i-eI2"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwI-6L-zrC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-910" y="135"/>
         </scene>
+        <!--Chats-->
+        <scene sceneID="0Ht-J4-2Wl">
+            <objects>
+                <viewController id="Irt-RZ-rBn" customClass="ListOfChatsViewController" customModule="Parleo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n6U-Ya-6GL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Ay-gS-Zm1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5cZ-Jb-MT1">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RP7-Sw-S8c" firstAttribute="bottom" secondItem="9Ay-gS-Zm1" secondAttribute="bottom" id="kGL-Cu-7qF"/>
+                            <constraint firstItem="RP7-Sw-S8c" firstAttribute="trailing" secondItem="9Ay-gS-Zm1" secondAttribute="trailing" id="nh3-Ca-9wr"/>
+                            <constraint firstItem="9Ay-gS-Zm1" firstAttribute="leading" secondItem="RP7-Sw-S8c" secondAttribute="leading" id="oQx-9e-8qT"/>
+                            <constraint firstItem="9Ay-gS-Zm1" firstAttribute="top" secondItem="RP7-Sw-S8c" secondAttribute="top" id="rLh-P7-zHt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RP7-Sw-S8c"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chats" id="uMM-P0-GSH"/>
+                    <connections>
+                        <outlet property="collectionView" destination="9Ay-gS-Zm1" id="hRZ-KK-miH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6WA-C8-Lqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="134"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="tabBarChatIcon" width="26" height="23"/>
+        <image name="tabBarChatIcon" width="28" height="26"/>
     </resources>
 </document>

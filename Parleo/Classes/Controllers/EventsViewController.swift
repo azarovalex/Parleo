@@ -31,9 +31,7 @@ class EventsViewController: UIViewController {
     }
     
     private func bindData() {
-        let input = EventsViewModel.Input(addEvent: addEventBarButton.rx.tap.asSignal(),
-                                          viewEvent: eventsTableView.rx.itemSelected.asSignal(),
-                                          filter: filterBarButton.rx.tap.asSignal())
+        let input = EventsViewModel.Input(viewEvent: eventsTableView.rx.itemSelected.asSignal())
         
         let output = viewModel.transform(input: input)
         
@@ -44,9 +42,5 @@ class EventsViewController: UIViewController {
             return cell
             }
         .disposed(by: disposeBag)
-        
-        output.addEvent.emit(onNext: { [weak self] in
-            self?.performSegue(withIdentifier: R.segue.eventsViewController.eventsToAddEvent, sender: self)
-        }).disposed(by: disposeBag)
     }
 }

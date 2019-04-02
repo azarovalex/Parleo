@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NA0-lV-n9g">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Filter-->
+        <scene sceneID="2ZU-gc-op7">
+            <objects>
+                <viewController id="NA0-lV-n9g" customClass="FilterViewController" customModule="Parleo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2hY-Cr-ccJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sFi-xa-QzH">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tm5-k0-aOU">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sFi-xa-QzH" firstAttribute="top" secondItem="QfE-Sl-TF1" secondAttribute="top" id="7Dh-fv-Ir5"/>
+                            <constraint firstItem="QfE-Sl-TF1" firstAttribute="trailing" secondItem="sFi-xa-QzH" secondAttribute="trailing" id="NcV-0p-Ejq"/>
+                            <constraint firstItem="sFi-xa-QzH" firstAttribute="leading" secondItem="QfE-Sl-TF1" secondAttribute="leading" id="dZb-HS-HS9"/>
+                            <constraint firstItem="QfE-Sl-TF1" firstAttribute="bottom" secondItem="sFi-xa-QzH" secondAttribute="bottom" id="oc3-IM-NGR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QfE-Sl-TF1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Filter" id="tgu-8P-2Qj">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="0pH-LO-8Zs">
+                            <color key="tintColor" name="AppAccent"/>
+                            <connections>
+                                <action selector="close" destination="NA0-lV-n9g" id="XEo-ob-Pnb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="collectionView" destination="sFi-xa-QzH" id="rfP-VU-Res"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AiW-c5-GUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="85.907046476761622"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AppAccent">
+            <color red="0.32156862745098042" green="0.39215686274509803" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
