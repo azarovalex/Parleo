@@ -74,6 +74,14 @@ extension NetworkService {
         }
     }
 
+    func fetchStringFromKey(_ key: String, api: API) -> Single<Result<String>> {
+        return makeRequest(to: api).map { result in
+            guard let response = result.value else { return .failure(result.error ?? EmptyError()) }
+            guard let string = response.json?[key] as? String else { return .failure(NetworkError(message: (try? response.mapString()) ?? "???")) }
+            return .success(string)
+        }
+    }
+
     private func makeRequest(to api: API) -> Single<Result<Response>> {
         return provider.rx.request(api).map { .success($0) }.catchError { Single.just(.failure($0)) }
     }

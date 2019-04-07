@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CheckboxesCell" id="gTV-IL-0wX" customClass="CheckboxesCell" customModule="Parleo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="294" height="110"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="294" height="110"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPi-Bu-Bka">
+                        <rect key="frame" x="0.0" y="0.0" width="294" height="110"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRw-vG-HwM">
+                                <rect key="frame" x="20" y="20" width="254" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="6li-yL-2af"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                <color key="textColor" name="AppGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RUA-8x-dsb">
+                                <rect key="frame" x="20" y="60" width="254" height="40"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wRw-vG-HwM" firstAttribute="leading" secondItem="MPi-Bu-Bka" secondAttribute="leading" constant="20" id="08c-hi-jOK"/>
+                            <constraint firstItem="RUA-8x-dsb" firstAttribute="trailing" secondItem="wRw-vG-HwM" secondAttribute="trailing" id="3yQ-eP-512"/>
+                            <constraint firstAttribute="bottom" secondItem="RUA-8x-dsb" secondAttribute="bottom" constant="10" id="N0X-bK-3Rj"/>
+                            <constraint firstAttribute="trailing" secondItem="wRw-vG-HwM" secondAttribute="trailing" constant="20" id="c7n-Vp-a29"/>
+                            <constraint firstItem="RUA-8x-dsb" firstAttribute="leading" secondItem="wRw-vG-HwM" secondAttribute="leading" id="gI6-BE-4r8"/>
+                            <constraint firstItem="RUA-8x-dsb" firstAttribute="top" secondItem="wRw-vG-HwM" secondAttribute="bottom" constant="20" id="kAg-c0-TeY"/>
+                            <constraint firstItem="wRw-vG-HwM" firstAttribute="top" secondItem="MPi-Bu-Bka" secondAttribute="top" constant="20" id="yF6-13-0L3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="MPi-Bu-Bka" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Sq8-HF-HdB"/>
+                <constraint firstAttribute="bottom" secondItem="MPi-Bu-Bka" secondAttribute="bottom" id="YNE-WT-1jp"/>
+                <constraint firstAttribute="trailing" secondItem="MPi-Bu-Bka" secondAttribute="trailing" id="ac5-Gx-LnI"/>
+                <constraint firstItem="MPi-Bu-Bka" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gc7-r0-b0X"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="294" height="110"/>
+            <connections>
+                <outlet property="itemsStackView" destination="RUA-8x-dsb" id="ag1-rw-62X"/>
+                <outlet property="titleLabel" destination="wRw-vG-HwM" id="CgF-fc-F72"/>
+            </connections>
+            <point key="canvasLocation" x="314.49275362318843" y="173.4375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AppGray">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

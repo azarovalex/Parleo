@@ -1,63 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Zv-Ah-rcI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Zv-Ah-rcI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="8e0-2c-NKM">
-            <objects>
-                <tableViewController id="vXj-Cs-zmD" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JB5-cw-Hnd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="PKU-hd-HV9">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PKU-hd-HV9" id="VGJ-xq-31F">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="vXj-Cs-zmD" id="1Hr-dd-EBz"/>
-                            <outlet property="delegate" destination="vXj-Cs-zmD" id="3G9-7t-yY3"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="vHT-Ac-pEM"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CDB-EP-IOm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="303" y="89"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="dUc-QP-K9N">
             <objects>
                 <navigationController id="5Zv-Ah-rcI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="tabBarNotificationIcon" id="8WC-wV-aUX"/>
+                    <tabBarItem key="tabBarItem" title="" image="tabBarNotificationIcon" id="8WC-wV-aUX">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R8W-Gj-RYH">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="vXj-Cs-zmD" kind="relationship" relationship="rootViewController" id="PqR-k3-Obw"/>
+                        <segue destination="BTU-s4-zSk" kind="relationship" relationship="rootViewController" id="b1n-2N-Vti"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="77p-Na-hex" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-649" y="89"/>
         </scene>
+        <!--Notifications-->
+        <scene sceneID="qRI-ge-LRa">
+            <objects>
+                <viewController id="BTU-s4-zSk" customClass="NotificationsViewController" customModule="Parleo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1qM-5a-Way">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HVL-Gm-LC1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HVL-Gm-LC1" firstAttribute="top" secondItem="7qz-Bb-HzC" secondAttribute="top" id="1tD-zF-wVg"/>
+                            <constraint firstItem="7qz-Bb-HzC" firstAttribute="bottom" secondItem="HVL-Gm-LC1" secondAttribute="bottom" id="PKD-Px-mId"/>
+                            <constraint firstItem="HVL-Gm-LC1" firstAttribute="leading" secondItem="7qz-Bb-HzC" secondAttribute="leading" id="cnL-SU-E9V"/>
+                            <constraint firstItem="7qz-Bb-HzC" firstAttribute="trailing" secondItem="HVL-Gm-LC1" secondAttribute="trailing" id="gZh-Ne-pYG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7qz-Bb-HzC"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notifications" id="pUj-VA-OX4"/>
+                    <connections>
+                        <outlet property="tableView" destination="HVL-Gm-LC1" id="odC-ke-qfb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KUQ-bs-yY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="226" y="89"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="tabBarNotificationIcon" width="20" height="24"/>
+        <image name="tabBarNotificationIcon" width="20" height="25"/>
     </resources>
 </document>

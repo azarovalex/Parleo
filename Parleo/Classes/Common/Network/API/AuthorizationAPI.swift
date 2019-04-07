@@ -10,6 +10,7 @@ import Moya
 
 enum AuthorizationAPI {
     case login(email: String, password: String)
+    case register(email: String, password: String)
 }
 
 extension AuthorizationAPI: TargetType {
@@ -19,7 +20,9 @@ extension AuthorizationAPI: TargetType {
     var path: String {
         switch self {
         case .login:
-            return "/login"
+            return "/api/Account/login"
+        case .register:
+            return "/api/Account/register"
         }
     }
 
@@ -29,23 +32,21 @@ extension AuthorizationAPI: TargetType {
 
     var sampleData: Data {
         switch self {
-        case .login(let email, _):
-            return .mockedUser(with: email)
+        case .login:
+            return Data()
+        case .register:
+            return Data()
         }
     }
 
     var task: Task {
-        return .requestPlain
+        switch self {
+        case .login(let email, let password), .register(let email, let password):
+            return .requestParameters(parameters: ["email": email, "password": password], encoding: JSONEncoding.default)
+        }
     }
 
     var headers: [String : String]? {
         return [:]
-    }
-}
-
-private extension Data {
-
-    static func mockedUser(with email: String) -> Data {
-        return User(id: 1, email: email).toJSONString()!.data(using: .utf8)!
     }
 }
