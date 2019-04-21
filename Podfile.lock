@@ -3,6 +3,8 @@ PODS:
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - Alamofire (4.8.2)
+  - ApiClient (0.0.2):
+    - Alamofire (~> 4.8.2)
   - Chatto (3.3.1)
   - ChattoAdditions (3.3.1):
     - Chatto
@@ -47,6 +49,7 @@ PODS:
 
 DEPENDENCIES:
   - Action
+  - ApiClient (from `https://github.com/shaiter/parleo-apiclient`)
   - Chatto (from `https://github.com/badoo/Chatto`, branch `master`)
   - ChattoAdditions (from `https://github.com/badoo/Chatto`, branch `master`)
   - IGListKit (~> 3.0)
@@ -80,6 +83,8 @@ SPEC REPOS:
     - SegueManager
 
 EXTERNAL SOURCES:
+  ApiClient:
+    :git: https://github.com/shaiter/parleo-apiclient
   Chatto:
     :branch: master
     :git: https://github.com/badoo/Chatto
@@ -88,6 +93,9 @@ EXTERNAL SOURCES:
     :git: https://github.com/badoo/Chatto
 
 CHECKOUT OPTIONS:
+  ApiClient:
+    :commit: bd1350ecfbe83c38280df6ab54f07ccdb252b9f8
+    :git: https://github.com/shaiter/parleo-apiclient
   Chatto:
     :commit: 5995970d12c720a29062a0cb16f877425a35ef17
     :git: https://github.com/badoo/Chatto
@@ -98,6 +106,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Action: 689181e4c3f6566844178d8a7da6fef39a9597fc
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  ApiClient: fe55a49ce330b86cab7f2b8a06c512c1d37fb4b9
   Chatto: 45f1df6af89c0b1b526e7d6368a9dca4a4728def
   ChattoAdditions: f38e9fef6c17ee587be70377b33841ff78c26f94
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
@@ -114,6 +123,6 @@ SPEC CHECKSUMS:
   RxSwiftExt: 01f8ecbeeb355698e9c75365ebe908b00dacf45d
   SegueManager: e4970e6f7150c81ec577e0b61d9fda3f27c11db5
 
-PODFILE CHECKSUM: 83f734bd009aae88a1243957dd10db7ac0519287
+PODFILE CHECKSUM: 3ab75fb0fddc1f247f0cf0b58faff1672c28f72a
 
 COCOAPODS: 1.6.1

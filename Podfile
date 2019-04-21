@@ -5,6 +5,7 @@ target 'Parleo' do
   # Pods for Network layer
   pod 'ObjectMapper', '~> 3.4'
   pod 'Moya/RxSwift', '~> 12.0'
+  pod 'ApiClient', :git => 'https://github.com/shaiter/parleo-apiclient'
 
   # Reactive
   pod 'RxSwift', '~> 4.0'
