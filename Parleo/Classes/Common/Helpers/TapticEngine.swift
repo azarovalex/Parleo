@@ -18,32 +18,14 @@ open class TapticEngine {
 
     /// Wrapper of `UIImpactFeedbackGenerator`
     open class Impact {
-
-        /// Impact feedback styles
-        ///
-        /// - light: A impact feedback between small, light user interface elements.
-        /// - medium: A impact feedback between moderately sized user interface elements.
-        /// - heavy: A impact feedback between large, heavy user interface elements.
-        public enum ImpactStyle {
-            case light, medium, heavy
-        }
+        public typealias ImpactStyle = UIImpactFeedbackGenerator.FeedbackStyle
 
         private var style: ImpactStyle = .light
         private var generator: Any? = Impact.makeGenerator(.light)
 
         private static func makeGenerator(_ style: ImpactStyle) -> Any? {
             guard #available(iOS 10.0, *) else { return nil }
-
-            let feedbackStyle: UIImpactFeedbackGenerator.FeedbackStyle
-            switch style {
-            case .light:
-                feedbackStyle = .light
-            case .medium:
-                feedbackStyle = .medium
-            case .heavy:
-                feedbackStyle = .heavy
-            }
-            let generator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: feedbackStyle)
+            let generator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: style)
             generator.prepare()
             return generator
         }

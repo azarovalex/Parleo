@@ -64,7 +64,6 @@
 		ECB5962922515316002EDDFD /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5962822515316002EDDFD /* Reactive.swift */; };
 		ECB596412251618C002EDDFD /* FriendRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5963F2251618C002EDDFD /* FriendRequestCell.swift */; };
 		ECB596422251618C002EDDFD /* FriendRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECB596402251618C002EDDFD /* FriendRequestCell.xib */; };
-		ECB596452252ADE0002EDDFD /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB596442252ADE0002EDDFD /* UIView+CornerRadius.swift */; };
 		ECB596492252C34C002EDDFD /* SignUpAvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB596482252C34C002EDDFD /* SignUpAvatarViewController.swift */; };
 		ECB5964C2252C540002EDDFD /* UIViewController+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5964B2252C540002EDDFD /* UIViewController+ImagePicker.swift */; };
 		ECB5964E2252C564002EDDFD /* ImagePickerController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5964D2252C564002EDDFD /* ImagePickerController+Rx.swift */; };
@@ -211,7 +210,6 @@
 		ECB5962822515316002EDDFD /* Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; };
 		ECB5963F2251618C002EDDFD /* FriendRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestCell.swift; sourceTree = "<group>"; };
 		ECB596402251618C002EDDFD /* FriendRequestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendRequestCell.xib; sourceTree = "<group>"; };
-		ECB596442252ADE0002EDDFD /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
 		ECB596482252C34C002EDDFD /* SignUpAvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAvatarViewController.swift; sourceTree = "<group>"; };
 		ECB5964B2252C540002EDDFD /* UIViewController+ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ImagePicker.swift"; sourceTree = "<group>"; };
 		ECB5964D2252C564002EDDFD /* ImagePickerController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImagePickerController+Rx.swift"; sourceTree = "<group>"; };
@@ -331,8 +329,8 @@
 		176EDAEA225A3233006E21BD /* ItemsList */ = {
 			isa = PBXGroup;
 			children = (
-				176EDAEB225A3233006E21BD /* ItemsListViewController.swift */,
 				176EDAEC225A3233006E21BD /* ItemsListCell */,
+				176EDAEB225A3233006E21BD /* ItemsListViewController.swift */,
 				176EDAF0225A3233006E21BD /* ItemsListViewModel.swift */,
 			);
 			path = ItemsList;
@@ -541,7 +539,6 @@
 			isa = PBXGroup;
 			children = (
 				17453965223F909500796A12 /* UIKit */,
-				ECB596432252ADB4002EDDFD /* UIView */,
 				EC76CA3122353C3300ADD1BE /* UIViewController */,
 				ECB5962822515316002EDDFD /* Reactive.swift */,
 			);
@@ -600,14 +597,6 @@
 				ECB596402251618C002EDDFD /* FriendRequestCell.xib */,
 			);
 			path = FriendRequestCell;
-			sourceTree = "<group>";
-		};
-		ECB596432252ADB4002EDDFD /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				ECB596442252ADE0002EDDFD /* UIView+CornerRadius.swift */,
-			);
-			path = UIView;
 			sourceTree = "<group>";
 		};
 		ECB5964A2252C526002EDDFD /* ImagePicker */ = {
@@ -1098,7 +1087,6 @@
 				EC93F3D2222C834F00C4BB89 /* NetworkService.swift in Sources */,
 				EC76CA3B2235877900ADD1BE /* Storage.swift in Sources */,
 				ECDB2A7A224FA9D90061AEB1 /* UpdateItemTypeViewController.swift in Sources */,
-				ECB596452252ADE0002EDDFD /* UIView+CornerRadius.swift in Sources */,
 				ECF190C62227463C002D24EF /* RoundedTextField.swift in Sources */,
 				ECDB2A47224ECD1A0061AEB1 /* CheckboxesCell.swift in Sources */,
 				ECD2C1CC223F008000C421A7 /* UsersViewController.swift in Sources */,

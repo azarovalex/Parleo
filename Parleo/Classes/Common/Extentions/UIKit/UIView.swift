@@ -102,14 +102,37 @@ extension UIView {
         cornerRadius = min(frame.width, frame.height) / 2.0
     }
     
-//    @IBInspectable
-//    var cornerRadius: CGFloat {
-//        set {
-//            layer.cornerRadius = newValue
-//            layer.masksToBounds = true
-//        }
-//        get {
-//            return layer.cornerRadius
-//        }
-//    }
+    @IBInspectable
+    var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = true
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+}
+
+// MARK: UIView+border
+extension UIView {
+    @IBInspectable
+    var borderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
+        }
+    }
+    
+    @IBInspectable
+    var borderColor: UIColor? {
+        get {
+            return UIColor(cgColor: layer.borderColor!)
+        }
+        set {
+            layer.borderColor = newValue?.cgColor
+        }
+    }
 }
