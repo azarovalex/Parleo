@@ -997,7 +997,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/Parleo/Application/R.generated.swift",
+				$SRCROOT/Parleo/Application/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
