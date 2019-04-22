@@ -91,10 +91,6 @@ extension ListOfChatsViewController: ListAdapterDataSource {
 extension ListOfChatsViewController: ListSingleSectionControllerDelegate {
 
     func didSelect(_ sectionController: ListSingleSectionController, with object: Any) {
-        let dataSource = DemoChatDataSource(count: 10_000, pageSize: 50)
-        let viewController = AddRandomMessagesChatViewController()
-        viewController.dataSource = dataSource
-        viewController.shouldUseAlternativePresenter = false
-        navigationController?.pushViewController(viewController, animated: true)
+
     }
 }

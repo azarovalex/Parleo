@@ -340,6 +340,9 @@ stuff, coffee is good etc etc</string>
                                                         <state key="normal" title="Add location on Map" image="locationIconBig">
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="showMockAlert" destination="wcv-mh-Nht" eventType="touchUpInside" id="yqz-tJ-NdQ"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBU-0I-Fyi">
                                                         <rect key="frame" x="0.0" y="59" width="339" height="33"/>
@@ -349,6 +352,9 @@ stuff, coffee is good etc etc</string>
                                                         <state key="normal" title="Invite Friends" image="profileFriendsIcon">
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="showMockAlert" destination="wcv-mh-Nht" eventType="touchUpInside" id="gpz-yk-Inr"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQO-3p-lmv">
                                                         <rect key="frame" x="0.0" y="125" width="339" height="25"/>
@@ -367,6 +373,9 @@ stuff, coffee is good etc etc</string>
                                                         <state key="normal" title="Add language" image="languageIcon">
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="showMockAlert" destination="wcv-mh-Nht" eventType="touchUpInside" id="Yo8-Yj-VQq"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>

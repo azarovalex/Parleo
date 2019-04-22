@@ -34,4 +34,10 @@ extension UIViewController {
             dismiss(animated: true)
         }
     }
+
+    @IBAction func showMockAlert() {
+        let alert = UIAlertController(title: "Mocked!", message: "This button does nothing", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
 }
