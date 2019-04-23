@@ -38,8 +38,11 @@
 		EC863CBD2220811A00A49824 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC863CBB2220811A00A49824 /* LaunchScreen.storyboard */; };
 		EC93F3D2222C834F00C4BB89 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D1222C834F00C4BB89 /* NetworkService.swift */; };
 		EC93F3D4222C836D00C4BB89 /* NetworkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D3222C836D00C4BB89 /* NetworkExtension.swift */; };
-		EC93F3D6222C83B300C4BB89 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D5222C83B300C4BB89 /* AuthorizationService.swift */; };
-		EC93F3D8222C83BF00C4BB89 /* AuthorizationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D7222C83BF00C4BB89 /* AuthorizationAPI.swift */; };
+		EC93F3D6222C83B300C4BB89 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D5222C83B300C4BB89 /* UserService.swift */; };
+		EC93F3D8222C83BF00C4BB89 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D7222C83BF00C4BB89 /* UserAPI.swift */; };
+		ECA2BCC9226E49E500B042B3 /* UserFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2BCC8226E49E500B042B3 /* UserFilter.swift */; };
+		ECA2BCCC226E5E6D00B042B3 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2BCCB226E5E6D00B042B3 /* AuthPlugin.swift */; };
+		ECA2BCCF226E5FC500B042B3 /* UsersPaginationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2BCCE226E5FC500B042B3 /* UsersPaginationResponse.swift */; };
 		ECB5961922514974002EDDFD /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5961822514974002EDDFD /* NotificationsViewController.swift */; };
 		ECB5961E22514AC4002EDDFD /* FriendAddedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5961C22514AC4002EDDFD /* FriendAddedCell.swift */; };
 		ECB5961F22514AC4002EDDFD /* FriendAddedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECB5961D22514AC4002EDDFD /* FriendAddedCell.xib */; };
@@ -137,8 +140,11 @@
 		EC863CBE2220811A00A49824 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC93F3D1222C834F00C4BB89 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		EC93F3D3222C836D00C4BB89 /* NetworkExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkExtension.swift; sourceTree = "<group>"; };
-		EC93F3D5222C83B300C4BB89 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
-		EC93F3D7222C83BF00C4BB89 /* AuthorizationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAPI.swift; sourceTree = "<group>"; };
+		EC93F3D5222C83B300C4BB89 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		EC93F3D7222C83BF00C4BB89 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		ECA2BCC8226E49E500B042B3 /* UserFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFilter.swift; sourceTree = "<group>"; };
+		ECA2BCCB226E5E6D00B042B3 /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
+		ECA2BCCE226E5FC500B042B3 /* UsersPaginationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersPaginationResponse.swift; sourceTree = "<group>"; };
 		ECB5961822514974002EDDFD /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		ECB5961C22514AC4002EDDFD /* FriendAddedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAddedCell.swift; sourceTree = "<group>"; };
 		ECB5961D22514AC4002EDDFD /* FriendAddedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendAddedCell.xib; sourceTree = "<group>"; };
@@ -375,7 +381,9 @@
 		EC93F3CB222C644800C4BB89 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ECA2BCCD226E5F3A00B042B3 /* Authorization */,
 				ECDCC251222EB07400DA9758 /* User.swift */,
+				ECA2BCC8226E49E500B042B3 /* UserFilter.swift */,
 				ECB59626225150A4002EDDFD /* AppNotification.swift */,
 			);
 			path = Models;
@@ -413,7 +421,7 @@
 		EC93F3CF222C833000C4BB89 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				EC93F3D5222C83B300C4BB89 /* AuthorizationService.swift */,
+				EC93F3D5222C83B300C4BB89 /* UserService.swift */,
 				ECB5962422514F3F002EDDFD /* NotificationsService.swift */,
 			);
 			path = Services;
@@ -422,10 +430,27 @@
 		EC93F3D0222C833500C4BB89 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				EC93F3D7222C83BF00C4BB89 /* AuthorizationAPI.swift */,
+				ECA2BCCA226E5E5800B042B3 /* Plugins */,
+				EC93F3D7222C83BF00C4BB89 /* UserAPI.swift */,
 				ECB5962222514F31002EDDFD /* NotificationsAPI.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		ECA2BCCA226E5E5800B042B3 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				ECA2BCCB226E5E6D00B042B3 /* AuthPlugin.swift */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		ECA2BCCD226E5F3A00B042B3 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				ECA2BCCE226E5FC500B042B3 /* UsersPaginationResponse.swift */,
+			);
+			path = Authorization;
 			sourceTree = "<group>";
 		};
 		ECB5961A22514A3C002EDDFD /* Notifications */ = {
@@ -885,7 +910,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/Parleo/Application/R.generated.swift",
+				$SRCROOT/Parleo/Application/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -911,9 +936,11 @@
 				ECC9617722482EFA00E4D4C1 /* UserProfileViewController.swift in Sources */,
 				ECDB2A3C224E8F110061AEB1 /* LanguageInPicker.swift in Sources */,
 				ECB596552252DA4F002EDDFD /* SingUpViewModel.swift in Sources */,
+				ECA2BCCC226E5E6D00B042B3 /* AuthPlugin.swift in Sources */,
+				ECA2BCC9226E49E500B042B3 /* UserFilter.swift in Sources */,
 				ECDB2A50224F87D20061AEB1 /* ListOfChatsCell.swift in Sources */,
 				EC8059C52253C005005C1644 /* MyProfileViewController.swift in Sources */,
-				EC93F3D6222C83B300C4BB89 /* AuthorizationService.swift in Sources */,
+				EC93F3D6222C83B300C4BB89 /* UserService.swift in Sources */,
 				ECB596512252D5ED002EDDFD /* SignUpCredentialsViewController.swift in Sources */,
 				ECB5961E22514AC4002EDDFD /* FriendAddedCell.swift in Sources */,
 				ECDCC257222EB2C400DA9758 /* AppError.swift in Sources */,
@@ -941,8 +968,9 @@
 				ECC9617022478E3300E4D4C1 /* NotificationCellsConfigurator.swift in Sources */,
 				ECB5962922515316002EDDFD /* Reactive.swift in Sources */,
 				ECC9616A2246E1DC00E4D4C1 /* SliderCell.swift in Sources */,
-				EC93F3D8222C83BF00C4BB89 /* AuthorizationAPI.swift in Sources */,
+				EC93F3D8222C83BF00C4BB89 /* UserAPI.swift in Sources */,
 				ECB5964E2252C564002EDDFD /* ImagePickerController+Rx.swift in Sources */,
+				ECA2BCCF226E5FC500B042B3 /* UsersPaginationResponse.swift in Sources */,
 				EC76CA2E2235397400ADD1BE /* LoginViewModel.swift in Sources */,
 				ECC961572246C46300E4D4C1 /* FilterViewModel.swift in Sources */,
 				ECC961642246CB3E00E4D4C1 /* NibLoadable.swift in Sources */,

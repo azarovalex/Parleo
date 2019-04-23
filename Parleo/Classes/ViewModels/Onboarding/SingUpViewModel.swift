@@ -12,7 +12,7 @@ import Action
 
 class SignUpViewModel: ViewModelType {
 
-    private let authService = AuthorizationService()
+    private let authService = UserService()
     private let navigationRelay = PublishRelay<Void>()
 
     struct Input {

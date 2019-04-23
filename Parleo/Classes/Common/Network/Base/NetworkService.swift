@@ -35,7 +35,12 @@ extension NetworkService {
     func send(_ api: API) -> Single<Result<Void>> {
         return makeRequest(to: api).map { result in
             guard let response = result.value else { return .failure(result.error ?? EmptyError()) }
-            guard (try? response.filterSuccessfulStatusCodes()) != nil else { return .failure(NetworkError(response: response)) }
+            guard (try? response.filterSuccessfulStatusCodes()) != nil else {
+                guard let errorMessage = response.json?["error"] as? String else {
+                    return .failure(NetworkError(response: response))
+                }
+                return .failure(NetworkError(message: errorMessage))
+            }
             return .success(())
         }
     }
@@ -61,7 +66,12 @@ extension NetworkService {
     func fetchModel<T: BaseMappable>(_ api: API) -> Single<Result<T>> {
         return makeRequest(to: api).map { result in
             guard let response = result.value else { return .failure(result.error ?? EmptyError()) }
-            guard let data = T(response: response) else { return .failure(NetworkError(response: response)) }
+            guard let data = T(response: response) else {
+                guard let errorMessage = response.json?["error"] as? String else {
+                    return .failure(NetworkError(response: response))
+                }
+                return .failure(NetworkError(message: errorMessage))
+            }
             return .success(data)
         }
     }
@@ -77,7 +87,12 @@ extension NetworkService {
     func fetchStringFromKey(_ key: String, api: API) -> Single<Result<String>> {
         return makeRequest(to: api).map { result in
             guard let response = result.value else { return .failure(result.error ?? EmptyError()) }
-            guard let string = response.json?[key] as? String else { return .failure(NetworkError(message: (try? response.mapString()) ?? "???")) }
+            guard let string = response.json?[key] as? String else {
+                guard let errorMessage = response.json?["error"] as? String else {
+                    return .failure(NetworkError(response: response))
+                }
+                return .failure(NetworkError(message: errorMessage))
+            }
             return .success(string)
         }
     }

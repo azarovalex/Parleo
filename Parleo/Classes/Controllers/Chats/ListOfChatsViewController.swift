@@ -8,7 +8,6 @@
 
 import UIKit
 import IGListKit
-import Chatto
 
 class ListOfChatsViewController: UIViewController {
 

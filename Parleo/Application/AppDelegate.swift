@@ -18,9 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupNavigationButtons()
         IQKeyboardManager.shared.enable = true
-        IQKeyboardManager.shared.disabledToolbarClasses = [DemoChatViewController.self]
-        IQKeyboardManager.shared.disabledTouchResignedClasses = [DemoChatViewController.self]
-        IQKeyboardManager.shared.disabledDistanceHandlingClasses = [DemoChatViewController.self]
         return true
     }
 }
