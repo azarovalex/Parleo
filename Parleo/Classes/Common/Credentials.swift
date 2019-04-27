@@ -11,6 +11,6 @@ import Foundation
 struct Credentials {
 
     struct Backend {
-        static let stage = URL(string: "https://parleobackend.azurewebsites.net")!
+        static let stage = URL(string: "https://awesomeparleobackend.azurewebsites.net")!
     }
 }
