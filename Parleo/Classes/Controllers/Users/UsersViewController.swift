@@ -55,7 +55,8 @@ private extension UsersViewController {
             .filter { [unowned self] _ in !self.refreshControl.isRefreshing }
             .drive(commentsSpinner).disposed(by: bag)
         tableView.rx.modelSelected(User.self)
-            .bind(to: rx.navigate(with: R.segue.usersViewController.fromUserListToUserInfo))
+            .bind(to: rx.navigate(with: R.segue.usersViewController.fromUserListToUserInfo,
+                                  segueHandler: { segue, user in segue.destination.user = user }))
             .disposed(by: bag)
     }
 

@@ -91,12 +91,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_example" translatesAutoresizingMaskIntoConstraints="NO" id="adi-3d-X2c">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarTemplate" translatesAutoresizingMaskIntoConstraints="NO" id="adi-3d-X2c">
                                 <rect key="frame" x="16" y="80" width="90" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="iQI-jm-BCm"/>
                                     <constraint firstAttribute="height" constant="90" id="wRR-LK-QAx"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="sfL-w2-VG0">
                                 <rect key="frame" x="122" y="103.5" width="167" height="43.5"/>
@@ -214,6 +219,12 @@ do nothing, watch anime, play tanks and whatnot. 😂✌</string>
                     </view>
                     <navigationItem key="navigationItem" title="Tedik's Profile" id="3cC-My-4bS"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="aboutLabel" destination="n9V-Tz-KHy" id="nwO-Dz-KkV"/>
+                        <outlet property="languagesStackView" destination="4XN-Mo-uUL" id="5f8-hY-v86"/>
+                        <outlet property="userImageView" destination="adi-3d-X2c" id="mqO-8Y-Asj"/>
+                        <outlet property="usernameLabel" destination="zLv-9l-u5o" id="qnr-2R-LZJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTx-7M-6Pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,7 +234,7 @@ do nothing, watch anime, play tanks and whatnot. 😂✌</string>
     <resources>
         <image name="RussianFlag" width="19" height="19"/>
         <image name="UKFlag" width="30" height="30"/>
-        <image name="avatar_example" width="88" height="88"/>
+        <image name="avatarTemplate" width="150" height="150"/>
         <image name="filterIcon" width="24" height="24"/>
         <image name="tabBarUsersIcon" width="31" height="23"/>
         <namedColor name="AppGray">
