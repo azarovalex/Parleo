@@ -1,30 +1,31 @@
 //
-//  UsersPaginationResponse.swift
+//  PaginatedResponse.swift
 //  Parleo
 //
-//  Created by Alex Azarov on 4/22/19.
+//  Created by Alex Azarov on 4/27/19.
 //  Copyright © 2019 LeatherSoft. All rights reserved.
 //
 
 import ObjectMapper
 
-struct UsersPaginationResponse {
-    var entities: [User] = []
+struct PagedResponse<T: BaseMappable> {
+    var items = [T]()
     var pageNumber: Int = 0
     var pageSize: Int = 0
     var totalAmount: Int = 0
 }
 
-extension UsersPaginationResponse: Mappable {
+extension PagedResponse: Mappable {
 
     init?(map: Map) {
         if map.JSON["totalAmount"] == nil { return nil }
     }
 
     mutating func mapping(map: Map) {
-        entities <- map["entities"]
+        items <- map["entities"]
         pageNumber <- map["pageNumber"]
         pageSize <- map["pageSize"]
         totalAmount <- map["totalAmount"]
     }
 }
+

@@ -10,14 +10,18 @@ import ObjectMapper
 
 struct User {
     var id: String!
-    var accountImage: String?
+    var accountImage: URL?
     var name: String?
     var about: String?
     var birthdate: Date?
     var isMale: Bool = false
-    var latitude: Double = 0
-    var longitude: Double = 0
-    var email: String = ""
+    var distanceFromCurrentUser: Double = 0
+    var email: String?
+    var createdEvents = [Int]()
+    var languages = [Int]()
+    var friends = [Int]()
+    var attendingEvents = [Int]()
+    var hobbies = [Int]()
 }
 
 extension User: Mappable {
@@ -28,14 +32,17 @@ extension User: Mappable {
 
     mutating func mapping(map: Map) {
         id <- map["id"]
-        accountImage <- map["accountImage"]
         name <- map["name"]
         about <- map["about"]
         birthdate <- map["birthdate"]
         isMale <- map["gender"]
-        latitude <- map["latitude"]
-        longitude <- map["longitude"]
+        distanceFromCurrentUser <- map["distanceFromCurrentUser"]
         email <- map["email"]
+
+        var imageName: String = ""
+        imageName <- map["accountImage"]
+        print(imageName)
+        accountImage = URL(string: "https://awesomeparleobackend.azurewebsites.net/account-images/" + imageName)
     }
 }
 

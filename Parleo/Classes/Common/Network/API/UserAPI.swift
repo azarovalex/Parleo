@@ -9,7 +9,7 @@
 import Moya
 
 enum UserAPI {
-    case getUsers
+    case getUsers(page: Int, pageSize: Int)
     case register(email: String, password: String)
     case login(email: String, password: String)
     case getUser(id: String)
@@ -71,8 +71,10 @@ extension UserAPI: AuthorizedTargetType {
 
     var task: Task {
         switch self {
-        case .getUsers, .getUser, .getMyProfile:
+        case .getUser, .getMyProfile:
             return .requestPlain
+        case .getUsers(let page, let pageSize):
+            return .requestParameters(parameters: ["Page": page, "PageSize": pageSize], encoding: URLEncoding.queryString)
         case .register(let email, let password), .login(let email, let password):
             return .requestParameters(parameters: ["email": email, "password": password], encoding: JSONEncoding.default)
         case .updateUser(_, let user):

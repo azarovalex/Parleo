@@ -22,6 +22,11 @@
 		EC1B9AD822397103007B4113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1B9AD722397103007B4113 /* Assets.xcassets */; };
 		EC251952224E8AEE00D0FEE7 /* LanguagesPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC251950224E8AEE00D0FEE7 /* LanguagesPickerCell.swift */; };
 		EC251953224E8AEE00D0FEE7 /* LanguagesPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC251951224E8AEE00D0FEE7 /* LanguagesPickerCell.xib */; };
+		EC29964222749DD6002694F9 /* PaginatedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29964122749DD6002694F9 /* PaginatedResponse.swift */; };
+		EC29964422749EAF002694F9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29964322749EAF002694F9 /* Event.swift */; };
+		EC29964622749ECF002694F9 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29964522749ECF002694F9 /* Language.swift */; };
+		EC29964822749F37002694F9 /* Hobbie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29964722749F37002694F9 /* Hobbie.swift */; };
+		EC29964A2274A37F002694F9 /* PaginationLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2996492274A37F002694F9 /* PaginationLogic.swift */; };
 		EC2C85EF2222758600D113B5 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC2C85EE2222756800D113B5 /* Montserrat-Regular.ttf */; };
 		EC2C85F12222788100D113B5 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC2C85F02222787F00D113B5 /* Montserrat-Bold.ttf */; };
 		EC2C85F322227A0400D113B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C85F222227A0400D113B5 /* LoginViewController.swift */; };
@@ -42,7 +47,6 @@
 		EC93F3D8222C83BF00C4BB89 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D7222C83BF00C4BB89 /* UserAPI.swift */; };
 		ECA2BCC9226E49E500B042B3 /* UserFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2BCC8226E49E500B042B3 /* UserFilter.swift */; };
 		ECA2BCCC226E5E6D00B042B3 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2BCCB226E5E6D00B042B3 /* AuthPlugin.swift */; };
-		ECA2BCCF226E5FC500B042B3 /* UsersPaginationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2BCCE226E5FC500B042B3 /* UsersPaginationResponse.swift */; };
 		ECB5961922514974002EDDFD /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5961822514974002EDDFD /* NotificationsViewController.swift */; };
 		ECB5961E22514AC4002EDDFD /* FriendAddedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5961C22514AC4002EDDFD /* FriendAddedCell.swift */; };
 		ECB5961F22514AC4002EDDFD /* FriendAddedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECB5961D22514AC4002EDDFD /* FriendAddedCell.xib */; };
@@ -122,6 +126,11 @@
 		EC1B9AD722397103007B4113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC251950224E8AEE00D0FEE7 /* LanguagesPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesPickerCell.swift; sourceTree = "<group>"; };
 		EC251951224E8AEE00D0FEE7 /* LanguagesPickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguagesPickerCell.xib; sourceTree = "<group>"; };
+		EC29964122749DD6002694F9 /* PaginatedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedResponse.swift; sourceTree = "<group>"; };
+		EC29964322749EAF002694F9 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		EC29964522749ECF002694F9 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		EC29964722749F37002694F9 /* Hobbie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hobbie.swift; sourceTree = "<group>"; };
+		EC2996492274A37F002694F9 /* PaginationLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationLogic.swift; sourceTree = "<group>"; };
 		EC2C85EE2222756800D113B5 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		EC2C85F02222787F00D113B5 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		EC2C85F222227A0400D113B5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -144,7 +153,6 @@
 		EC93F3D7222C83BF00C4BB89 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		ECA2BCC8226E49E500B042B3 /* UserFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFilter.swift; sourceTree = "<group>"; };
 		ECA2BCCB226E5E6D00B042B3 /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
-		ECA2BCCE226E5FC500B042B3 /* UsersPaginationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersPaginationResponse.swift; sourceTree = "<group>"; };
 		ECB5961822514974002EDDFD /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		ECB5961C22514AC4002EDDFD /* FriendAddedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAddedCell.swift; sourceTree = "<group>"; };
 		ECB5961D22514AC4002EDDFD /* FriendAddedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendAddedCell.xib; sourceTree = "<group>"; };
@@ -381,10 +389,13 @@
 		EC93F3CB222C644800C4BB89 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				ECA2BCCD226E5F3A00B042B3 /* Authorization */,
 				ECDCC251222EB07400DA9758 /* User.swift */,
 				ECA2BCC8226E49E500B042B3 /* UserFilter.swift */,
 				ECB59626225150A4002EDDFD /* AppNotification.swift */,
+				EC29964122749DD6002694F9 /* PaginatedResponse.swift */,
+				EC29964322749EAF002694F9 /* Event.swift */,
+				EC29964522749ECF002694F9 /* Language.swift */,
+				EC29964722749F37002694F9 /* Hobbie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -443,14 +454,6 @@
 				ECA2BCCB226E5E6D00B042B3 /* AuthPlugin.swift */,
 			);
 			path = Plugins;
-			sourceTree = "<group>";
-		};
-		ECA2BCCD226E5F3A00B042B3 /* Authorization */ = {
-			isa = PBXGroup;
-			children = (
-				ECA2BCCE226E5FC500B042B3 /* UsersPaginationResponse.swift */,
-			);
-			path = Authorization;
 			sourceTree = "<group>";
 		};
 		ECB5961A22514A3C002EDDFD /* Notifications */ = {
@@ -569,6 +572,7 @@
 			children = (
 				ECC9617322478F5200E4D4C1 /* TapticEngine.swift */,
 				ECDB2A3D224EC4220061AEB1 /* DiffableBox.swift */,
+				EC2996492274A37F002694F9 /* PaginationLogic.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -923,7 +927,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC29964A2274A37F002694F9 /* PaginationLogic.swift in Sources */,
 				ECB596492252C34C002EDDFD /* SignUpAvatarViewController.swift in Sources */,
+				EC29964822749F37002694F9 /* Hobbie.swift in Sources */,
 				EC93F3D2222C834F00C4BB89 /* NetworkService.swift in Sources */,
 				EC76CA3B2235877900ADD1BE /* Storage.swift in Sources */,
 				ECB596452252ADE0002EDDFD /* UIView+CornerRadius.swift in Sources */,
@@ -940,6 +946,7 @@
 				ECA2BCC9226E49E500B042B3 /* UserFilter.swift in Sources */,
 				ECDB2A50224F87D20061AEB1 /* ListOfChatsCell.swift in Sources */,
 				EC8059C52253C005005C1644 /* MyProfileViewController.swift in Sources */,
+				EC29964222749DD6002694F9 /* PaginatedResponse.swift in Sources */,
 				EC93F3D6222C83B300C4BB89 /* UserService.swift in Sources */,
 				ECB596512252D5ED002EDDFD /* SignUpCredentialsViewController.swift in Sources */,
 				ECB5961E22514AC4002EDDFD /* FriendAddedCell.swift in Sources */,
@@ -953,6 +960,8 @@
 				ECC961602246CA5900E4D4C1 /* CheckboxView.swift in Sources */,
 				EC76CA30223539D700ADD1BE /* ViewModelType.swift in Sources */,
 				ECC9617422478F5200E4D4C1 /* TapticEngine.swift in Sources */,
+				EC29964622749ECF002694F9 /* Language.swift in Sources */,
+				EC29964422749EAF002694F9 /* Event.swift in Sources */,
 				ECB5964C2252C540002EDDFD /* UIViewController+ImagePicker.swift in Sources */,
 				ECDB2A53224F8B6E0061AEB1 /* ListOfChatsSectionController.swift in Sources */,
 				EC251952224E8AEE00D0FEE7 /* LanguagesPickerCell.swift in Sources */,
@@ -970,7 +979,6 @@
 				ECC9616A2246E1DC00E4D4C1 /* SliderCell.swift in Sources */,
 				EC93F3D8222C83BF00C4BB89 /* UserAPI.swift in Sources */,
 				ECB5964E2252C564002EDDFD /* ImagePickerController+Rx.swift in Sources */,
-				ECA2BCCF226E5FC500B042B3 /* UsersPaginationResponse.swift in Sources */,
 				EC76CA2E2235397400ADD1BE /* LoginViewModel.swift in Sources */,
 				ECC961572246C46300E4D4C1 /* FilterViewModel.swift in Sources */,
 				ECC961642246CB3E00E4D4C1 /* NibLoadable.swift in Sources */,
