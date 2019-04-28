@@ -12,11 +12,10 @@ import Moya
 protocol StorageType { }
 
 class Storage {
-
-    private init() { }
-
     static var shared = Storage()
 
 //    var currentUser: User?
     var accessToken: String?
+    
+    private init() { }
 }

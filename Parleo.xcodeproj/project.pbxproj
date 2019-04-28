@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		171F38D2226CA23000DECF7A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171F38D1226CA23000DECF7A /* Event.swift */; };
+		171F38D4226CA25F00DECF7A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171F38D3226CA25F00DECF7A /* Location.swift */; };
+		171F38D6226CA38300DECF7A /* EventsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171F38D5226CA38300DECF7A /* EventsService.swift */; };
 		177A7CDC224FCA0000FB4A2D /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A7CDA224FCA0000FB4A2D /* EventTableViewCell.swift */; };
 		177A7CDD224FCA0000FB4A2D /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177A7CDB224FCA0000FB4A2D /* EventTableViewCell.xib */; };
 		17DFB169223FE2A900495918 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DFB168223FE2A900495918 /* EventsViewController.swift */; };
@@ -137,6 +140,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		171F38D1226CA23000DECF7A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		171F38D3226CA25F00DECF7A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		171F38D5226CA38300DECF7A /* EventsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsService.swift; sourceTree = "<group>"; };
 		177A7CDA224FCA0000FB4A2D /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		177A7CDB224FCA0000FB4A2D /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		17DFB168223FE2A900495918 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -445,6 +451,8 @@
 			children = (
 				ECDCC251222EB07400DA9758 /* User.swift */,
 				ECB59626225150A4002EDDFD /* AppNotification.swift */,
+				171F38D1226CA23000DECF7A /* Event.swift */,
+				171F38D3226CA25F00DECF7A /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -483,6 +491,7 @@
 			children = (
 				EC93F3D5222C83B300C4BB89 /* AuthorizationService.swift */,
 				ECB5962422514F3F002EDDFD /* NotificationsService.swift */,
+				171F38D5226CA38300DECF7A /* EventsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1014,6 +1023,7 @@
 				ECDB2A93224FAA210061AEB1 /* GenericMessageHandler.swift in Sources */,
 				EC93F3D2222C834F00C4BB89 /* NetworkService.swift in Sources */,
 				EC76CA3B2235877900ADD1BE /* Storage.swift in Sources */,
+				171F38D6226CA38300DECF7A /* EventsService.swift in Sources */,
 				ECDB2A7A224FA9D90061AEB1 /* UpdateItemTypeViewController.swift in Sources */,
 				ECB596452252ADE0002EDDFD /* UIView+CornerRadius.swift in Sources */,
 				ECF190C62227463C002D24EF /* RoundedTextField.swift in Sources */,
@@ -1050,6 +1060,7 @@
 				ECDB2A7F224FA9D90061AEB1 /* MessagesSelectionChatViewController.swift in Sources */,
 				ECDB2A80224FA9D90061AEB1 /* DemoChatMessageSender.swift in Sources */,
 				EC76CA30223539D700ADD1BE /* ViewModelType.swift in Sources */,
+				171F38D2226CA23000DECF7A /* Event.swift in Sources */,
 				ECC9617422478F5200E4D4C1 /* TapticEngine.swift in Sources */,
 				ECDB2A71224FA9AF0061AEB1 /* AddRandomMessageChatViewController.swift in Sources */,
 				ECDB2A8A224FAA0B0061AEB1 /* DemoCompoundMessageViewModel.swift in Sources */,
@@ -1076,6 +1087,7 @@
 				ECC9616A2246E1DC00E4D4C1 /* SliderCell.swift in Sources */,
 				EC93F3D8222C83BF00C4BB89 /* AuthorizationAPI.swift in Sources */,
 				ECDB2AA2224FAA400061AEB1 /* DemoTextMessageModel.swift in Sources */,
+				171F38D4226CA25F00DECF7A /* Location.swift in Sources */,
 				ECB5964E2252C564002EDDFD /* ImagePickerController+Rx.swift in Sources */,
 				EC76CA2E2235397400ADD1BE /* LoginViewModel.swift in Sources */,
 				ECC961572246C46300E4D4C1 /* FilterViewModel.swift in Sources */,
