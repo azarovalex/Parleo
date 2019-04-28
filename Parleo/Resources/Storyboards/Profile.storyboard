@@ -39,7 +39,7 @@
         <!--My Profile-->
         <scene sceneID="Twk-kr-AHk">
             <objects>
-                <viewController id="iNa-c1-Xqj" sceneMemberID="viewController">
+                <viewController id="iNa-c1-Xqj" customClass="MyProfileViewController" customModule="Parleo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="THY-L1-s1X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,6 +118,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                                         <real key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showMockAlert" destination="iNa-c1-Xqj" eventType="touchUpInside" id="OOD-xR-0Gq"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="oI7-Hv-0bX">
                                 <rect key="frame" x="16" y="348.5" width="343" height="94"/>
@@ -130,6 +133,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                                         <state key="normal" title="My meetings (2)" image="myMeetingsIcon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="showMockAlert" destination="iNa-c1-Xqj" eventType="touchUpInside" id="Ob3-Ac-MTu"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRE-ic-3F2">
                                         <rect key="frame" x="0.0" y="61" width="343" height="33"/>
@@ -139,6 +145,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                                         <state key="normal" title="Friends (35)" image="profileFriendsIcon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="showMockAlert" destination="iNa-c1-Xqj" eventType="touchUpInside" id="cfm-39-dhh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -166,6 +175,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="settingsButton" destination="Ik3-lk-Ft0" id="Zl5-cG-4yT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7le-Fi-SfM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

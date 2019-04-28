@@ -14,7 +14,6 @@ protocol StorageType { }
 class Storage {
     static var shared = Storage()
 
-//    var currentUser: User?
     var accessToken: String?
     
     private init() { }

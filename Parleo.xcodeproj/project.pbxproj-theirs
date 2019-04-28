@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		171F38D4226CA25F00DECF7A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171F38D3226CA25F00DECF7A /* Location.swift */; };
-		171F38D6226CA38300DECF7A /* EventsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171F38D5226CA38300DECF7A /* EventsService.swift */; };
 		177A7CDC224FCA0000FB4A2D /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A7CDA224FCA0000FB4A2D /* EventTableViewCell.swift */; };
 		177A7CDD224FCA0000FB4A2D /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177A7CDB224FCA0000FB4A2D /* EventTableViewCell.xib */; };
 		17DFB169223FE2A900495918 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DFB168223FE2A900495918 /* EventsViewController.swift */; };
@@ -25,7 +23,7 @@
 		EC251952224E8AEE00D0FEE7 /* LanguagesPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC251950224E8AEE00D0FEE7 /* LanguagesPickerCell.swift */; };
 		EC251953224E8AEE00D0FEE7 /* LanguagesPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC251951224E8AEE00D0FEE7 /* LanguagesPickerCell.xib */; };
 		EC29964222749DD6002694F9 /* PaginatedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29964122749DD6002694F9 /* PaginatedResponse.swift */; };
-		EC29964422749EAF002694F9 /* ParleoEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29964322749EAF002694F9 /* ParleoEvent.swift */; };
+		EC29964422749EAF002694F9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29964322749EAF002694F9 /* Event.swift */; };
 		EC29964622749ECF002694F9 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29964522749ECF002694F9 /* Language.swift */; };
 		EC29964822749F37002694F9 /* Hobbie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29964722749F37002694F9 /* Hobbie.swift */; };
 		EC29964A2274A37F002694F9 /* PaginationLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2996492274A37F002694F9 /* PaginationLogic.swift */; };
@@ -113,8 +111,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		171F38D3226CA25F00DECF7A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		171F38D5226CA38300DECF7A /* EventsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsService.swift; sourceTree = "<group>"; };
 		177A7CDA224FCA0000FB4A2D /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		177A7CDB224FCA0000FB4A2D /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		17DFB168223FE2A900495918 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -132,7 +128,7 @@
 		EC251950224E8AEE00D0FEE7 /* LanguagesPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesPickerCell.swift; sourceTree = "<group>"; };
 		EC251951224E8AEE00D0FEE7 /* LanguagesPickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguagesPickerCell.xib; sourceTree = "<group>"; };
 		EC29964122749DD6002694F9 /* PaginatedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedResponse.swift; sourceTree = "<group>"; };
-		EC29964322749EAF002694F9 /* ParleoEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParleoEvent.swift; sourceTree = "<group>"; };
+		EC29964322749EAF002694F9 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		EC29964522749ECF002694F9 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		EC29964722749F37002694F9 /* Hobbie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hobbie.swift; sourceTree = "<group>"; };
 		EC2996492274A37F002694F9 /* PaginationLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationLogic.swift; sourceTree = "<group>"; };
@@ -399,9 +395,8 @@
 				ECDCC251222EB07400DA9758 /* User.swift */,
 				ECA2BCC8226E49E500B042B3 /* UserFilter.swift */,
 				ECB59626225150A4002EDDFD /* AppNotification.swift */,
-				171F38D3226CA25F00DECF7A /* Location.swift */,
 				EC29964122749DD6002694F9 /* PaginatedResponse.swift */,
-				EC29964322749EAF002694F9 /* ParleoEvent.swift */,
+				EC29964322749EAF002694F9 /* Event.swift */,
 				EC29964522749ECF002694F9 /* Language.swift */,
 				EC29964722749F37002694F9 /* Hobbie.swift */,
 			);
@@ -442,7 +437,6 @@
 			children = (
 				EC93F3D5222C83B300C4BB89 /* UserService.swift */,
 				ECB5962422514F3F002EDDFD /* NotificationsService.swift */,
-				171F38D5226CA38300DECF7A /* EventsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -941,7 +935,6 @@
 				EC29964822749F37002694F9 /* Hobbie.swift in Sources */,
 				EC93F3D2222C834F00C4BB89 /* NetworkService.swift in Sources */,
 				EC76CA3B2235877900ADD1BE /* Storage.swift in Sources */,
-				171F38D6226CA38300DECF7A /* EventsService.swift in Sources */,
 				ECB596452252ADE0002EDDFD /* UIView+CornerRadius.swift in Sources */,
 				EC8ED29B2274E61C00A59A3C /* MyProfileViewModel.swift in Sources */,
 				ECF190C62227463C002D24EF /* RoundedTextField.swift in Sources */,
@@ -972,7 +965,7 @@
 				EC76CA30223539D700ADD1BE /* ViewModelType.swift in Sources */,
 				ECC9617422478F5200E4D4C1 /* TapticEngine.swift in Sources */,
 				EC29964622749ECF002694F9 /* Language.swift in Sources */,
-				EC29964422749EAF002694F9 /* ParleoEvent.swift in Sources */,
+				EC29964422749EAF002694F9 /* Event.swift in Sources */,
 				ECB5964C2252C540002EDDFD /* UIViewController+ImagePicker.swift in Sources */,
 				ECDB2A53224F8B6E0061AEB1 /* ListOfChatsSectionController.swift in Sources */,
 				EC251952224E8AEE00D0FEE7 /* LanguagesPickerCell.swift in Sources */,
@@ -988,8 +981,6 @@
 				ECC9617022478E3300E4D4C1 /* NotificationCellsConfigurator.swift in Sources */,
 				ECB5962922515316002EDDFD /* Reactive.swift in Sources */,
 				ECC9616A2246E1DC00E4D4C1 /* SliderCell.swift in Sources */,
-				EC93F3D8222C83BF00C4BB89 /* UserAPI.swift in Sources */,
-				171F38D4226CA25F00DECF7A /* Location.swift in Sources */,
 				EC93F3D8222C83BF00C4BB89 /* UserAPI.swift in Sources */,
 				ECB5964E2252C564002EDDFD /* ImagePickerController+Rx.swift in Sources */,
 				EC76CA2E2235397400ADD1BE /* LoginViewModel.swift in Sources */,

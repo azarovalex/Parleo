@@ -11,11 +11,23 @@ import UIKit
 class UserCell: UITableViewCell {
 
     @IBOutlet private var shadowView: UIView!
+    @IBOutlet private var userImageView: UIImageView!
+    @IBOutlet private var usernameLabel: UILabel!
+    @IBOutlet private var descriptionLabel: UILabel!
+    @IBOutlet private var distanceLabel: UILabel!
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
         setup()
+    }
+
+    func configure(with model: User) {
+        userImageView.kf.setImage(with: model.accountImage, placeholder: R.image.avatarTemplate()!)
+        usernameLabel.text = model.name
+        descriptionLabel.text = model.about
+        distanceLabel.text = "\(model.distanceFromCurrentUser) km away"
     }
 }
 

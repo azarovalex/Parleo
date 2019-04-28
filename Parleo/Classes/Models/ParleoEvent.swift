@@ -1,5 +1,5 @@
 //
-//  Event.swift
+//  ParleoEvent.swift
 //  Parleo
 //
 //  Created by Artyom Shaiter on 4/21/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Event {
+struct ParleoEvent {
     let id: UUID
     let title: String
     let description: String
