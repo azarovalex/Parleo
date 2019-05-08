@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		171F38D4226CA25F00DECF7A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171F38D3226CA25F00DECF7A /* Location.swift */; };
 		171F38D6226CA38300DECF7A /* EventsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171F38D5226CA38300DECF7A /* EventsService.swift */; };
+		175F7B752275CB2C00EC76DD /* ParleoEventsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175F7B742275CB2C00EC76DD /* ParleoEventsAPI.swift */; };
 		177A7CDC224FCA0000FB4A2D /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A7CDA224FCA0000FB4A2D /* EventTableViewCell.swift */; };
 		177A7CDD224FCA0000FB4A2D /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177A7CDB224FCA0000FB4A2D /* EventTableViewCell.xib */; };
 		17DFB169223FE2A900495918 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DFB168223FE2A900495918 /* EventsViewController.swift */; };
@@ -115,6 +116,7 @@
 /* Begin PBXFileReference section */
 		171F38D3226CA25F00DECF7A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		171F38D5226CA38300DECF7A /* EventsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsService.swift; sourceTree = "<group>"; };
+		175F7B742275CB2C00EC76DD /* ParleoEventsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParleoEventsAPI.swift; sourceTree = "<group>"; };
 		177A7CDA224FCA0000FB4A2D /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		177A7CDB224FCA0000FB4A2D /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		17DFB168223FE2A900495918 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 				ECA2BCCA226E5E5800B042B3 /* Plugins */,
 				EC93F3D7222C83BF00C4BB89 /* UserAPI.swift */,
 				ECB5962222514F31002EDDFD /* NotificationsAPI.swift */,
+				175F7B742275CB2C00EC76DD /* ParleoEventsAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1004,6 +1007,7 @@
 				ECC961552246C42B00E4D4C1 /* FilterViewController.swift in Sources */,
 				ECDB2A3E224EC4220061AEB1 /* DiffableBox.swift in Sources */,
 				ECDB2A4D224F775D0061AEB1 /* ListOfChatsViewController.swift in Sources */,
+				175F7B752275CB2C00EC76DD /* ParleoEventsAPI.swift in Sources */,
 				ECDB2A40224ECB1E0061AEB1 /* CheckboxSectionController.swift in Sources */,
 				EC863CB12220811800A49824 /* AppDelegate.swift in Sources */,
 				ECB596532252D978002EDDFD /* SignUpInfoViewController.swift in Sources */,
