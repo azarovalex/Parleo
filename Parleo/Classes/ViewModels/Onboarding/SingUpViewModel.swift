@@ -11,8 +11,7 @@ import RxCocoa
 import Action
 
 class SignUpViewModel: ViewModelType {
-
-    private let authService = UserService()
+    
     private let navigationRelay = PublishRelay<Void>()
 
     struct Input {
@@ -27,13 +26,20 @@ class SignUpViewModel: ViewModelType {
     }
 
     func transform(input: Input) -> Output {
-        let action = CocoaAction { () -> Observable<Void> in
-            return unwrapResult(self.authService.register(with: input.credentials.email, password: input.credentials.password).debug("😎😎😎", trimOutput: false))
-                .map { [unowned self] token in print(token); return self.navigationRelay.accept(()) }
-        }
+        let action = getRegistrationAction()
         return Output(registerAction: action,
                       isLoading: action.executing.asDriver { _ in .never() },
                       errors: action.underlyingError.asSignal { _ in .never() },
                       navigate: navigationRelay.asSignal())
+    }
+}
+
+// MARK: - Private
+private extension SignUpViewModel {
+
+    func getRegistrationAction() -> CocoaAction {
+        return CocoaAction {
+            return .never()
+        }
     }
 }

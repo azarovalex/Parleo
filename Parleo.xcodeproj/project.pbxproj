@@ -30,6 +30,7 @@
 		EC2C85EF2222758600D113B5 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC2C85EE2222756800D113B5 /* Montserrat-Regular.ttf */; };
 		EC2C85F12222788100D113B5 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC2C85F02222787F00D113B5 /* Montserrat-Bold.ttf */; };
 		EC2C85F322227A0400D113B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C85F222227A0400D113B5 /* LoginViewController.swift */; };
+		EC48D3AE2282296B00165BC3 /* DatePickerAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48D3AD2282296B00165BC3 /* DatePickerAlert.swift */; };
 		EC76CA2E2235397400ADD1BE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76CA2D2235397400ADD1BE /* LoginViewModel.swift */; };
 		EC76CA30223539D700ADD1BE /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76CA2F223539D700ADD1BE /* ViewModelType.swift */; };
 		EC76CA3322353C4500ADD1BE /* UIViewController+ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76CA3222353C4500ADD1BE /* UIViewController+ErrorAlert.swift */; };
@@ -38,6 +39,9 @@
 		EC76CA3B2235877900ADD1BE /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76CA3A2235877900ADD1BE /* Storage.swift */; };
 		EC8059C32253ABC6005C1644 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8059C22253ABC6005C1644 /* EventDetailsViewController.swift */; };
 		EC8059C52253C005005C1644 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8059C42253C005005C1644 /* MyProfileViewController.swift */; };
+		EC834D6E2277A5F900BADD2E /* SignUpCredentialsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC834D6D2277A5F900BADD2E /* SignUpCredentialsViewModel.swift */; };
+		EC834D84227892F000BADD2E /* UITextField+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC834D83227892F000BADD2E /* UITextField+Rx.swift */; };
+		EC834D8622789B6900BADD2E /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC834D8522789B6900BADD2E /* Validators.swift */; };
 		EC863CB12220811800A49824 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC863CB02220811800A49824 /* AppDelegate.swift */; };
 		EC863CB82220811800A49824 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC863CB62220811800A49824 /* Main.storyboard */; };
 		EC863CBD2220811A00A49824 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC863CBB2220811A00A49824 /* LaunchScreen.storyboard */; };
@@ -48,6 +52,12 @@
 		EC93F3D8222C83BF00C4BB89 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F3D7222C83BF00C4BB89 /* UserAPI.swift */; };
 		ECA2BCC9226E49E500B042B3 /* UserFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2BCC8226E49E500B042B3 /* UserFilter.swift */; };
 		ECA2BCCC226E5E6D00B042B3 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2BCCB226E5E6D00B042B3 /* AuthPlugin.swift */; };
+		ECA5879B2281A54B001B8120 /* EmailVerification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA5879A2281A54B001B8120 /* EmailVerification.storyboard */; };
+		ECA5879D2281F579001B8120 /* EmailVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA5879C2281F579001B8120 /* EmailVerificationViewController.swift */; };
+		ECA5879F2281F774001B8120 /* EmailVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA5879E2281F774001B8120 /* EmailVerificationViewModel.swift */; };
+		ECA587A1228204EC001B8120 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA587A0228204EC001B8120 /* Registration.storyboard */; };
+		ECA587A322820681001B8120 /* AccountAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA587A222820681001B8120 /* AccountAPI.swift */; };
+		ECA587A522820865001B8120 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA587A422820865001B8120 /* AccountService.swift */; };
 		ECB5961922514974002EDDFD /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5961822514974002EDDFD /* NotificationsViewController.swift */; };
 		ECB5961E22514AC4002EDDFD /* FriendAddedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5961C22514AC4002EDDFD /* FriendAddedCell.swift */; };
 		ECB5961F22514AC4002EDDFD /* FriendAddedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECB5961D22514AC4002EDDFD /* FriendAddedCell.xib */; };
@@ -135,6 +145,7 @@
 		EC2C85EE2222756800D113B5 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		EC2C85F02222787F00D113B5 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		EC2C85F222227A0400D113B5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EC48D3AD2282296B00165BC3 /* DatePickerAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerAlert.swift; sourceTree = "<group>"; };
 		EC76CA2D2235397400ADD1BE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EC76CA2F223539D700ADD1BE /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		EC76CA3222353C4500ADD1BE /* UIViewController+ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ErrorAlert.swift"; sourceTree = "<group>"; };
@@ -143,6 +154,9 @@
 		EC76CA3A2235877900ADD1BE /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		EC8059C22253ABC6005C1644 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		EC8059C42253C005005C1644 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		EC834D6D2277A5F900BADD2E /* SignUpCredentialsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCredentialsViewModel.swift; sourceTree = "<group>"; };
+		EC834D83227892F000BADD2E /* UITextField+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Rx.swift"; sourceTree = "<group>"; };
+		EC834D8522789B6900BADD2E /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		EC863CAD2220811800A49824 /* Parleo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parleo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC863CB02220811800A49824 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC863CB72220811800A49824 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -156,6 +170,12 @@
 		EC93F3D7222C83BF00C4BB89 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		ECA2BCC8226E49E500B042B3 /* UserFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFilter.swift; sourceTree = "<group>"; };
 		ECA2BCCB226E5E6D00B042B3 /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
+		ECA5879A2281A54B001B8120 /* EmailVerification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmailVerification.storyboard; sourceTree = "<group>"; };
+		ECA5879C2281F579001B8120 /* EmailVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVerificationViewController.swift; sourceTree = "<group>"; };
+		ECA5879E2281F774001B8120 /* EmailVerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVerificationViewModel.swift; sourceTree = "<group>"; };
+		ECA587A0228204EC001B8120 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		ECA587A222820681001B8120 /* AccountAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAPI.swift; sourceTree = "<group>"; };
+		ECA587A422820865001B8120 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		ECB5961822514974002EDDFD /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		ECB5961C22514AC4002EDDFD /* FriendAddedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAddedCell.swift; sourceTree = "<group>"; };
 		ECB5961D22514AC4002EDDFD /* FriendAddedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendAddedCell.xib; sourceTree = "<group>"; };
@@ -253,6 +273,8 @@
 			children = (
 				ECF190C122274311002D24EF /* CreateAccount.storyboard */,
 				ECE1D8A32221A950009DE2A3 /* Onboarding.storyboard */,
+				ECA5879A2281A54B001B8120 /* EmailVerification.storyboard */,
+				ECA587A0228204EC001B8120 /* Registration.storyboard */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -262,6 +284,8 @@
 			children = (
 				EC76CA2D2235397400ADD1BE /* LoginViewModel.swift */,
 				ECB596542252DA4F002EDDFD /* SingUpViewModel.swift */,
+				EC834D6D2277A5F900BADD2E /* SignUpCredentialsViewModel.swift */,
+				ECA5879E2281F774001B8120 /* EmailVerificationViewModel.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -420,6 +444,7 @@
 			children = (
 				ECB596432252ADB4002EDDFD /* UIView */,
 				EC76CA3122353C3300ADD1BE /* UIViewController */,
+				EC834D83227892F000BADD2E /* UITextField+Rx.swift */,
 				ECB5962822515316002EDDFD /* Reactive.swift */,
 			);
 			path = Extentions;
@@ -439,6 +464,7 @@
 			children = (
 				EC93F3D5222C83B300C4BB89 /* UserService.swift */,
 				ECB5962422514F3F002EDDFD /* NotificationsService.swift */,
+				ECA587A422820865001B8120 /* AccountService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -449,6 +475,7 @@
 				ECA2BCCA226E5E5800B042B3 /* Plugins */,
 				EC93F3D7222C83BF00C4BB89 /* UserAPI.swift */,
 				ECB5962222514F31002EDDFD /* NotificationsAPI.swift */,
+				ECA587A222820681001B8120 /* AccountAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -511,6 +538,7 @@
 				ECB596502252D5ED002EDDFD /* SignUpCredentialsViewController.swift */,
 				ECB596522252D978002EDDFD /* SignUpInfoViewController.swift */,
 				ECB596482252C34C002EDDFD /* SignUpAvatarViewController.swift */,
+				ECA5879C2281F579001B8120 /* EmailVerificationViewController.swift */,
 			);
 			path = CreateAccount;
 			sourceTree = "<group>";
@@ -578,6 +606,8 @@
 				ECC9617322478F5200E4D4C1 /* TapticEngine.swift */,
 				ECDB2A3D224EC4220061AEB1 /* DiffableBox.swift */,
 				EC2996492274A37F002694F9 /* PaginationLogic.swift */,
+				EC834D8522789B6900BADD2E /* Validators.swift */,
+				EC48D3AD2282296B00165BC3 /* DatePickerAlert.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -801,6 +831,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECA587A1228204EC001B8120 /* Registration.storyboard in Resources */,
 				177A7CDD224FCA0000FB4A2D /* EventTableViewCell.xib in Resources */,
 				EC1B9ACC22396A85007B4113 /* Users.storyboard in Resources */,
 				ECE1D8AA2221AF51009DE2A3 /* Montserrat-SemiBold.ttf in Resources */,
@@ -811,6 +842,7 @@
 				EC1B9AD822397103007B4113 /* Assets.xcassets in Resources */,
 				ECDB2A3A224E8EF70061AEB1 /* LanguageInPicker.xib in Resources */,
 				ECDB2A51224F87D20061AEB1 /* ListOfChatsCell.xib in Resources */,
+				ECA5879B2281A54B001B8120 /* EmailVerification.storyboard in Resources */,
 				EC863CBD2220811A00A49824 /* LaunchScreen.storyboard in Resources */,
 				EC251953224E8AEE00D0FEE7 /* LanguagesPickerCell.xib in Resources */,
 				EC2C85F12222788100D113B5 /* Montserrat-Bold.ttf in Resources */,
@@ -945,11 +977,13 @@
 				ECB596452252ADE0002EDDFD /* UIView+CornerRadius.swift in Sources */,
 				EC8ED29B2274E61C00A59A3C /* MyProfileViewModel.swift in Sources */,
 				ECF190C62227463C002D24EF /* RoundedTextField.swift in Sources */,
+				EC48D3AE2282296B00165BC3 /* DatePickerAlert.swift in Sources */,
 				ECDB2A47224ECD1A0061AEB1 /* CheckboxesCell.swift in Sources */,
 				ECD2C1CC223F008000C421A7 /* UsersViewController.swift in Sources */,
 				177A7CDC224FCA0000FB4A2D /* EventTableViewCell.swift in Sources */,
 				EC8059C32253ABC6005C1644 /* EventDetailsViewController.swift in Sources */,
 				EC2C85F322227A0400D113B5 /* LoginViewController.swift in Sources */,
+				ECA587A522820865001B8120 /* AccountService.swift in Sources */,
 				ECC9617722482EFA00E4D4C1 /* UserProfileViewController.swift in Sources */,
 				ECDB2A3C224E8F110061AEB1 /* LanguageInPicker.swift in Sources */,
 				ECB596552252DA4F002EDDFD /* SingUpViewModel.swift in Sources */,
@@ -961,6 +995,7 @@
 				EC93F3D6222C83B300C4BB89 /* UserService.swift in Sources */,
 				ECB596512252D5ED002EDDFD /* SignUpCredentialsViewController.swift in Sources */,
 				ECB5961E22514AC4002EDDFD /* FriendAddedCell.swift in Sources */,
+				EC834D8622789B6900BADD2E /* Validators.swift in Sources */,
 				ECDCC257222EB2C400DA9758 /* AppError.swift in Sources */,
 				ECE1D8AC2221B054009DE2A3 /* OnboardingNavigationController.swift in Sources */,
 				ECB5961922514974002EDDFD /* NotificationsViewController.swift in Sources */,
@@ -976,10 +1011,12 @@
 				ECB5964C2252C540002EDDFD /* UIViewController+ImagePicker.swift in Sources */,
 				ECDB2A53224F8B6E0061AEB1 /* ListOfChatsSectionController.swift in Sources */,
 				EC251952224E8AEE00D0FEE7 /* LanguagesPickerCell.swift in Sources */,
+				ECA5879F2281F774001B8120 /* EmailVerificationViewModel.swift in Sources */,
 				EC93F3D4222C836D00C4BB89 /* NetworkExtension.swift in Sources */,
 				ECDEBFF022537D3E009CFE93 /* CreateEventViewController.swift in Sources */,
 				17DFB16B223FE3A800495918 /* EventsViewModel.swift in Sources */,
 				EC76CA3522353CA100ADD1BE /* UIViewController+HUD.swift in Sources */,
+				EC834D84227892F000BADD2E /* UITextField+Rx.swift in Sources */,
 				17DFB169223FE2A900495918 /* EventsViewController.swift in Sources */,
 				ECDB2A44224ECB970061AEB1 /* LanguagePickerSectionController.swift in Sources */,
 				ECB596412251618C002EDDFD /* FriendRequestCell.swift in Sources */,
@@ -988,7 +1025,9 @@
 				ECC9617022478E3300E4D4C1 /* NotificationCellsConfigurator.swift in Sources */,
 				ECB5962922515316002EDDFD /* Reactive.swift in Sources */,
 				ECC9616A2246E1DC00E4D4C1 /* SliderCell.swift in Sources */,
+				ECA5879D2281F579001B8120 /* EmailVerificationViewController.swift in Sources */,
 				EC93F3D8222C83BF00C4BB89 /* UserAPI.swift in Sources */,
+				EC834D6E2277A5F900BADD2E /* SignUpCredentialsViewModel.swift in Sources */,
 				ECB5964E2252C564002EDDFD /* ImagePickerController+Rx.swift in Sources */,
 				EC76CA2E2235397400ADD1BE /* LoginViewModel.swift in Sources */,
 				ECC961572246C46300E4D4C1 /* FilterViewModel.swift in Sources */,
@@ -1001,6 +1040,7 @@
 				ECF190C82227E362002D24EF /* RoundedButton.swift in Sources */,
 				ECC961552246C42B00E4D4C1 /* FilterViewController.swift in Sources */,
 				ECDB2A3E224EC4220061AEB1 /* DiffableBox.swift in Sources */,
+				ECA587A322820681001B8120 /* AccountAPI.swift in Sources */,
 				ECDB2A4D224F775D0061AEB1 /* ListOfChatsViewController.swift in Sources */,
 				ECDB2A40224ECB1E0061AEB1 /* CheckboxSectionController.swift in Sources */,
 				EC863CB12220811800A49824 /* AppDelegate.swift in Sources */,

@@ -17,6 +17,7 @@ class SignUpCredentialsViewController: SegueManagerViewController {
     @IBOutlet private var repeatPasswordTextField: UITextField!
     @IBOutlet private var nextButton: UIButton!
 
+    private let viewModel = SignUpCredentialsViewModel()
     private let bag = DisposeBag()
 
     override func viewDidLoad() {
@@ -30,28 +31,33 @@ class SignUpCredentialsViewController: SegueManagerViewController {
 private extension SignUpCredentialsViewController {
 
     func setup() {
-        let credentials = Driver.combineLatest(emailTextField.rx.text.orEmpty.asDriver().distinctUntilChanged(),
-                                               passwordTextField.rx.text.orEmpty.asDriver().distinctUntilChanged(),
-                                               repeatPasswordTextField.rx.text.orEmpty.asDriver().distinctUntilChanged())
+        let input = SignUpCredentialsViewModel.Input(email: emailTextField.textDriver,
+                                                     password: passwordTextField.textDriver,
+                                                     repeatedPassword: repeatPasswordTextField.textDriver)
 
-        credentials.map { !$0.isEmpty && !$1.isEmpty && !$2.isEmpty}
-            .drive(nextButton.rx.isEnabled)
-            .disposed(by: bag)
+        let output = viewModel.transform(input: input)
 
-        nextButton.rx.tap.asSignal()
-            .withLatestFrom(credentials)
-            .filter { $1 != $2 }
-            .map { _ in SimpleError(message: "Passwords are not equal!") }
-            .emit(to: rx.error)
-            .disposed(by: bag)
+        nextButton.rx.action = output.registerAction
+        output.registerAction.enabled.map { $0 ? 1 : 0.7 }
+            .bind(to: nextButton.rx.alpha).disposed(by: bag)
 
+        output.isLoading.drive(rx.isLoading).disposed(by: bag)
+        output.error.emit(to: rx.error).disposed(by: bag)
+        output.registered.emit(to: registered).disposed(by: bag)
+    }
+}
 
-        nextButton.rx.tap.asSignal()
-            .withLatestFrom(credentials)
-            .filter { $0.1 == $0.2 }
-            .map { (email: $0.0, password: $0.1) }
-            .emit(to: rx.navigate(with: R.segue.signUpCredentialsViewController.fromCredentialsToInfo,
-                                  segueHandler: { (segue, credentials) in segue.destination.setCredentials(credentials: credentials) }))
-            .disposed(by: bag)
+// MARK: - Private
+private extension SignUpCredentialsViewController {
+
+    var registered: Binder<Void> {
+        return Binder(self, binding: { viewController, _ in
+            let alert = UIAlertController(title: "Successful registration", message: "Check your email for a verification link", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
+                viewController.navigationController?.popViewController(animated: true)
+            })
+            alert.addAction(okAction)
+            viewController.present(alert, animated: true)
+        })
     }
 }

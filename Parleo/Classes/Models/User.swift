@@ -38,11 +38,7 @@ extension User: Mappable {
         isMale <- map["gender"]
         distanceFromCurrentUser <- map["distanceFromCurrentUser"]
         email <- map["email"]
-
-        var imageName: String = ""
-        imageName <- map["accountImage"]
-        print(imageName)
-        accountImage = URL(string: "https://awesomeparleobackend.azurewebsites.net/account-images/" + imageName)
+        accountImage <- (map["accountImage"], URLTransform())
     }
 }
 

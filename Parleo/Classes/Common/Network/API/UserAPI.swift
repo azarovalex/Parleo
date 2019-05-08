@@ -10,12 +10,9 @@ import Moya
 
 enum UserAPI {
     case getUsers(page: Int, pageSize: Int)
-    case register(email: String, password: String)
-    case login(email: String, password: String)
     case getUser(id: String)
     case updateUser(id: String, user: User)
     case getMyProfile
-    case verifyEmail(token: String)
     case uploadImage(id: String, image: UIImage)
     case updateLocation(id: String, lat: Double, lon: Double)
 }
@@ -28,16 +25,10 @@ extension UserAPI: AuthorizedTargetType {
         switch self {
         case .getUsers:
             return "/api/Account"
-        case .register:
-            return "/api/Account/register"
-        case .login:
-            return "/api/Account/login"
         case .getUser(let id), .updateUser(let id, _):
             return "/api/Account/\(id)"
         case .getMyProfile:
             return "/api/Account/me"
-        case .verifyEmail:
-            return "/api/Account/activate"
         case .uploadImage(let id, _):
             return "/api/Account/\(id)/image"
         case .updateLocation(let id, _, _):
@@ -46,20 +37,13 @@ extension UserAPI: AuthorizedTargetType {
     }
 
     var needsAuth: Bool {
-        switch self {
-        case .register, .login:
-            return false
-        default:
-            return true
-        }
+        return true
     }
 
     var method: Method {
         switch self {
-        case .getUsers, .getUser, .getMyProfile, .verifyEmail:
+        case .getUsers, .getUser, .getMyProfile:
             return .get
-        case .register, .login:
-            return .post
         case .updateUser, .uploadImage, .updateLocation:
             return .put
         }
@@ -74,13 +58,9 @@ extension UserAPI: AuthorizedTargetType {
         case .getUser, .getMyProfile:
             return .requestPlain
         case .getUsers(let page, let pageSize):
-            return .requestParameters(parameters: ["Page": page, "PageSize": pageSize], encoding: URLEncoding.queryString)
-        case .register(let email, let password), .login(let email, let password):
-            return .requestParameters(parameters: ["email": email, "password": password], encoding: JSONEncoding.default)
+            return .requestParameters(parameters: ["PageNumber": page, "PageSize": pageSize], encoding: URLEncoding.queryString)
         case .updateUser(_, let user):
             return .requestParameters(parameters: user.toJSON(), encoding: JSONEncoding.default)
-        case .verifyEmail(let token):
-            return .requestParameters(parameters: ["token": token], encoding: URLEncoding.queryString)
         case .uploadImage(_, let image):
             let imageData = MultipartFormData(provider: .data(image.jpegData(compressionQuality: 0)!), name: "image", fileName: "\(UUID().uuidString).jpg", mimeType: "image/jpeg")
             return .uploadMultipart([imageData])

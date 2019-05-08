@@ -28,7 +28,7 @@ class UserProfileViewController: UIViewController {
 private extension UserProfileViewController {
 
     func setup() {
-        userImageView.kf.setImage(with: user.accountImage)
+        userImageView.kf.setImage(with: user.accountImage, placeholder: R.image.avatarTemplate()!)
         usernameLabel.text = user.name
         aboutLabel.text = user.about
     }

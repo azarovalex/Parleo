@@ -41,8 +41,7 @@ extension MyProfileViewModel: ViewModelType {
 private extension MyProfileViewModel {
 
     func getFetchUserAction() -> Action<Void, User> {
-        return Action(workFactory: {
-            return .never()
-        })
+        let userService = UserService()
+        return Action(workFactory: { unwrapResult(userService.getMyProfile()) })
     }
 }

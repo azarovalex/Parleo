@@ -17,14 +17,6 @@ struct UserService: NetworkService {
         return fetchModel(.getUsers(page: page, pageSize: pageSize))
     }
 
-    func register(with email: String, password: String) -> Single<Result<Void>> {
-        return send(.register(email: email, password: password))
-    }
-
-    func login(with email: String, password: String) -> Single<Result<String>> {
-        return fetchStringFromKey("token", api: .login(email: email, password: password))
-    }
-
     func getUser(with id: String) -> Single<Result<User>> {
         return fetchModel(.getUser(id: id))
     }
@@ -35,10 +27,6 @@ struct UserService: NetworkService {
 
     func getMyProfile() -> Single<Result<User>> {
         return fetchModel(.getMyProfile)
-    }
-
-    func verifyEmail(token: String) -> Single<Result<Void>> {
-        return send(.verifyEmail(token: token))
     }
 
     func uploadImage(userId: String, image: UIImage) -> Single<Result<Void>> {

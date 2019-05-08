@@ -20,7 +20,7 @@ class SignUpAvatarViewController: UIViewController {
     private let bag = DisposeBag()
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad() 
 
         setup()
     }

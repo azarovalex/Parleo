@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JBP-MW-IkD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aC9-uH-qAN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,109 +21,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Sign Up Credentials View Controller-->
-        <scene sceneID="xj8-Zn-o1k">
-            <objects>
-                <viewController id="JBP-MW-IkD" customClass="SignUpCredentialsViewController" customModule="Parleo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wxV-LC-sP6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up to start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0B-O5-owi">
-                                <rect key="frame" x="86.5" y="94" width="202.5" height="30.5"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNb-Ya-7Pk">
-                                <rect key="frame" x="57" y="139.5" width="261" height="37"/>
-                                <string key="text">Sign up now and search for people
-to meet, whenever you are.</string>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1 of 3: Log In Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1n-ni-MdQ">
-                                <rect key="frame" x="96" y="206.5" width="183.5" height="21"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="BzI-at-ODp">
-                                <rect key="frame" x="20" y="257.5" width="335" height="278"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v4h-ZT-IiP" customClass="RoundedTextField" customModule="Parleo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="SRk-al-A6D"/>
-                                        </constraints>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BSO-fd-mDH" customClass="RoundedTextField" customModule="Parleo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="76" width="335" height="50"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="7h0-BR-pBn"/>
-                                        </constraints>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TDv-my-Vcg" customClass="RoundedTextField" customModule="Parleo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="152" width="335" height="50"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Nd0-3o-Yua"/>
-                                        </constraints>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
-                                    </textField>
-                                    <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKp-dI-ZD3" customClass="RoundedButton" customModule="Parleo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="228" width="335" height="50"/>
-                                        <color key="backgroundColor" red="0.3142909706" green="0.36779713629999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="G5N-ZZ-yr6"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
-                                        <state key="normal" title="Next step">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="U55-ng-QP1" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="BzI-at-ODp" secondAttribute="bottom" constant="20" id="4hA-FG-KFf"/>
-                            <constraint firstItem="Y0B-O5-owi" firstAttribute="centerX" secondItem="wxV-LC-sP6" secondAttribute="centerX" id="6Pu-Of-aWB"/>
-                            <constraint firstItem="fNb-Ya-7Pk" firstAttribute="top" secondItem="Y0B-O5-owi" secondAttribute="bottom" constant="15" id="6be-F2-j6r"/>
-                            <constraint firstItem="U55-ng-QP1" firstAttribute="trailing" secondItem="BzI-at-ODp" secondAttribute="trailing" constant="20" id="An4-Ec-jQT"/>
-                            <constraint firstItem="Y0B-O5-owi" firstAttribute="top" secondItem="U55-ng-QP1" secondAttribute="top" constant="30" id="Pxo-EC-36F"/>
-                            <constraint firstItem="t1n-ni-MdQ" firstAttribute="centerX" secondItem="wxV-LC-sP6" secondAttribute="centerX" id="YHc-mr-pec"/>
-                            <constraint firstItem="fNb-Ya-7Pk" firstAttribute="centerX" secondItem="wxV-LC-sP6" secondAttribute="centerX" id="fQv-GQ-gB5"/>
-                            <constraint firstItem="t1n-ni-MdQ" firstAttribute="top" secondItem="fNb-Ya-7Pk" secondAttribute="bottom" constant="30" id="kEr-0R-tjm"/>
-                            <constraint firstItem="BzI-at-ODp" firstAttribute="top" secondItem="t1n-ni-MdQ" secondAttribute="bottom" constant="30" id="xQi-jC-vfB"/>
-                            <constraint firstItem="BzI-at-ODp" firstAttribute="leading" secondItem="U55-ng-QP1" secondAttribute="leading" constant="20" id="ydH-JN-sFz"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="U55-ng-QP1"/>
-                    </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <connections>
-                        <outlet property="emailTextField" destination="v4h-ZT-IiP" id="aPW-Ug-pPG"/>
-                        <outlet property="nextButton" destination="JKp-dI-ZD3" id="MzF-VM-AOb"/>
-                        <outlet property="passwordTextField" destination="BSO-fd-mDH" id="BHW-lk-q6R"/>
-                        <outlet property="repeatPasswordTextField" destination="TDv-my-Vcg" id="D3S-Wk-rlc"/>
-                        <segue destination="aC9-uH-qAN" kind="show" identifier="fromCredentialsToInfo" id="8ce-Mf-y62"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rWQ-oN-g7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="401" y="127"/>
-        </scene>
         <!--Sign Up Info View Controller-->
         <scene sceneID="iHp-bl-9a3">
             <objects>
@@ -132,28 +29,28 @@ to meet, whenever you are.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up to start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsY-U8-FGb">
-                                <rect key="frame" x="86.5" y="94" width="202.5" height="30.5"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Continue Your Registration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsY-U8-FGb">
+                                <rect key="frame" x="31" y="94" width="313" height="27"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XA-M7-7Kt">
-                                <rect key="frame" x="57" y="139.5" width="261" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XA-M7-7Kt">
+                                <rect key="frame" x="57" y="136" width="261" height="37"/>
                                 <string key="text">Sign up now and search for people
 to meet, whenever you are.</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2 of 3: Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFe-37-pEJ">
-                                <rect key="frame" x="110" y="206.5" width="155" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Step 1 of 2: Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFe-37-pEJ">
+                                <rect key="frame" x="112" y="203" width="151.5" height="21"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="usL-Ak-ASN">
-                                <rect key="frame" x="20" y="257.5" width="335" height="354"/>
+                                <rect key="frame" x="20" y="217" width="335" height="430"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sYA-gc-Ysp" customClass="RoundedTextField" customModule="Parleo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
@@ -162,21 +59,45 @@ to meet, whenever you are.</string>
                                             <constraint firstAttribute="height" constant="50" id="g08-8B-G7l"/>
                                         </constraints>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="name"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pws-IQ-6tY" customClass="RoundedTextField" customModule="Parleo" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFm-r8-JLH">
                                         <rect key="frame" x="0.0" y="76" width="335" height="50"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="3kq-2k-72Y"/>
+                                            <constraint firstAttribute="height" constant="50" id="9KV-Hh-zL8"/>
                                         </constraints>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="password"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose languages" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q8a-Yt-k52" customClass="RoundedTextField" customModule="Parleo" customModuleProvider="target">
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                        <state key="normal" title="Pick birth date"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="birthDateTapped:" destination="aC9-uH-qAN" eventType="touchUpInside" id="Hc1-Sz-lvO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nX-YR-3wg">
                                         <rect key="frame" x="0.0" y="152" width="335" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="39f-Oi-O9W"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                        <state key="normal" title="Pick your gender"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="genderTapped:" destination="aC9-uH-qAN" eventType="touchUpInside" id="8ev-as-kNG"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose languages" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q8a-Yt-k52" customClass="RoundedTextField" customModule="Parleo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="228" width="335" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="l4j-OG-i6f"/>
@@ -186,7 +107,7 @@ to meet, whenever you are.</string>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your interests" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipe-eR-yTB" customClass="RoundedTextField" customModule="Parleo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="228" width="335" height="50"/>
+                                        <rect key="frame" x="0.0" y="304" width="335" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="MH2-jR-RgE"/>
@@ -196,7 +117,7 @@ to meet, whenever you are.</string>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yl0-Hd-SIS" customClass="RoundedButton" customModule="Parleo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="304" width="335" height="50"/>
+                                        <rect key="frame" x="0.0" y="380" width="335" height="50"/>
                                         <color key="backgroundColor" red="0.3142909706" green="0.36779713629999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Ory-RK-Lia"/>
@@ -205,6 +126,9 @@ to meet, whenever you are.</string>
                                         <state key="normal" title="Next step">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="dqB-Wg-adX" kind="show" id="lez-43-JfC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -225,6 +149,10 @@ to meet, whenever you are.</string>
                         <viewLayoutGuide key="safeArea" id="aoF-sH-6VP"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="birthDateButton" destination="nFm-r8-JLH" id="Twb-hw-C88"/>
+                        <outlet property="genderButton" destination="6nX-YR-3wg" id="XwI-yY-Nyk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ihf-GJ-fip" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -255,7 +183,7 @@ to meet, whenever you are.</string>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UiB-HA-wj3">
                                 <rect key="frame" x="43" y="203.5" width="289.5" height="40"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 3 of 3: Change photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knG-Xg-HKo">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2 of 2: Change photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knG-Xg-HKo">
                                         <rect key="frame" x="0.0" y="0.0" width="289.5" height="20"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>

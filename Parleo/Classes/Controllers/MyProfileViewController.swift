@@ -12,6 +12,10 @@ import RxCocoa
 class MyProfileViewController: UIViewController {
 
     @IBOutlet private var settingsButton: UIBarButtonItem!
+    @IBOutlet private var profileImageView: UIImageView!
+    @IBOutlet private var usernameLabel: UILabel!
+    @IBOutlet private var languagesStackView: UIStackView!
+    @IBOutlet private var aboutLabel: UILabel!
 
     private let bag = DisposeBag()
     private let viewModel = MyProfileViewModel()
@@ -38,6 +42,8 @@ private extension MyProfileViewController {
         let output = viewModel.transform(input: input)
 
         output.user.emit(to: user).disposed(by: bag)
+        output.isLoading.drive(rx.isLoading).disposed(by: bag)
+        output.error.emit(to: rx.error).disposed(by: bag)
     }
 }
 
@@ -46,7 +52,9 @@ private extension MyProfileViewController {
 
     var user: Binder<User> {
         return Binder(self, binding: { viewController, user in
-            
+            viewController.profileImageView.kf.setImage(with: user.accountImage, placeholder: R.image.avatarTemplate()!)
+            viewController.usernameLabel.text = user.name
+            viewController.aboutLabel.text = user.about
         })
     }
 }

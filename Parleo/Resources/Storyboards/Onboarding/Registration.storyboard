@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XQx-lp-tuJ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Sign Up Credentials View Controller-->
+        <scene sceneID="ad0-nR-xtw">
+            <objects>
+                <viewController id="XQx-lp-tuJ" customClass="SignUpCredentialsViewController" customModule="Parleo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Vx-G2-ggC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up to start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdH-3e-15j">
+                                <rect key="frame" x="106" y="118" width="202.5" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEC-ba-Iuc">
+                                <rect key="frame" x="76.5" y="163.5" width="261" height="37"/>
+                                <string key="text">Sign up now and search for people
+to meet, whenever you are.</string>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="L1T-mD-iMq">
+                                <rect key="frame" x="20" y="281.5" width="374" height="278"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vth-S0-Eli" customClass="RoundedTextField" customModule="Parleo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="KMi-s7-rQ8"/>
+                                        </constraints>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GoT-MZ-pLs" customClass="RoundedTextField" customModule="Parleo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="76" width="374" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="tDE-uY-3VL"/>
+                                        </constraints>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZqA-Z3-Rkj" customClass="RoundedTextField" customModule="Parleo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="152" width="374" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Z5b-eT-zzh"/>
+                                        </constraints>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pv-Nh-lCU" customClass="RoundedButton" customModule="Parleo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="228" width="374" height="50"/>
+                                        <color key="backgroundColor" red="0.3142909706" green="0.36779713629999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ywa-ZK-I4o"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                                        <state key="normal" title="Next step">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="L1T-mD-iMq" firstAttribute="top" secondItem="nEC-ba-Iuc" secondAttribute="bottom" constant="81" id="5yQ-rb-Chx"/>
+                            <constraint firstItem="nEC-ba-Iuc" firstAttribute="top" secondItem="ZdH-3e-15j" secondAttribute="bottom" constant="15" id="9zJ-6z-AOL"/>
+                            <constraint firstItem="Mco-ef-tcc" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="L1T-mD-iMq" secondAttribute="bottom" constant="20" id="Ah1-zE-W7V"/>
+                            <constraint firstItem="ZdH-3e-15j" firstAttribute="centerX" secondItem="1Vx-G2-ggC" secondAttribute="centerX" id="GCr-7Z-jHL"/>
+                            <constraint firstItem="Mco-ef-tcc" firstAttribute="trailing" secondItem="L1T-mD-iMq" secondAttribute="trailing" constant="20" id="btT-lH-t0Z"/>
+                            <constraint firstItem="ZdH-3e-15j" firstAttribute="top" secondItem="Mco-ef-tcc" secondAttribute="top" constant="30" id="lOb-Ts-4ts"/>
+                            <constraint firstItem="L1T-mD-iMq" firstAttribute="leading" secondItem="Mco-ef-tcc" secondAttribute="leading" constant="20" id="pAO-Hr-IAI"/>
+                            <constraint firstItem="nEC-ba-Iuc" firstAttribute="centerX" secondItem="1Vx-G2-ggC" secondAttribute="centerX" id="xWZ-YB-znw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mco-ef-tcc"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="vth-S0-Eli" id="Vpk-Q0-edf"/>
+                        <outlet property="nextButton" destination="0pv-Nh-lCU" id="AUb-a0-xio"/>
+                        <outlet property="passwordTextField" destination="GoT-MZ-pLs" id="qWy-7d-lvj"/>
+                        <outlet property="repeatPasswordTextField" destination="ZqA-Z3-Rkj" id="ROI-Lf-9q8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q5p-pf-a5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="401" y="127"/>
+        </scene>
+    </scenes>
+</document>

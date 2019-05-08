@@ -11,7 +11,7 @@ PODS:
     - IGListKit/Diffing
   - IGListKit/Diffing (3.4.0)
   - IQKeyboardManagerSwift (6.2.1)
-  - Kingfisher (5.3.1)
+  - Kingfisher (5.4.0)
   - MessageInputBar/Core (0.4.1)
   - MessageKit (2.0.0):
     - MessageInputBar/Core
@@ -98,7 +98,7 @@ SPEC CHECKSUMS:
   ApiClient: fe55a49ce330b86cab7f2b8a06c512c1d37fb4b9
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   IQKeyboardManagerSwift: 0f0ae8935360b4003e6ea1ac7c19898f01e2f7c7
-  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
+  Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
   MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
   MessageKit: 29c1c87e5a396d2ca7a3f712e5171dc9aba42a1e
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f

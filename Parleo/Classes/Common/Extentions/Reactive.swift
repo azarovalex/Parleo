@@ -42,3 +42,14 @@ extension RequestBuilder {
         }
     }
 }
+
+extension CocoaAction {
+
+    var executingDriver: Driver<Bool> {
+        return executing.asDriver { _ in .never() }
+    }
+
+    var errorSignal: Signal<Error> {
+        return underlyingError.asSignal { _ in .never() }
+    }
+}
