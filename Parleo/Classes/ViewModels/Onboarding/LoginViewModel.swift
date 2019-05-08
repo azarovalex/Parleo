@@ -12,7 +12,7 @@ import Action
 
 class LoginViewModel: ViewModelType {
 
-    private let authorizationService = AuthorizationService()
+    private let authorizationService = UserService()
 
     struct Input {
         let email: Driver<String>

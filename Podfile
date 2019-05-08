@@ -5,6 +5,7 @@ target 'Parleo' do
   # Pods for Network layer
   pod 'ObjectMapper', '~> 3.4'
   pod 'Moya/RxSwift', '~> 12.0'
+  pod 'ApiClient', :git => 'https://github.com/shaiter/parleo-apiclient'
 
   # Reactive
   pod 'RxSwift', '~> 4.0'
@@ -17,8 +18,7 @@ target 'Parleo' do
   pod 'Kingfisher'
   pod 'IQKeyboardManagerSwift'
   pod 'IGListKit', '~> 3.0'
-  pod 'Chatto', :git => 'https://github.com/badoo/Chatto', :branch => 'master'
-  pod 'ChattoAdditions', :git => 'https://github.com/badoo/Chatto', :branch => 'master'
+  pod 'MessageKit'
 
   # Common
   pod 'R.swift'

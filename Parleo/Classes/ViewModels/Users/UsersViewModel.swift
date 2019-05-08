@@ -10,28 +10,49 @@ import RxSwift
 import RxCocoa
 import Action
 
-class UsersViewModel: ViewModelType {
+class UsersViewModel: PaginationUISource {
+    private let loadNextPageRelay = PublishRelay<Void>()
+    private let refreshRelay = PublishRelay<Void>()
+    private let fetchingCompletedRelay = PublishRelay<Void>()
 
-    private let bag = DisposeBag()
+    var refresh: Observable<Void> { return refreshRelay.asObservable() }
+    var loadNextPage: Observable<Void> { return loadNextPageRelay.asObservable() }
+    let bag = DisposeBag()
+}
 
+extension UsersViewModel: ViewModelType {
+    
     struct Input {
-
+        let fetchNextPage: Signal<Void>
     }
 
     struct Output {
-        let cells: Driver<[Void]>
+        let error: Signal<Error>
+        let isPaginationLoading: Driver<Bool>
+        let cells: Driver<[User]>
         let refreshAction: CocoaAction
     }
 
     func transform(input: Input) -> Output {
-        let cellsRelay = BehaviorRelay<[()]>(value: [])
-        let action = CocoaAction { [unowned self] in
-            let cells = Driver.just([(), (), (), (), (), (), (), (), (), (), (), ()])
-                .delay(1)
-            cells.drive(cellsRelay).disposed(by: self.bag)
-            return cells.asObservable().map { _ in }
+        input.fetchNextPage.emit(to: loadNextPageRelay).disposed(by: bag)
+
+        let userService = UserService()
+        let networkRequest: PaginationSink<User>.PaginationNetworkRequest = { page, pageSize in
+            return userService.getUsers(page: page, pageSize: pageSize)
         }
-        action.execute()
-        return Output(cells: cellsRelay.asDriver(), refreshAction: action)
+
+        let paginationSink = PaginationSink(ui: self, request: networkRequest)
+        paginationSink.isLoading.filter { $0 == false }.map { _ in }.bind(to: fetchingCompletedRelay).disposed(by: bag)
+        return Output(error: paginationSink.error.asSignal(onErrorSignalWith: .never()),
+                      isPaginationLoading: paginationSink.isLoading.asDriver(onErrorDriveWith: .never()),
+                      cells: paginationSink.elements.asDriver(onErrorDriveWith: .never()),
+                      refreshAction: getRefreshAction())
+    }
+
+    func getRefreshAction() -> CocoaAction {
+        return CocoaAction(workFactory: { [unowned self] in
+            self.refreshRelay.accept(())
+            return self.fetchingCompletedRelay.asObservable().take(1)
+        })
     }
 }

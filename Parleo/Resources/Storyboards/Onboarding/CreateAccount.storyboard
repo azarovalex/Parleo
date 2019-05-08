@@ -205,9 +205,6 @@ to meet, whenever you are.</string>
                                         <state key="normal" title="Next step">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="dqB-Wg-adX" kind="show" id="kF1-fX-D8o"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
