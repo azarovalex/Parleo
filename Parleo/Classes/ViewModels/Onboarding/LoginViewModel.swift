@@ -12,6 +12,8 @@ import Action
 
 class LoginViewModel: ViewModelType {
 
+    private let accountService = AccountService()
+
     struct Input {
         let email: Driver<String>
         let password: Driver<String>
@@ -50,7 +52,6 @@ private extension LoginViewModel {
     }
 
     func login(with info: LoginInfo) -> Observable<Void> {
-        let accountService = AccountService()
         return unwrapResult(accountService.login(with: info.email, password: info.password))
             .do(onNext: { token in Storage.shared.accessToken = token }).map { _ in }
     }

@@ -10,11 +10,11 @@ PODS:
   - IGListKit/Default (3.4.0):
     - IGListKit/Diffing
   - IGListKit/Diffing (3.4.0)
-  - IQKeyboardManagerSwift (6.2.1)
+  - InputBarAccessoryView (4.2.2)
+  - IQKeyboardManagerSwift (6.3.0)
   - Kingfisher (5.4.0)
-  - MessageInputBar/Core (0.4.1)
-  - MessageKit (2.0.0):
-    - MessageInputBar/Core
+  - MessageKit (3.0.0):
+    - InputBarAccessoryView (~> 4.2.2)
   - Moya/Core (12.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.0)
@@ -68,9 +68,9 @@ SPEC REPOS:
     - Action
     - Alamofire
     - IGListKit
+    - InputBarAccessoryView
     - IQKeyboardManagerSwift
     - Kingfisher
-    - MessageInputBar
     - MessageKit
     - Moya
     - ObjectMapper
@@ -97,10 +97,10 @@ SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   ApiClient: fe55a49ce330b86cab7f2b8a06c512c1d37fb4b9
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
-  IQKeyboardManagerSwift: 0f0ae8935360b4003e6ea1ac7c19898f01e2f7c7
+  InputBarAccessoryView: 2b937602598e2fab3149f37f51dd7ad795653812
+  IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
   Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
-  MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
-  MessageKit: 29c1c87e5a396d2ca7a3f712e5171dc9aba42a1e
+  MessageKit: e892a9ca49ebe6d82684d3a93ad84021fa23e2c6
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
