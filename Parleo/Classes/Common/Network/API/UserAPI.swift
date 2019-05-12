@@ -18,6 +18,7 @@ enum UserAPI {
     case verifyEmail(token: String)
     case uploadImage(id: String, image: UIImage)
     case updateLocation(id: String, lat: Double, lon: Double)
+    case 
 }
 
 extension UserAPI: AuthorizedTargetType {
@@ -27,21 +28,21 @@ extension UserAPI: AuthorizedTargetType {
     var path: String {
         switch self {
         case .getUsers:
-            return "/api/Account"
+            return "/api/Users"
         case .register:
-            return "/api/Account/register"
+            return "/api/Accounts/register"
         case .login:
-            return "/api/Account/login"
+            return "/api/Accounts/login"
         case .getUser(let id), .updateUser(let id, _):
-            return "/api/Account/\(id)"
+            return "/api/Accounts/\(id)"
         case .getMyProfile:
-            return "/api/Account/me"
+            return "/api/Accounts/me"
         case .verifyEmail:
-            return "/api/Account/activate"
+            return "/api/Accounts/activate"
         case .uploadImage(let id, _):
-            return "/api/Account/\(id)/image"
+            return "/api/Accounts/\(id)/image"
         case .updateLocation(let id, _, _):
-            return "/api/Account/\(id)/location"
+            return "/api/Accounts/\(id)/location"
         }
     }
 
@@ -74,7 +75,7 @@ extension UserAPI: AuthorizedTargetType {
         case .getUser, .getMyProfile:
             return .requestPlain
         case .getUsers(let page, let pageSize):
-            return .requestParameters(parameters: ["Page": page, "PageSize": pageSize], encoding: URLEncoding.queryString)
+            return .requestParameters(parameters: ["PageNumber": page, "PageSize": pageSize], encoding: URLEncoding.queryString)
         case .register(let email, let password), .login(let email, let password):
             return .requestParameters(parameters: ["email": email, "password": password], encoding: JSONEncoding.default)
         case .updateUser(_, let user):

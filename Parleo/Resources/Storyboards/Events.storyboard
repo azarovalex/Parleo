@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PKc-Ya-oIi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PKc-Ya-oIi">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -78,7 +78,7 @@ stuff, coffee is good etc etc</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IG-ce-jQI">
-                                                <rect key="frame" x="16" y="423.5" width="54" height="22"/>
+                                                <rect key="frame" x="16" y="423.5" width="53.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                                 <color key="textColor" name="AppGray"/>
                                                 <nil key="highlightedColor"/>
@@ -120,7 +120,7 @@ stuff, coffee is good etc etc</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Address here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2k-8V-L2x">
-                                                <rect key="frame" x="78" y="423.5" width="281" height="22"/>
+                                                <rect key="frame" x="77.5" y="423.5" width="281.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -208,7 +208,7 @@ stuff, coffee is good etc etc</string>
             </objects>
             <point key="canvasLocation" x="914" y="835"/>
         </scene>
-        <!--Events-->
+        <!--Events View Controller-->
         <scene sceneID="ysO-dr-W38">
             <objects>
                 <viewController id="821-QG-YRC" customClass="EventsViewController" customModule="Parleo" customModuleProvider="target" sceneMemberID="viewController">
@@ -217,26 +217,21 @@ stuff, coffee is good etc etc</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lG5-YA-j6a">
-                                <rect key="frame" x="0.0" y="119" width="375" height="499"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventSegmentedControl" translatesAutoresizingMaskIntoConstraints="NO" id="Ydx-d1-HkW">
-                                <rect key="frame" x="0.0" y="64" width="375" height="55"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lG5-YA-j6a" firstAttribute="leading" secondItem="onl-7X-HgH" secondAttribute="leading" id="9a2-Xa-1hg"/>
-                            <constraint firstItem="Ydx-d1-HkW" firstAttribute="leading" secondItem="onl-7X-HgH" secondAttribute="leading" id="K2q-kQ-piQ"/>
-                            <constraint firstItem="onl-7X-HgH" firstAttribute="trailing" secondItem="Ydx-d1-HkW" secondAttribute="trailing" id="MmO-7H-Vfu"/>
-                            <constraint firstItem="Ydx-d1-HkW" firstAttribute="top" secondItem="onl-7X-HgH" secondAttribute="top" id="Xo8-09-vw3"/>
                             <constraint firstItem="onl-7X-HgH" firstAttribute="bottom" secondItem="lG5-YA-j6a" secondAttribute="bottom" id="YbH-BJ-4gN"/>
-                            <constraint firstItem="lG5-YA-j6a" firstAttribute="top" secondItem="Ydx-d1-HkW" secondAttribute="bottom" id="oBM-yg-ptN"/>
+                            <constraint firstItem="lG5-YA-j6a" firstAttribute="top" secondItem="onl-7X-HgH" secondAttribute="top" id="hJT-7u-BsZ"/>
                             <constraint firstItem="onl-7X-HgH" firstAttribute="trailing" secondItem="lG5-YA-j6a" secondAttribute="trailing" id="ySI-Nr-Lj9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="onl-7X-HgH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Events" id="QBj-DB-4ZD">
+                    <navigationItem key="navigationItem" id="QBj-DB-4ZD">
+                        <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="Back" id="9ZD-ZA-1xk"/>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="6YE-0C-1A7">
@@ -248,10 +243,21 @@ stuff, coffee is good etc etc</string>
                             <barButtonItem title="Item" image="filterIcon" id="Mrp-Cl-dmf">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
+                            <barButtonItem style="plain" id="MHP-X1-83w">
+                                <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="xSK-Ls-I1t">
+                                    <rect key="frame" x="113.5" y="7" width="155" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <segments>
+                                        <segment title="All Events"/>
+                                        <segment title="My Events"/>
+                                    </segments>
+                                </segmentedControl>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="addEventBarButton" destination="6YE-0C-1A7" id="4Sk-qR-U3C"/>
+                        <outlet property="eventsSegmentedControl" destination="xSK-Ls-I1t" id="irx-e3-37o"/>
                         <outlet property="eventsTableView" destination="lG5-YA-j6a" id="Bhw-1E-ro2"/>
                         <outlet property="filterBarButton" destination="Mrp-Cl-dmf" id="rs4-fN-uwh"/>
                         <segue destination="Chb-lx-yM9" kind="show" identifier="fromEventsToDetails" id="bk2-ah-MOA"/>
@@ -441,7 +447,6 @@ stuff, coffee is good etc etc</string>
         <image name="createEventAddImage" width="359" height="125"/>
         <image name="eventCardShadow" width="360" height="247"/>
         <image name="eventMembers" width="324" height="44"/>
-        <image name="eventSegmentedControl" width="360" height="55"/>
         <image name="filterIcon" width="24" height="24"/>
         <image name="languageIcon" width="26" height="26"/>
         <image name="locationIconBig" width="26" height="26"/>

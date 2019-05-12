@@ -9,7 +9,7 @@
 import Moya
 
 enum ParleoEventsAPI {
-    case getParleoEvents(minPartic: Int, maxPartic: Int, maxDistance: Int, languages: [String], minDate: Date, maxDate: Date, page: Int, pageSize: Int, timeStamp: Date)
+    case getParleoEvents(minPartic: Int?, maxPartic: Int?, maxDistance: Int?, languages: [String]?, minDate: Date?, maxDate: Date?, page: Int, pageSize: Int, timeStamp: Date?)
     case getParleoEvent(id: String)
     case postParleoEvent(name: String, description: String, maxParticipants: Int, latitude: Double, longitude: Double, isFinished: Bool, startTime: Date, endDate: Date, languageCode: String)
 }
@@ -24,9 +24,10 @@ extension ParleoEventsAPI: AuthorizedTargetType {
     }
     
     var path: String {
+        let basePath = "/api/Events"
         switch self {
-        case let .getParleoEvent(id: id): return "api/Events/\(id)"
-        case .getParleoEvents, .postParleoEvent: return "api/Events"
+        case let .getParleoEvent(id: id): return "\(basePath)/\(id)"
+        case .getParleoEvents, .postParleoEvent: return basePath
         }
     }
     
@@ -53,16 +54,32 @@ extension ParleoEventsAPI: AuthorizedTargetType {
                                   page: page,
                                   pageSize: pageSize,
                                   timeStamp: timeStamp):
-            return .requestParameters(parameters: ["MinNumberOfParticipants": minPartic,
-                                                   "MaxNumberOfParticipants": maxPartic,
-                                                   "MaxDistance": maxDistance,
-                                                   "Languages": languages,
-                                                   "MinStartDate": minDate,
-                                                   "MaxStartDate": maxDate,
-                                                   "Page": page,
-                                                   "PageSize": pageSize,
-                                                   "TimeStamp": timeStamp],
-                                      encoding: URLEncoding.queryString)
+            var parameters: [String: Any] = ["PageNumber": page,
+                                             "PageSize": pageSize]
+            if let minPartic = minPartic {
+                parameters["MinNumberOfParticipants"] = minPartic
+            }
+            if let maxPartic = maxPartic {
+                parameters["MaxNumberOfParticipants"] = maxPartic
+            }
+            if let maxDistance = maxDistance {
+                parameters["MaxDistance"] = maxDistance
+            }
+            if let languages = languages {
+                parameters["Languages"] = languages
+            }
+            if let minDate = minDate {
+                parameters["MinStartDate"] = minDate
+            }
+            if let maxDate = maxDate {
+                parameters["MaxStartDate"] = maxDate
+            }
+            if let timeStamp = timeStamp {
+                parameters["TimeStamp"] = timeStamp
+            }
+            
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
+            
         case let .postParleoEvent(name: name,
                                   description: description,
                                   maxParticipants: maxParticipants,
@@ -72,6 +89,7 @@ extension ParleoEventsAPI: AuthorizedTargetType {
                                   startTime: startTime,
                                   endDate: endDate,
                                   languageCode: languageCode):
+            
             return .requestParameters(parameters: ["name": name,
                                                    "description": description,
                                                    "maxParticipants": maxParticipants,

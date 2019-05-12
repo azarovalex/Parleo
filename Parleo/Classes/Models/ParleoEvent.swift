@@ -6,15 +6,41 @@
 //  Copyright © 2019 LeatherSoft. All rights reserved.
 //
 
-import Foundation
+import ObjectMapper
 
 struct ParleoEvent {
-    let id: UUID
-    let title: String
-    let description: String
-    let participants: [UUID]
-    let startTime: Date
-    let endTime: Date
-    let creatorId: UUID
-    let languageId: UUID
+    var id: String = ""
+    var title: String = ""
+    var description: String = ""
+    var eventImageURL: URL?
+    var maxParticipants = Int()
+    var participants = [UUID]()
+    var latitude = Double()
+    var longitude = Double()
+    var startTime = Date()
+    var endTime = Date()
+    var creatorId: String = ""
+    var languageId: String = ""
+}
+
+extension ParleoEvent: Mappable {
+    
+    init?(map: Map) {
+        if map.JSON["id"] == nil { return nil }
+    }
+    
+    mutating func mapping(map: Map) {
+        id <- map["id"]
+        title <- map["name"]
+        description <- map["description"]
+        maxParticipants <- map["maxParticipants"]
+        latitude <- map["latitude"]
+        longitude <- map["longitude"]
+        startTime <- map["startTime"]
+        endTime <- map["endDate"]
+        
+        var imageName: String = ""
+        imageName <- map["image"]
+        eventImageURL = URL(string: imageName)
+    }
 }
