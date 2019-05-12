@@ -12,8 +12,10 @@ class SignUpInfoViewController: UIViewController {
 
     @IBOutlet private var birthDateButton: UIButton!
     @IBOutlet private var genderButton: UIButton!
+    @IBOutlet private var chooseLanguagesButton: UIButton!
 
     private var credentials: (email: String, password: String)!
+    private var currentSelectedLanguages = [Language]()
 
     func setCredentials(credentials: (email: String, password: String)) {
         self.credentials = credentials
@@ -30,7 +32,8 @@ class SignUpInfoViewController: UIViewController {
         DatePickerAlert(font: R.font.montserratRegular(size: 14)!)
             .show("Pick your birth date", datePickerMode: .date) { [weak self] date in
                 guard let date = date else { return }
-                self?.birthDateButton.setTitle("Birth date: \(date)", for: .normal)
+                self?.birthDateButton.setTitle("Your birth date: " +
+                    date.asString(format: "MMM d, yyyy"), for: .normal)
             }
     }
 
@@ -45,5 +48,23 @@ class SignUpInfoViewController: UIViewController {
         genderAlert.addAction(maleCase)
         genderAlert.addAction(femaleCase)
         present(genderAlert, animated: true)
+    }
+
+    @IBAction func languageButtonTapped(_ sender: Any) {
+        let languagePickerViewController = R.storyboard.languagePicker.instantiateInitialViewController()!
+        languagePickerViewController.delegate = self
+        languagePickerViewController.setInitial(currentSelectedLanguages)
+        navigationController?.present(languagePickerViewController, animated: true)
+
+    }
+}
+
+extension SignUpInfoViewController: LanguagePickerDelegate {
+
+    func updateSelectedLanguages(with languages: [Language]) {
+        currentSelectedLanguages = languages
+        let buttonTitle = languages.count == 0 ? "Choose languages" :
+            ("Your languages: " + languages.map { $0.name }.joined(separator: ", "))
+        chooseLanguagesButton.setTitle(buttonTitle, for: .normal)
     }
 }

@@ -38,7 +38,7 @@ private extension EmailVerificationViewModel {
 
     func getVerifyEmailAction(token: String) -> CocoaAction {
         let accountService = AccountService()
-
+        Storage.shared.accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsZXhAYXphcm92LmJ5IiwianRpIjoiM2YwYThkMDgtNzY5Yy00NzA3LWIxZTQtZmJmOGVjZjdjNDhjIiwiSXNBdXRob3JpemF0aW9uIjoidHJ1ZSIsImV4cCI6MTU2MDAxODE4M30.u7QkEbcVhnSGOXAT3Q3HrufgInv5ugNq9eUe8CdlhuU"
         return CocoaAction(workFactory: {
             return .just(())
             unwrapResult(accountService.verifyEmail(token: token))

@@ -10,6 +10,7 @@ import RxSwift
 import RxCocoa
 import Action
 import ApiClient
+import Rswift
 
 func unwrapResult<ResultValue, O: ObservableConvertibleType>(_ observable: O) -> Observable<ResultValue> where O.E == Result<ResultValue> {
     return observable.asObservable().map { result in

@@ -19,7 +19,6 @@
 		EC1B9AD222396AA5007B4113 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1B9AD122396AA5007B4113 /* Notifications.storyboard */; };
 		EC1B9AD422396AB3007B4113 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1B9AD322396AB3007B4113 /* Profile.storyboard */; };
 		EC1B9AD622396B6F007B4113 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B9AD522396B6F007B4113 /* BaseTabBarController.swift */; };
-		EC1B9AD822397103007B4113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1B9AD722397103007B4113 /* Assets.xcassets */; };
 		EC251952224E8AEE00D0FEE7 /* LanguagesPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC251950224E8AEE00D0FEE7 /* LanguagesPickerCell.swift */; };
 		EC251953224E8AEE00D0FEE7 /* LanguagesPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC251951224E8AEE00D0FEE7 /* LanguagesPickerCell.xib */; };
 		EC29964222749DD6002694F9 /* PaginatedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29964122749DD6002694F9 /* PaginatedResponse.swift */; };
@@ -31,6 +30,16 @@
 		EC2C85F12222788100D113B5 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC2C85F02222787F00D113B5 /* Montserrat-Bold.ttf */; };
 		EC2C85F322227A0400D113B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C85F222227A0400D113B5 /* LoginViewController.swift */; };
 		EC48D3AE2282296B00165BC3 /* DatePickerAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48D3AD2282296B00165BC3 /* DatePickerAlert.swift */; };
+		EC48D3B3228322D400165BC3 /* LanguagePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC48D3B2228322D400165BC3 /* LanguagePicker.storyboard */; };
+		EC4A84F3228323C500D7BE8B /* LanguageInPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4A84F1228323C500D7BE8B /* LanguageInPickerCell.swift */; };
+		EC4A84F4228323C500D7BE8B /* LanguageInPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC4A84F2228323C500D7BE8B /* LanguageInPickerCell.xib */; };
+		EC4A84F62283379300D7BE8B /* LanguagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4A84F52283379300D7BE8B /* LanguagePickerViewController.swift */; };
+		EC4A84FB2283541100D7BE8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4A84FA2283541000D7BE8B /* Assets.xcassets */; };
+		EC4A84FD2283563200D7BE8B /* LanguagePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4A84FC2283563200D7BE8B /* LanguagePickerViewModel.swift */; };
+		EC4A84FF2283590800D7BE8B /* UtilitiesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4A84FE2283590800D7BE8B /* UtilitiesAPI.swift */; };
+		EC4A85012283625400D7BE8B /* UtilitiesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4A85002283625400D7BE8B /* UtilitiesService.swift */; };
+		EC4A8505228429E900D7BE8B /* languages.json in Resources */ = {isa = PBXBuildFile; fileRef = EC4A8504228429E900D7BE8B /* languages.json */; };
+		EC4A850722842A4900D7BE8B /* LanguageNameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4A850622842A4900D7BE8B /* LanguageNameManager.swift */; };
 		EC76CA2E2235397400ADD1BE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76CA2D2235397400ADD1BE /* LoginViewModel.swift */; };
 		EC76CA30223539D700ADD1BE /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76CA2F223539D700ADD1BE /* ViewModelType.swift */; };
 		EC76CA3322353C4500ADD1BE /* UIViewController+ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76CA3222353C4500ADD1BE /* UIViewController+ErrorAlert.swift */; };
@@ -42,6 +51,7 @@
 		EC834D6E2277A5F900BADD2E /* SignUpCredentialsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC834D6D2277A5F900BADD2E /* SignUpCredentialsViewModel.swift */; };
 		EC834D84227892F000BADD2E /* UITextField+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC834D83227892F000BADD2E /* UITextField+Rx.swift */; };
 		EC834D8622789B6900BADD2E /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC834D8522789B6900BADD2E /* Validators.swift */; };
+		EC84B4A32288713000BBE38C /* Date+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84B4A22288713000BBE38C /* Date+StringRepresentation.swift */; };
 		EC863CB12220811800A49824 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC863CB02220811800A49824 /* AppDelegate.swift */; };
 		EC863CB82220811800A49824 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC863CB62220811800A49824 /* Main.storyboard */; };
 		EC863CBD2220811A00A49824 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC863CBB2220811A00A49824 /* LaunchScreen.storyboard */; };
@@ -134,7 +144,6 @@
 		EC1B9AD122396AA5007B4113 /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
 		EC1B9AD322396AB3007B4113 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		EC1B9AD522396B6F007B4113 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
-		EC1B9AD722397103007B4113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC251950224E8AEE00D0FEE7 /* LanguagesPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesPickerCell.swift; sourceTree = "<group>"; };
 		EC251951224E8AEE00D0FEE7 /* LanguagesPickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguagesPickerCell.xib; sourceTree = "<group>"; };
 		EC29964122749DD6002694F9 /* PaginatedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedResponse.swift; sourceTree = "<group>"; };
@@ -146,6 +155,16 @@
 		EC2C85F02222787F00D113B5 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		EC2C85F222227A0400D113B5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EC48D3AD2282296B00165BC3 /* DatePickerAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerAlert.swift; sourceTree = "<group>"; };
+		EC48D3B2228322D400165BC3 /* LanguagePicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LanguagePicker.storyboard; sourceTree = "<group>"; };
+		EC4A84F1228323C500D7BE8B /* LanguageInPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageInPickerCell.swift; sourceTree = "<group>"; };
+		EC4A84F2228323C500D7BE8B /* LanguageInPickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageInPickerCell.xib; sourceTree = "<group>"; };
+		EC4A84F52283379300D7BE8B /* LanguagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePickerViewController.swift; sourceTree = "<group>"; };
+		EC4A84FA2283541000D7BE8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC4A84FC2283563200D7BE8B /* LanguagePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePickerViewModel.swift; sourceTree = "<group>"; };
+		EC4A84FE2283590800D7BE8B /* UtilitiesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesAPI.swift; sourceTree = "<group>"; };
+		EC4A85002283625400D7BE8B /* UtilitiesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesService.swift; sourceTree = "<group>"; };
+		EC4A8504228429E900D7BE8B /* languages.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = languages.json; sourceTree = "<group>"; };
+		EC4A850622842A4900D7BE8B /* LanguageNameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageNameManager.swift; sourceTree = "<group>"; };
 		EC76CA2D2235397400ADD1BE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EC76CA2F223539D700ADD1BE /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		EC76CA3222353C4500ADD1BE /* UIViewController+ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ErrorAlert.swift"; sourceTree = "<group>"; };
@@ -157,6 +176,7 @@
 		EC834D6D2277A5F900BADD2E /* SignUpCredentialsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCredentialsViewModel.swift; sourceTree = "<group>"; };
 		EC834D83227892F000BADD2E /* UITextField+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Rx.swift"; sourceTree = "<group>"; };
 		EC834D8522789B6900BADD2E /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		EC84B4A22288713000BBE38C /* Date+StringRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+StringRepresentation.swift"; sourceTree = "<group>"; };
 		EC863CAD2220811800A49824 /* Parleo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parleo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC863CB02220811800A49824 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC863CB72220811800A49824 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -279,6 +299,15 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		EC4A84EE2283237000D7BE8B /* LanguagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				EC4A84F1228323C500D7BE8B /* LanguageInPickerCell.swift */,
+				EC4A84F2228323C500D7BE8B /* LanguageInPickerCell.xib */,
+			);
+			path = LanguagePicker;
+			sourceTree = "<group>";
+		};
 		EC76CA2C2235395E00ADD1BE /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,9 +394,10 @@
 			children = (
 				ECE1D8A62221ACA6009DE2A3 /* Fonts */,
 				EC863CC82220841500A49824 /* Storyboards */,
-				EC1B9AD722397103007B4113 /* Assets.xcassets */,
+				EC4A84FA2283541000D7BE8B /* Assets.xcassets */,
 				ECC961512246BD9700E4D4C1 /* Colors.xcassets */,
 				EC863CBB2220811A00A49824 /* LaunchScreen.storyboard */,
+				EC4A8504228429E900D7BE8B /* languages.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -383,6 +413,7 @@
 				EC1B9AD122396AA5007B4113 /* Notifications.storyboard */,
 				EC1B9AD322396AB3007B4113 /* Profile.storyboard */,
 				ECC9614F2246BC3100E4D4C1 /* Filter.storyboard */,
+				EC48D3B2228322D400165BC3 /* LanguagePicker.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -397,6 +428,7 @@
 				17DFB16A223FE3A800495918 /* EventsViewModel.swift */,
 				17DFB16E223FE59000495918 /* EventTableCellViewModel.swift */,
 				EC8ED29A2274E61C00A59A3C /* MyProfileViewModel.swift */,
+				EC4A84FC2283563200D7BE8B /* LanguagePickerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -446,6 +478,7 @@
 				EC76CA3122353C3300ADD1BE /* UIViewController */,
 				EC834D83227892F000BADD2E /* UITextField+Rx.swift */,
 				ECB5962822515316002EDDFD /* Reactive.swift */,
+				EC84B4A22288713000BBE38C /* Date+StringRepresentation.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -465,6 +498,7 @@
 				EC93F3D5222C83B300C4BB89 /* UserService.swift */,
 				ECB5962422514F3F002EDDFD /* NotificationsService.swift */,
 				ECA587A422820865001B8120 /* AccountService.swift */,
+				EC4A85002283625400D7BE8B /* UtilitiesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -476,6 +510,7 @@
 				EC93F3D7222C83BF00C4BB89 /* UserAPI.swift */,
 				ECB5962222514F31002EDDFD /* NotificationsAPI.swift */,
 				ECA587A222820681001B8120 /* AccountAPI.swift */,
+				EC4A84FE2283590800D7BE8B /* UtilitiesAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -608,6 +643,7 @@
 				EC2996492274A37F002694F9 /* PaginationLogic.swift */,
 				EC834D8522789B6900BADD2E /* Validators.swift */,
 				EC48D3AD2282296B00165BC3 /* DatePickerAlert.swift */,
+				EC4A850622842A4900D7BE8B /* LanguageNameManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -643,6 +679,7 @@
 		ECD2C1D0223F017500C421A7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EC4A84EE2283237000D7BE8B /* LanguagePicker */,
 				ECDEBFED22537179009CFE93 /* Events */,
 				ECB5961A22514A3C002EDDFD /* Notifications */,
 				ECDB2A49224F75170061AEB1 /* Chats */,
@@ -751,6 +788,7 @@
 				ECC961542246C42B00E4D4C1 /* FilterViewController.swift */,
 				ECB5961822514974002EDDFD /* NotificationsViewController.swift */,
 				EC8059C42253C005005C1644 /* MyProfileViewController.swift */,
+				EC4A84F52283379300D7BE8B /* LanguagePickerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -837,13 +875,14 @@
 				ECE1D8AA2221AF51009DE2A3 /* Montserrat-SemiBold.ttf in Resources */,
 				ECDB2A48224ECD1A0061AEB1 /* CheckboxesCell.xib in Resources */,
 				ECE1D8A82221AD23009DE2A3 /* Montserrat-ExtraBold.ttf in Resources */,
+				EC48D3B3228322D400165BC3 /* LanguagePicker.storyboard in Resources */,
 				ECC9616B2246E1DC00E4D4C1 /* SliderCell.xib in Resources */,
 				EC2C85EF2222758600D113B5 /* Montserrat-Regular.ttf in Resources */,
-				EC1B9AD822397103007B4113 /* Assets.xcassets in Resources */,
 				ECDB2A3A224E8EF70061AEB1 /* LanguageInPicker.xib in Resources */,
 				ECDB2A51224F87D20061AEB1 /* ListOfChatsCell.xib in Resources */,
 				ECA5879B2281A54B001B8120 /* EmailVerification.storyboard in Resources */,
 				EC863CBD2220811A00A49824 /* LaunchScreen.storyboard in Resources */,
+				EC4A8505228429E900D7BE8B /* languages.json in Resources */,
 				EC251953224E8AEE00D0FEE7 /* LanguagesPickerCell.xib in Resources */,
 				EC2C85F12222788100D113B5 /* Montserrat-Bold.ttf in Resources */,
 				EC1B9ACF22396A97007B4113 /* Chats.storyboard in Resources */,
@@ -851,9 +890,11 @@
 				ECC961522246BD9700E4D4C1 /* Colors.xcassets in Resources */,
 				ECE1D8A42221A950009DE2A3 /* Onboarding.storyboard in Resources */,
 				ECF190C222274311002D24EF /* CreateAccount.storyboard in Resources */,
+				EC4A84F4228323C500D7BE8B /* LanguageInPickerCell.xib in Resources */,
 				EC1B9AC922396A70007B4113 /* Events.storyboard in Resources */,
 				EC1B9AD422396AB3007B4113 /* Profile.storyboard in Resources */,
 				ECC961502246BC3100E4D4C1 /* Filter.storyboard in Resources */,
+				EC4A84FB2283541100D7BE8B /* Assets.xcassets in Resources */,
 				EC1B9AD222396AA5007B4113 /* Notifications.storyboard in Resources */,
 				ECD2C1DD223F035A00C421A7 /* Montserrat-Medium.ttf in Resources */,
 				ECD2C1DB223F01BF00C421A7 /* UserCell.xib in Resources */,
@@ -975,7 +1016,9 @@
 				EC93F3D2222C834F00C4BB89 /* NetworkService.swift in Sources */,
 				EC76CA3B2235877900ADD1BE /* Storage.swift in Sources */,
 				ECB596452252ADE0002EDDFD /* UIView+CornerRadius.swift in Sources */,
+				EC4A84F3228323C500D7BE8B /* LanguageInPickerCell.swift in Sources */,
 				EC8ED29B2274E61C00A59A3C /* MyProfileViewModel.swift in Sources */,
+				EC4A850722842A4900D7BE8B /* LanguageNameManager.swift in Sources */,
 				ECF190C62227463C002D24EF /* RoundedTextField.swift in Sources */,
 				EC48D3AE2282296B00165BC3 /* DatePickerAlert.swift in Sources */,
 				ECDB2A47224ECD1A0061AEB1 /* CheckboxesCell.swift in Sources */,
@@ -986,6 +1029,7 @@
 				ECA587A522820865001B8120 /* AccountService.swift in Sources */,
 				ECC9617722482EFA00E4D4C1 /* UserProfileViewController.swift in Sources */,
 				ECDB2A3C224E8F110061AEB1 /* LanguageInPicker.swift in Sources */,
+				EC4A85012283625400D7BE8B /* UtilitiesService.swift in Sources */,
 				ECB596552252DA4F002EDDFD /* SingUpViewModel.swift in Sources */,
 				ECA2BCCC226E5E6D00B042B3 /* AuthPlugin.swift in Sources */,
 				ECA2BCC9226E49E500B042B3 /* UserFilter.swift in Sources */,
@@ -1002,8 +1046,10 @@
 				ECB5962322514F31002EDDFD /* NotificationsAPI.swift in Sources */,
 				ECD2C1DA223F01BF00C421A7 /* UserCell.swift in Sources */,
 				ECB59627225150A4002EDDFD /* AppNotification.swift in Sources */,
+				EC4A84FD2283563200D7BE8B /* LanguagePickerViewModel.swift in Sources */,
 				ECDCC252222EB07400DA9758 /* User.swift in Sources */,
 				ECC961602246CA5900E4D4C1 /* CheckboxView.swift in Sources */,
+				EC4A84FF2283590800D7BE8B /* UtilitiesAPI.swift in Sources */,
 				EC76CA30223539D700ADD1BE /* ViewModelType.swift in Sources */,
 				ECC9617422478F5200E4D4C1 /* TapticEngine.swift in Sources */,
 				EC29964622749ECF002694F9 /* Language.swift in Sources */,
@@ -1049,7 +1095,9 @@
 				ECE1D8AE2221B5ED009DE2A3 /* StartupViewController.swift in Sources */,
 				EC76CA3322353C4500ADD1BE /* UIViewController+ErrorAlert.swift in Sources */,
 				17DFB16F223FE59000495918 /* EventTableCellViewModel.swift in Sources */,
+				EC84B4A32288713000BBE38C /* Date+StringRepresentation.swift in Sources */,
 				ECE1D8A22221A5DC009DE2A3 /* R.generated.swift in Sources */,
+				EC4A84F62283379300D7BE8B /* LanguagePickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,28 +29,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Continue Your Registration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsY-U8-FGb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue Your Registration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsY-U8-FGb">
                                 <rect key="frame" x="31" y="94" width="313" height="27"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XA-M7-7Kt">
-                                <rect key="frame" x="57" y="136" width="261" height="37"/>
-                                <string key="text">Sign up now and search for people
-to meet, whenever you are.</string>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Step 1 of 2: Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFe-37-pEJ">
-                                <rect key="frame" x="112" y="203" width="151.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1 of 2: Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFe-37-pEJ">
+                                <rect key="frame" x="112" y="161" width="151.5" height="21"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="usL-Ak-ASN">
-                                <rect key="frame" x="20" y="217" width="335" height="430"/>
+                                <rect key="frame" x="20" y="212" width="335" height="430"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sYA-gc-Ysp" customClass="RoundedTextField" customModule="Parleo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
@@ -96,26 +88,37 @@ to meet, whenever you are.</string>
                                             <action selector="genderTapped:" destination="aC9-uH-qAN" eventType="touchUpInside" id="8ev-as-kNG"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose languages" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q8a-Yt-k52" customClass="RoundedTextField" customModule="Parleo" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJf-u8-tFJ">
                                         <rect key="frame" x="0.0" y="228" width="335" height="50"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="l4j-OG-i6f"/>
+                                            <constraint firstAttribute="height" constant="50" id="N6g-xt-PUt"/>
                                         </constraints>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="password"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your interests" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipe-eR-yTB" customClass="RoundedTextField" customModule="Parleo" customModuleProvider="target">
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                        <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <state key="normal" title="Choose languages"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="languageButtonTapped:" destination="aC9-uH-qAN" eventType="touchUpInside" id="GnM-R5-QdN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnH-1b-Vli">
                                         <rect key="frame" x="0.0" y="304" width="335" height="50"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="MH2-jR-RgE"/>
+                                            <constraint firstAttribute="height" constant="50" id="Y52-RS-9uc"/>
                                         </constraints>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="password"/>
-                                    </textField>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yl0-Hd-SIS" customClass="RoundedButton" customModule="Parleo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="380" width="335" height="50"/>
                                         <color key="backgroundColor" red="0.3142909706" green="0.36779713629999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -135,22 +138,21 @@ to meet, whenever you are.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="9XA-M7-7Kt" firstAttribute="top" secondItem="MsY-U8-FGb" secondAttribute="bottom" constant="15" id="51F-Hp-zV8"/>
                             <constraint firstItem="aoF-sH-6VP" firstAttribute="trailing" secondItem="usL-Ak-ASN" secondAttribute="trailing" constant="20" id="9bJ-rP-dwM"/>
                             <constraint firstItem="eFe-37-pEJ" firstAttribute="centerX" secondItem="qnN-eI-5jl" secondAttribute="centerX" id="NFY-4V-lWv"/>
                             <constraint firstItem="aoF-sH-6VP" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="usL-Ak-ASN" secondAttribute="bottom" constant="20" id="OOg-il-HQO"/>
-                            <constraint firstItem="9XA-M7-7Kt" firstAttribute="centerX" secondItem="qnN-eI-5jl" secondAttribute="centerX" id="Q1E-43-NxR"/>
                             <constraint firstItem="MsY-U8-FGb" firstAttribute="centerX" secondItem="qnN-eI-5jl" secondAttribute="centerX" id="TLN-Ql-swB"/>
-                            <constraint firstItem="eFe-37-pEJ" firstAttribute="top" secondItem="9XA-M7-7Kt" secondAttribute="bottom" constant="30" id="bX3-OI-TDm"/>
                             <constraint firstItem="usL-Ak-ASN" firstAttribute="leading" secondItem="aoF-sH-6VP" secondAttribute="leading" constant="20" id="g6Z-1A-Tsv"/>
                             <constraint firstItem="usL-Ak-ASN" firstAttribute="top" secondItem="eFe-37-pEJ" secondAttribute="bottom" constant="30" id="jHb-dm-jht"/>
                             <constraint firstItem="MsY-U8-FGb" firstAttribute="top" secondItem="aoF-sH-6VP" secondAttribute="top" constant="30" id="oz2-d0-oCZ"/>
+                            <constraint firstItem="eFe-37-pEJ" firstAttribute="top" secondItem="MsY-U8-FGb" secondAttribute="bottom" constant="40" id="rr0-X4-y0W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aoF-sH-6VP"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="birthDateButton" destination="nFm-r8-JLH" id="Twb-hw-C88"/>
+                        <outlet property="chooseLanguagesButton" destination="MJf-u8-tFJ" id="9kc-ti-e0k"/>
                         <outlet property="genderButton" destination="6nX-YR-3wg" id="XwI-yY-Nyk"/>
                     </connections>
                 </viewController>
