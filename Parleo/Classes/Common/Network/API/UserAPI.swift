@@ -11,10 +11,10 @@ import Moya
 enum UserAPI {
     case getUsers(page: Int, pageSize: Int)
     case getUser(id: String)
-    case updateUser(id: String, user: User)
     case getMyProfile
-    case uploadImage(id: String, image: UIImage)
-    case updateLocation(id: String, lat: Double, lon: Double)
+    case updateUser(user: UserUpdate)
+    case uploadImage(image: UIImage)
+    case updateLocation(lat: Double, lon: Double)
 }
 
 extension UserAPI: AuthorizedTargetType {
@@ -24,15 +24,17 @@ extension UserAPI: AuthorizedTargetType {
     var path: String {
         switch self {
         case .getUsers:
-            return "/api/Account"
-        case .getUser(let id), .updateUser(let id, _):
-            return "/api/Account/\(id)"
+            return "/api/Users"
+        case .getUser(let id):
+            return "/api/Users/\(id)"
+        case .updateUser:
+            return "/api/Users/current"
         case .getMyProfile:
-            return "/api/Account/me"
-        case .uploadImage(let id, _):
-            return "/api/Account/\(id)/image"
-        case .updateLocation(let id, _, _):
-            return "/api/Account/\(id)/location"
+            return "/api/Users/current"
+        case .uploadImage:
+            return "/api/Users/current/image"
+        case .updateLocation:
+            return "/api/Users/current/location"
         }
     }
 
@@ -59,12 +61,12 @@ extension UserAPI: AuthorizedTargetType {
             return .requestPlain
         case .getUsers(let page, let pageSize):
             return .requestParameters(parameters: ["PageNumber": page, "PageSize": pageSize], encoding: URLEncoding.queryString)
-        case .updateUser(_, let user):
+        case .updateUser(let user):
             return .requestParameters(parameters: user.toJSON(), encoding: JSONEncoding.default)
-        case .uploadImage(_, let image):
+        case .uploadImage(let image):
             let imageData = MultipartFormData(provider: .data(image.jpegData(compressionQuality: 0)!), name: "image", fileName: "\(UUID().uuidString).jpg", mimeType: "image/jpeg")
             return .uploadMultipart([imageData])
-        case .updateLocation(_, let lat, let lon):
+        case .updateLocation(let lat, let lon):
             return .requestParameters(parameters: ["latitude": lat, "longitude": lon], encoding: JSONEncoding.default)
         }
     }

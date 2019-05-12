@@ -17,17 +17,11 @@ class EmailVerificationViewController: UIViewController {
     private let viewModel = EmailVerificationViewModel()
     private let bag = DisposeBag()
 
-    var emailVerificationToken: String = "hhh"
+    var emailVerificationToken: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setup()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        verifyButton.rx.action?.execute()
     }
 }
 
@@ -43,6 +37,7 @@ private extension EmailVerificationViewController {
         let output = viewModel.transform(input: input)
 
         verifyButton.rx.action = output.verifyEmailAction
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: { self.verifyButton.rx.action?.execute() })
         output.error.emit(to: rx.error).disposed(by: bag)
         output.error.map { _ in false }.emit(to: verifyButton.rx.isHidden).disposed(by: bag)
         output.isLoading

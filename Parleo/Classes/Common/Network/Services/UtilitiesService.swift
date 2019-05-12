@@ -13,7 +13,7 @@ struct UtilitiesService: NetworkService {
 
     var provider = MoyaProvider<UtilitiesAPI>(plugins: [AuthPlugin(token: Storage.shared.accessToken)])
 
-    func getLanguages() -> Single<Result<[Language]>> {
+    func getLanguages() -> Single<Result<[LanguageId]>> {
         return fetchArray(.getLanguages)
     }
 }

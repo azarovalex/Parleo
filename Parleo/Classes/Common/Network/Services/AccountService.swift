@@ -21,7 +21,7 @@ struct AccountService: NetworkService {
         return fetchStringFromKey("token", api: .login(email: email, password: password))
     }
 
-    func verifyEmail(token: String) -> Single<Result<Void>> {
-        return send(.verifyEmail(token: token))
+    func verifyEmail(token: String) -> Single<Result<EmailVerificationResponse>> {
+        return fetchModel(.verifyEmail(token: token))
     }
 }

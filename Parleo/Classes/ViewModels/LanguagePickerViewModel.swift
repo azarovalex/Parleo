@@ -48,6 +48,7 @@ private extension LanguagePickerViewModel {
         let utilitiesService = UtilitiesService()
         return CocoaAction(workFactory: {
             unwrapResult(utilitiesService.getLanguages())
+                .map { $0.map { Language(code: $0.id, level: .beginner) } }
                 .map { [unowned self] cells in self.cellsRelay.accept(cells) }
         })
     }

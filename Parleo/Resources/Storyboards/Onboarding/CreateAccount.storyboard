@@ -130,7 +130,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="dqB-Wg-adX" kind="show" id="lez-43-JfC"/>
+                                            <action selector="nextStep:" destination="aC9-uH-qAN" eventType="touchUpInside" id="WAK-MJ-vT0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -154,6 +154,8 @@
                         <outlet property="birthDateButton" destination="nFm-r8-JLH" id="Twb-hw-C88"/>
                         <outlet property="chooseLanguagesButton" destination="MJf-u8-tFJ" id="9kc-ti-e0k"/>
                         <outlet property="genderButton" destination="6nX-YR-3wg" id="XwI-yY-Nyk"/>
+                        <outlet property="nameTextField" destination="sYA-gc-Ysp" id="Xf9-9d-anq"/>
+                        <segue destination="dqB-Wg-adX" kind="show" identifier="fromResistrationInfoToAvatar" id="Udg-w5-3iI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ihf-GJ-fip" userLabel="First Responder" sceneMemberID="firstResponder"/>

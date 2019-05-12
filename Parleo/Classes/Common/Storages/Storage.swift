@@ -18,4 +18,5 @@ class Storage {
     private init() { }
 
     var accessToken: String?
+    var currentUserId: String?
 }

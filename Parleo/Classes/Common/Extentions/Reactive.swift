@@ -44,7 +44,7 @@ extension RequestBuilder {
     }
 }
 
-extension CocoaAction {
+extension Action {
 
     var executingDriver: Driver<Bool> {
         return executing.asDriver { _ in .never() }

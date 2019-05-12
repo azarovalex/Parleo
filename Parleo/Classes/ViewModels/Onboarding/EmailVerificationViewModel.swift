@@ -12,6 +12,8 @@ import Action
 
 class EmailVerificationViewModel: ViewModelType {
 
+    private let accountService = AccountService()
+
     struct Input {
         let token: String
     }
@@ -37,11 +39,12 @@ class EmailVerificationViewModel: ViewModelType {
 private extension EmailVerificationViewModel {
 
     func getVerifyEmailAction(token: String) -> CocoaAction {
-        let accountService = AccountService()
-        Storage.shared.accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsZXhAYXphcm92LmJ5IiwianRpIjoiM2YwYThkMDgtNzY5Yy00NzA3LWIxZTQtZmJmOGVjZjdjNDhjIiwiSXNBdXRob3JpemF0aW9uIjoidHJ1ZSIsImV4cCI6MTU2MDAxODE4M30.u7QkEbcVhnSGOXAT3Q3HrufgInv5ugNq9eUe8CdlhuU"
-        return CocoaAction(workFactory: {
-            return .just(())
-            unwrapResult(accountService.verifyEmail(token: token))
+        return CocoaAction(workFactory: { [unowned self] in
+            unwrapResult(self.accountService.verifyEmail(token: token))
+                .map { response in
+                    Storage.shared.accessToken = response.token
+                    Storage.shared.currentUserId = response.id
+                }
         })
     }
 }

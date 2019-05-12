@@ -29,14 +29,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ app: UIApplication, open url: URL,
                      options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-//        guard url.scheme == "parleo", url.host == "verify_email" else { return false }
-//        var parameters: [String: String] = [:]
-//        URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems?
-//            .forEach { parameters[$0.name] = $0.value }
-//        guard let token = parameters["token"] else { return false }
-        let emailVerificationViewCotroller = R.storyboard.emailVerification.instantiateInitialViewController()!
-//        emailVerificationViewCotroller.emailVerificationToken = token
-        UIApplication.shared.keyWindow?.rootViewController = emailVerificationViewCotroller
+        guard url.scheme == "parleo", url.host == "verify_email" else { return false }
+        var parameters: [String: String] = [:]
+        URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems?
+            .forEach { parameters[$0.name] = $0.value }
+        guard let token = parameters["token"] else { return false }
+        let emailVerificationNavigationController = R.storyboard.emailVerification.instantiateInitialViewController()!
+        let emailVerificationViewController = emailVerificationNavigationController.viewControllers.first as! EmailVerificationViewController
+        emailVerificationViewController.emailVerificationToken = token
+        UIApplication.shared.keyWindow?.rootViewController = emailVerificationNavigationController
         return true
     }
 

@@ -38,7 +38,7 @@ class EventsViewModel {
         let cellsDriver = events
             .asDriver()
             .map {
-                $0.map{ EventTableCellViewModel(title: $0.title, description: $0.title, backgroungImage: R.image.katesCafe()!, flagImage: R.image.ukFlag()!) }
+                $0.map{ EventTableCellViewModel(title: $0.title, description: $0.title, backgroungImage: R.image.katesCafe()!, flagImage: R.image.uk()!) }
             }
         
         let viewEventSignal = input.viewEvent.map { [weak self] indexPath in

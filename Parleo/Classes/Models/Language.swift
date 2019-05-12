@@ -47,11 +47,20 @@ struct Language {
 extension Language: Mappable {
 
     init?(map: Map) {
-        if map.JSON["id"] == nil { return nil }
+        if map.JSON["code"] == nil { return nil }
     }
 
     mutating func mapping(map: Map) {
-        code <- map["id"]
+        code <- map["code"]
         level <- map["level"]
+    }
+}
+
+struct LanguageId: Mappable {
+    var id: String!
+
+    init?(map: Map) {}
+    mutating func mapping(map: Map) {
+        id <- map["id"]
     }
 }
