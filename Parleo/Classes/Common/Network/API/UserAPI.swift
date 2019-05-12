@@ -18,7 +18,6 @@ enum UserAPI {
     case verifyEmail(token: String)
     case uploadImage(id: String, image: UIImage)
     case updateLocation(id: String, lat: Double, lon: Double)
-    case 
 }
 
 extension UserAPI: AuthorizedTargetType {
