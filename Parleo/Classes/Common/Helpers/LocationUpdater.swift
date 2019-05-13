@@ -34,6 +34,10 @@ class LocationUpdater: NSObject {
 // MARK: - CLLocationManagerDelegate
 extension LocationUpdater: CLLocationManagerDelegate {
 
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         _ = unwrapResult(userService.updateLocation(lat: locValue.latitude, lon: locValue.longitude))
