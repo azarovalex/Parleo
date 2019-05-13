@@ -45,7 +45,7 @@ extension UsersViewModel: ViewModelType {
         paginationSink.isLoading.filter { $0 == false }.map { _ in }.bind(to: fetchingCompletedRelay).disposed(by: bag)
         return Output(error: paginationSink.error.asSignal { _ in .never() },
                       isPaginationLoading: paginationSink.isLoading.asDriver { _ in .never() },
-                      cells: paginationSink.elements.asDriver { _ in .never() },
+                      cells: paginationSink.elements.do(onNext: { print($0.count) }).asDriver { _ in .never() },
                       refreshAction: getRefreshAction())
     }
 }

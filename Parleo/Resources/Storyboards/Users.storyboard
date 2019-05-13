@@ -91,7 +91,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarTemplate" translatesAutoresizingMaskIntoConstraints="NO" id="adi-3d-X2c">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarTemplate" translatesAutoresizingMaskIntoConstraints="NO" id="adi-3d-X2c">
                                 <rect key="frame" x="16" y="80" width="90" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="iQI-jm-BCm"/>
@@ -101,10 +101,16 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="45"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="sfL-w2-VG0">
-                                <rect key="frame" x="122" y="103.5" width="167" height="43.5"/>
+                                <rect key="frame" x="122" y="88" width="167" height="74.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ricardo Milos, 27" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLv-9l-u5o">
                                         <rect key="frame" x="0.0" y="0.0" width="167" height="24.5"/>
@@ -113,32 +119,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="HiB-JT-7fk">
-                                        <rect key="frame" x="0.0" y="24.5" width="137.5" height="19"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="144.5" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Languages:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V48-63-1ja">
-                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="19"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="50"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                 <color key="textColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4XN-Mo-uUL">
-                                                <rect key="frame" x="94.5" y="0.0" width="43" height="19"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UKFlag" translatesAutoresizingMaskIntoConstraints="NO" id="5Ez-RQ-Ffn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="19" height="19"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="19" id="fky-ue-8vc"/>
-                                                            <constraint firstAttribute="width" constant="19" id="jFp-bV-9Am"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RussianFlag" translatesAutoresizingMaskIntoConstraints="NO" id="Vw3-dM-9pT">
-                                                        <rect key="frame" x="24" y="0.0" width="19" height="19"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="19" id="Lwb-pM-Vaa"/>
-                                                            <constraint firstAttribute="width" constant="19" id="VyV-ZP-J7W"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                </subviews>
+                                                <rect key="frame" x="94.5" y="0.0" width="50" height="50"/>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -232,8 +222,6 @@ do nothing, watch anime, play tanks and whatnot. 😂✌</string>
         </scene>
     </scenes>
     <resources>
-        <image name="RussianFlag" width="19" height="19"/>
-        <image name="UKFlag" width="30" height="30"/>
         <image name="avatarTemplate" width="150" height="150"/>
         <image name="filterIcon" width="24" height="24"/>
         <image name="tabBarUsersIcon" width="31" height="23"/>

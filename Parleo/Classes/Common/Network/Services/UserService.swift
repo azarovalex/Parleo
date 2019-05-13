@@ -21,19 +21,19 @@ struct UserService: NetworkService {
         return fetchModel(.getUser(id: id))
     }
 
-    func updateUser(id: String, newUser: User) -> Single<Result<Void>> {
-        return send(.updateUser(id: id, user: newUser))
+    func updateUser(newUser: UserUpdate) -> Single<Result<Void>> {
+        return send(.updateUser(user: newUser))
     }
 
     func getMyProfile() -> Single<Result<User>> {
         return fetchModel(.getMyProfile)
     }
 
-    func uploadImage(userId: String, image: UIImage) -> Single<Result<Void>> {
-        return send(.uploadImage(id: userId, image: image))
+    func uploadImage(image: UIImage) -> Single<Result<Void>> {
+        return send(.uploadImage(image: image))
     }
 
-    func updateLocation(userId: String, lat: Double, lon: Double) -> Single<Result<Void>> {
-        return send(.updateLocation(id: userId, lat: lat, lon: lon))
+    func updateLocation(lat: Double, lon: Double) -> Single<Result<Void>> {
+        return send(.updateLocation(lat: lat, lon: lon))
     }
 }

@@ -55,6 +55,17 @@ private extension MyProfileViewController {
             viewController.profileImageView.kf.setImage(with: user.accountImage, placeholder: R.image.avatarTemplate()!)
             viewController.usernameLabel.text = user.name
             viewController.aboutLabel.text = user.about
+            let firstFiveLanguages = user.languages.prefix(5)
+            for language in firstFiveLanguages {
+                let flagImageView = UIImageView(image: language.flagImage)
+                flagImageView.frame = CGRect(x: 0, y: 0, width: 19, height: 19)
+                flagImageView.cornerRadius = 10
+                NSLayoutConstraint.activate([
+                    NSLayoutConstraint(item: flagImageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 19),
+                    NSLayoutConstraint(item: flagImageView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 19)
+                ])
+                viewController.languagesStackView.addArrangedSubview(flagImageView)
+            }
         })
     }
 }
