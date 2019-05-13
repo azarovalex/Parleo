@@ -29,8 +29,8 @@ extension MyProfileViewModel: ViewModelType {
 
     func transform(input: Input) -> Output {
         let fetchUserAction = getFetchUserAction()
-        input.viewWillAppear.emit(to: fetchUserAction.inputs).disposed(by: bag)
-
+        input.viewWillAppear.asObservable().take(1).bind(to: fetchUserAction.inputs).disposed(by: bag)
+        LocationUpdater.shared.startUpdatingLocation()
         return Output(user: fetchUserAction.elements.asSignal { _ in .never() },
                       isLoading: fetchUserAction.executing.asDriver { _ in .never() },
                       error: fetchUserAction.underlyingError.asSignal { _ in .never() })
@@ -41,8 +41,7 @@ extension MyProfileViewModel: ViewModelType {
 private extension MyProfileViewModel {
 
     func getFetchUserAction() -> Action<Void, User> {
-        return Action(workFactory: {
-            return .never()
-        })
+        let userService = UserService()
+        return Action(workFactory: { unwrapResult(userService.getMyProfile()) })
     }
 }

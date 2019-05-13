@@ -244,7 +244,7 @@ stuff, coffee is good etc etc</string>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
                             <barButtonItem style="plain" id="MHP-X1-83w">
-                                <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="xSK-Ls-I1t">
+                                <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="xSK-Ls-I1t">
                                     <rect key="frame" x="113.5" y="7" width="155" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <segments>
@@ -302,16 +302,10 @@ stuff, coffee is good etc etc</string>
                                 <rect key="frame" x="0.0" y="64" width="375" height="607"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYe-jF-3F4">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="602"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="602.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="createEventAddImage" translatesAutoresizingMaskIntoConstraints="NO" id="wcx-IC-6S7">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="130.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="wcx-IC-6S7" secondAttribute="height" multiplier="359:125" id="dea-2B-LLS"/>
-                                                </constraints>
-                                            </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Event name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7OB-aw-6nt" customClass="RoundedTextField" customModule="Parleo" customModuleProvider="target">
-                                                <rect key="frame" x="18" y="154.5" width="339" height="50"/>
+                                                <rect key="frame" x="18" y="155" width="339" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="WHm-An-uC2"/>
@@ -321,7 +315,7 @@ stuff, coffee is good etc etc</string>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Event description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2tn-LA-peC">
-                                                <rect key="frame" x="18" y="228.5" width="339" height="107"/>
+                                                <rect key="frame" x="18" y="229" width="339" height="107"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="107" id="xk7-3R-uzT"/>
@@ -336,7 +330,7 @@ stuff, coffee is good etc etc</string>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="UDF-Bz-EW2">
-                                                <rect key="frame" x="18" y="373" width="339" height="209"/>
+                                                <rect key="frame" x="18" y="373.5" width="339" height="209"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbp-ZR-0Tx">
                                                         <rect key="frame" x="0.0" y="0.0" width="339" height="26"/>
@@ -385,21 +379,28 @@ stuff, coffee is good etc etc</string>
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qc-17-bn0">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="0qc-17-bn0" secondAttribute="height" multiplier="3:1" id="NWy-Si-o3V"/>
+                                                </constraints>
+                                                <state key="normal" image="createEventAddImage"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="UDF-Bz-EW2" firstAttribute="leading" secondItem="2tn-LA-peC" secondAttribute="leading" id="1N6-ww-5E3"/>
-                                            <constraint firstAttribute="trailing" secondItem="wcx-IC-6S7" secondAttribute="trailing" id="3U7-Cl-2J8"/>
-                                            <constraint firstItem="wcx-IC-6S7" firstAttribute="top" secondItem="tYe-jF-3F4" secondAttribute="top" id="3z2-RS-hw0"/>
                                             <constraint firstItem="2tn-LA-peC" firstAttribute="top" secondItem="7OB-aw-6nt" secondAttribute="bottom" constant="24" id="5yj-KQ-x4i"/>
                                             <constraint firstAttribute="trailing" secondItem="7OB-aw-6nt" secondAttribute="trailing" constant="18" id="9w4-Jb-nti"/>
                                             <constraint firstItem="UDF-Bz-EW2" firstAttribute="top" secondItem="2tn-LA-peC" secondAttribute="bottom" constant="37.5" id="Blw-Sd-sfC"/>
                                             <constraint firstItem="2tn-LA-peC" firstAttribute="trailing" secondItem="7OB-aw-6nt" secondAttribute="trailing" id="Gnv-rB-JLB"/>
                                             <constraint firstAttribute="bottom" secondItem="UDF-Bz-EW2" secondAttribute="bottom" constant="20" id="L9b-T2-hVm"/>
-                                            <constraint firstItem="7OB-aw-6nt" firstAttribute="top" secondItem="wcx-IC-6S7" secondAttribute="bottom" constant="24" id="UuG-Ft-smi"/>
+                                            <constraint firstItem="0qc-17-bn0" firstAttribute="leading" secondItem="tYe-jF-3F4" secondAttribute="leading" id="PUo-uw-t0D"/>
                                             <constraint firstItem="2tn-LA-peC" firstAttribute="leading" secondItem="7OB-aw-6nt" secondAttribute="leading" id="aRt-4X-VNr"/>
+                                            <constraint firstAttribute="trailing" secondItem="0qc-17-bn0" secondAttribute="trailing" id="aWz-Kp-evH"/>
+                                            <constraint firstItem="7OB-aw-6nt" firstAttribute="top" secondItem="0qc-17-bn0" secondAttribute="bottom" constant="30" id="ajX-RB-2d6"/>
                                             <constraint firstItem="UDF-Bz-EW2" firstAttribute="trailing" secondItem="2tn-LA-peC" secondAttribute="trailing" id="bi4-lp-LrV"/>
-                                            <constraint firstItem="wcx-IC-6S7" firstAttribute="leading" secondItem="tYe-jF-3F4" secondAttribute="leading" id="hkg-mM-e38"/>
+                                            <constraint firstItem="0qc-17-bn0" firstAttribute="top" secondItem="tYe-jF-3F4" secondAttribute="top" id="cHI-t3-5MY"/>
                                             <constraint firstItem="7OB-aw-6nt" firstAttribute="leading" secondItem="tYe-jF-3F4" secondAttribute="leading" constant="18" id="jBD-Mw-lnh"/>
                                         </constraints>
                                     </view>
@@ -431,8 +432,12 @@ stuff, coffee is good etc etc</string>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="720"/>
                     <connections>
+                        <outlet property="addLanguageButton" destination="F87-MH-JTN" id="Ssm-9D-SCm"/>
                         <outlet property="eventDescriptionTextView" destination="2tn-LA-peC" id="xfx-hR-0uV"/>
                         <outlet property="eventNameTextField" destination="7OB-aw-6nt" id="BLE-RO-nht"/>
+                        <outlet property="imageButton" destination="0qc-17-bn0" id="enD-4U-i6k"/>
+                        <outlet property="inviteFriendsButton" destination="GBU-0I-Fyi" id="aow-wj-qkV"/>
+                        <outlet property="setDateButton" destination="aQO-3p-lmv" id="Mbe-fc-aOZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TcX-kN-Zfc" userLabel="First Responder" sceneMemberID="firstResponder"/>

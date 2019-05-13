@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import RxCocoa
 import ObjectMapper
 
 protocol PaginationUISource {
@@ -29,19 +30,17 @@ extension PaginationSink {
     init(ui: PaginationUISource, request: @escaping PaginationNetworkRequest) {
         let defaultPageSize = 5
 
-        let loadResults = BehaviorSubject<[Int: [Item]]>(value: [:])
+        let loadResults = BehaviorRelay<[Int: [Item]]>(value: [:])
 
         var totalCount = 0
-        var currentCount = 0
 
         let reload = ui.refresh
-            .do(onNext: { currentCount = 0 })
             .map { -1 }
 
         let maxPage = loadResults.map { $0.keys }.map { $0.max() ?? 1 }
 
         let loadNext = ui.loadNextPage
-            .filter { currentCount < totalCount }
+            .filter { loadResults.value.keys.count * defaultPageSize < totalCount }
             .withLatestFrom(maxPage).map { $0 + 1 }
             .share()
 
@@ -51,8 +50,7 @@ extension PaginationSink {
             .flatMap { page -> Observable<Event<(pageNumber: Int, items: [Item])>> in
                 let videos = unwrapResult(request(page == -1 ? 1 : page, defaultPageSize))
                     .do(onNext: { response in
-                        totalCount = response.totalAmount
-                        currentCount += response.items.count })
+                        totalCount = response.totalAmount })
                     .map { $0.items }
 
                 return Observable.combineLatest(Observable.just(page), videos) { (pageNumber: $0, items: $1) }

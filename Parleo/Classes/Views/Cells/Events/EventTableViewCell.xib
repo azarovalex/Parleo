@@ -28,8 +28,12 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventCardShadow" translatesAutoresizingMaskIntoConstraints="NO" id="Rmg-Yo-TCa">
                         <rect key="frame" x="0.0" y="0.0" width="399" height="250.5"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UKFlag" translatesAutoresizingMaskIntoConstraints="NO" id="2Cm-lK-qVQ">
-                        <rect key="frame" x="20" y="141.5" width="30" height="30"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ko" translatesAutoresizingMaskIntoConstraints="NO" id="2Cm-lK-qVQ">
+                        <rect key="frame" x="20" y="127.5" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="A9F-5Y-PAL"/>
+                            <constraint firstAttribute="height" constant="44" id="tjN-r3-eyd"/>
+                        </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WBL-aL-rZo">
                         <rect key="frame" x="20" y="191.5" width="359" height="41"/>
@@ -80,7 +84,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="UKFlag" width="30" height="30"/>
         <image name="eventCardShadow" width="360" height="247"/>
+        <image name="ko" width="512" height="512"/>
     </resources>
 </document>

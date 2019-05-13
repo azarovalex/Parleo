@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MZl-uH-A77">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-ExtraBold.ttf">
+            <string>Montserrat-ExtraBold</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Email Verification View Controller-->
+        <scene sceneID="usn-UJ-DLL">
+            <objects>
+                <viewController id="Nrr-rO-Htf" customClass="EmailVerificationViewController" customModule="Parleo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t9L-Tz-v8s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startupBackground" translatesAutoresizingMaskIntoConstraints="NO" id="MKY-Lb-EDu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="596"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Parleo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdF-Ld-03C">
+                                <rect key="frame" x="103" y="241" width="208.5" height="74.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="61"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hk8-rU-f5f" customClass="RoundedButton" customModule="Parleo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="453" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.3142909706" green="0.36779713629999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="94c-PK-HQP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                                <state key="normal" title="Verify Email">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11276992410421371" green="0.13611596822738647" blue="0.19421529769897461" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MKY-Lb-EDu" firstAttribute="top" secondItem="t9L-Tz-v8s" secondAttribute="top" id="12g-S0-ncm"/>
+                            <constraint firstItem="r6r-0i-hz2" firstAttribute="trailing" secondItem="hk8-rU-f5f" secondAttribute="trailing" constant="20" id="Llb-QG-Q57"/>
+                            <constraint firstItem="hk8-rU-f5f" firstAttribute="leading" secondItem="r6r-0i-hz2" secondAttribute="leading" constant="20" id="Qsu-eD-0z2"/>
+                            <constraint firstItem="IdF-Ld-03C" firstAttribute="centerY" secondItem="t9L-Tz-v8s" secondAttribute="centerY" constant="-170" id="RIb-dY-5Kq"/>
+                            <constraint firstItem="hk8-rU-f5f" firstAttribute="centerX" secondItem="t9L-Tz-v8s" secondAttribute="centerX" id="Xe3-OJ-aoF"/>
+                            <constraint firstItem="hk8-rU-f5f" firstAttribute="centerY" secondItem="t9L-Tz-v8s" secondAttribute="centerY" constant="30" id="XyF-yH-PYK"/>
+                            <constraint firstAttribute="bottom" secondItem="MKY-Lb-EDu" secondAttribute="bottom" constant="300" id="hoU-z6-W9w"/>
+                            <constraint firstItem="MKY-Lb-EDu" firstAttribute="leading" secondItem="t9L-Tz-v8s" secondAttribute="leading" id="iCe-hk-BmY"/>
+                            <constraint firstAttribute="trailing" secondItem="MKY-Lb-EDu" secondAttribute="trailing" id="mNk-N1-xCL"/>
+                            <constraint firstItem="IdF-Ld-03C" firstAttribute="centerX" secondItem="t9L-Tz-v8s" secondAttribute="centerX" id="sUg-xL-akX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="r6r-0i-hz2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hmY-3C-4xV"/>
+                    <connections>
+                        <outlet property="verifyButton" destination="hk8-rU-f5f" id="YNo-LK-YzP"/>
+                        <segue destination="En3-hV-XSP" kind="show" identifier="fromEmailVerificationToCreateAccount" id="gig-gc-5Cj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QhI-XX-As4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828.98550724637687" y="121.875"/>
+        </scene>
+        <!--CreateAccount-->
+        <scene sceneID="cKG-Uz-KF8">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jDc-vd-hb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="CreateAccount" id="En3-hV-XSP" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="1447.1014492753625" y="121.875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4dK-Th-HjN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="MZl-uH-A77" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FPQ-5o-qbt">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Nrr-rO-Htf" kind="relationship" relationship="rootViewController" id="Bks-ya-Jzh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hIj-aS-rQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-81.159420289855078" y="121.875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="startupBackground" width="360" height="488"/>
+    </resources>
+</document>

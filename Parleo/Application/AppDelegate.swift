@@ -9,6 +9,7 @@
 import UIKit
 import RxSwiftExt
 import IQKeyboardManagerSwift
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,8 +19,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupNavigationButtons()
         IQKeyboardManager.shared.enable = true
-//        Storage.shared.accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsZXhAYXphcm92LmJ5IiwianRpIjoiM2YwYThkMDgtNzY5Yy00NzA3LWIxZTQtZmJmOGVjZjdjNDhjIiwiZXhwIjoxNTU4OTY2NjI1fQ.QFCK0UjBxXejWAh4jAz-1qjvB-DftANon4sXA4eM7b0"
+        registerForPushNotifications()
+        presentFirstScreen()
         return true
+    }
+
+    func presentFirstScreen() {
+        let initialStoryboard = Storage.shared.isLoggedIn ?
+            R.storyboard.main() : R.storyboard.onboarding()
+        window?.rootViewController = initialStoryboard.instantiateInitialViewController()
+    }
+
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print(deviceToken.reduce("") { $0 + String(format: "%02x", $1) })
+    }
+
+    func application(_ app: UIApplication, open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        guard url.scheme == "parleo", url.host == "verify_email" else { return false }
+        var parameters: [String: String] = [:]
+        URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems?
+            .forEach { parameters[$0.name] = $0.value }
+        guard let token = parameters["token"] else { return false }
+        let emailVerificationNavigationController = R.storyboard.emailVerification.instantiateInitialViewController()!
+        let emailVerificationViewController = emailVerificationNavigationController.viewControllers.first as! EmailVerificationViewController
+        emailVerificationViewController.emailVerificationToken = token
+        UIApplication.shared.keyWindow?.rootViewController = emailVerificationNavigationController
+        return true
+    }
+
+    func registerForPushNotifications() {
+        UNUserNotificationCenter.current()
+            .requestAuthorization(options: [.alert, .sound, .badge]) { [weak self] granted, _ in
+                guard granted else { return }
+                self?.getNotificationSettings()
+        }
+    }
+
+    func getNotificationSettings() {
+        UNUserNotificationCenter.current().getNotificationSettings { settings in
+            guard settings.authorizationStatus == .authorized else { return }
+            DispatchQueue.main.async {
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+        }
     }
 }
 

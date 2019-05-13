@@ -481,7 +481,7 @@ class RangeSlider: UIControl {
         accessibleElements = [leftHandleAccessibilityElement, rightHandleAccessibilityElement]
     }
 
-    private func updateHandlePositions() {
+    func updateHandlePositions() {
         leftHandle.position = CGPoint(x: xPositionAlongLine(for: selectedMinValue),
                                       y: sliderLine.frame.midY)
 
@@ -571,12 +571,14 @@ class RangeSlider: UIControl {
             selectedMinValue = CGFloat(roundf(Float(selectedMinValue / step))) * step
             if let previousStepMinValue = previousStepMinValue, previousStepMinValue != selectedMinValue {
                 TapticEngine.selection.feedback()
+                sendActions(for: .valueChanged)
             }
             previousStepMinValue = selectedMinValue
 
             selectedMaxValue = CGFloat(roundf(Float(selectedMaxValue / step))) * step
             if let previousStepMaxValue = previousStepMaxValue, previousStepMaxValue != selectedMaxValue {
                 TapticEngine.selection.feedback()
+                sendActions(for: .valueChanged)
             }
             previousStepMaxValue = selectedMaxValue
         }

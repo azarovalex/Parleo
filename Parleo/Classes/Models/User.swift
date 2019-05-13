@@ -14,13 +14,11 @@ struct User {
     var name: String?
     var about: String?
     var birthdate: Date?
-    var isMale: Bool = false
+    var isMale: Bool? = false
     var distanceFromCurrentUser: Double = 0
     var email: String?
-    var createdEvents = [Int]()
-    var languages = [Int]()
-    var friends = [Int]()
-    var attendingEvents = [Int]()
+    var isFriend: Bool?
+    var languages = [Language]()
     var hobbies = [Int]()
 }
 
@@ -38,12 +36,8 @@ extension User: Mappable {
         isMale <- map["gender"]
         distanceFromCurrentUser <- map["distanceFromCurrentUser"]
         email <- map["email"]
-
-        var imageName: String = ""
-        imageName <- map["accountImage"]
-        print(imageName)
-        accountImage = URL(string: "https://awesomeparleobackend.azurewebsites.net/account-images/" + imageName)
+        accountImage <- (map["accountImage"], URLTransform())
+        isFriend <- map["isFriend"]
+        languages <- map["languages"]
     }
 }
-
-
