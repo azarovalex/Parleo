@@ -12,6 +12,10 @@ import SegueManager
 
 class UsersViewController: SegueManagerViewController {
 
+    enum ScreenConfiguration {
+        case allUsers, friends
+    }
+
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var filterButton: UIBarButtonItem!
 
@@ -19,6 +23,8 @@ class UsersViewController: SegueManagerViewController {
     private var refreshControl = UIRefreshControl()
     private let viewModel = UsersViewModel()
     private let bag = DisposeBag()
+
+    var screenConfiguration = ScreenConfiguration.allUsers
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +41,12 @@ private extension UsersViewController {
         tableView.refreshControl = refreshControl
         bindViewModel()
         bindFilterButton()
+        navigationItem.title = (screenConfiguration == .allUsers) ? "Users" : "Friends"
     }
 
     func bindViewModel() {
-        let input = UsersViewModel.Input(fetchNextPage: getNextPageSignal())
+        let input = UsersViewModel.Input(fetchNextPage: getNextPageSignal(),
+                                         screenConfiguration: screenConfiguration)
         let output = viewModel.transform(input: input)
 
         refreshControl.rx.action = output.refreshAction
@@ -56,11 +64,16 @@ private extension UsersViewController {
             .drive(commentsSpinner).disposed(by: bag)
         tableView.rx.modelSelected(User.self)
             .bind(to: rx.navigate(with: R.segue.usersViewController.fromUserListToUserInfo,
-                                  segueHandler: { segue, user in segue.destination.user = user }))
+                                  segueHandler: { segue, user in
+                                    var user = user
+                                    if self.screenConfiguration == .friends { user.isFriend = true }
+                                    segue.destination.user = user
+            }))
             .disposed(by: bag)
     }
 
     func bindFilterButton() {
+        guard screenConfiguration == .allUsers else { filterButton.isEnabled = false; filterButton.tintColor = .clear; return }
         filterButton.rx.tap.bind(to: rx.navigate(with: R.segue.usersViewController.fromUsersListToFilter, segueHandler: { segue, _ in
             segue.destination.screenConfiguration = .filterUsers
         })).disposed(by: bag)

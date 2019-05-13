@@ -14,6 +14,7 @@ class UsersViewModel: PaginationUISource {
     private let loadNextPageRelay = PublishRelay<Void>()
     private let refreshRelay = PublishRelay<Void>()
     private let fetchingCompletedRelay = PublishRelay<Void>()
+    private let userService = UserService()
 
     var refresh: Observable<Void> { return refreshRelay.asObservable() }
     var loadNextPage: Observable<Void> { return loadNextPageRelay.asObservable() }
@@ -24,6 +25,7 @@ extension UsersViewModel: ViewModelType {
     
     struct Input {
         let fetchNextPage: Signal<Void>
+        let screenConfiguration: UsersViewController.ScreenConfiguration
     }
 
     struct Output {
@@ -36,9 +38,14 @@ extension UsersViewModel: ViewModelType {
     func transform(input: Input) -> Output {
         input.fetchNextPage.emit(to: loadNextPageRelay).disposed(by: bag)
 
-        let userService = UserService()
-        let networkRequest: PaginationSink<User>.PaginationNetworkRequest = { page, pageSize in
-            return userService.getUsers(page: page, pageSize: pageSize)
+        let networkRequest: PaginationSink<User>.PaginationNetworkRequest
+        switch input.screenConfiguration {
+        case .allUsers:
+            networkRequest = { [unowned self] page, pageSize in
+                self.userService.getUsers(page: page, pageSize: pageSize) }
+        case .friends:
+            networkRequest = { [unowned self] page, pageSize in
+                self.userService.getFriends(page: page, pageSize: pageSize) }
         }
 
         let paginationSink = PaginationSink(ui: self, request: networkRequest)

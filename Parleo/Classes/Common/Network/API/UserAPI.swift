@@ -15,6 +15,9 @@ enum UserAPI {
     case updateUser(user: UserUpdate)
     case uploadImage(image: UIImage)
     case updateLocation(lat: Double, lon: Double)
+    case getFriends(page: Int, pageSize: Int)
+    case removeFriend(userId: String)
+    case addFriend(userId: String)
 }
 
 extension UserAPI: AuthorizedTargetType {
@@ -35,6 +38,12 @@ extension UserAPI: AuthorizedTargetType {
             return "/api/Users/current/image"
         case .updateLocation:
             return "/api/Users/current/location"
+        case .getFriends:
+            return "/api/Users/current/friends"
+        case .removeFriend(let userId):
+            return "/api/Users/current/friends/\(userId)"
+        case .addFriend(let userId):
+            return "/api/Users/current/friends/\(userId)"
         }
     }
 
@@ -44,10 +53,12 @@ extension UserAPI: AuthorizedTargetType {
 
     var method: Method {
         switch self {
-        case .getUsers, .getUser, .getMyProfile:
+        case .getUsers, .getUser, .getMyProfile, .getFriends:
             return .get
-        case .updateUser, .uploadImage, .updateLocation:
+        case .updateUser, .uploadImage, .updateLocation, .addFriend:
             return .put
+        case .removeFriend:
+            return .delete
         }
     }
 
@@ -57,9 +68,9 @@ extension UserAPI: AuthorizedTargetType {
 
     var task: Task {
         switch self {
-        case .getUser, .getMyProfile:
+        case .getUser, .getMyProfile, .removeFriend, .addFriend:
             return .requestPlain
-        case .getUsers(let page, let pageSize):
+        case .getUsers(let page, let pageSize), .getFriends(let page, let pageSize):
             return .requestParameters(parameters: ["PageNumber": page, "PageSize": pageSize], encoding: URLEncoding.queryString)
         case .updateUser(let user):
             return .requestParameters(parameters: user.toJSON(), encoding: JSONEncoding.default)

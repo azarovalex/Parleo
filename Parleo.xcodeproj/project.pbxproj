@@ -33,6 +33,7 @@
 		EC3C68BF2288B32F0038B4CA /* SignUpInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3C68BE2288B32F0038B4CA /* SignUpInfoViewModel.swift */; };
 		EC3C68C12288BDC00038B4CA /* UserUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3C68C02288BDC00038B4CA /* UserUpdate.swift */; };
 		EC3C68C32288E4C40038B4CA /* LocationUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3C68C22288E4C40038B4CA /* LocationUpdater.swift */; };
+		EC3C68C5228A0C740038B4CA /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3C68C4228A0C740038B4CA /* UserProfileViewModel.swift */; };
 		EC48D3AE2282296B00165BC3 /* DatePickerAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48D3AD2282296B00165BC3 /* DatePickerAlert.swift */; };
 		EC48D3B3228322D400165BC3 /* LanguagePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC48D3B2228322D400165BC3 /* LanguagePicker.storyboard */; };
 		EC4A84F3228323C500D7BE8B /* LanguageInPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4A84F1228323C500D7BE8B /* LanguageInPickerCell.swift */; };
@@ -162,6 +163,7 @@
 		EC3C68BE2288B32F0038B4CA /* SignUpInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInfoViewModel.swift; sourceTree = "<group>"; };
 		EC3C68C02288BDC00038B4CA /* UserUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUpdate.swift; sourceTree = "<group>"; };
 		EC3C68C22288E4C40038B4CA /* LocationUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUpdater.swift; sourceTree = "<group>"; };
+		EC3C68C4228A0C740038B4CA /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 		EC48D3AD2282296B00165BC3 /* DatePickerAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerAlert.swift; sourceTree = "<group>"; };
 		EC48D3B2228322D400165BC3 /* LanguagePicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LanguagePicker.storyboard; sourceTree = "<group>"; };
 		EC4A84F1228323C500D7BE8B /* LanguageInPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageInPickerCell.swift; sourceTree = "<group>"; };
@@ -684,6 +686,7 @@
 			isa = PBXGroup;
 			children = (
 				ECD2C1CE223F00E800C421A7 /* UsersViewModel.swift */,
+				EC3C68C4228A0C740038B4CA /* UserProfileViewModel.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -1011,7 +1014,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/Parleo/Application/R.generated.swift",
+				$SRCROOT/Parleo/Application/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1116,6 +1119,7 @@
 				EC84B4A32288713000BBE38C /* Date+StringRepresentation.swift in Sources */,
 				ECE1D8A22221A5DC009DE2A3 /* R.generated.swift in Sources */,
 				EC4A84F62283379300D7BE8B /* LanguagePickerViewController.swift in Sources */,
+				EC3C68C5228A0C740038B4CA /* UserProfileViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

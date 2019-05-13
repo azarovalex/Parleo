@@ -16,6 +16,7 @@ class MyProfileViewController: UIViewController {
     @IBOutlet private var usernameLabel: UILabel!
     @IBOutlet private var languagesStackView: UIStackView!
     @IBOutlet private var aboutLabel: UILabel!
+    @IBOutlet private var friendsButton: UIButton!
 
     private let bag = DisposeBag()
     private let viewModel = MyProfileViewModel()
@@ -33,6 +34,7 @@ private extension MyProfileViewController {
     func setup() {
         bindViewModel()
         settingsButton.rx.tap.bind(to: settings).disposed(by: bag)
+        friendsButton.rx.tap.bind(to: friends).disposed(by: bag)
     }
 
     func bindViewModel() {
@@ -78,5 +80,13 @@ private extension MyProfileViewController {
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
             viewController.present(alert, animated: true)
         })
+    }
+
+    var friends: Binder<Void> {
+        return Binder(self) { viewController, _ in
+            let usersViewController = R.storyboard.users.listOfUsersViewController()!
+            usersViewController.screenConfiguration = .friends
+            viewController.navigationController?.pushViewController(usersViewController, animated: true)
+        }
     }
 }

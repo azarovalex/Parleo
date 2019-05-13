@@ -19,7 +19,7 @@
         <!--Users-->
         <scene sceneID="SfA-qx-Vim">
             <objects>
-                <viewController id="nwe-JQ-2DY" customClass="UsersViewController" customModule="Parleo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="listOfUsersViewController" id="nwe-JQ-2DY" customClass="UsersViewController" customModule="Parleo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sLh-Ze-cF5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,7 +146,7 @@ do nothing, watch anime, play tanks and whatnot. 😂✌</string>
                                 <rect key="frame" x="16" y="266" width="343" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ra-x0-uwq">
-                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="IeD-Cp-F0W"/>
                                         </constraints>
@@ -163,12 +163,9 @@ do nothing, watch anime, play tanks and whatnot. 😂✌</string>
                                                 <real key="value" value="22"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="showMockAlert" destination="m6o-7W-wxe" eventType="touchUpInside" id="Vhh-Xg-UEe"/>
-                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijU-tq-jTC">
-                                        <rect key="frame" x="177.5" y="0.0" width="165.5" height="44"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijU-tq-jTC">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="5ru-dT-Chy"/>
                                         </constraints>
@@ -211,6 +208,7 @@ do nothing, watch anime, play tanks and whatnot. 😂✌</string>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="aboutLabel" destination="n9V-Tz-KHy" id="nwO-Dz-KkV"/>
+                        <outlet property="addFriendButton" destination="2ra-x0-uwq" id="cBY-aw-EFB"/>
                         <outlet property="languagesStackView" destination="4XN-Mo-uUL" id="5f8-hY-v86"/>
                         <outlet property="userImageView" destination="adi-3d-X2c" id="mqO-8Y-Asj"/>
                         <outlet property="usernameLabel" destination="zLv-9l-u5o" id="qnr-2R-LZJ"/>
