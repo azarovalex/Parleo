@@ -43,7 +43,6 @@ private extension EmailVerificationViewModel {
             unwrapResult(self.accountService.verifyEmail(token: token))
                 .map { response in
                     Storage.shared.accessToken = response.token
-                    Storage.shared.currentUserId = response.id
                     LocationUpdater.shared.startUpdatingLocation()
                 }
         })

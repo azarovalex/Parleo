@@ -12,6 +12,7 @@ PODS:
   - IGListKit/Diffing (3.4.0)
   - InputBarAccessoryView (4.2.2)
   - IQKeyboardManagerSwift (6.3.0)
+  - KeychainSwift (15.0.0)
   - Kingfisher (5.4.0)
   - MessageKit (3.0.0):
     - InputBarAccessoryView (~> 4.2.2)
@@ -52,6 +53,7 @@ DEPENDENCIES:
   - ApiClient (from `https://github.com/shaiter/parleo-apiclient`)
   - IGListKit (~> 3.0)
   - IQKeyboardManagerSwift
+  - KeychainSwift (~> 15.0)
   - Kingfisher
   - MessageKit
   - Moya/RxSwift (~> 12.0)
@@ -70,6 +72,7 @@ SPEC REPOS:
     - IGListKit
     - InputBarAccessoryView
     - IQKeyboardManagerSwift
+    - KeychainSwift
     - Kingfisher
     - MessageKit
     - Moya
@@ -99,6 +102,7 @@ SPEC CHECKSUMS:
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   InputBarAccessoryView: 2b937602598e2fab3149f37f51dd7ad795653812
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
+  KeychainSwift: c6fc018d287804faf1ce3f258a1e51a7178c8382
   Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
   MessageKit: e892a9ca49ebe6d82684d3a93ad84021fa23e2c6
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
@@ -112,6 +116,6 @@ SPEC CHECKSUMS:
   RxSwiftExt: 01f8ecbeeb355698e9c75365ebe908b00dacf45d
   SegueManager: e4970e6f7150c81ec577e0b61d9fda3f27c11db5
 
-PODFILE CHECKSUM: fb633daea05d7913b8d5bd93cac0c6af7ba19c53
+PODFILE CHECKSUM: f11a04337ee42adc701270ec8589d66756f202c2
 
 COCOAPODS: 1.6.1

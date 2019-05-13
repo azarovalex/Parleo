@@ -43,9 +43,11 @@ extension UsersViewModel: ViewModelType {
 
         let paginationSink = PaginationSink(ui: self, request: networkRequest)
         paginationSink.isLoading.filter { $0 == false }.map { _ in }.bind(to: fetchingCompletedRelay).disposed(by: bag)
+        let cells = paginationSink.elements
+            .asDriver { _ in .never() }
         return Output(error: paginationSink.error.asSignal { _ in .never() },
                       isPaginationLoading: paginationSink.isLoading.asDriver { _ in .never() },
-                      cells: paginationSink.elements.do(onNext: { print($0.count) }).asDriver { _ in .never() },
+                      cells: cells,
                       refreshAction: getRefreshAction())
     }
 }

@@ -31,6 +31,7 @@ private extension UserProfileViewController {
         userImageView.kf.setImage(with: user.accountImage, placeholder: R.image.avatarTemplate()!)
         usernameLabel.text = user.name
         aboutLabel.text = user.about
+        title = (user.name != nil ? (user.name! + "'s ") : "") + "Profile"
         let firstFiveLanguages = user.languages.prefix(5)
         for language in firstFiveLanguages {
             let flagImageView = UIImageView(image: language.flagImage)
