@@ -13,8 +13,8 @@ struct UserService: NetworkService {
 
     var provider = MoyaProvider<UserAPI>(plugins: [AuthPlugin(token: Storage.shared.accessToken)])
 
-    func getUsers(page: Int, pageSize: Int) -> Single<Result<PagedResponse<User>>> {
-        return fetchModel(.getUsers(page: page, pageSize: pageSize))
+    func getUsers(page: Int, pageSize: Int, filter: UsersFilter) -> Single<Result<PagedResponse<User>>> {
+        return fetchModel(.getUsers(page: page, pageSize: pageSize, filter: filter))
     }
 
     func getUser(with id: String) -> Single<Result<User>> {

@@ -10,6 +10,14 @@ import RxSwift
 import RxCocoa
 import SegueManager
 
+struct UsersFilter {
+    var isMale = true
+    var isFemale = true
+    var minAge = 16
+    var maxAge = 65
+    var languages = [Language]()
+}
+
 class UsersViewController: SegueManagerViewController {
 
     enum ScreenConfiguration {
@@ -23,6 +31,8 @@ class UsersViewController: SegueManagerViewController {
     private var refreshControl = UIRefreshControl()
     private let viewModel = UsersViewModel()
     private let bag = DisposeBag()
+
+    private var filterRelay = BehaviorRelay<UsersFilter>(value: UsersFilter())
 
     var screenConfiguration = ScreenConfiguration.allUsers
 
@@ -46,7 +56,9 @@ private extension UsersViewController {
 
     func bindViewModel() {
         let input = UsersViewModel.Input(fetchNextPage: getNextPageSignal(),
-                                         screenConfiguration: screenConfiguration)
+                                         screenConfiguration: screenConfiguration,
+                                         filter: filterRelay,
+                                         filterUpdated: filterRelay.asSignal { _ in .never() }.map { _ in })
         let output = viewModel.transform(input: input)
 
         refreshControl.rx.action = output.refreshAction
@@ -76,6 +88,8 @@ private extension UsersViewController {
         guard screenConfiguration == .allUsers else { filterButton.isEnabled = false; filterButton.tintColor = .clear; return }
         filterButton.rx.tap.bind(to: rx.navigate(with: R.segue.usersViewController.fromUsersListToFilter, segueHandler: { segue, _ in
             segue.destination.screenConfiguration = .filterUsers
+            segue.destination.filter = self.filterRelay.value
+            segue.destination.delegate = self
         })).disposed(by: bag)
     }
 }
@@ -97,5 +111,12 @@ private extension UsersViewController {
         spinner.startAnimating()
         spinner.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 50)
         return Binder(tableView, binding: { $0.tableFooterView = $1 ? spinner : nil })
+    }
+}
+
+extension UsersViewController: FilterViewControllerDelegate {
+
+    func updateFilter(filter: UsersFilter) {
+        filterRelay.accept(filter)
     }
 }

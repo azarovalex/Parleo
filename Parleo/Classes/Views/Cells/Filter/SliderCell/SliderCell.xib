@@ -88,6 +88,9 @@
                                         <real key="value" value="-40"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="bgh-lS-ViM" eventType="valueChanged" id="JHw-51-N7w"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
