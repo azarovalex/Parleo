@@ -18,6 +18,7 @@ enum UserAPI {
     case verifyEmail(token: String)
     case uploadImage(id: String, image: UIImage)
     case updateLocation(id: String, lat: Double, lon: Double)
+    case getCurrentUserEvents(page: Int, pageSize: Int)
 }
 
 extension UserAPI: AuthorizedTargetType {
@@ -42,6 +43,8 @@ extension UserAPI: AuthorizedTargetType {
             return "/api/Accounts/\(id)/image"
         case .updateLocation(let id, _, _):
             return "/api/Accounts/\(id)/location"
+        case .getCurrentUserEvents:
+            return "/api/Users/current/attending-events"
         }
     }
 
@@ -56,7 +59,7 @@ extension UserAPI: AuthorizedTargetType {
 
     var method: Method {
         switch self {
-        case .getUsers, .getUser, .getMyProfile, .verifyEmail:
+        case .getUsers, .getUser, .getMyProfile, .verifyEmail, .getCurrentUserEvents:
             return .get
         case .register, .login:
             return .post
@@ -86,6 +89,8 @@ extension UserAPI: AuthorizedTargetType {
             return .uploadMultipart([imageData])
         case .updateLocation(_, let lat, let lon):
             return .requestParameters(parameters: ["latitude": lat, "longitude": lon], encoding: JSONEncoding.default)
+        case .getCurrentUserEvents(let page, let pageSize):
+            return .requestParameters(parameters: ["PageNumber": page, "PageSize": pageSize], encoding: URLEncoding.queryString)
         }
     }
 
