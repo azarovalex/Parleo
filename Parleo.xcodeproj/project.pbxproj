@@ -32,6 +32,7 @@
 		EC3C68BD228882360038B4CA /* EmailVerificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3C68BC228882360038B4CA /* EmailVerificationResponse.swift */; };
 		EC3C68BF2288B32F0038B4CA /* SignUpInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3C68BE2288B32F0038B4CA /* SignUpInfoViewModel.swift */; };
 		EC3C68C12288BDC00038B4CA /* UserUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3C68C02288BDC00038B4CA /* UserUpdate.swift */; };
+		EC3C68C32288E4C40038B4CA /* LocationUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3C68C22288E4C40038B4CA /* LocationUpdater.swift */; };
 		EC48D3AE2282296B00165BC3 /* DatePickerAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48D3AD2282296B00165BC3 /* DatePickerAlert.swift */; };
 		EC48D3B3228322D400165BC3 /* LanguagePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC48D3B2228322D400165BC3 /* LanguagePicker.storyboard */; };
 		EC4A84F3228323C500D7BE8B /* LanguageInPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4A84F1228323C500D7BE8B /* LanguageInPickerCell.swift */; };
@@ -160,6 +161,7 @@
 		EC3C68BC228882360038B4CA /* EmailVerificationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVerificationResponse.swift; sourceTree = "<group>"; };
 		EC3C68BE2288B32F0038B4CA /* SignUpInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInfoViewModel.swift; sourceTree = "<group>"; };
 		EC3C68C02288BDC00038B4CA /* UserUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUpdate.swift; sourceTree = "<group>"; };
+		EC3C68C22288E4C40038B4CA /* LocationUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUpdater.swift; sourceTree = "<group>"; };
 		EC48D3AD2282296B00165BC3 /* DatePickerAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerAlert.swift; sourceTree = "<group>"; };
 		EC48D3B2228322D400165BC3 /* LanguagePicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LanguagePicker.storyboard; sourceTree = "<group>"; };
 		EC4A84F1228323C500D7BE8B /* LanguageInPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageInPickerCell.swift; sourceTree = "<group>"; };
@@ -653,6 +655,7 @@
 				EC834D8522789B6900BADD2E /* Validators.swift */,
 				EC48D3AD2282296B00165BC3 /* DatePickerAlert.swift */,
 				EC4A850622842A4900D7BE8B /* LanguageNameManager.swift */,
+				EC3C68C22288E4C40038B4CA /* LocationUpdater.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1029,6 +1032,7 @@
 				EC8ED29B2274E61C00A59A3C /* MyProfileViewModel.swift in Sources */,
 				EC4A850722842A4900D7BE8B /* LanguageNameManager.swift in Sources */,
 				ECF190C62227463C002D24EF /* RoundedTextField.swift in Sources */,
+				EC3C68C32288E4C40038B4CA /* LocationUpdater.swift in Sources */,
 				EC48D3AE2282296B00165BC3 /* DatePickerAlert.swift in Sources */,
 				ECDB2A47224ECD1A0061AEB1 /* CheckboxesCell.swift in Sources */,
 				ECD2C1CC223F008000C421A7 /* UsersViewController.swift in Sources */,

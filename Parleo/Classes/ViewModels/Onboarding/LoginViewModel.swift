@@ -53,6 +53,9 @@ private extension LoginViewModel {
 
     func login(with info: LoginInfo) -> Observable<Void> {
         return unwrapResult(accountService.login(with: info.email, password: info.password))
-            .do(onNext: { token in Storage.shared.accessToken = token }).map { _ in }
+            .do(onNext: { token in
+                Storage.shared.accessToken = token
+                LocationUpdater.shared.startUpdatingLocation()
+            }).map { _ in }
     }
 }

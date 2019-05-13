@@ -33,7 +33,7 @@ struct UserService: NetworkService {
         return send(.uploadImage(image: image))
     }
 
-    func updateLocation(userId: String, lat: Double, lon: Double) -> Single<Result<Void>> {
+    func updateLocation(lat: Double, lon: Double) -> Single<Result<Void>> {
         return send(.updateLocation(lat: lat, lon: lon))
     }
 }

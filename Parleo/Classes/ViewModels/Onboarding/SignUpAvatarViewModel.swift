@@ -9,9 +9,11 @@
 import RxSwift
 import RxCocoa
 import Action
+import CoreLocation
 
 class SignUpAvatarViewModel: ViewModelType {
-    
+
+    private let locationManager = CLLocationManager()
     private let navigationRelay = PublishRelay<Void>()
     private let userService = UserService()
     private let bag = DisposeBag()

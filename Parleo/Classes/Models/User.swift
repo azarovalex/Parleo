@@ -38,5 +38,6 @@ extension User: Mappable {
         email <- map["email"]
         accountImage <- (map["accountImage"], URLTransform())
         isFriend <- map["isFriend"]
+        languages <- map["languages"]
     }
 }

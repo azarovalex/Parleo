@@ -44,6 +44,7 @@ private extension EmailVerificationViewModel {
                 .map { response in
                     Storage.shared.accessToken = response.token
                     Storage.shared.currentUserId = response.id
+                    LocationUpdater.shared.startUpdatingLocation()
                 }
         })
     }
