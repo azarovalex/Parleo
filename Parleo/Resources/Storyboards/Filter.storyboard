@@ -44,7 +44,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Save" id="0pH-LO-8Zs">
                             <color key="tintColor" name="AppAccent"/>
                             <connections>
-                                <action selector="close" destination="NA0-lV-n9g" id="XEo-ob-Pnb"/>
+                                <action selector="save:" destination="NA0-lV-n9g" id="o36-EB-Lpq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -11,6 +11,8 @@ import IGListKit
 class SliderSectionController: ListSectionController {
 
     private var model: SliderCellModel!
+    var updateClosure: ((_ minAge: Int, _ maxAge: Int) -> Void)!
+    var filter: UsersFilter!
 
     override func sizeForItem(at index: Int) -> CGSize {
         return CGSize(width: collectionContext!.containerSize.width, height: 124)
@@ -18,7 +20,7 @@ class SliderSectionController: ListSectionController {
 
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         let cell = collectionContext!.dequeueReusableCell(withNibName: R.nib.sliderCell.name, bundle: R.nib.sliderCell.bundle, for: self, at: index) as! SliderCell
-        cell.configure(with: model)
+        cell.configure(with: model, updateClosure: updateClosure, filter: filter)
         return cell
     }
 

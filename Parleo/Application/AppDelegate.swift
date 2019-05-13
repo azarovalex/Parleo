@@ -20,7 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupNavigationButtons()
         IQKeyboardManager.shared.enable = true
         registerForPushNotifications()
+        presentFirstScreen()
         return true
+    }
+
+    func presentFirstScreen() {
+        let initialStoryboard = Storage.shared.isLoggedIn ?
+            R.storyboard.main() : R.storyboard.onboarding()
+        window?.rootViewController = initialStoryboard.instantiateInitialViewController()
     }
 
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {

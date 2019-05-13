@@ -119,31 +119,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="oI7-Hv-0bX">
-                                <rect key="frame" x="16" y="280" width="343" height="94"/>
+                                <rect key="frame" x="16" y="280" width="343" height="33"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyP-Hn-aze">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
-                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="My meetings (2)" image="myMeetingsIcon">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="showMockAlert" destination="iNa-c1-Xqj" eventType="touchUpInside" id="Ob3-Ac-MTu"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRE-ic-3F2">
-                                        <rect key="frame" x="0.0" y="61" width="343" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="33"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <inset key="titleEdgeInsets" minX="17" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Friends (35)" image="profileFriendsIcon">
+                                        <state key="normal" title="Friends" image="profileFriendsIcon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
-                                        <connections>
-                                            <action selector="showMockAlert" destination="iNa-c1-Xqj" eventType="touchUpInside" id="cfm-39-dhh"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -174,6 +159,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="aboutLabel" destination="Tt9-4O-PRW" id="Sin-TS-tcH"/>
+                        <outlet property="friendsButton" destination="MRE-ic-3F2" id="hK3-ep-lYf"/>
                         <outlet property="languagesStackView" destination="1V7-MH-vDS" id="xFw-QW-7KK"/>
                         <outlet property="profileImageView" destination="g8R-J0-Ida" id="q2E-wg-mOu"/>
                         <outlet property="settingsButton" destination="Ik3-lk-Ft0" id="Zl5-cG-4yT"/>
@@ -187,7 +173,6 @@
     </scenes>
     <resources>
         <image name="avatarTemplate" width="150" height="150"/>
-        <image name="myMeetingsIcon" width="28" height="28"/>
         <image name="navBarSettingsIcon" width="19" height="19"/>
         <image name="profileFriendsIcon" width="33" height="33"/>
         <image name="tabBarProfileIcon" width="25" height="23"/>

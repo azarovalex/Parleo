@@ -11,6 +11,8 @@ import IGListKit
 class CheckboxSectionController: ListSectionController {
 
     private var model: CheckboxCellModel!
+    var updateClosure: ((_ isMale: Bool, _ isFemale: Bool) -> Void)!
+    var filter: UsersFilter!
 
     override func sizeForItem(at index: Int) -> CGSize {
         let height = 70 + model.items.count * 34
@@ -20,7 +22,7 @@ class CheckboxSectionController: ListSectionController {
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         let cell = collectionContext!.dequeueReusableCell(withNibName: R.nib.checkboxesCell.name,
                                                           bundle: R.nib.checkboxesCell.bundle, for: self, at: index) as! CheckboxesCell
-        cell.configure(with: model)
+        cell.configure(with: model, updateClosure: updateClosure, filter: filter)
         return cell
     }
 

@@ -23,4 +23,5 @@ target 'Parleo' do
   # Common
   pod 'R.swift'
   pod 'SegueManager'
+  pod 'KeychainSwift', '~> 15.0'
 end

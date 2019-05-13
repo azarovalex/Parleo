@@ -16,6 +16,7 @@ class MyProfileViewController: UIViewController {
     @IBOutlet private var usernameLabel: UILabel!
     @IBOutlet private var languagesStackView: UIStackView!
     @IBOutlet private var aboutLabel: UILabel!
+    @IBOutlet private var friendsButton: UIButton!
 
     private let bag = DisposeBag()
     private let viewModel = MyProfileViewModel()
@@ -24,9 +25,6 @@ class MyProfileViewController: UIViewController {
         super.viewDidLoad()
 
         setup()
-        settingsButton.rx.tap.bind {
-            UIApplication.shared.keyWindow?.rootViewController = R.storyboard.onboarding.instantiateInitialViewController()!
-        }.disposed(by: bag)
     }
 }
 
@@ -35,6 +33,8 @@ private extension MyProfileViewController {
 
     func setup() {
         bindViewModel()
+        settingsButton.rx.tap.bind(to: settings).disposed(by: bag)
+        friendsButton.rx.tap.bind(to: friends).disposed(by: bag)
     }
 
     func bindViewModel() {
@@ -67,5 +67,26 @@ private extension MyProfileViewController {
                 viewController.languagesStackView.addArrangedSubview(flagImageView)
             }
         })
+    }
+
+    var settings: Binder<Void> {
+        return Binder<Void>(self, binding: { viewController, _ in
+            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+            let logOutAction = UIAlertAction(title: "Log Out", style: .destructive, handler: { _ in
+                UIApplication.shared.keyWindow?.rootViewController = R.storyboard.onboarding.instantiateInitialViewController()!
+                Storage.shared.logout()
+            })
+            alert.addAction(logOutAction)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            viewController.present(alert, animated: true)
+        })
+    }
+
+    var friends: Binder<Void> {
+        return Binder(self) { viewController, _ in
+            let usersViewController = R.storyboard.users.listOfUsersViewController()!
+            usersViewController.screenConfiguration = .friends
+            viewController.navigationController?.pushViewController(usersViewController, animated: true)
+        }
     }
 }
