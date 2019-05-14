@@ -46,7 +46,7 @@ private extension SignUpAvatarViewModel {
     func getRegistrationAction(image: Driver<UIImage?>) -> CocoaAction {
         return CocoaAction { [unowned self] in
             return image.asObservable().flatMap { image -> Observable<Void> in
-                guard let image = image else { return .just(()) }
+                guard let image = image else { self.navigationRelay.accept(()); return .just(()) }
                 return unwrapResult(self.userService.uploadImage(image: image))
                     .do(onNext: { [unowned self] in self.navigationRelay.accept(()) })
             }.take(1)

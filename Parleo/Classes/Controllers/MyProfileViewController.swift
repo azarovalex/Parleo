@@ -21,10 +21,21 @@ class MyProfileViewController: UIViewController {
     private let bag = DisposeBag()
     private let viewModel = MyProfileViewModel()
 
+    private var userModel = User()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setup()
+    }
+
+    @IBAction func editProfile(_ sender: Any) {
+        let editViewController = R.storyboard.createAccount.instantiateInitialViewController()!
+        editViewController.screenType = .editProfile(user: userModel)
+        editViewController.imageURL = userModel.accountImage
+        let navVC = UINavigationController(rootViewController: editViewController)
+        navVC.isNavigationBarHidden = true
+        present(navVC, animated: true)
     }
 }
 
@@ -52,6 +63,7 @@ private extension MyProfileViewController {
 
     var user: Binder<User> {
         return Binder(self, binding: { viewController, user in
+            self.userModel = user
             viewController.profileImageView.kf.setImage(with: user.accountImage, placeholder: R.image.avatarTemplate()!)
             viewController.usernameLabel.text = user.name
             viewController.aboutLabel.text = user.about

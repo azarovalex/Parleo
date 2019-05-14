@@ -39,7 +39,7 @@ extension UsersViewModel: ViewModelType {
 
     func transform(input: Input) -> Output {
         input.fetchNextPage.emit(to: loadNextPageRelay).disposed(by: bag)
-        input.filterUpdated.emit(to: refreshRelay).disposed(by: bag)
+        input.filterUpdated.debug().emit(to: refreshRelay).disposed(by: bag)
 
         let networkRequest: PaginationSink<User>.PaginationNetworkRequest
         switch input.screenConfiguration {

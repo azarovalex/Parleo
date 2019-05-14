@@ -90,6 +90,7 @@
 		ECB596512252D5ED002EDDFD /* SignUpCredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB596502252D5ED002EDDFD /* SignUpCredentialsViewController.swift */; };
 		ECB596532252D978002EDDFD /* SignUpInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB596522252D978002EDDFD /* SignUpInfoViewController.swift */; };
 		ECB596552252DA4F002EDDFD /* SignUpAvatarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB596542252DA4F002EDDFD /* SignUpAvatarViewModel.swift */; };
+		ECB5A760228B45F200B20E9A /* EditProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECB5A75F228B45F200B20E9A /* EditProfileViewController.storyboard */; };
 		ECC961502246BC3100E4D4C1 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC9614F2246BC3100E4D4C1 /* Filter.storyboard */; };
 		ECC961522246BD9700E4D4C1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC961512246BD9700E4D4C1 /* Colors.xcassets */; };
 		ECC961552246C42B00E4D4C1 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC961542246C42B00E4D4C1 /* FilterViewController.swift */; };
@@ -223,6 +224,7 @@
 		ECB596502252D5ED002EDDFD /* SignUpCredentialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCredentialsViewController.swift; sourceTree = "<group>"; };
 		ECB596522252D978002EDDFD /* SignUpInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInfoViewController.swift; sourceTree = "<group>"; };
 		ECB596542252DA4F002EDDFD /* SignUpAvatarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAvatarViewModel.swift; sourceTree = "<group>"; };
+		ECB5A75F228B45F200B20E9A /* EditProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfileViewController.storyboard; sourceTree = "<group>"; };
 		ECC9614F2246BC3100E4D4C1 /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		ECC961512246BD9700E4D4C1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		ECC961542246C42B00E4D4C1 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 				EC1B9AD322396AB3007B4113 /* Profile.storyboard */,
 				ECC9614F2246BC3100E4D4C1 /* Filter.storyboard */,
 				EC48D3B2228322D400165BC3 /* LanguagePicker.storyboard */,
+				ECB5A75F228B45F200B20E9A /* EditProfileViewController.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -914,6 +917,7 @@
 				ECD2C1DD223F035A00C421A7 /* Montserrat-Medium.ttf in Resources */,
 				ECD2C1DB223F01BF00C421A7 /* UserCell.xib in Resources */,
 				ECC961622246CA6800E4D4C1 /* CheckboxView.xib in Resources */,
+				ECB5A760228B45F200B20E9A /* EditProfileViewController.storyboard in Resources */,
 				ECB5961F22514AC4002EDDFD /* FriendAddedCell.xib in Resources */,
 				ECB596422251618C002EDDFD /* FriendRequestCell.xib in Resources */,
 			);
