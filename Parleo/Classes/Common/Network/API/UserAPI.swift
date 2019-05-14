@@ -30,7 +30,7 @@ extension UserAPI: AuthorizedTargetType {
         case .getUsers:
             return "/api/Users"
         case .getCurrentUserEvents:
-            return "/api/Users/current/attending-events"
+            return "/api/Users/current/created-events"
         case .getUser(let id):
             return "/api/Users/\(id)"
         case .updateUser:

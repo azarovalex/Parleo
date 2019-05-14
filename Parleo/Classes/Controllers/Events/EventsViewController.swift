@@ -12,7 +12,6 @@ import SegueManager
 
 class EventsViewController: SegueManagerViewController {
 
-    @IBOutlet private var filterBarButton: UIBarButtonItem!
     @IBOutlet private var addEventBarButton: UIBarButtonItem!
     @IBOutlet private var eventsTableView: UITableView! {
         didSet {
@@ -34,6 +33,7 @@ class EventsViewController: SegueManagerViewController {
     }
     
     private func bindData() {
+        eventsTableView.tableFooterView = UIView()
         let input = EventsViewModel.Input(viewEvent: eventsTableView.rx.itemSelected.asSignal(),
                                           fetchNextPage: getNextPageSignal(),
                                           changeContent: eventsSegmentedControl.rx.selectedSegmentIndex
@@ -49,14 +49,9 @@ class EventsViewController: SegueManagerViewController {
             cell.viewModel = model
             return cell
         }.disposed(by: bag)
-
-        filterBarButton.rx.tap
-            .bind(to: rx.navigate(with: R.segue.eventsViewController.fromEventsToFilter,
-                                  segueHandler: { segue, _ in segue.destination.screenConfiguration = .filterEvents }))
-            .disposed(by: bag)
         
         refreshControl.rx.action = output.refreshAction
-        
+
         output.viewEvent
             .emit(to: rx.navigate(with: R.segue.eventsViewController.fromEventsToDetails, segueHandler: { segue, parleoEvent in
                 segue.destination.viewModel = EventDetailsViewModel(parleoEvent: parleoEvent)

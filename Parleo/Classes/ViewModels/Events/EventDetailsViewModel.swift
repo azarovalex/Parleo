@@ -24,7 +24,7 @@ class EventDetailsViewModel {
         title.accept(parleoEvent.title)
         description.accept(parleoEvent.description)
         dateString.accept(parleoEvent.startTime.asString(format: "MMM d, yyyy: H m"))
-        flagImage.accept(parleoEvent.language.flagImage)
+        flagImage.accept(parleoEvent.language?.flagImage ?? R.image.flagTemplate()!)
         location.accept(CLLocationCoordinate2D(latitude: parleoEvent.latitude,
                                                longitude: parleoEvent.longitude))
     }

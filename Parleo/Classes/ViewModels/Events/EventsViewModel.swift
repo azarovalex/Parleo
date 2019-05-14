@@ -87,15 +87,15 @@ class EventsViewModel {
         let cellsDriver = Observable.of(allEventsPaginationSink.elements, userEventsPaginationSink.elements).merge()
             .asDriver(onErrorDriveWith: .never())
             .map {
-                $0.map{ EventTableCellViewModel(title: $0.title, description: $0.description, backgroungImageURL: $0.eventImageURL, flagImage: R.image.fr()!) }
+                $0.map{ EventTableCellViewModel(title: $0.title, description: $0.description, backgroungImageURL: $0.eventImageURL, flagImage: $0.language?.flagImage ?? R.image.flagTemplate()!) }
             }
-        
-        let viewEventSignal = Observable.combineLatest(input.viewEvent.asObservable(), paginationSink.elements)
-            .map { indexPath, events in
-                events[indexPath.row]
-            }
-            .asSignal(onErrorSignalWith: .never())
-        
+
+        let sinks = Observable.combineLatest(allEventsPaginationSink.elements, userEventsPaginationSink.elements, resultSelector: { ($0, $1) })
+        let viewEventSignal = input.viewEvent.asObservable().withLatestFrom(sinks)
+        { indexPath, sinks in
+            self.contentMode == .allEvents ? sinks.0[indexPath.row] : sinks.1[indexPath.row]
+            }.asSignal { _ in .never() }
+
         return Output(cells: cellsDriver,
                       viewEvent: viewEventSignal,
                       refreshAction: getRefreshAction())

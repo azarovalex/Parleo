@@ -35,7 +35,7 @@ class EventTableViewCell: UITableViewCell {
             guard let viewModel = viewModel else { return }
             titleLabel.text = viewModel.title
             descriptionLabel.text = viewModel.description
-            backgroundImageView.kf.setImage(with: viewModel.backgroungImageURL, placeholder: R.image.avatarTemplate()!)
+            backgroundImageView.kf.setImage(with: viewModel.backgroungImageURL, placeholder: R.image.katesCafe()!)
             languageFlagImageView.image = viewModel.flagImage
         }
     }
