@@ -11,7 +11,6 @@ import Moya
 import KeychainSwift
 
 class Storage {
-
     static var shared = Storage()
 
     private let keychain = KeychainSwift()

@@ -34,7 +34,7 @@ extension RequestBuilder {
                     observer.onNext(response)
                     observer.onCompleted()
                 } else {
-                    observer.onError(NSError(domain: "Something is wrong with Alamofire response: both 'error' and 'response' are empty", code: 0))
+                    observer.onError(NSError(domain: "Something is wrong with Alamofire response: both ‘error’ and ‘response’ are empty", code: 0))
                 }
             }
             return Disposables.create(with: {

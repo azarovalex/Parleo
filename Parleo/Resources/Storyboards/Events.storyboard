@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PKc-Ya-oIi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PKc-Ya-oIi">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,13 +31,16 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="857"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSz-hO-jgG">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="851.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="763"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KatesCafe" translatesAutoresizingMaskIntoConstraints="NO" id="VSy-xy-lWl">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="247"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventCardShadow" translatesAutoresizingMaskIntoConstraints="NO" id="kQm-SE-qZr">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="247"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="kQm-SE-qZr" secondAttribute="height" multiplier="375:247" id="2vn-Gy-IGt"/>
+                                                </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kate's Cafe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ium-NC-dov">
                                                 <rect key="frame" x="16" y="162" width="170" height="37"/>
@@ -53,38 +56,26 @@ stuff, coffee is good etc etc</string>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Members:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRM-NV-lxd">
-                                                <rect key="frame" x="16" y="255" width="90" height="22"/>
-                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
-                                                <color key="textColor" name="AppGray"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventMembers" translatesAutoresizingMaskIntoConstraints="NO" id="xeu-tQ-Mov">
-                                                <rect key="frame" x="16" y="285" width="343" height="46.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="xeu-tQ-Mov" secondAttribute="height" multiplier="81:11" id="N5U-qn-Ave"/>
-                                                </constraints>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date&amp;Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2s-Nw-Wt1">
-                                                <rect key="frame" x="16" y="347.5" width="104" height="22"/>
+                                                <rect key="frame" x="16" y="259" width="104" height="22"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                                 <color key="textColor" name="AppGray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqm-H2-zpZ">
-                                                <rect key="frame" x="16" y="385.5" width="96" height="22"/>
+                                                <rect key="frame" x="16" y="297" width="96" height="22"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                                 <color key="textColor" name="AppGray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IG-ce-jQI">
-                                                <rect key="frame" x="16" y="423.5" width="54" height="22"/>
+                                                <rect key="frame" x="16" y="335" width="53.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                                 <color key="textColor" name="AppGray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gti-0L-qgR">
-                                                <rect key="frame" x="16" y="465.5" width="343" height="300"/>
+                                                <rect key="frame" x="16" y="377" width="343" height="300"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="300" id="thg-fi-Kh8"/>
                                                 </constraints>
@@ -95,7 +86,7 @@ stuff, coffee is good etc etc</string>
                                                 </userDefinedRuntimeAttributes>
                                             </mapView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zk9-Mx-Oen">
-                                                <rect key="frame" x="16" y="781.5" width="343" height="50"/>
+                                                <rect key="frame" x="16" y="693" width="343" height="50"/>
                                                 <color key="backgroundColor" name="AppAccent"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="sA4-dg-kh6"/>
@@ -111,22 +102,27 @@ stuff, coffee is good etc etc</string>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="close" destination="Chb-lx-yM9" eventType="touchUpInside" id="7sJ-Cc-kY2"/>
+                                                    <action selector="joinButtonClicked:" destination="Chb-lx-yM9" eventType="touchUpInside" id="lsO-zQ-CHS"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="22 Dec 2012 12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOf-nP-MAg">
-                                                <rect key="frame" x="128" y="347.5" width="231" height="22"/>
+                                                <rect key="frame" x="128" y="259" width="154" height="22"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Address here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2k-8V-L2x">
-                                                <rect key="frame" x="78" y="423.5" width="281" height="22"/>
+                                                <rect key="frame" x="77.5" y="335" width="118.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UKFlag" translatesAutoresizingMaskIntoConstraints="NO" id="x8h-Tz-Fjm">
-                                                <rect key="frame" x="120" y="381.5" width="30" height="30"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="be" translatesAutoresizingMaskIntoConstraints="NO" id="x8h-Tz-Fjm">
+                                                <rect key="frame" x="120" y="293" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="28G-LZ-Sp9"/>
+                                                    <constraint firstAttribute="width" constant="30" id="Ea2-p5-ZVo"/>
+                                                </constraints>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,39 +130,34 @@ stuff, coffee is good etc etc</string>
                                             <constraint firstItem="Zk9-Mx-Oen" firstAttribute="leading" secondItem="Gti-0L-qgR" secondAttribute="leading" id="1Ft-aB-wIY"/>
                                             <constraint firstItem="X2k-8V-L2x" firstAttribute="leading" secondItem="2IG-ce-jQI" secondAttribute="trailing" constant="8" id="4jH-kI-x75"/>
                                             <constraint firstItem="Zk9-Mx-Oen" firstAttribute="trailing" secondItem="Gti-0L-qgR" secondAttribute="trailing" id="6Gy-9D-Q7h"/>
-                                            <constraint firstItem="PRM-NV-lxd" firstAttribute="top" secondItem="VSy-xy-lWl" secondAttribute="bottom" constant="8" id="7Mu-R9-cYc"/>
                                             <constraint firstItem="kQm-SE-qZr" firstAttribute="leading" secondItem="VSy-xy-lWl" secondAttribute="leading" id="7tk-W0-1ct"/>
                                             <constraint firstAttribute="trailing" secondItem="VSy-xy-lWl" secondAttribute="trailing" id="8qq-ZH-Ahw"/>
+                                            <constraint firstItem="2IG-ce-jQI" firstAttribute="leading" secondItem="yqm-H2-zpZ" secondAttribute="leading" id="9Iu-to-bHv"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xju-Lw-kWz" secondAttribute="trailing" constant="16" id="9U1-1h-Hil"/>
+                                            <constraint firstItem="yqm-H2-zpZ" firstAttribute="leading" secondItem="Y2s-Nw-Wt1" secondAttribute="leading" id="AQ9-2F-Gcd"/>
                                             <constraint firstItem="x8h-Tz-Fjm" firstAttribute="centerY" secondItem="yqm-H2-zpZ" secondAttribute="centerY" id="Cot-8g-YwF"/>
-                                            <constraint firstItem="yqm-H2-zpZ" firstAttribute="leading" secondItem="xeu-tQ-Mov" secondAttribute="leading" id="Dcs-tt-aQ2"/>
                                             <constraint firstItem="Xju-Lw-kWz" firstAttribute="top" secondItem="ium-NC-dov" secondAttribute="bottom" id="HPL-dP-tvg"/>
                                             <constraint firstItem="kQm-SE-qZr" firstAttribute="bottom" secondItem="VSy-xy-lWl" secondAttribute="bottom" id="HmP-0g-us6"/>
                                             <constraint firstItem="yqm-H2-zpZ" firstAttribute="top" secondItem="Y2s-Nw-Wt1" secondAttribute="bottom" constant="16" id="IOS-ST-LwE"/>
                                             <constraint firstItem="X2k-8V-L2x" firstAttribute="firstBaseline" secondItem="2IG-ce-jQI" secondAttribute="firstBaseline" id="JUP-Gf-WX1"/>
                                             <constraint firstItem="kQm-SE-qZr" firstAttribute="top" secondItem="VSy-xy-lWl" secondAttribute="top" id="Jgx-aJ-euE"/>
+                                            <constraint firstItem="Y2s-Nw-Wt1" firstAttribute="leading" secondItem="kSz-hO-jgG" secondAttribute="leading" constant="16" id="KJW-S2-XeY"/>
                                             <constraint firstItem="UOf-nP-MAg" firstAttribute="leading" secondItem="Y2s-Nw-Wt1" secondAttribute="trailing" constant="8" id="LXW-vY-uG0"/>
-                                            <constraint firstAttribute="trailing" secondItem="xeu-tQ-Mov" secondAttribute="trailing" constant="16" id="Mmj-0f-u9C"/>
                                             <constraint firstItem="kQm-SE-qZr" firstAttribute="trailing" secondItem="VSy-xy-lWl" secondAttribute="trailing" id="OZx-Ny-G28"/>
-                                            <constraint firstItem="Y2s-Nw-Wt1" firstAttribute="leading" secondItem="xeu-tQ-Mov" secondAttribute="leading" id="SDV-PA-TSe"/>
-                                            <constraint firstItem="Gti-0L-qgR" firstAttribute="trailing" secondItem="xeu-tQ-Mov" secondAttribute="trailing" id="TlC-p2-o9a"/>
+                                            <constraint firstItem="Y2s-Nw-Wt1" firstAttribute="top" secondItem="VSy-xy-lWl" secondAttribute="bottom" constant="12" id="Ugg-GA-0LE"/>
+                                            <constraint firstItem="Gti-0L-qgR" firstAttribute="leading" secondItem="kSz-hO-jgG" secondAttribute="leading" constant="16" id="VQO-jx-GJh"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gti-0L-qgR" secondAttribute="trailing" constant="16" id="WX2-Nm-ThG"/>
                                             <constraint firstItem="VSy-xy-lWl" firstAttribute="top" secondItem="kSz-hO-jgG" secondAttribute="top" id="Whi-Cw-owS"/>
-                                            <constraint firstItem="xeu-tQ-Mov" firstAttribute="leading" secondItem="PRM-NV-lxd" secondAttribute="leading" id="aAu-81-lCW"/>
                                             <constraint firstAttribute="bottom" secondItem="Zk9-Mx-Oen" secondAttribute="bottom" constant="20" id="aBb-Gu-g1f"/>
                                             <constraint firstItem="2IG-ce-jQI" firstAttribute="top" secondItem="yqm-H2-zpZ" secondAttribute="bottom" constant="16" id="d98-iH-ee7"/>
                                             <constraint firstItem="ium-NC-dov" firstAttribute="leading" secondItem="kQm-SE-qZr" secondAttribute="leading" constant="16" id="daa-jG-oj6"/>
                                             <constraint firstItem="x8h-Tz-Fjm" firstAttribute="leading" secondItem="yqm-H2-zpZ" secondAttribute="trailing" constant="8" id="f9P-ob-5pv"/>
-                                            <constraint firstItem="Gti-0L-qgR" firstAttribute="leading" secondItem="xeu-tQ-Mov" secondAttribute="leading" id="fEY-k4-8xa"/>
-                                            <constraint firstItem="2IG-ce-jQI" firstAttribute="leading" secondItem="xeu-tQ-Mov" secondAttribute="leading" id="gIm-7z-n6A"/>
                                             <constraint firstItem="VSy-xy-lWl" firstAttribute="leading" secondItem="kSz-hO-jgG" secondAttribute="leading" id="hMn-m9-f9y"/>
                                             <constraint firstItem="UOf-nP-MAg" firstAttribute="firstBaseline" secondItem="Y2s-Nw-Wt1" secondAttribute="firstBaseline" id="jBd-dR-41e"/>
-                                            <constraint firstItem="UOf-nP-MAg" firstAttribute="trailing" secondItem="xeu-tQ-Mov" secondAttribute="trailing" id="nLj-PB-bej"/>
-                                            <constraint firstItem="PRM-NV-lxd" firstAttribute="leading" secondItem="kSz-hO-jgG" secondAttribute="leading" constant="16" id="nSl-ET-mvP"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ium-NC-dov" secondAttribute="trailing" constant="16" id="m9y-Qr-FPI"/>
                                             <constraint firstItem="Zk9-Mx-Oen" firstAttribute="top" secondItem="Gti-0L-qgR" secondAttribute="bottom" constant="16" id="o8n-gs-YeJ"/>
-                                            <constraint firstItem="xeu-tQ-Mov" firstAttribute="top" secondItem="PRM-NV-lxd" secondAttribute="bottom" constant="8" id="p2z-75-RlF"/>
-                                            <constraint firstItem="Y2s-Nw-Wt1" firstAttribute="top" secondItem="xeu-tQ-Mov" secondAttribute="bottom" constant="16" id="s5H-yt-kfT"/>
                                             <constraint firstItem="Xju-Lw-kWz" firstAttribute="bottom" secondItem="kQm-SE-qZr" secondAttribute="bottom" constant="-16" id="tGH-Eq-o7h"/>
                                             <constraint firstItem="Xju-Lw-kWz" firstAttribute="leading" secondItem="ium-NC-dov" secondAttribute="leading" id="ubp-ZC-mLk"/>
-                                            <constraint firstItem="X2k-8V-L2x" firstAttribute="trailing" secondItem="xeu-tQ-Mov" secondAttribute="trailing" id="x1N-hf-Cid"/>
                                             <constraint firstItem="Gti-0L-qgR" firstAttribute="top" secondItem="2IG-ce-jQI" secondAttribute="bottom" constant="20" id="yiA-vN-KNv"/>
                                         </constraints>
                                     </view>
@@ -193,7 +184,13 @@ stuff, coffee is good etc etc</string>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="970"/>
                     <connections>
+                        <outlet property="addressLabel" destination="X2k-8V-L2x" id="GgG-pz-nNM"/>
+                        <outlet property="dateLabel" destination="UOf-nP-MAg" id="Vx2-V0-WcE"/>
+                        <outlet property="descriptionLabel" destination="Xju-Lw-kWz" id="Ykr-r5-qic"/>
+                        <outlet property="eventImageView" destination="VSy-xy-lWl" id="5yD-Ex-Qok"/>
+                        <outlet property="flagImageView" destination="x8h-Tz-Fjm" id="3Qg-uv-9Tj"/>
                         <outlet property="mapView" destination="Gti-0L-qgR" id="JKe-9Z-bgE"/>
+                        <outlet property="titleLabel" destination="ium-NC-dov" id="2mx-rg-ALN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UmP-qA-ejn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -208,7 +205,7 @@ stuff, coffee is good etc etc</string>
             </objects>
             <point key="canvasLocation" x="914" y="835"/>
         </scene>
-        <!--Events-->
+        <!--Events View Controller-->
         <scene sceneID="ysO-dr-W38">
             <objects>
                 <viewController id="821-QG-YRC" customClass="EventsViewController" customModule="Parleo" customModuleProvider="target" sceneMemberID="viewController">
@@ -217,26 +214,21 @@ stuff, coffee is good etc etc</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lG5-YA-j6a">
-                                <rect key="frame" x="0.0" y="119" width="375" height="499"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventSegmentedControl" translatesAutoresizingMaskIntoConstraints="NO" id="Ydx-d1-HkW">
-                                <rect key="frame" x="0.0" y="64" width="375" height="55"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lG5-YA-j6a" firstAttribute="leading" secondItem="onl-7X-HgH" secondAttribute="leading" id="9a2-Xa-1hg"/>
-                            <constraint firstItem="Ydx-d1-HkW" firstAttribute="leading" secondItem="onl-7X-HgH" secondAttribute="leading" id="K2q-kQ-piQ"/>
-                            <constraint firstItem="onl-7X-HgH" firstAttribute="trailing" secondItem="Ydx-d1-HkW" secondAttribute="trailing" id="MmO-7H-Vfu"/>
-                            <constraint firstItem="Ydx-d1-HkW" firstAttribute="top" secondItem="onl-7X-HgH" secondAttribute="top" id="Xo8-09-vw3"/>
                             <constraint firstItem="onl-7X-HgH" firstAttribute="bottom" secondItem="lG5-YA-j6a" secondAttribute="bottom" id="YbH-BJ-4gN"/>
-                            <constraint firstItem="lG5-YA-j6a" firstAttribute="top" secondItem="Ydx-d1-HkW" secondAttribute="bottom" id="oBM-yg-ptN"/>
+                            <constraint firstItem="lG5-YA-j6a" firstAttribute="top" secondItem="onl-7X-HgH" secondAttribute="top" id="hJT-7u-BsZ"/>
                             <constraint firstItem="onl-7X-HgH" firstAttribute="trailing" secondItem="lG5-YA-j6a" secondAttribute="trailing" id="ySI-Nr-Lj9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="onl-7X-HgH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Events" id="QBj-DB-4ZD">
+                    <navigationItem key="navigationItem" id="QBj-DB-4ZD">
+                        <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="Back" id="9ZD-ZA-1xk"/>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="6YE-0C-1A7">
@@ -248,10 +240,21 @@ stuff, coffee is good etc etc</string>
                             <barButtonItem title="Item" image="filterIcon" id="Mrp-Cl-dmf">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
+                            <barButtonItem style="plain" id="MHP-X1-83w">
+                                <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="xSK-Ls-I1t">
+                                    <rect key="frame" x="113.5" y="7" width="155" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <segments>
+                                        <segment title="All Events"/>
+                                        <segment title="My Events"/>
+                                    </segments>
+                                </segmentedControl>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="addEventBarButton" destination="6YE-0C-1A7" id="4Sk-qR-U3C"/>
+                        <outlet property="eventsSegmentedControl" destination="xSK-Ls-I1t" id="irx-e3-37o"/>
                         <outlet property="eventsTableView" destination="lG5-YA-j6a" id="Bhw-1E-ro2"/>
                         <outlet property="filterBarButton" destination="Mrp-Cl-dmf" id="rs4-fN-uwh"/>
                         <segue destination="Chb-lx-yM9" kind="show" identifier="fromEventsToDetails" id="bk2-ah-MOA"/>
@@ -289,23 +292,17 @@ stuff, coffee is good etc etc</string>
             <objects>
                 <viewController id="wcv-mh-Nht" customClass="CreateEventViewController" customModule="Parleo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qj4-tn-cXM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="720"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INW-l5-p5i">
-                                <rect key="frame" x="0.0" y="64" width="375" height="607"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="887"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYe-jF-3F4">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="602"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="736.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="createEventAddImage" translatesAutoresizingMaskIntoConstraints="NO" id="wcx-IC-6S7">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="130.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="wcx-IC-6S7" secondAttribute="height" multiplier="359:125" id="dea-2B-LLS"/>
-                                                </constraints>
-                                            </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Event name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7OB-aw-6nt" customClass="RoundedTextField" customModule="Parleo" customModuleProvider="target">
-                                                <rect key="frame" x="18" y="154.5" width="339" height="50"/>
+                                                <rect key="frame" x="18" y="155" width="339" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="WHm-An-uC2"/>
@@ -315,7 +312,7 @@ stuff, coffee is good etc etc</string>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Event description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2tn-LA-peC">
-                                                <rect key="frame" x="18" y="228.5" width="339" height="107"/>
+                                                <rect key="frame" x="18" y="229" width="339" height="107"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="107" id="xk7-3R-uzT"/>
@@ -330,22 +327,16 @@ stuff, coffee is good etc etc</string>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="UDF-Bz-EW2">
-                                                <rect key="frame" x="18" y="373" width="339" height="209"/>
+                                                <rect key="frame" x="18" y="373.5" width="339" height="343"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbp-ZR-0Tx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="339" height="26"/>
-                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
-                                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                        <state key="normal" title="Add location on Map" image="locationIconBig">
-                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="showMockAlert" destination="wcv-mh-Nht" eventType="touchUpInside" id="yqz-tJ-NdQ"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBU-0I-Fyi">
-                                                        <rect key="frame" x="0.0" y="59" width="339" height="33"/>
+                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tGc-rH-9Kc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="339" height="226"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="tGc-rH-9Kc" secondAttribute="height" multiplier="3:2" id="Ew4-bE-Nkz"/>
+                                                        </constraints>
+                                                    </mapView>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBU-0I-Fyi">
+                                                        <rect key="frame" x="0.0" y="242.5" width="339" height="0.0"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <inset key="titleEdgeInsets" minX="17" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -357,7 +348,7 @@ stuff, coffee is good etc etc</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQO-3p-lmv">
-                                                        <rect key="frame" x="0.0" y="125" width="339" height="25"/>
+                                                        <rect key="frame" x="0.0" y="259" width="339" height="25"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <inset key="titleEdgeInsets" minX="17" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -366,34 +357,38 @@ stuff, coffee is good etc etc</string>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F87-MH-JTN">
-                                                        <rect key="frame" x="0.0" y="183" width="339" height="26"/>
+                                                        <rect key="frame" x="0.0" y="317" width="339" height="26"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <state key="normal" title="Add language" image="languageIcon">
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
-                                                        <connections>
-                                                            <action selector="showMockAlert" destination="wcv-mh-Nht" eventType="touchUpInside" id="Yo8-Yj-VQq"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qc-17-bn0">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="0qc-17-bn0" secondAttribute="height" multiplier="3:1" id="NWy-Si-o3V"/>
+                                                </constraints>
+                                                <state key="normal" image="createEventAddImage"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="UDF-Bz-EW2" firstAttribute="leading" secondItem="2tn-LA-peC" secondAttribute="leading" id="1N6-ww-5E3"/>
-                                            <constraint firstAttribute="trailing" secondItem="wcx-IC-6S7" secondAttribute="trailing" id="3U7-Cl-2J8"/>
-                                            <constraint firstItem="wcx-IC-6S7" firstAttribute="top" secondItem="tYe-jF-3F4" secondAttribute="top" id="3z2-RS-hw0"/>
                                             <constraint firstItem="2tn-LA-peC" firstAttribute="top" secondItem="7OB-aw-6nt" secondAttribute="bottom" constant="24" id="5yj-KQ-x4i"/>
                                             <constraint firstAttribute="trailing" secondItem="7OB-aw-6nt" secondAttribute="trailing" constant="18" id="9w4-Jb-nti"/>
                                             <constraint firstItem="UDF-Bz-EW2" firstAttribute="top" secondItem="2tn-LA-peC" secondAttribute="bottom" constant="37.5" id="Blw-Sd-sfC"/>
                                             <constraint firstItem="2tn-LA-peC" firstAttribute="trailing" secondItem="7OB-aw-6nt" secondAttribute="trailing" id="Gnv-rB-JLB"/>
                                             <constraint firstAttribute="bottom" secondItem="UDF-Bz-EW2" secondAttribute="bottom" constant="20" id="L9b-T2-hVm"/>
-                                            <constraint firstItem="7OB-aw-6nt" firstAttribute="top" secondItem="wcx-IC-6S7" secondAttribute="bottom" constant="24" id="UuG-Ft-smi"/>
+                                            <constraint firstItem="0qc-17-bn0" firstAttribute="leading" secondItem="tYe-jF-3F4" secondAttribute="leading" id="PUo-uw-t0D"/>
                                             <constraint firstItem="2tn-LA-peC" firstAttribute="leading" secondItem="7OB-aw-6nt" secondAttribute="leading" id="aRt-4X-VNr"/>
+                                            <constraint firstAttribute="trailing" secondItem="0qc-17-bn0" secondAttribute="trailing" id="aWz-Kp-evH"/>
+                                            <constraint firstItem="7OB-aw-6nt" firstAttribute="top" secondItem="0qc-17-bn0" secondAttribute="bottom" constant="30" id="ajX-RB-2d6"/>
                                             <constraint firstItem="UDF-Bz-EW2" firstAttribute="trailing" secondItem="2tn-LA-peC" secondAttribute="trailing" id="bi4-lp-LrV"/>
-                                            <constraint firstItem="wcx-IC-6S7" firstAttribute="leading" secondItem="tYe-jF-3F4" secondAttribute="leading" id="hkg-mM-e38"/>
+                                            <constraint firstItem="0qc-17-bn0" firstAttribute="top" secondItem="tYe-jF-3F4" secondAttribute="top" id="cHI-t3-5MY"/>
                                             <constraint firstItem="7OB-aw-6nt" firstAttribute="leading" secondItem="tYe-jF-3F4" secondAttribute="leading" constant="18" id="jBD-Mw-lnh"/>
                                         </constraints>
                                     </view>
@@ -419,14 +414,20 @@ stuff, coffee is good etc etc</string>
                     <navigationItem key="navigationItem" title="Events" id="CaH-qy-lHb">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="1b4-th-Jgc">
                             <connections>
-                                <action selector="close" destination="wcv-mh-Nht" id="Vg0-TY-0KR"/>
+                                <action selector="saveButtonClicked:" destination="wcv-mh-Nht" id="oXd-nb-a2Q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <size key="freeformSize" width="375" height="720"/>
+                    <size key="freeformSize" width="375" height="1000"/>
                     <connections>
+                        <outlet property="addLanguageButton" destination="F87-MH-JTN" id="Ssm-9D-SCm"/>
                         <outlet property="eventDescriptionTextView" destination="2tn-LA-peC" id="xfx-hR-0uV"/>
                         <outlet property="eventNameTextField" destination="7OB-aw-6nt" id="BLE-RO-nht"/>
+                        <outlet property="imageButton" destination="0qc-17-bn0" id="enD-4U-i6k"/>
+                        <outlet property="inviteFriendsButton" destination="GBU-0I-Fyi" id="aow-wj-qkV"/>
+                        <outlet property="mapView" destination="tGc-rH-9Kc" id="6TD-he-CWk"/>
+                        <outlet property="saveButton" destination="1b4-th-Jgc" id="sFr-TN-6CB"/>
+                        <outlet property="setDateButton" destination="aQO-3p-lmv" id="Mbe-fc-aOZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TcX-kN-Zfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -436,15 +437,12 @@ stuff, coffee is good etc etc</string>
     </scenes>
     <resources>
         <image name="KatesCafe" width="360" height="247"/>
-        <image name="UKFlag" width="30" height="30"/>
+        <image name="be" width="496" height="496"/>
         <image name="clockIcon" width="25" height="25"/>
         <image name="createEventAddImage" width="359" height="125"/>
         <image name="eventCardShadow" width="360" height="247"/>
-        <image name="eventMembers" width="324" height="44"/>
-        <image name="eventSegmentedControl" width="360" height="55"/>
         <image name="filterIcon" width="24" height="24"/>
         <image name="languageIcon" width="26" height="26"/>
-        <image name="locationIconBig" width="26" height="26"/>
         <image name="profileFriendsIcon" width="33" height="33"/>
         <image name="tabBarEventsIcon" width="25" height="23"/>
         <namedColor name="AppAccent">

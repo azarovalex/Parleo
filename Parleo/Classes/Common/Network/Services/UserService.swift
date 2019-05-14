@@ -36,6 +36,10 @@ struct UserService: NetworkService {
     func updateLocation(lat: Double, lon: Double) -> Single<Result<Void>> {
         return send(.updateLocation(lat: lat, lon: lon))
     }
+    
+    func fetchCurrentUserEvents(page: Int, pageSize: Int) -> Single<Result<PagedResponse<ParleoEvent>>> {
+        return fetchModel(.getCurrentUserEvents(page: page, pageSize: pageSize))
+    }
 
     func getFriends(page: Int, pageSize: Int) -> Single<Result<PagedResponse<User>>> {
         return fetchModel(.getFriends(page: page, pageSize: pageSize))
