@@ -28,11 +28,11 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventCardShadow" translatesAutoresizingMaskIntoConstraints="NO" id="Rmg-Yo-TCa">
                         <rect key="frame" x="0.0" y="0.0" width="399" height="250.5"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ko" translatesAutoresizingMaskIntoConstraints="NO" id="2Cm-lK-qVQ">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uk" translatesAutoresizingMaskIntoConstraints="NO" id="2Cm-lK-qVQ">
                         <rect key="frame" x="20" y="127.5" width="44" height="44"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="44" id="A9F-5Y-PAL"/>
-                            <constraint firstAttribute="height" constant="44" id="tjN-r3-eyd"/>
+                            <constraint firstAttribute="height" constant="44" id="BGb-KY-uvF"/>
+                            <constraint firstAttribute="width" constant="44" id="rNp-dK-z6X"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WBL-aL-rZo">
@@ -85,6 +85,6 @@
     </objects>
     <resources>
         <image name="eventCardShadow" width="360" height="247"/>
-        <image name="ko" width="512" height="512"/>
+        <image name="uk" width="512" height="512"/>
     </resources>
 </document>

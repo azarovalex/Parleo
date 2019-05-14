@@ -32,13 +32,15 @@ class LanguagesPickerCell: UICollectionViewCell {
 
     @IBOutlet private var stackView: UIStackView!
     @IBOutlet private var addMoreView: UIView!
+    @IBOutlet private var languagesLabel: UILabel!
 
-    private var updateLayoutAction: (Int) -> Void = { _ in }
+    private var updateClosure: ([Language]) -> Void = { _ in }
+    private var languages = [Language]()
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(addMore))
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectLanguages))
         addMoreView.addGestureRecognizer(tapRecognizer)
     }
 
@@ -47,16 +49,29 @@ class LanguagesPickerCell: UICollectionViewCell {
         stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
     }
 
-    func configure(with model: LanguagePickerModel, updateLayoutAction: @escaping (Int) -> Void) {
-        self.updateLayoutAction = updateLayoutAction
-        model.languages.forEach { _ in addMore() }
+    func configure(with model: LanguagePickerModel, updateClosure: @escaping ([Language]) -> Void) {
+        languages = model.languages.map { Language(code: $0, level: .beginner) }
+        self.updateClosure = updateClosure
+        setLabelText(for: languages)
     }
 
-    @objc private func addMore() {
-        let view = LanguageInPicker(removeAction: { [weak self] in self?.updateLayoutAction(-1) })
-        view.alpha = 0
-        updateLayoutAction(+1)
-        stackView.insertArrangedSubview(view, at: self.stackView.subviews.count - 1)
-        UIView.animate(withDuration: 0.4, animations: { view.alpha = 1 })
+    @objc private func selectLanguages() {
+        let languagesPickerViewController = R.storyboard.languagePicker.instantiateInitialViewController()!
+        languagesPickerViewController.setInitial(languages)
+        languagesPickerViewController.delegate = self
+        UIApplication.shared.keyWindow?.rootViewController?.present(languagesPickerViewController, animated: true)
+    }
+
+    private func setLabelText(for languages: [Language]) {
+        languagesLabel.text = languages.count > 0 ? "Selected: " + languages.map { $0.name }.joined(separator: ", ") : "Choose your languages"
+    }
+}
+
+extension LanguagesPickerCell: LanguagePickerDelegate {
+
+    func updateSelectedLanguages(with languages: [Language]) {
+        self.languages = languages
+        updateClosure(languages)
+        setLabelText(for: languages)
     }
 }

@@ -9,13 +9,16 @@
 import Moya
 
 enum UserAPI {
-    case getUsers(page: Int, pageSize: Int)
+    case getUsers(page: Int, pageSize: Int, filter: UsersFilter)
     case getUser(id: String)
     case getMyProfile
     case updateUser(user: UserUpdate)
     case uploadImage(image: UIImage)
     case updateLocation(lat: Double, lon: Double)
     case getCurrentUserEvents(page: Int, pageSize: Int)
+    case getFriends(page: Int, pageSize: Int)
+    case removeFriend(userId: String)
+    case addFriend(userId: String)
 }
 
 extension UserAPI: AuthorizedTargetType {
@@ -38,6 +41,12 @@ extension UserAPI: AuthorizedTargetType {
             return "/api/Users/current/image"
         case .updateLocation:
             return "/api/Users/current/location"
+        case .getFriends:
+            return "/api/Users/current/friends"
+        case .removeFriend(let userId):
+            return "/api/Users/current/friends/\(userId)"
+        case .addFriend(let userId):
+            return "/api/Users/current/friends/\(userId)"
         }
     }
 
@@ -47,10 +56,12 @@ extension UserAPI: AuthorizedTargetType {
 
     var method: Method {
         switch self {
-        case .getUsers, .getUser, .getMyProfile, .getCurrentUserEvents:
+        case .getUsers, .getUser, .getMyProfile, .getCurrentUserEvents, .getFriends:
             return .get
-        case .updateUser, .uploadImage, .updateLocation:
+        case .updateUser, .uploadImage, .updateLocation, .addFriend:
             return .put
+        case .removeFriend:
+            return .delete
         }
     }
 
@@ -60,10 +71,16 @@ extension UserAPI: AuthorizedTargetType {
 
     var task: Task {
         switch self {
-        case .getUser, .getMyProfile:
+        case .getUser, .getMyProfile, .removeFriend, .addFriend:
             return .requestPlain
-        case .getUsers(let page, let pageSize):
-            return .requestParameters(parameters: ["PageNumber": page, "PageSize": pageSize], encoding: URLEncoding.queryString)
+        case .getUsers(let page, let pageSize, let filter):
+            var parameters: [String: Any] = ["PageNumber": page, "PageSize": pageSize,
+                                             "MinAge": filter.minAge, "MaxAge": filter.maxAge,
+                                             "Languages": filter.languages.map { $0.code! }]
+            if (filter.isMale && !filter.isFemale) || (!filter.isMale && filter.isFemale) {
+                parameters["Gender"] = filter.isMale
+            }
+            return .requestParameters(parameters: parameters, encoding: URLEncoding(destination: .queryString, arrayEncoding: .noBrackets))
         case .updateUser(let user):
             return .requestParameters(parameters: user.toJSON(), encoding: JSONEncoding.default)
         case .uploadImage(let image):
@@ -72,6 +89,8 @@ extension UserAPI: AuthorizedTargetType {
         case .updateLocation(let lat, let lon):
             return .requestParameters(parameters: ["latitude": lat, "longitude": lon], encoding: JSONEncoding.default)
         case .getCurrentUserEvents(let page, let pageSize):
+            return .requestParameters(parameters: ["PageNumber": page, "PageSize": pageSize], encoding: URLEncoding.queryString)
+        case .getFriends(let page, let pageSize):
             return .requestParameters(parameters: ["PageNumber": page, "PageSize": pageSize], encoding: URLEncoding.queryString)
         }
     }

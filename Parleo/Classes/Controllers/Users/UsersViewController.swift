@@ -10,7 +10,19 @@ import RxSwift
 import RxCocoa
 import SegueManager
 
+struct UsersFilter {
+    var isMale = true
+    var isFemale = true
+    var minAge = 16
+    var maxAge = 65
+    var languages = [Language]()
+}
+
 class UsersViewController: SegueManagerViewController {
+
+    enum ScreenConfiguration {
+        case allUsers, friends
+    }
 
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var filterButton: UIBarButtonItem!
@@ -19,6 +31,10 @@ class UsersViewController: SegueManagerViewController {
     private var refreshControl = UIRefreshControl()
     private let viewModel = UsersViewModel()
     private let bag = DisposeBag()
+
+    private var filterRelay = BehaviorRelay<UsersFilter>(value: UsersFilter())
+
+    var screenConfiguration = ScreenConfiguration.allUsers
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +51,14 @@ private extension UsersViewController {
         tableView.refreshControl = refreshControl
         bindViewModel()
         bindFilterButton()
+        navigationItem.title = (screenConfiguration == .allUsers) ? "Users" : "Friends"
     }
 
     func bindViewModel() {
-        let input = UsersViewModel.Input(fetchNextPage: getNextPageSignal())
+        let input = UsersViewModel.Input(fetchNextPage: getNextPageSignal(),
+                                         screenConfiguration: screenConfiguration,
+                                         filter: filterRelay,
+                                         filterUpdated: filterRelay.asSignal { _ in .never() }.map { _ in })
         let output = viewModel.transform(input: input)
 
         refreshControl.rx.action = output.refreshAction
@@ -56,13 +76,20 @@ private extension UsersViewController {
             .drive(commentsSpinner).disposed(by: bag)
         tableView.rx.modelSelected(User.self)
             .bind(to: rx.navigate(with: R.segue.usersViewController.fromUserListToUserInfo,
-                                  segueHandler: { segue, user in segue.destination.user = user }))
+                                  segueHandler: { segue, user in
+                                    var user = user
+                                    if self.screenConfiguration == .friends { user.isFriend = true }
+                                    segue.destination.user = user
+            }))
             .disposed(by: bag)
     }
 
     func bindFilterButton() {
+        guard screenConfiguration == .allUsers else { filterButton.isEnabled = false; filterButton.tintColor = .clear; return }
         filterButton.rx.tap.bind(to: rx.navigate(with: R.segue.usersViewController.fromUsersListToFilter, segueHandler: { segue, _ in
             segue.destination.screenConfiguration = .filterUsers
+            segue.destination.filter = self.filterRelay.value
+            segue.destination.delegate = self
         })).disposed(by: bag)
     }
 }
@@ -84,5 +111,12 @@ private extension UsersViewController {
         spinner.startAnimating()
         spinner.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 50)
         return Binder(tableView, binding: { $0.tableFooterView = $1 ? spinner : nil })
+    }
+}
+
+extension UsersViewController: FilterViewControllerDelegate {
+
+    func updateFilter(filter: UsersFilter) {
+        filterRelay.accept(filter)
     }
 }

@@ -40,10 +40,19 @@ class SliderCell: UICollectionViewCell {
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var rangeSlider: RangeSlider!
 
-    func configure(with model: SliderCellModel) {
+    var updateClosure: ((_ minAge: Int, _ maxAge: Int) -> Void)!
+
+    func configure(with model: SliderCellModel, updateClosure: @escaping (_ minAge: Int, _ maxAge: Int) -> Void, filter: UsersFilter) {
+        self.updateClosure = updateClosure
         titleLabel.text = model.title
         rangeSlider.minValue = CGFloat(model.minValue)
         rangeSlider.maxValue = CGFloat(model.maxValue)
+        rangeSlider.selectedMinValue = CGFloat(filter.minAge)
+        rangeSlider.selectedMaxValue = CGFloat(filter.maxAge)
         rangeSlider.step = CGFloat(model.step)
+    }
+    
+    @IBAction func sliderChanged(_ sender: Any) {
+        updateClosure(Int(rangeSlider.selectedMinValue), Int(rangeSlider.selectedMaxValue))
     }
 }

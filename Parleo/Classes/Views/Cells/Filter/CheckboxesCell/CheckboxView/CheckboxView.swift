@@ -14,14 +14,16 @@ class CheckboxView: UIView, NibLoadable {
     @IBOutlet private var checkboxImageView: UIImageView!
 
     private var isChecked = false
+    private var updateClosure: (Bool) -> Void = { _ in }
 
-    init(title: String, isChecked: Bool = false) {
+    init(title: String, isChecked: Bool, updateClosure: @escaping (Bool) -> Void) {
         super.init(frame: .zero)
 
         loadNibContent()
         titleLabel.text = title
         self.isChecked = isChecked
         updateImageState()
+        self.updateClosure = updateClosure
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -30,6 +32,7 @@ class CheckboxView: UIView, NibLoadable {
 
     @IBAction func toggle(_ sender: Any) {
         isChecked.toggle()
+        updateClosure(isChecked)
         UIView.transition(with: checkboxImageView, duration: 0.2, options: .transitionCrossDissolve, animations: updateImageState, completion: nil)
     }
 

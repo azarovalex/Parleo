@@ -11,25 +11,23 @@ import IGListKit
 class LanguagePickerSectionController: ListSectionController {
 
     private var model: LanguagePickerModel!
-    private var numberOfLanguages: Int!
+
+    var updateClosure: (([Language]) -> Void)!
+    var filter: UsersFilter! {
+        didSet {
+            model = LanguagePickerModel(languages: filter!.languages.map { $0.code })
+        }
+    }
 
     override func sizeForItem(at index: Int) -> CGSize {
-        let height = numberOfLanguages * 50 + 140
-        return CGSize(width: collectionContext!.containerSize.width, height: CGFloat(height))
+        return CGSize(width: collectionContext!.containerSize.width, height: 140.0)
     }
 
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         let cell = collectionContext!.dequeueReusableCell(withNibName: R.nib.languagesPickerCell.name, bundle: R.nib.languagesPickerCell.bundle, for: self, at: index) as! LanguagesPickerCell
-        cell.configure(with: model, updateLayoutAction: { [unowned self] change in
-            self.numberOfLanguages += change
-            UIView.performWithoutAnimation { self.collectionContext!.invalidateLayout(for: self) }
-        })
+        cell.configure(with: model, updateClosure: updateClosure)
         return cell
     }
 
-    override func didUpdate(to object: Any) {
-        self.model = (object as! LanguagePickerModel)
-        numberOfLanguages = model.languages.count
-    }
+    override func didUpdate(to object: Any) {}
 }
-

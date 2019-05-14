@@ -11,14 +11,43 @@ import RxCocoa
 
 class SignUpInfoViewController: UIViewController {
 
+    enum ScreenType {
+        case registration, editProfile(user: User)
+    }
+
     @IBOutlet private var nameTextField: RoundedTextField!
     @IBOutlet private var birthDateButton: UIButton!
     @IBOutlet private var genderButton: UIButton!
     @IBOutlet private var chooseLanguagesButton: UIButton!
+    @IBOutlet private var welcomeTextLabel: UILabel!
 
     private let viewModel = SignUpInfoViewModel()
     private let bag = DisposeBag()
     private var user = UserUpdate()
+
+    var screenType = ScreenType.registration
+    var imageURL: URL?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        switch screenType {
+        case .registration: return
+        case .editProfile(let user):
+            welcomeTextLabel.text = "Edit your profile"
+            self.user.name = user.name ?? ""
+            nameTextField.text = user.name
+            self.user.birthdate = user.birthdate!
+            birthDateButton.setTitle("Your birth date: " +
+                user.birthdate!.asString(format: "MMM d, yyyy"), for: .normal)
+            self.user.isMale = user.isMale
+            genderButton.setTitle("Your gender: " + (user.isMale! ? "Male" : "Female"), for: .normal)
+            self.user.languages = user.languages
+            let buttonTitle = user.languages.count == 0 ? "Choose languages" :
+                ("Your languages: " + user.languages.map { $0.name }.joined(separator: ", "))
+            chooseLanguagesButton.setTitle(buttonTitle, for: .normal)
+        }
+    }
 
     @IBAction func birthDateTapped(_ sender: Any) {
         DatePickerAlert(font: R.font.montserratRegular(size: 14)!)
@@ -67,8 +96,8 @@ class SignUpInfoViewController: UIViewController {
             return
         }
         let ageComponents = Calendar.current.dateComponents([.year], from: user.birthdate!, to: Date())
-        guard ageComponents.year! >= 16 else {
-            show(error: SimpleError(message: "You must be from 16 to 100 years old"))
+        guard ageComponents.year! >= 16, ageComponents.year! < 80 else {
+            show(error: SimpleError(message: "You must be from 16 to 80 years old"))
             return
         }
         guard user.languages.count > 0 else {
@@ -78,8 +107,10 @@ class SignUpInfoViewController: UIViewController {
         let output = viewModel.updateUser(user: user)
         output.error.emit(to: rx.error).disposed(by: bag)
         output.isLoading.drive(rx.isLoading).disposed(by: bag)
-        output.navigate.emit(onNext: {
-            self.performSegue(withIdentifier: R.segue.signUpInfoViewController.fromResistrationInfoToAvatar, sender: nil)
+        output.navigate.emit(onNext: { [unowned self] in
+            let editAvatarViewController = R.storyboard.createAccount.avatarViewController()!
+            editAvatarViewController.initialImageURL = self.imageURL
+            self.navigationController?.pushViewController(editAvatarViewController, animated: true)
         }).disposed(by: bag)
     }
 }

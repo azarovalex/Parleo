@@ -32,7 +32,7 @@ extension User: Mappable {
         id <- map["id"]
         name <- map["name"]
         about <- map["about"]
-        birthdate <- map["birthdate"]
+        birthdate <- (map["birthdate"], CustomDateFormatTransform(formatString: "yyyy-MM-dd'T'HH:mm:ss"))
         isMale <- map["gender"]
         distanceFromCurrentUser <- map["distanceFromCurrentUser"]
         email <- map["email"]

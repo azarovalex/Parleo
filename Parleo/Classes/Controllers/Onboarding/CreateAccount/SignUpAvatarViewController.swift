@@ -18,6 +18,8 @@ class SignUpAvatarViewController: UIViewController {
     private let viewModel = SignUpAvatarViewModel()
     private let bag = DisposeBag()
 
+    var initialImageURL: URL?
+
     override func viewDidLoad() {
         super.viewDidLoad() 
 
@@ -33,9 +35,7 @@ private extension SignUpAvatarViewController {
             .flatMap { [unowned self] in
                 self.rx.pickImage(title: "Add avatar Image", allowsEditing: true) }
             .do(onNext: { [unowned self] image in
-                self.pickedImageRelay.accept(image)
-                self.nextButton.isEnabled = true
-                self.nextButton.alpha = 1 })
+                self.pickedImageRelay.accept(image) })
             .bind(to: addImageButton.rx.image())
             .disposed(by: bag)
 
@@ -45,10 +45,13 @@ private extension SignUpAvatarViewController {
         )
         nextButton.rx.action = output.registerAction
         output.navigate
-            .emit(onNext: { [unowned self] _ in
-                self.navigationController?.popToRootViewController(animated: true) })
+            .emit(onNext: { _ in
+                let tabViewController = R.storyboard.main.instantiateInitialViewController()!
+                UIApplication.shared.keyWindow?.rootViewController = tabViewController
+            })
             .disposed(by: bag)
         output.errors.emit(to: rx.error).disposed(by: bag)
         output.isLoading.drive(rx.isLoading(onView: view)).disposed(by: bag)
+        addImageButton.kf.setImage(with: initialImageURL, for: .normal, placeholder: R.image.addImage()!)
     }
 }

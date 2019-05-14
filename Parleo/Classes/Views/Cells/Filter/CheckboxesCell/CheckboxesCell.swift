@@ -42,10 +42,20 @@ class CheckboxesCell: UICollectionViewCell {
         itemsStackView.subviews.forEach { $0.removeFromSuperview() }
     }
 
-    func configure(with model: CheckboxCellModel) {
+    func configure(with model: CheckboxCellModel, updateClosure: @escaping (_ isMale: Bool, _ isFemale: Bool) -> Void, filter: UsersFilter) {
+        var filterCopy = filter
         titleLabel.text = model.title
         for item in model.items {
-            itemsStackView.addArrangedSubview(CheckboxView(title: item))
+            let isChecked = (item == "Female" && filter.isFemale) || (item == "Male" && filter.isMale)
+            itemsStackView.addArrangedSubview(CheckboxView(title: item, isChecked: isChecked, updateClosure: { isChecked in
+                if item == "Male" {
+                    filterCopy.isMale = isChecked
+                    updateClosure(isChecked, filterCopy.isFemale)
+                } else {
+                    filterCopy.isFemale = isChecked
+                    updateClosure(filterCopy.isMale, isChecked)
+                }
+            }))
         }
     }
 }
