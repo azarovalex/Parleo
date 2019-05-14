@@ -13,6 +13,7 @@
 		177A7CDC224FCA0000FB4A2D /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A7CDA224FCA0000FB4A2D /* EventTableViewCell.swift */; };
 		177A7CDD224FCA0000FB4A2D /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177A7CDB224FCA0000FB4A2D /* EventTableViewCell.xib */; };
 		177FB6332289BBDF004CF825 /* CreateEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177FB6322289BBDF004CF825 /* CreateEventViewModel.swift */; };
+		177FB635228B3138004CF825 /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177FB634228B3138004CF825 /* EventDetailsViewModel.swift */; };
 		17DFB169223FE2A900495918 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DFB168223FE2A900495918 /* EventsViewController.swift */; };
 		17DFB16B223FE3A800495918 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DFB16A223FE3A800495918 /* EventsViewModel.swift */; };
 		17DFB16F223FE59000495918 /* EventTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DFB16E223FE59000495918 /* EventTableCellViewModel.swift */; };
@@ -145,6 +146,7 @@
 		177A7CDA224FCA0000FB4A2D /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		177A7CDB224FCA0000FB4A2D /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		177FB6322289BBDF004CF825 /* CreateEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewModel.swift; sourceTree = "<group>"; };
+		177FB634228B3138004CF825 /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
 		17DFB168223FE2A900495918 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		17DFB16A223FE3A800495918 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		17DFB16E223FE59000495918 /* EventTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableCellViewModel.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			children = (
 				17DFB16A223FE3A800495918 /* EventsViewModel.swift */,
 				177FB6322289BBDF004CF825 /* CreateEventViewModel.swift */,
+				177FB634228B3138004CF825 /* EventDetailsViewModel.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -1112,6 +1115,7 @@
 				EC3C68C12288BDC00038B4CA /* UserUpdate.swift in Sources */,
 				EC93F3D8222C83BF00C4BB89 /* UserAPI.swift in Sources */,
 				171F38D4226CA25F00DECF7A /* Location.swift in Sources */,
+				177FB635228B3138004CF825 /* EventDetailsViewModel.swift in Sources */,
 				EC93F3D8222C83BF00C4BB89 /* UserAPI.swift in Sources */,
 				EC834D6E2277A5F900BADD2E /* SignUpCredentialsViewModel.swift in Sources */,
 				ECB5964E2252C564002EDDFD /* ImagePickerController+Rx.swift in Sources */,

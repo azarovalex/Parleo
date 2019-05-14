@@ -50,16 +50,18 @@ class EventsViewController: SegueManagerViewController {
             return cell
         }.disposed(by: bag)
 
-        eventsTableView.rx.modelSelected(EventTableCellViewModel.self)
-            .bind(to: rx.navigate(with: R.segue.eventsViewController.fromEventsToDetails))
-            .disposed(by: bag)
-
         filterBarButton.rx.tap
             .bind(to: rx.navigate(with: R.segue.eventsViewController.fromEventsToFilter,
                                   segueHandler: { segue, _ in segue.destination.screenConfiguration = .filterEvents }))
             .disposed(by: bag)
         
         refreshControl.rx.action = output.refreshAction
+        
+        output.viewEvent
+            .emit(to: rx.navigate(with: R.segue.eventsViewController.fromEventsToDetails, segueHandler: { segue, parleoEvent in
+                segue.destination.viewModel = EventDetailsViewModel(parleoEvent: parleoEvent)
+            }))
+            .disposed(by: bag)
     }
 }
 

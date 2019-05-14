@@ -20,7 +20,7 @@ struct ParleoEvent {
     var startTime = Date()
     var endTime = Date()
     var creatorId: String = ""
-    var languageId: String = ""
+    var language = Language()
 }
 
 extension ParleoEvent: Mappable {
@@ -38,6 +38,9 @@ extension ParleoEvent: Mappable {
         longitude <- map["longitude"]
         startTime <- map["startTime"]
         endTime <- map["endDate"]
+        var languageCode = ""
+        languageCode <- map["language"]
+        language.code = languageCode
         
         var imageName: String = ""
         imageName <- map["image"]

@@ -12,6 +12,7 @@ enum ParleoEventsAPI {
     case getParleoEvents(minPartic: Int?, maxPartic: Int?, maxDistance: Int?, languages: [String]?, minDate: Date?, maxDate: Date?, page: Int, pageSize: Int, timeStamp: Date?)
     case getParleoEvent(id: String)
     case postParleoEvent(name: String, description: String, maxParticipants: Int, latitude: Double, longitude: Double, isFinished: Bool, startTime: Date, endDate: Date, languageCode: String)
+    case putParleoEventPhoto(eventId: String, image: UIImage)
 }
 
 extension ParleoEventsAPI: AuthorizedTargetType {
@@ -27,6 +28,7 @@ extension ParleoEventsAPI: AuthorizedTargetType {
         let basePath = "/api/Events"
         switch self {
         case let .getParleoEvent(id: id): return "\(basePath)/\(id)"
+        case .putParleoEventPhoto(let eventId, _): return "\(basePath)/\(eventId)/image"
         case .getParleoEvents, .postParleoEvent: return basePath
         }
     }
@@ -35,6 +37,7 @@ extension ParleoEventsAPI: AuthorizedTargetType {
         switch self {
         case .getParleoEvent, .getParleoEvents: return .get
         case .postParleoEvent: return .post
+        case .putParleoEventPhoto: return .put
         }
     }
     
@@ -96,14 +99,42 @@ extension ParleoEventsAPI: AuthorizedTargetType {
                                                    "latitude": latitude,
                                                    "longitude": longitude,
                                                    "isFinished": isFinished,
-                                                   "startTime": startTime,
-                                                   "endDate": endDate,
+                                                   "startTime": startTime.iso8601,
+                                                   "endDate": endDate.iso8601,
                                                    "languageCode": languageCode],
-                                      encoding: URLEncoding.queryString)
+                                      encoding: JSONEncoding.default)
+            
+        case .putParleoEventPhoto(_, let image):
+            let imageData = MultipartFormData(provider: .data(image.jpegData(compressionQuality: 0)!), name: "image", fileName: "\(UUID().uuidString).jpg", mimeType: "image/jpeg")
+            return .uploadMultipart([imageData])
         }
     }
     
     var headers: [String : String]? {
         return [:]
+    }
+}
+
+extension ISO8601DateFormatter {
+    convenience init(_ formatOptions: Options, timeZone: TimeZone = TimeZone(secondsFromGMT: 0)!) {
+        self.init()
+        self.formatOptions = formatOptions
+        self.timeZone = timeZone
+    }
+}
+
+extension Formatter {
+    static let iso8601 = ISO8601DateFormatter([.withInternetDateTime, .withFractionalSeconds])
+}
+
+extension Date {
+    var iso8601: String {
+        return Formatter.iso8601.string(from: self)
+    }
+}
+
+extension String {
+    var iso8601: Date? {
+        return Formatter.iso8601.date(from: self)
     }
 }

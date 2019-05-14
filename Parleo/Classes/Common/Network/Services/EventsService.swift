@@ -23,7 +23,7 @@ struct EventsService: NetworkService {
                            longitude: Double,
                            startTime: Date,
                            endDate: Date,
-                           languageCode: String) -> Single<Result<PagedResponse<ParleoEvent>>>  {
+                           languageCode: String) -> Single<Result<ParleoEvent>>  {
         return fetchModel(.postParleoEvent(name: name,
                                            description: description,
                                            maxParticipants: maxParticipants,
@@ -33,5 +33,9 @@ struct EventsService: NetworkService {
                                            startTime: startTime,
                                            endDate: endDate,
                                            languageCode: languageCode))
+    }
+    
+    func uploadParleoEventImage(eventId: String, image: UIImage) -> Single<Result<Void>> {
+        return send(.putParleoEventPhoto(eventId: eventId, image: image))
     }
 }
