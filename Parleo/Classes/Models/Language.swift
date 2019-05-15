@@ -63,4 +63,8 @@ struct LanguageId: Mappable {
     mutating func mapping(map: Map) {
         id <- map["id"]
     }
+
+    var flagImage: UIImage {
+        return UIImage(named: id) ?? R.image.flagTemplate()!
+    }
 }
