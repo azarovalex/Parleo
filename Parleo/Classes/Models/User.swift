@@ -19,7 +19,7 @@ struct User {
     var email: String?
     var isFriend: Bool?
     var languages = [Language]()
-    var hobbies = [Int]()
+    var hobbies = [Hobbie]()
 }
 
 extension User: Mappable {
@@ -39,5 +39,6 @@ extension User: Mappable {
         accountImage <- (map["accountImage"], URLTransform())
         isFriend <- map["isFriend"]
         languages <- map["languages"]
+        hobbies <- map["hobbies"]
     }
 }

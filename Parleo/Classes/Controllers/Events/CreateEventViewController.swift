@@ -125,7 +125,7 @@ extension CreateEventViewController: CLLocationManagerDelegate, MKMapViewDelegat
             annotationView = dequeuedAnotationView
         } else {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "annotation")
-            annotationView.image = R.image.locationIcon()
+            annotationView.image = R.image.locationIconBig()!
         }
         return annotationView
     }

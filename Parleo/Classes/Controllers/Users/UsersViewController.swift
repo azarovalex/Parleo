@@ -79,7 +79,7 @@ private extension UsersViewController {
                                   segueHandler: { segue, user in
                                     var user = user
                                     if self.screenConfiguration == .friends { user.isFriend = true }
-                                    segue.destination.user = user
+                                    segue.destination.userID = user.id
             }))
             .disposed(by: bag)
     }

@@ -106,6 +106,13 @@ extension EventDetailsViewController: UICollectionViewDelegate, UICollectionView
         
         return cell
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let user = viewModel.members.value[indexPath.row]
+        let userViewController = R.storyboard.users.userViewController()!
+        userViewController.userID = user.id
+        navigationController?.pushViewController(userViewController, animated: true)
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 44, height: 44)

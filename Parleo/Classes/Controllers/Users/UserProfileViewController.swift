@@ -19,8 +19,9 @@ class UserProfileViewController: UIViewController {
 
     private let viewModel = UserProfileViewModel()
     private let bag = DisposeBag()
+    private let userService = UserService()
 
-    var user: User!
+    var userID: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,33 +34,36 @@ class UserProfileViewController: UIViewController {
 private extension UserProfileViewController {
 
     func setup() {
-        bindViewModel()
-        userImageView.kf.setImage(with: user.accountImage, placeholder: R.image.avatarTemplate()!)
-        usernameLabel.text = user.name
-        aboutLabel.text = user.about
-        title = (user.name != nil ? (user.name! + "'s ") : "") + "Profile"
-        let firstFiveLanguages = user.languages.prefix(5)
-        for language in firstFiveLanguages {
-            let flagImageView = UIImageView(image: language.flagImage)
-            flagImageView.cornerRadius = 10
-            NSLayoutConstraint.activate([
-                NSLayoutConstraint(item: flagImageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 19),
-                NSLayoutConstraint(item: flagImageView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 19)
-            ])
-            languagesStackView.addArrangedSubview(flagImageView)
-        }
-    }
+        unwrapResult(userService.getUser(with: userID))
+            .bind { user in
+                self.userImageView.kf.setImage(with: user.accountImage, placeholder: R.image.avatarTemplate()!)
+                self.usernameLabel.text = user.name
+                self.aboutLabel.text = user.about ?? "" + "\nHobbies: " + user.hobbies.map { $0.name }.joined(separator: ", ")
+                self.title = (user.name != nil ? (user.name! + "'s ") : "") + "Profile"
+                let firstFiveLanguages = user.languages.prefix(5)
+                for language in firstFiveLanguages {
+                    let flagImageView = UIImageView(image: language.flagImage)
+                    flagImageView.cornerRadius = 10
+                    NSLayoutConstraint.activate([
+                        NSLayoutConstraint(item: flagImageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 19),
+                        NSLayoutConstraint(item: flagImageView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 19)
+                        ])
+                    self.languagesStackView.addArrangedSubview(flagImageView)
+                }
+                DispatchQueue.main.async {
+                    self.aboutLabel.text = (user.about ?? "") + "\nHobbies: " + user.hobbies.map { $0.name }.joined(separator: ", ")
+                }
 
-    func bindViewModel() {
-        let input = UserProfileViewModel.Input(
-            addFriendButtonTap: addFriendButton.rx.tap.asSignal(),
-            initialIsFriendState: user.isFriend ?? false,
-            userId: user.id
-        )
-        let output = viewModel.transform(input: input)
+                let input = UserProfileViewModel.Input(
+                    addFriendButtonTap: self.addFriendButton.rx.tap.asSignal(),
+                    initialIsFriendState: user.isFriend ?? false,
+                    userId: user.id
+                )
+                let output = self.viewModel.transform(input: input)
 
-        output.error.emit(to: rx.error).disposed(by: bag)
-        output.isLoading.drive(rx.isLoading).disposed(by: bag)
-        output.friendButtonTitle.drive(addFriendButton.rx.title()).disposed(by: bag)
+                output.error.emit(to: self.rx.error).disposed(by: self.bag)
+                output.isLoading.drive(self.rx.isLoading).disposed(by: self.bag)
+                output.friendButtonTitle.drive(self.addFriendButton.rx.title()).disposed(by: self.bag)
+        }.disposed(by: bag)
     }
 }
