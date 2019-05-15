@@ -14,6 +14,8 @@
 		177A7CDD224FCA0000FB4A2D /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177A7CDB224FCA0000FB4A2D /* EventTableViewCell.xib */; };
 		177FB6332289BBDF004CF825 /* CreateEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177FB6322289BBDF004CF825 /* CreateEventViewModel.swift */; };
 		177FB635228B3138004CF825 /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177FB634228B3138004CF825 /* EventDetailsViewModel.swift */; };
+		177FB638228BF85D004CF825 /* ParticipantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177FB636228BF85D004CF825 /* ParticipantCollectionViewCell.swift */; };
+		177FB639228BF85D004CF825 /* ParticipantCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177FB637228BF85D004CF825 /* ParticipantCollectionViewCell.xib */; };
 		17DFB169223FE2A900495918 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DFB168223FE2A900495918 /* EventsViewController.swift */; };
 		17DFB16B223FE3A800495918 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DFB16A223FE3A800495918 /* EventsViewModel.swift */; };
 		17DFB16F223FE59000495918 /* EventTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DFB16E223FE59000495918 /* EventTableCellViewModel.swift */; };
@@ -149,6 +151,8 @@
 		177A7CDB224FCA0000FB4A2D /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		177FB6322289BBDF004CF825 /* CreateEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewModel.swift; sourceTree = "<group>"; };
 		177FB634228B3138004CF825 /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
+		177FB636228BF85D004CF825 /* ParticipantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantCollectionViewCell.swift; sourceTree = "<group>"; };
+		177FB637228BF85D004CF825 /* ParticipantCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticipantCollectionViewCell.xib; sourceTree = "<group>"; };
 		17DFB168223FE2A900495918 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		17DFB16A223FE3A800495918 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		17DFB16E223FE59000495918 /* EventTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableCellViewModel.swift; sourceTree = "<group>"; };
@@ -301,6 +305,15 @@
 				177FB634228B3138004CF825 /* EventDetailsViewModel.swift */,
 			);
 			path = Events;
+			sourceTree = "<group>";
+		};
+		177FB63A228BFA3D004CF825 /* Participant */ = {
+			isa = PBXGroup;
+			children = (
+				177FB636228BF85D004CF825 /* ParticipantCollectionViewCell.swift */,
+				177FB637228BF85D004CF825 /* ParticipantCollectionViewCell.xib */,
+			);
+			path = Participant;
 			sourceTree = "<group>";
 		};
 		4DA7D8199F90915306C24272 /* Frameworks */ = {
@@ -720,6 +733,7 @@
 		ECD2C1D0223F017500C421A7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				177FB63A228BFA3D004CF825 /* Participant */,
 				EC4A84EE2283237000D7BE8B /* LanguagePicker */,
 				ECDEBFED22537179009CFE93 /* Events */,
 				ECB5961A22514A3C002EDDFD /* Notifications */,
@@ -930,6 +944,7 @@
 				EC863CB82220811800A49824 /* Main.storyboard in Resources */,
 				ECC961522246BD9700E4D4C1 /* Colors.xcassets in Resources */,
 				ECE1D8A42221A950009DE2A3 /* Onboarding.storyboard in Resources */,
+				177FB639228BF85D004CF825 /* ParticipantCollectionViewCell.xib in Resources */,
 				ECF190C222274311002D24EF /* CreateAccount.storyboard in Resources */,
 				EC4A84F4228323C500D7BE8B /* LanguageInPickerCell.xib in Resources */,
 				EC1B9AC922396A70007B4113 /* Events.storyboard in Resources */,
@@ -1054,6 +1069,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177FB638228BF85D004CF825 /* ParticipantCollectionViewCell.swift in Sources */,
 				EC29964A2274A37F002694F9 /* PaginationLogic.swift in Sources */,
 				ECB596492252C34C002EDDFD /* SignUpAvatarViewController.swift in Sources */,
 				EC29964822749F37002694F9 /* Hobbie.swift in Sources */,

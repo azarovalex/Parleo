@@ -13,6 +13,7 @@ enum ParleoEventsAPI {
     case getParleoEvent(id: String)
     case postParleoEvent(name: String, description: String, maxParticipants: Int, latitude: Double, longitude: Double, isFinished: Bool, startTime: Date, endDate: Date, languageCode: String)
     case putParleoEventPhoto(eventId: String, image: UIImage)
+    case addParticipant(eventId: String, userId: String)
 }
 
 extension ParleoEventsAPI: AuthorizedTargetType {
@@ -30,6 +31,7 @@ extension ParleoEventsAPI: AuthorizedTargetType {
         case let .getParleoEvent(id: id): return "\(basePath)/\(id)"
         case .putParleoEventPhoto(let eventId, _): return "\(basePath)/\(eventId)/image"
         case .getParleoEvents, .postParleoEvent: return basePath
+        case .addParticipant(let eventId, _): return "\(basePath)/\(eventId)/participants"
         }
     }
     
@@ -37,7 +39,7 @@ extension ParleoEventsAPI: AuthorizedTargetType {
         switch self {
         case .getParleoEvent, .getParleoEvents: return .get
         case .postParleoEvent: return .post
-        case .putParleoEventPhoto: return .put
+        case .putParleoEventPhoto, .addParticipant: return .put
         }
     }
     
@@ -107,6 +109,9 @@ extension ParleoEventsAPI: AuthorizedTargetType {
         case .putParleoEventPhoto(_, let image):
             let imageData = MultipartFormData(provider: .data(image.jpegData(compressionQuality: 0)!), name: "image", fileName: "\(UUID().uuidString).jpg", mimeType: "image/jpeg")
             return .uploadMultipart([imageData])
+            
+        case .addParticipant(_, let userId):
+            return .requestJSONEncodable([userId])
         }
     }
     
