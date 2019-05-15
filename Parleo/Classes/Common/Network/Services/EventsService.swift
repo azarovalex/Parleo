@@ -38,4 +38,8 @@ struct EventsService: NetworkService {
     func uploadParleoEventImage(eventId: String, image: UIImage) -> Single<Result<Void>> {
         return send(.putParleoEventPhoto(eventId: eventId, image: image))
     }
+    
+    func joinEvent(eventId: String, userId: String) -> Single<Result<Void>> {
+        return send(.addParticipant(eventId: eventId, userId: userId))
+    }
 }

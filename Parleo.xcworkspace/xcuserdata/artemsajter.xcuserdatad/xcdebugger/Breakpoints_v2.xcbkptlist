@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parleo/Classes/Common/Network/Services/UserService.swift"
-            timestampString = "579601592.853183"
+            timestampString = "579624954.256529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parleo/Classes/Common/Network/API/UserAPI.swift"
-            timestampString = "579559336.3289731"
+            timestampString = "579624483.850327"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parleo/Classes/Models/ParleoEvent.swift"
-            timestampString = "579601592.853681"
+            timestampString = "579624954.256694"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parleo/Classes/Common/Network/Services/UserService.swift"
-            timestampString = "579601592.854413"
+            timestampString = "579624954.256862"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -234,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parleo/Classes/Controllers/Events/CreateEventViewController.swift"
-            timestampString = "579601592.8549581"
+            timestampString = "579623981.877858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parleo/Classes/Common/Network/API/ParleoEventsAPI.swift"
-            timestampString = "579559336.329409"
+            timestampString = "579624954.257061"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "task"
             landmarkType = "24">
          </BreakpointContent>
@@ -266,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parleo/Classes/Controllers/Events/CreateEventViewController.swift"
-            timestampString = "579601592.855183"
+            timestampString = "579623981.8781281"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parleo/Classes/Common/Network/API/ParleoEventsAPI.swift"
-            timestampString = "579559336.329549"
+            timestampString = "579624954.257223"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "task"
             landmarkType = "24">
          </BreakpointContent>
@@ -298,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parleo/Classes/Common/Network/Services/UserService.swift"
-            timestampString = "579601592.855341"
+            timestampString = "579624954.257306"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -314,7 +314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parleo/Classes/Common/Network/Services/UserService.swift"
-            timestampString = "579601592.85571"
+            timestampString = "579624954.257388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -336,6 +336,38 @@
             startingLineNumber = "62"
             endingLineNumber = "62"
             landmarkName = "bindData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Parleo/Classes/ViewModels/Events/EventDetailsViewModel.swift"
+            timestampString = "579624954.257526"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "joinButtonClicked()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Parleo/Classes/ViewModels/Events/EventDetailsViewModel.swift"
+            timestampString = "579624954.257587"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "joinButtonClicked()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

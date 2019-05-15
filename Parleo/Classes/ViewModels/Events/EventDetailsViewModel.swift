@@ -19,8 +19,17 @@ class EventDetailsViewModel {
     let address = BehaviorRelay<String?>(value: nil)
     let location = BehaviorRelay<CLLocationCoordinate2D?>(value: nil)
     let members = BehaviorRelay<[ParleoEvent.Participants]>(value: [])
+    let joinButtonIsHiddenRelay = BehaviorRelay<Bool>(value: true)
+    let isLoadingRelay = PublishRelay<Bool>()
+    let errorRelay = PublishRelay<Error>()
+    private let eventId: String
+    
+    private let eventsService = EventsService()
+    private let userService = UserService()
+    private let disposeBag = DisposeBag()
     
     init(parleoEvent: ParleoEvent) {
+        eventId = parleoEvent.id
         eventImageURL.accept(parleoEvent.eventImageURL)
         title.accept(parleoEvent.title)
         description.accept(parleoEvent.description)
@@ -29,6 +38,21 @@ class EventDetailsViewModel {
         location.accept(CLLocationCoordinate2D(latitude: parleoEvent.latitude,
                                                longitude: parleoEvent.longitude))
         members.accept(parleoEvent.participants)
+        
+        checkIsCurrentUserParticipant()
+    }
+    
+    func checkIsCurrentUserParticipant() {
+        let responce = userService.getMyProfile()
+        
+        responce.asObservable()
+            .bind(onNext: { [weak self] result in
+                guard let self = self else { return }
+                if let userId = result.value?.id, !self.members.value.contains(where: { $0.id == userId }) {
+                    self.joinButtonIsHiddenRelay.accept(false)
+                }
+            })
+            .disposed(by: disposeBag)
     }
     
     func setupAddress() {
@@ -38,7 +62,33 @@ class EventDetailsViewModel {
             guard let placemark = placemark?.first else {
                 return
             }
-            self?.address.accept(placemark.administrativeArea)
+            self?.address.accept(placemark.name)
         }
+    }
+    
+    func joinButtonClicked() {
+        let responce = userService.getMyProfile()
+        
+        isLoadingRelay.accept(true)
+        responce.asObservable()
+            .bind(onNext: { [weak self] result in
+                guard let self = self else { return }
+                if let userId = result.value?.id {
+                    let responce = self.eventsService.joinEvent(eventId: self.eventId, userId: userId)
+                    responce.asObservable()
+                        .bind(onNext: { [weak self] result in
+                            if let error = result.error {
+                                self?.errorRelay.accept(error)
+                            } else {
+                                self?.joinButtonIsHiddenRelay.accept(true)
+                            }
+                            self?.isLoadingRelay.accept(false)
+                        })
+                        .disposed(by: self.disposeBag)
+                } else {
+                    self.isLoadingRelay.accept(false)
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }

@@ -32,6 +32,8 @@ class EventDetailsViewController: UIViewController {
         }
     }
     
+    @IBOutlet private var joinButton: UIButton!
+    
     var viewModel: EventDetailsViewModel!
     private let disposeBag = DisposeBag()
     private let pointAnnotation = MKPointAnnotation()
@@ -62,11 +64,16 @@ class EventDetailsViewController: UIViewController {
                 guard let location = location else { return }
                 self?.pointAnnotation.coordinate = location
                 self?.mapView.setCenter(location, animated: false)
+                self?.viewModel.setupAddress()
             })
             .disposed(by: disposeBag)
+        viewModel.isLoadingRelay.bind(to: rx.isLoading).disposed(by: disposeBag)
+        viewModel.errorRelay.bind(to: rx.error).disposed(by: disposeBag)
+        viewModel.joinButtonIsHiddenRelay.asDriver().drive(joinButton.rx.isHidden).disposed(by: disposeBag)
     }
     
     @IBAction func joinButtonClicked(_ sender: UIButton) {
+        viewModel.joinButtonClicked()
     }
 }
 
