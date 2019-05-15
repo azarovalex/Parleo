@@ -23,6 +23,14 @@ class EventDetailsViewController: UIViewController {
             mapView.delegate = self
         }
     }
+    @IBOutlet var membersCollectionView: UICollectionView! {
+        didSet {
+            membersCollectionView.register(R.nib.participantCollectionViewCell)
+            membersCollectionView.delegate = self
+            membersCollectionView.dataSource = self
+            membersCollectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        }
+    }
     
     var viewModel: EventDetailsViewModel!
     private let disposeBag = DisposeBag()
@@ -75,5 +83,24 @@ extension EventDetailsViewController: MKMapViewDelegate {
             annotationView.image = R.image.locationIconBig()
         }
         return annotationView
+    }
+}
+
+extension EventDetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.members.value.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.participantCollectionViewCell, for: indexPath) else {
+            return UICollectionViewCell()
+        }
+        cell.imageURL = viewModel.members.value[indexPath.row].imageURL
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 44, height: 44)
     }
 }

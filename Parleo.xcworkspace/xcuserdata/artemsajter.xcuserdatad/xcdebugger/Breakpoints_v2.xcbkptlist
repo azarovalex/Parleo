@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parleo/Classes/Common/Network/Services/UserService.swift"
-            timestampString = "579546513.492241"
+            timestampString = "579601592.853183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
             endingLineNumber = "57"
-            landmarkName = "needsAuth"
+            landmarkName = "method"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parleo/Classes/Models/ParleoEvent.swift"
-            timestampString = "579559336.32909"
+            timestampString = "579601592.853681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "mapping(map:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,13 +106,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parleo/Classes/Common/Network/Services/UserService.swift"
-            timestampString = "579546513.49265"
+            timestampString = "579601592.854413"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
             endingLineNumber = "44"
-            landmarkName = "UserService"
-            landmarkType = "14">
+            landmarkName = "getFriends(page:pageSize:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -234,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parleo/Classes/Controllers/Events/CreateEventViewController.swift"
-            timestampString = "579559336.3293279"
+            timestampString = "579601592.8549581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -266,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parleo/Classes/Controllers/Events/CreateEventViewController.swift"
-            timestampString = "579559336.329494"
+            timestampString = "579601592.855183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
@@ -298,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parleo/Classes/Common/Network/Services/UserService.swift"
-            timestampString = "579546513.493251"
+            timestampString = "579601592.855341"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -314,7 +314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parleo/Classes/Common/Network/Services/UserService.swift"
-            timestampString = "579546513.493304"
+            timestampString = "579601592.85571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"

@@ -18,6 +18,7 @@ class EventDetailsViewModel {
     let flagImage = BehaviorRelay<UIImage?>(value: R.image.flagTemplate())
     let address = BehaviorRelay<String?>(value: nil)
     let location = BehaviorRelay<CLLocationCoordinate2D?>(value: nil)
+    let members = BehaviorRelay<[ParleoEvent.Participants]>(value: [])
     
     init(parleoEvent: ParleoEvent) {
         eventImageURL.accept(parleoEvent.eventImageURL)
@@ -27,6 +28,7 @@ class EventDetailsViewModel {
         flagImage.accept(parleoEvent.language?.flagImage ?? R.image.flagTemplate()!)
         location.accept(CLLocationCoordinate2D(latitude: parleoEvent.latitude,
                                                longitude: parleoEvent.longitude))
+        members.accept(parleoEvent.participants)
     }
     
     func setupAddress() {
